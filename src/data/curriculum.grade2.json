@@ -1,0 +1,267 @@
+{
+  "grade": 2,
+  "chapters": [
+    {
+      "id": "addition-subtraction",
+      "title": "Cộng trừ có nhớ",
+      "description": "Phép cộng và trừ các số có nhớ",
+      "icon": "calculator",
+      "color": "primary",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Cộng có nhớ trong phạm vi 100",
+          "duration": 120,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "37 + 28 = ?",
+              "options": ["55", "65", "75", "85"],
+              "correctAnswer": 1,
+              "explanation": "37 + 28 = 65. Cộng hàng đơn vị: 7 + 8 = 15 (nhớ 1). Cộng hàng chục: 3 + 2 + 1 = 6."
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "45 + 36 = ?",
+              "options": ["71", "81", "91", "61"],
+              "correctAnswer": 1,
+              "explanation": "45 + 36 = 81"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "58 + 27 = ?",
+              "options": ["75", "85", "95", "65"],
+              "correctAnswer": 1,
+              "explanation": "58 + 27 = 85"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "49 + 38 = ?",
+              "options": ["77", "87", "97", "67"],
+              "correctAnswer": 1,
+              "explanation": "49 + 38 = 87"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "29 + 47 = ?",
+              "options": ["66", "76", "86", "96"],
+              "correctAnswer": 1,
+              "explanation": "29 + 47 = 76"
+            }
+          ]
+        },
+        {
+          "id": "lesson-2",
+          "title": "Trừ có nhớ trong phạm vi 100",
+          "duration": 120,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "82 - 37 = ?",
+              "options": ["45", "55", "35", "65"],
+              "correctAnswer": 0,
+              "explanation": "82 - 37 = 45. Trừ hàng đơn vị: 2 - 7 không được, mượn 1. 12 - 7 = 5. Trừ hàng chục: 7 - 3 = 4."
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "73 - 28 = ?",
+              "options": ["45", "55", "35", "65"],
+              "correctAnswer": 0,
+              "explanation": "73 - 28 = 45"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "91 - 46 = ?",
+              "options": ["45", "55", "35", "65"],
+              "correctAnswer": 0,
+              "explanation": "91 - 46 = 45"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "65 - 39 = ?",
+              "options": ["16", "26", "36", "46"],
+              "correctAnswer": 1,
+              "explanation": "65 - 39 = 26"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "84 - 47 = ?",
+              "options": ["27", "37", "47", "57"],
+              "correctAnswer": 1,
+              "explanation": "84 - 47 = 37"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measurement",
+      "title": "Đo lường",
+      "description": "Đơn vị đo độ dài và khối lượng",
+      "icon": "ruler",
+      "color": "secondary",
+      "lessons": [
+        {
+          "id": "lesson-3",
+          "title": "Đo độ dài: cm và m",
+          "duration": 120,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "1 mét bằng bao nhiêu cm?",
+              "options": ["10 cm", "50 cm", "100 cm", "1000 cm"],
+              "correctAnswer": 2,
+              "explanation": "1 mét = 100 cm"
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "Chiều dài bàn học là 120 cm. Đổi ra mét là:",
+              "options": ["1 m 20 cm", "12 m", "2 m 10 cm", "1 m 2 cm"],
+              "correctAnswer": 0,
+              "explanation": "120 cm = 1 m 20 cm"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "2 mét 50 cm = ? cm",
+              "options": ["200 cm", "250 cm", "205 cm", "520 cm"],
+              "correctAnswer": 1,
+              "explanation": "2 m 50 cm = 200 cm + 50 cm = 250 cm"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "Cái bút chì dài 15 cm, cái thước dài 30 cm. Cái thước dài hơn cái bút chì:",
+              "options": ["10 cm", "15 cm", "20 cm", "25 cm"],
+              "correctAnswer": 1,
+              "explanation": "30 cm - 15 cm = 15 cm"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "3 mét = ? cm",
+              "options": ["30 cm", "300 cm", "3000 cm", "330 cm"],
+              "correctAnswer": 1,
+              "explanation": "3 m = 300 cm"
+            }
+          ]
+        },
+        {
+          "id": "lesson-4",
+          "title": "Đo khối lượng: kg và g",
+          "duration": 120,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "1 kg bằng bao nhiêu gam?",
+              "options": ["10 g", "100 g", "1000 g", "10000 g"],
+              "correctAnswer": 2,
+              "explanation": "1 kg = 1000 g"
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "2 kg 500 g = ? g",
+              "options": ["250 g", "2500 g", "2050 g", "520 g"],
+              "correctAnswer": 1,
+              "explanation": "2 kg 500 g = 2000 g + 500 g = 2500 g"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "Quả dưa hấu nặng 3 kg, quả bưởi nặng 1500 g. Quả dưa hấu nặng hơn quả bưởi:",
+              "options": ["1 kg", "1 kg 500 g", "2 kg", "500 g"],
+              "correctAnswer": 1,
+              "explanation": "3 kg - 1500 g = 3000 g - 1500 g = 1500 g = 1 kg 500 g"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "5000 g = ? kg",
+              "options": ["5 kg", "50 kg", "500 kg", "0.5 kg"],
+              "correctAnswer": 0,
+              "explanation": "5000 g = 5 kg"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "1 kg 200 g + 800 g = ?",
+              "options": ["1 kg 800 g", "2 kg", "1 kg 1000 g", "1200 g"],
+              "correctAnswer": 1,
+              "explanation": "1200 g + 800 g = 2000 g = 2 kg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "title": "Thời gian",
+      "description": "Đọc đồng hồ và tính thời gian",
+      "icon": "clock",
+      "color": "accent",
+      "lessons": [
+        {
+          "id": "lesson-5",
+          "title": "Đọc đồng hồ",
+          "duration": 120,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "Kim ngắn chỉ số 3, kim dài chỉ số 12. Đồng hồ chỉ mấy giờ?",
+              "options": ["3 giờ", "12 giờ", "3 giờ 30 phút", "12 giờ 30 phút"],
+              "correctAnswer": 0,
+              "explanation": "Kim ngắn chỉ giờ (3), kim dài chỉ phút (12 = 0 phút). Đồng hồ chỉ 3 giờ."
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "1 giờ = ? phút",
+              "options": ["30 phút", "60 phút", "90 phút", "120 phút"],
+              "correctAnswer": 1,
+              "explanation": "1 giờ = 60 phút"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "Kim ngắn chỉ giữa số 7 và 8, kim dài chỉ số 6. Đồng hồ chỉ:",
+              "options": ["7 giờ 6 phút", "7 giờ 30 phút", "8 giờ 30 phút", "6 giờ 30 phút"],
+              "correctAnswer": 1,
+              "explanation": "Kim dài chỉ số 6 = 30 phút. Kim ngắn giữa 7 và 8 nghĩa là 7 giờ hơn. Đồng hồ chỉ 7 giờ 30 phút."
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "2 giờ 30 phút = ? phút",
+              "options": ["120 phút", "130 phút", "150 phút", "230 phút"],
+              "correctAnswer": 2,
+              "explanation": "2 giờ = 120 phút. 2 giờ 30 phút = 120 + 30 = 150 phút"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "Từ 8 giờ đến 10 giờ hết bao nhiêu thời gian?",
+              "options": ["1 giờ", "2 giờ", "3 giờ", "4 giờ"],
+              "correctAnswer": 1,
+              "explanation": "10 giờ - 8 giờ = 2 giờ"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
