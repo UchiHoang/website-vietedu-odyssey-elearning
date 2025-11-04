@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, XCircle, Lightbulb } from "lucide-react";
-import { Question } from "@/utils/storyLoader";
 
 interface QuestionCardProps {
-  question: Question;
+  question: any;
   questionNumber: number;
   totalQuestions: number;
   onAnswer: (isCorrect: boolean) => void;

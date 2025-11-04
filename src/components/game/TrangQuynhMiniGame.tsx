@@ -7,7 +7,7 @@ import { HudXpBar } from "./HudXpBar";
 import { BadgeModal } from "./BadgeModal";
 import { LevelSelection } from "./LevelSelection";
 import { StoryIntro } from "./StoryIntro";
-import { loadStory, findActivityByRef, Activity } from "@/utils/storyLoader";
+import { loadStory, findActivityByRef, Activity, getBadgeInfo } from "@/utils/storyLoader";
 import { useGameEngine } from "@/hooks/useGameEngine";
 import { ArrowLeft, RotateCcw, Home } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
@@ -312,6 +312,7 @@ export const TrangQuynhMiniGame = () => {
         <BadgeModal
           isOpen={showBadgeModal}
           badgeId={completedBadgeId}
+          badgeInfo={getBadgeInfo}
           earnedXp={earnedXpThisLevel}
           performance={levelPerformance}
           onContinue={handleBadgeModalContinue}
