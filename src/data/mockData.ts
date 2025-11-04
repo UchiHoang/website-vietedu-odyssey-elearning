@@ -13,7 +13,7 @@ export const classes = [
     ageRange: "6-7",
     image: "/src/assets/class-grade1.png",
     description: "Học toán qua truyện 12 con giáp",
-    gameRoute: null
+    gameRoute: "/classroom/grade1"
   },
   {
     level: "Lớp 2",
