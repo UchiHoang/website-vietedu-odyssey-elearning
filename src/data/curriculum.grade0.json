@@ -1,0 +1,220 @@
+{
+  "grade": "0",
+  "chapters": [
+    {
+      "id": "counting",
+      "title": "Đếm và nhận biết số",
+      "description": "Đếm số bánh và ghép với chữ số",
+      "icon": "calculator",
+      "color": "primary",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Đếm bánh chưng 1–5",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "Có mấy chiếc bánh chưng trong giỏ? (hình hiển thị 3 bánh)",
+              "options": ["2", "3", "4", "5"],
+              "correctAnswer": 1,
+              "explanation": "Có 3 chiếc bánh trong giỏ, nên chọn 3."
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "Chú Cuội cần mang 2 bánh cho bà Ngoại — bạn chọn số nào?",
+              "options": ["1", "2", "4", "5"],
+              "correctAnswer": 1,
+              "explanation": "Bà Ngoại cần 2 bánh nên chọn 2."
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "Trong hình có 4 bánh — chọn số đúng:",
+              "options": ["3", "4", "2", "1"],
+              "correctAnswer": 1,
+              "explanation": "Đếm 4 chiếc bánh, chọn 4."
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "Bạn kéo 5 bánh vào giỏ — đây là số nào?",
+              "options": ["5", "3", "2", "4"],
+              "correctAnswer": 0,
+              "explanation": "Số bánh đã kéo là 5."
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "Có 1 bánh trên đĩa — chọn số đúng:",
+              "options": ["2", "1", "3", "4"],
+              "correctAnswer": 1,
+              "explanation": "Chỉ có 1 bánh, nên chọn 1."
+            }
+          ]
+        },
+        {
+          "id": "lesson-2",
+          "title": "Ghép số với lượng (1–6)",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "Chọn chữ số tương ứng với 6 chiếc bánh:",
+              "options": ["5", "6", "4", "3"],
+              "correctAnswer": 1,
+              "explanation": "6 chiếc bánh tương ứng với chữ số 6."
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "Nhìn vào giỏ có 2 bánh — bạn chọn số:",
+              "options": ["1", "2", "3", "4"],
+              "correctAnswer": 1,
+              "explanation": "Giỏ có 2 bánh, chọn 2."
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "Chú Cuội cần 4 bánh cho một gia đình — chọn số 4:",
+              "options": ["4", "2", "5", "3"],
+              "correctAnswer": 0,
+              "explanation": "Gia đình đó cần 4 bánh."
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "Có 5 bánh trên mâm — chọn con số tương ứng:",
+              "options": ["5", "6", "2", "1"],
+              "correctAnswer": 0,
+              "explanation": "5 bánh → số 5."
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "Một đĩa rỗng (0 bánh) — chọn số nào? (các lựa chọn: 0,1,2,3)",
+              "options": ["0", "1", "2", "3"],
+              "correctAnswer": 0,
+              "explanation": "Đĩa rỗng là 0 bánh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparison",
+      "title": "So sánh: nhiều - ít",
+      "description": "So sánh số lượng bánh đơn giản",
+      "icon": "compare",
+      "color": "secondary",
+      "lessons": [
+        {
+          "id": "lesson-3",
+          "title": "So sánh ai nhiều hơn/ít hơn",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "Nhà A có 4 bánh, Nhà B có 2 bánh — nhà nào nhiều hơn?",
+              "options": ["Nhà A", "Nhà B", "Cả hai bằng nhau", "Không biết"],
+              "correctAnswer": 0,
+              "explanation": "4 lớn hơn 2, nên Nhà A nhiều hơn."
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "Nhà C có 1 bánh, Nhà D có 1 bánh — tình huống là:",
+              "options": ["Nhà C nhiều hơn", "Nhà D nhiều hơn", "Bằng nhau", "Không biết"],
+              "correctAnswer": 2,
+              "explanation": "1 bằng 1 nên cả hai bằng nhau."
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "Bạn thấy 3 bánh và 5 bánh — cái nào ít hơn?",
+              "options": ["3 bánh", "5 bánh", "Bằng nhau", "Không biết"],
+              "correctAnswer": 0,
+              "explanation": "3 ít hơn 5."
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "Ai cần ít bánh hơn: ai đó cần 2 bánh hay ai đó cần 4 bánh?",
+              "options": ["2 bánh", "4 bánh", "Bằng nhau", "Không biết"],
+              "correctAnswer": 0,
+              "explanation": "2 nhỏ hơn 4, nên người cần 2 bánh ít hơn."
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "So sánh: 0 bánh và 1 bánh — số nhỏ hơn là:",
+              "options": ["0 bánh", "1 bánh", "Bằng nhau", "Không biết"],
+              "correctAnswer": 0,
+              "explanation": "0 ít hơn 1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gameplay",
+      "title": "Gameplay: Chọn số bánh đúng",
+      "description": "Mini-game ghép đúng số bánh vào giỏ của chú Cuội",
+      "icon": "gift",
+      "color": "accent",
+      "lessons": [
+        {
+          "id": "lesson-4",
+          "title": "Chọn đúng để gói",
+          "duration": 120,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "interactive-choice",
+              "question": "Gia đình kia cần 3 bánh — bạn kéo bao nhiêu bánh vào giỏ? (lựa chọn: 2,3,4,5)",
+              "options": ["2", "3", "4", "5"],
+              "correctAnswer": 1,
+              "explanation": "Gia đình cần 3 bánh → chọn 3."
+            },
+            {
+              "id": "q2",
+              "type": "interactive-choice",
+              "question": "Chú Cuội chỉ còn 2 bánh — ai nên nhận? (lựa chọn hiển thị 2 nhà: A cần 1, B cần 3)",
+              "options": ["Nhà A (1)", "Nhà B (3)", "Cả hai", "Không chia"],
+              "correctAnswer": 0,
+              "explanation": "Vì chỉ có 2 bánh và Nhà A cần 1, nên chọn Nhà A hợp lý nhất trong lựa chọn."
+            },
+            {
+              "id": "q3",
+              "type": "interactive-choice",
+              "question": "Bạn thấy thẻ '4' — kéo đúng 4 bánh vào thẻ này. (options: hình số 3,4,5,2)",
+              "options": ["3", "4", "5", "2"],
+              "correctAnswer": 1,
+              "explanation": "Chọn 4 để khớp thẻ 4."
+            },
+            {
+              "id": "q4",
+              "type": "interactive-choice",
+              "question": "Một bé yêu xin 1 bánh — bạn chọn số nào?",
+              "options": ["1", "2", "3", "4"],
+              "correctAnswer": 0,
+              "explanation": "Bé xin 1 bánh nên chọn 1."
+            },
+            {
+              "id": "q5",
+              "type": "interactive-choice",
+              "question": "Trong giỏ có 0 bánh — bạn nên làm gì? (lựa chọn: Thêm 1, Thêm 3, Thêm 5, Giữ nguyên)",
+              "options": ["Thêm 1", "Thêm 3", "Thêm 5", "Giữ nguyên"],
+              "correctAnswer": 0,
+              "explanation": "Để có bánh gói, cần thêm ít nhất 1 bánh; trong trò này chọn 'Thêm 1' là hợp lý."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

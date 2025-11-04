@@ -6,13 +6,13 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Award, Sparkles } from "lucide-react";
-import { getBadgeInfo } from "@/utils/storyLoader";
 import Confetti from "react-confetti";
 import { useEffect, useState } from "react";
 
 interface BadgeModalProps {
   isOpen: boolean;
   badgeId: string | null;
+  badgeInfo?: any;
   earnedXp: number;
   performance: "excellent" | "good" | "retry";
   onContinue: () => void;
@@ -22,13 +22,14 @@ interface BadgeModalProps {
 export const BadgeModal = ({ 
   isOpen, 
   badgeId, 
+  badgeInfo,
   earnedXp,
   performance,
   onContinue,
   onRetry
 }: BadgeModalProps) => {
   const [showConfetti, setShowConfetti] = useState(false);
-  const badge = badgeId ? getBadgeInfo(badgeId) : null;
+  const badge = badgeId ? badgeInfo(badgeId) : null;
 
   useEffect(() => {
     if (isOpen && performance === "excellent") {

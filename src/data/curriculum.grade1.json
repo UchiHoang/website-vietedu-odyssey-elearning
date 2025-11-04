@@ -1,0 +1,229 @@
+{
+  "grade": "1",
+  "chapters": [
+    {
+      "id": "addition",
+      "title": "Phép cộng",
+      "description": "Luyện cộng trong phạm vi 10–50",
+      "icon": "plus",
+      "color": "primary",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Cộng trong phạm vi 20",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "8 + 6 = ?",
+              "options": ["12", "13", "14", "15"],
+              "correctAnswer": 2,
+              "explanation": "8 + 6 = 14"
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "9 + 5 = ?",
+              "options": ["13", "14", "15", "16"],
+              "correctAnswer": 1,
+              "explanation": "9 + 5 = 14"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "7 + 3 = ?",
+              "options": ["9", "10", "11", "8"],
+              "correctAnswer": 1,
+              "explanation": "7 + 3 = 10"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "15 + 4 = ?",
+              "options": ["17", "18", "19", "20"],
+              "correctAnswer": 2,
+              "explanation": "15 + 4 = 19"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "20 + 10 = ?",
+              "options": ["25", "28", "30", "35"],
+              "correctAnswer": 2,
+              "explanation": "20 + 10 = 30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subtraction",
+      "title": "Phép trừ",
+      "description": "Luyện trừ trong phạm vi 10–50",
+      "icon": "minus",
+      "color": "secondary",
+      "lessons": [
+        {
+          "id": "lesson-2",
+          "title": "Trừ trong phạm vi 30",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "18 - 9 = ?",
+              "options": ["8", "9", "10", "11"],
+              "correctAnswer": 1,
+              "explanation": "18 - 9 = 9"
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "25 - 7 = ?",
+              "options": ["17", "18", "19", "20"],
+              "correctAnswer": 2,
+              "explanation": "25 - 7 = 18"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "30 - 15 = ?",
+              "options": ["10", "12", "15", "20"],
+              "correctAnswer": 2,
+              "explanation": "30 - 15 = 15"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "28 - 9 = ?",
+              "options": ["17", "18", "19", "20"],
+              "correctAnswer": 2,
+              "explanation": "28 - 9 = 19"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "40 - 8 = ?",
+              "options": ["30", "31", "32", "33"],
+              "correctAnswer": 2,
+              "explanation": "40 - 8 = 32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mixed",
+      "title": "Cộng – Trừ hỗn hợp",
+      "description": "Ôn tập cộng và trừ trong phạm vi 10–100",
+      "icon": "shuffle",
+      "color": "accent",
+      "lessons": [
+        {
+          "id": "lesson-3",
+          "title": "Luyện tổng hợp",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "45 + 20 = ?",
+              "options": ["55", "60", "65", "70"],
+              "correctAnswer": 2,
+              "explanation": "45 + 20 = 65"
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "90 - 30 = ?",
+              "options": ["50", "55", "60", "65"],
+              "correctAnswer": 2,
+              "explanation": "90 - 30 = 60"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "28 + 14 = ?",
+              "options": ["40", "41", "42", "43"],
+              "correctAnswer": 2,
+              "explanation": "28 + 14 = 42"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "73 - 19 = ?",
+              "options": ["53", "54", "55", "56"],
+              "correctAnswer": 1,
+              "explanation": "73 - 19 = 54"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "65 + 25 - 10 = ?",
+              "options": ["75", "80", "85", "90"],
+              "correctAnswer": 1,
+              "explanation": "65 + 25 = 90, 90 - 10 = 80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gameplay",
+      "title": "Gameplay: Giải phép tính để tăng tốc",
+      "description": "Trả lời nhanh phép tính để nhân vật Tí tăng tốc đua cùng 12 con giáp.",
+      "icon": "trophy",
+      "color": "gold",
+      "lessons": [
+        {
+          "id": "lesson-4",
+          "title": "Giải phép tính trong lúc đua",
+          "duration": 120,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "interactive-choice",
+              "question": "Nếu Tí muốn vượt qua Chuột, hãy tính: 6 + 7 = ?",
+              "options": ["12", "13", "14", "15"],
+              "correctAnswer": 1,
+              "explanation": "6 + 7 = 13, Tí tăng tốc!"
+            },
+            {
+              "id": "q2",
+              "type": "interactive-choice",
+              "question": "Để vượt Trâu, giải: 30 - 15 = ?",
+              "options": ["10", "12", "15", "20"],
+              "correctAnswer": 2,
+              "explanation": "30 - 15 = 15"
+            },
+            {
+              "id": "q3",
+              "type": "interactive-choice",
+              "question": "Vượt Hổ bằng phép tính: 25 + 25 = ?",
+              "options": ["45", "50", "55", "60"],
+              "correctAnswer": 1,
+              "explanation": "25 + 25 = 50"
+            },
+            {
+              "id": "q4",
+              "type": "interactive-choice",
+              "question": "Đến Ngựa rồi! Giải: 90 - 40 = ?",
+              "options": ["40", "45", "50", "55"],
+              "correctAnswer": 2,
+              "explanation": "90 - 40 = 50"
+            },
+            {
+              "id": "q5",
+              "type": "interactive-choice",
+              "question": "Chặng cuối với Rồng: 65 + 30 = ?",
+              "options": ["85", "90", "95", "100"],
+              "correctAnswer": 2,
+              "explanation": "65 + 30 = 95 — Tí chạm đích!"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "storyPackId": "ti-race-zodiac-2025",
+    "title": "Tí và cuộc đua cùng 12 con giáp",
+    "layout": "left-to-right",
+    "locale": "vi",
+    "description": "Cậu bé Tí tham gia cuộc đua cùng 12 con giáp. Mỗi chặng đường là một thử thách toán học — giải phép tính thật nhanh để Tí tăng tốc và giành chiến thắng!"
+  },
+  "legalNote": "Create only original character artwork and use assets in /public/assets/user/. Do not reuse copyrighted zodiac designs.",
+  "prologue": [
+    {
+      "id": "p1",
+      "bg": "assets/user/bg_festival.png",
+      "sprite": "assets/user/trang_idle.png",
+      "speaker": "Người kể chuyện",
+      "text": "Một buổi sáng rực rỡ, cậu bé Tí nghe tin: 12 con giáp đang tổ chức cuộc đua quanh núi Ngọc Linh!"
+    },
+    {
+      "id": "p2",
+      "bg": "assets/user/bg_festival.png",
+      "sprite": "assets/user/trang_cheer.png",
+      "speaker": "Chuột",
+      "text": "Tí ơi! Muốn tham gia thì phải giải đúng phép toán để tiến về phía trước nhé!"
+    },
+    {
+      "id": "p3",
+      "bg": "assets/user/bg_market.png",
+      "sprite": "assets/user/trang_idle.png",
+      "speaker": "Tí",
+      "text": "Được rồi! Tí sẵn sàng! Cộng trừ là sở trường của mình mà!"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "order": 1,
+      "title": "Chặng 1: Đua với Chuột",
+      "mathTopic": "Cộng trong phạm vi 10–20",
+      "objective": "Giải phép cộng để Tí tăng tốc vượt qua Chuột.",
+      "cutscene": [
+        {
+          "speaker": "Chuột",
+          "text": "Ai nhanh trí hơn nào? Giải đúng phép cộng là chạy nhanh hơn đấy!"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Chuột phóng vèo, nhưng Tí vẫn có thể đuổi kịp nếu tính đúng!"
+        }
+      ],
+      "voiceLines": [
+        {
+          "speaker": "Narrator",
+          "text": "Giải đúng, Tí tăng tốc!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_market.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_apple.png",
+        "alt": {
+          "bg": "Đường đua đồng cỏ",
+          "sprite_opponent": "Chuột",
+          "icon": "Phép cộng"
+        }
+      },
+      "activityRef": "grade1.c1.l1.a1",
+      "xpOnCorrect": 8,
+      "badgeOnComplete": "speed-math",
+      "hint": "Mỗi phép cộng đúng giúp Tí chạy nhanh hơn."
+    },
+    {
+      "id": "n2",
+      "order": 2,
+      "title": "Chặng 2: Đua với Trâu",
+      "mathTopic": "Trừ trong phạm vi 30",
+      "objective": "Giải phép trừ để vượt qua Trâu.",
+      "cutscene": [
+        {
+          "speaker": "Trâu",
+          "text": "Tí ơi, đua với Trâu phải thật kiên trì và chính xác!"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Trâu chậm mà chắc, nhưng nếu Tí tính nhanh sẽ vượt lên trước!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_bridge.png",
+        "sprite_main_think": "assets/user/trang_think.png",
+        "sprite_guard": "assets/user/guard.png",
+        "icon": "assets/user/icon_ticket.png",
+        "alt": {
+          "bg": "Đường làng",
+          "sprite_opponent": "Trâu",
+          "icon": "Phép trừ"
+        }
+      },
+      "activityRef": "grade1.c1.l2.a1",
+      "xpOnCorrect": 10,
+      "badgeOnComplete": null,
+      "hint": "Cứ mỗi phép trừ đúng, Tí tăng tốc 5m."
+    },
+    {
+      "id": "n3",
+      "order": 3,
+      "title": "Chặng 3: Đua với Hổ",
+      "mathTopic": "Cộng và trừ hỗn hợp (≤ 50)",
+      "objective": "Giải nhanh các phép cộng – trừ đan xen để giữ tốc độ.",
+      "cutscene": [
+        {
+          "speaker": "Hổ",
+          "text": "Hãy xem ai nhanh hơn – móng vuốt hay bộ não của Tí!"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Hổ lao vun vút, Tí phải tính đúng liên tục để không bị bỏ xa."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_areca_garden.png",
+        "sprite_owner": "assets/user/farmer.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_bunch.png",
+        "alt": {
+          "bg": "Đường rừng",
+          "sprite_opponent": "Hổ",
+          "icon": "Cộng trừ hỗn hợp"
+        }
+      },
+      "activityRef": "grade1.c1.l3.a1",
+      "xpOnCorrect": 12,
+      "badgeOnComplete": "fast-thinker",
+      "hint": "Trả lời đúng liên tục để giữ tốc độ tối đa."
+    },
+    {
+      "id": "n4",
+      "order": 4,
+      "title": "Chặng 4: Đua với Ngựa",
+      "mathTopic": "Cộng – trừ có nhớ (≤ 100)",
+      "objective": "Vượt chướng ngại bằng phép cộng, trừ có nhớ.",
+      "cutscene": [
+        {
+          "speaker": "Ngựa",
+          "text": "Muốn thắng Ngựa, Tí phải thật tinh mắt và nhớ tốt!"
+        },
+        {
+          "speaker": "Narrator",
+          "text": "Mỗi chướng ngại trên đường là một phép tính có nhớ."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_classroom.png",
+        "sprite_teacher": "assets/user/teacher.png",
+        "sprite_clock": "assets/user/clock_face.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_clock.png",
+        "alt": {
+          "bg": "Đường cát vàng",
+          "sprite_opponent": "Ngựa",
+          "icon": "Cộng trừ có nhớ"
+        }
+      },
+      "activityRef": "grade1.c1.l4.a1",
+      "xpOnCorrect": 15,
+      "badgeOnComplete": "memory-math",
+      "hint": "Mỗi đáp án đúng giúp Tí vượt chướng ngại vật."
+    },
+    {
+      "id": "n5",
+      "order": 5,
+      "title": "Chặng cuối: Về đích cùng Rồng",
+      "mathTopic": "Cộng trừ tổng hợp (10–100)",
+      "objective": "Ôn tập toàn bộ phép cộng trừ – giúp Tí chạm đích vinh quang.",
+      "cutscene": [
+        {
+          "speaker": "Rồng",
+          "text": "Muốn về đích, phải vượt qua thử thách cuối cùng của Rồng!"
+        },
+        {
+          "speaker": "Tí",
+          "text": "Tí không sợ! Cứ tính đúng là Tí thắng!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_pond.png",
+        "sprite_fisher": "assets/user/fisher.png",
+        "sprite_ruler": "assets/user/ruler.png",
+        "icon": "assets/user/icon_ruler.png",
+        "alt": {
+          "bg": "Đường đua trên mây",
+          "sprite_opponent": "Rồng",
+          "icon": "Cúp chiến thắng"
+        }
+      },
+      "activityRef": "grade1.c1.l5.a1",
+      "xpOnCorrect": 20,
+      "badgeOnComplete": "zodiac-champion",
+      "hint": "Đây là bài tổng hợp – tất cả phép tính ngẫu nhiên!"
+    }
+  ]
+}

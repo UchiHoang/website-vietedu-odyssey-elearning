@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from "react";
-import { StoryNode, Activity } from "@/utils/storyLoader";
 
 export interface GameProgress {
   currentNodeIndex: number;

@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "storyPackId": "cuoi-banhchung-2025",
+    "title": "Hành trình đếm bánh chưng cùng chú Cuội",
+    "layout": "left-to-right",
+    "locale": "vi",
+    "description": "Chú Cuội đi khắp làng để gói bánh chưng cho Tết. Hãy giúp chú đếm và chọn đúng số bánh để gói — vừa chơi vừa học đếm và so sánh!"
+  },
+  "legalNote": "Create original character artwork only. Use only user-provided images in /public/assets/user/. Do NOT copy or reproduce any copyrighted art from existing works.",
+  "prologue": [
+    {
+      "id": "p1",
+      "bg": "assets/user/bg_festival.png",
+      "sprite": "assets/user/trang_idle.png",
+      "speaker": "Người kể chuyện",
+      "text": "Đêm Rằm, chú Cuội xuống trần gian mang theo giỏ lá để gói bánh chưng cho mọi nhà."
+    },
+    {
+      "id": "p2",
+      "bg": "assets/user/bg_festival.png",
+      "sprite": "assets/user/trang_cheer.png",
+      "speaker": "Chú Cuội",
+      "text": "Ôi, giỏ bánh của ta lung tung rồi! Ta cần bạn nhỏ giúp đếm và chọn đúng số bánh để gói."
+    },
+    {
+      "id": "p3",
+      "bg": "assets/user/bg_market.png",
+      "sprite": "assets/user/trang_idle.png",
+      "speaker": "Người kể chuyện",
+      "text": "Trên đường đi, chú Cuội gặp nhiều gia đình: có nhà cần 2 bánh, có nhà cần 5 bánh. Bạn hãy giúp chú nhé!"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "order": 1,
+      "title": "Gặp nhà bà Ngoại",
+      "mathTopic": "Counting 1-5",
+      "objective": "Đếm số bánh (1–5)",
+      "cutscene": [
+        {
+          "speaker": "Narrator",
+          "text": "Chú Cuội tới nhà bà Ngoại. Bà cần 2 chiếc bánh chưng."
+        },
+        {
+          "speaker": "Bà Ngoại",
+          "text": "Con ơi, bà chỉ cần 2 chiếc bánh thôi."
+        },
+        {
+          "speaker": "Chú Cuội",
+          "text": "Hừm, mình lấy đúng 2 nhé!"
+        }
+      ],
+      "voiceLines": [
+        {
+          "speaker": "Narrator",
+          "text": "Chú Cuội tới nhà bà Ngoại. Bà cần 2 chiếc bánh chưng."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_market.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_apple.png",
+        "alt": {
+          "bg": "Nhà bà ngoại",
+          "sprite_main_idle": "Chú Cuội đứng cười",
+          "icon": "Bánh chưng"
+        }
+      },
+      "activityRef": "grade0.c1.l1.a1",
+      "xpOnCorrect": 5,
+      "badgeOnComplete": "count-helper",
+      "hint": "Hiển thị bánh chưng dưới dạng hình để trẻ chạm chọn"
+    },
+    {
+      "id": "n2",
+      "order": 2,
+      "title": "Gặp nhà 2 trẻ con",
+      "mathTopic": "Counting 1-5 (visual)",
+      "objective": "Đếm số đồ vật và ghép số",
+      "cutscene": [
+        {
+          "speaker": "Narrator",
+          "text": "Hai anh em cần 3 bánh cho gia đình nhỏ của họ."
+        },
+        {
+          "speaker": "Child",
+          "text": "Chú Cuội ơi, chúng con muốn 3 bánh!"
+        }
+      ],
+      "voiceLines": [
+        {
+          "speaker": "Narrator",
+          "text": "Hai anh em cần 3 bánh."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_bridge.png",
+        "sprite_main_think": "assets/user/trang_think.png",
+        "sprite_guard": "assets/user/guard.png",
+        "icon": "assets/user/icon_ticket.png",
+        "alt": {
+          "bg": "Nhà có trẻ con",
+          "sprite_kids": "Hai đứa trẻ",
+          "icon": "Bánh chưng"
+        }
+      },
+      "activityRef": "grade0.c1.l1.a2",
+      "xpOnCorrect": 5,
+      "badgeOnComplete": null,
+      "hint": "Cho trẻ kéo bánh vào giỏ để đếm"
+    },
+    {
+      "id": "n3",
+      "order": 3,
+      "title": "Ai nhiều hơn?",
+      "mathTopic": "Comparison (more / less)",
+      "objective": "So sánh 'nhiều hơn' và 'ít hơn' (1–5)",
+      "cutscene": [
+        {
+          "speaker": "Narrator",
+          "text": "Hai nhà hỏi: nhà A có 4 bánh, nhà B có 2 bánh — nhà nào nhiều hơn?"
+        },
+        {
+          "speaker": "Chú Cuội",
+          "text": "Nhà A nhiều hơn nhà B."
+        }
+      ],
+      "voiceLines": [
+        {
+          "speaker": "Narrator",
+          "text": "So sánh số bánh giữa hai nhà."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_areca_garden.png",
+        "sprite_owner": "assets/user/farmer.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_bunch.png",
+        "alt": {
+          "bg": "Con đường làng",
+          "sprite_main_think": "Chú Cuội suy nghĩ",
+          "icon": "So sánh"
+        }
+      },
+      "activityRef": "grade0.c1.l2.a1",
+      "xpOnCorrect": 6,
+      "badgeOnComplete": null,
+      "hint": "Dùng biểu tượng bánh chưng để so sánh trực quan"
+    },
+    {
+      "id": "n4",
+      "order": 4,
+      "title": "Chọn đúng số bánh để gói",
+      "mathTopic": "Matching number to quantity",
+      "objective": "Ghép số với đúng số bánh (1–6)",
+      "cutscene": [
+        {
+          "speaker": "Narrator",
+          "text": "Chú Cuội phải gói bánh cho hội làng — mỗi nhóm bảo cần số khác nhau."
+        },
+        {
+          "speaker": "Chú Cuội",
+          "text": "Bạn giúp chú chọn số bánh đúng để gói nhé!"
+        }
+      ],
+      "voiceLines": [
+        {
+          "speaker": "Narrator",
+          "text": "Chọn số đúng để gói bánh."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_classroom.png",
+        "sprite_teacher": "assets/user/teacher.png",
+        "sprite_clock": "assets/user/clock_face.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_clock.png",
+        "alt": {
+          "bg": "Đình làng",
+          "sprite_main_busy": "Chú Cuội gói bánh",
+          "icon": "Giỏ bánh"
+        }
+      },
+      "activityRef": "grade0.c1.l3.a1",
+      "xpOnCorrect": 8,
+      "badgeOnComplete": "little-wrapper",
+      "hint": "Hiển thị số lớn trên thẻ — kéo đúng số bánh vào giỏ"
+    },
+    {
+      "id": "n5",
+      "order": 5,
+      "title": "Trò chơi đoán số nhanh",
+      "mathTopic": "Counting speed (review)",
+      "objective": "Ôn tập đếm nhanh 1–6",
+      "cutscene": [
+        {
+          "speaker": "Narrator",
+          "text": "Trò chơi: chú Cuội giơ thẻ số, bạn phải chọn số bánh nhanh nhất."
+        },
+        {
+          "speaker": "Chú Cuội",
+          "text": "Sẵn sàng? 1, 2, 3 — chạy thôi!"
+        }
+      ],
+      "voiceLines": [
+        {
+          "speaker": "Narrator",
+          "text": "Trò chơi đếm nhanh để ôn lại."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_pond.png",
+        "sprite_fisher": "assets/user/fisher.png",
+        "sprite_ruler": "assets/user/ruler.png",
+        "icon": "assets/user/icon_ruler.png",
+        "alt": {
+          "bg": "Sân nhỏ lễ hội",
+          "sprite_main_cheer": "Chú Cuội cổ vũ",
+          "icon": "Đồng hồ bấm giờ"
+        }
+      },
+      "activityRef": "grade0.c1.l4.a1",
+      "xpOnCorrect": 5,
+      "badgeOnComplete": null,
+      "hint": "Không cần thời gian quá ngắn — giữ nhịp vui"
+    },
+    {
+      "id": "n6",
+      "order": 6,
+      "title": "Hoàn thành: Lễ gói bánh",
+      "mathTopic": "Final review (count & compare)",
+      "objective": "Ôn tập tổng hợp: đếm và so sánh",
+      "cutscene": [
+        {
+          "speaker": "Narrator",
+          "text": "Mọi nhà đã nhận được bánh. Lễ gói bánh được tổ chức vui vẻ."
+        },
+        {
+          "speaker": "Chú Cuội",
+          "text": "Cảm ơn bạn đã giúp đếm và gói bánh. Tết thật vui!"
+        }
+      ],
+      "voiceLines": [
+        {
+          "speaker": "Narrator",
+          "text": "Lễ gói bánh kết thúc trong niềm vui."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_kitchen.png",
+        "sprite_mother": "assets/user/mother.png",
+        "sprite_scale": "assets/user/scale.png",
+        "icon": "assets/user/icon_sack.png",
+        "alt": {
+          "bg": "Sân đình lễ hội",
+          "sprite_main_cheer": "Chú Cuội vui mừng",
+          "icon": "Ngôi sao"
+        }
+      },
+      "activityRef": "grade0.c1.l5.a1",
+      "xpOnCorrect": 10,
+      "badgeOnComplete": "cuoi-helper",
+      "hint": "Tổng hợp câu hỏi ngắn, hình ảnh lớn dễ nhìn"
+    }
+  ]
+}

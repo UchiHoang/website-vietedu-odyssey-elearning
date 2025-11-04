@@ -5,7 +5,7 @@ export const classes = [
     ageRange: "3-5",
     image: "/src/assets/class-preschool.png",
     description: "Khám phá số đếm qua câu chuyện dân gian",
-    gameRoute: null
+    gameRoute: "/classroom/preschool"
   },
   {
     level: "Lớp 1",

@@ -7,14 +7,14 @@ import { HudXpBar } from "./HudXpBar";
 import { BadgeModal } from "./BadgeModal";
 import { LevelSelection } from "./LevelSelection";
 import { StoryIntro } from "./StoryIntro";
-import { loadStory, findActivityByRef, Activity } from "@/utils/storyLoader";
+import { loadStory, findActivityByRef, Activity, getBadgeInfo} from "@/utils/grade0Loader";
 import { useGameEngine } from "@/hooks/useGameEngine";
 import { ArrowLeft, RotateCcw, Home } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 type GamePhase = "prologue" | "level-selection" | "cutscene" | "questions" | "complete";
 
-export const TrangQuynhMiniGame = () => {
+export const PreschoolMiniGame = () => {
   const navigate = useNavigate();
   const story = loadStory();
   const { progress, recordAnswer, nextQuestion, completeNode, resetProgress, selectNode } = useGameEngine();
@@ -146,11 +146,11 @@ export const TrangQuynhMiniGame = () => {
           </Button>
         </div>
         <LevelSelection
-          title={story.meta.title}
-          description={story.meta.description}
-          nodes={story.nodes as any}
-          progress={progress}
-          onSelectLevel={handleSelectLevel}
+            title={story.meta.title}
+            description={story.meta.description}
+            nodes={story.nodes as any}
+            progress={progress}
+            onSelectLevel={handleSelectLevel}
         />
       </div>
     );
@@ -312,6 +312,7 @@ export const TrangQuynhMiniGame = () => {
         <BadgeModal
           isOpen={showBadgeModal}
           badgeId={completedBadgeId}
+          badgeInfo={getBadgeInfo}
           earnedXp={earnedXpThisLevel}
           performance={levelPerformance}
           onContinue={handleBadgeModalContinue}

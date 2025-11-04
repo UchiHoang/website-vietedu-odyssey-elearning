@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Lock, CheckCircle, Star } from "lucide-react";
-import { StoryNode } from "@/utils/storyLoader";
 import { GameProgress } from "@/hooks/useGameEngine";
 
 // Import level icons
@@ -27,22 +26,24 @@ const levelIcons = [
 ];
 
 interface LevelSelectionProps {
-  nodes: StoryNode[];
+  title: string;
+  description: string;
+  nodes: any[];
   progress: GameProgress;
   onSelectLevel: (nodeIndex: number) => void;
 }
 
-export const LevelSelection = ({ nodes, progress, onSelectLevel }: LevelSelectionProps) => {
+export const LevelSelection = ({ title, description, nodes, progress, onSelectLevel }: LevelSelectionProps) => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-primary/5 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 space-y-4">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary">
-            Trạng Quỳnh đi thi
+            {title}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Cậu bé Trạng Quỳnh chuẩn bị đi thi Toán rồi đó! Hãy giúp Quỳnh vượt qua từng màn thử thách và trở thành &quot;Trạng nhí thông minh&quot; nhé!
+            {description}
           </p>
           
           {/* Progress Summary */}
