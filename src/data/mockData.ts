@@ -29,7 +29,7 @@ export const classes = [
     ageRange: "8-9",
     image: "/src/assets/class-grade3.jpg",
     description: "Phiêu lưu toán học trên dòng sông Hồng",
-    gameRoute: null
+    gameRoute: "/classroom/songhong"
   },
   {
     level: "Lớp 4",
