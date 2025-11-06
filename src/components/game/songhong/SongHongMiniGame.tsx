@@ -174,16 +174,20 @@ export const SongHongMiniGame: React.FC<SongHongMiniGameProps> = ({ forceIntroOn
               ))}
             </div>
 
-            <TreasureMap unlocked={unlocked} />
-            {gameState === "won" && (
-              <div className="rounded-xl border p-6 text-center space-y-3">
-                <TreasureChest open />
-                <div className="font-semibold">Bạn đã tìm thấy kho báu!</div>
-                <button className="rounded-md bg-primary px-4 py-2 text-white" onClick={handlePlayAgain}>
-                  Chơi lại
-                </button>
-              </div>
-            )}
+            <div className="relative">
+              <TreasureMap unlocked={unlocked} />
+              {gameState === "won" && (
+                <div className="absolute inset-0 z-10 flex items-center justify-center p-4">
+                  <div className="w-full max-w-md rounded-xl border bg-card/95 backdrop-blur p-6 text-center space-y-3 shadow-lg">
+                    <TreasureChest open />
+                    <div className="font-semibold">Bạn đã tìm thấy kho báu!</div>
+                    <button className="rounded-md bg-primary px-4 py-2 text-white" onClick={handlePlayAgain}>
+                      Chơi lại
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
           </section>
 
           <section className="space-y-4">
