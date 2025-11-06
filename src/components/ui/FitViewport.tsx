@@ -1,9 +1,9 @@
 import React from "react";
 
 interface FitViewportProps {
-  baseWidth?: number; // design width in px
-  baseHeight?: number; // design height in px
-  topOffset?: number; // pixels to subtract for fixed headers
+  baseWidth?: number;
+  baseHeight?: number;
+  topOffset?: number;
   children: React.ReactNode;
 }
 
@@ -50,5 +50,4 @@ const FitViewport: React.FC<FitViewportProps> = ({
 };
 
 export default FitViewport;
-
 

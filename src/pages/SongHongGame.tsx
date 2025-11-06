@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import { SongHongMiniGame } from "@/components/game/songhong/SongHongMiniGame";
-import FitViewport from "@/components/layout/FitViewport";
+import FitViewport from "@/components/ui/FitViewport";
 
 const SongHongGame = () => {
   return (
