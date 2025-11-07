@@ -1,9 +1,17 @@
+// Import images
+import preSchoolImg from '@/assets/class-preschool.png';
+import grade1Img from '@/assets/class-grade1.png';
+import grade2Img from '@/assets/class-grade2.png';
+import grade3Img from '@/assets/class-grade3.jpg';
+import grade4Img from '@/assets/class-grade4.jpg';
+import grade5Img from '@/assets/class-grade5.jpg';
+
 export const classes = [
   {
     level: "Mầm non",
     title: "Hành trình đếm bánh chưng cùng chú Cuội",
     ageRange: "3-5",
-    image: "/src/assets/class-preschool.png",
+    image: preSchoolImg,
     description: "Khám phá số đếm qua câu chuyện dân gian",
     gameRoute: "/classroom/preschool"
   },
@@ -11,7 +19,7 @@ export const classes = [
     level: "Lớp 1",
     title: "Tí và cuộc đua cùng 12 con giáp",
     ageRange: "6-7",
-    image: "/src/assets/class-grade1.png",
+    image: grade1Img,
     description: "Học toán qua truyện 12 con giáp",
     gameRoute: null
   },
@@ -19,7 +27,7 @@ export const classes = [
     level: "Lớp 2",
     title: "Trạng Quỳnh đi thi",
     ageRange: "7-8",
-    image: "/src/assets/class-grade2.jpg",
+    image: grade2Img,
     description: "Rèn luyện tư duy logic cùng Trạng Quỳnh",
     gameRoute: "/classroom/trangquynh"
   },
@@ -27,7 +35,7 @@ export const classes = [
     level: "Lớp 3",
     title: "Săn kho báu sông Hồng",
     ageRange: "8-9",
-    image: "/src/assets/class-grade3.jpg",
+    image: grade3Img,
     description: "Phiêu lưu toán học trên dòng sông Hồng",
     gameRoute: null
   },
@@ -35,7 +43,7 @@ export const classes = [
     level: "Lớp 4",
     title: "Thám hiểm Cổ Loa thành",
     ageRange: "9-10",
-    image: "/src/assets/class-grade4.jpg",
+    image: grade4Img,
     description: "Khám phá lịch sử qua bài toán",
     gameRoute: null
   },
@@ -43,18 +51,23 @@ export const classes = [
     level: "Lớp 5",
     title: "Bảo vệ đất nước cùng Trạng Nguyên",
     ageRange: "10-11",
-    image: "/src/assets/class-grade5.jpg",
+    image: grade5Img,
     description: "Toán học nâng cao với tinh thần yêu nước",
     gameRoute: null
   }
 ];
 
 export const leaderboard = [
-  { rank: 1, name: "Mai An", points: 1240, avatar: "👧" },
-  { rank: 2, name: "Nam Khoa", points: 1120, avatar: "👦" },
-  { rank: 3, name: "Linh Chi", points: 985, avatar: "👧" },
-  { rank: 4, name: "Minh Tuấn", points: 920, avatar: "👦" },
-  { rank: 5, name: "Hà My", points: 880, avatar: "👧" }
+  { rank: 1, name: "Nguyễn Phú Cường", points: 1240, avatar: "👦" },
+  { rank: 2, name: "Đặng Lê Thiên Ân", points: 1120, avatar: "👧" },
+  { rank: 3, name: "Võ Hữu Thiên Ngân", points: 985, avatar: "👧" },
+  { rank: 4, name: "Nguyễn Trần Ngọc Nhi", points: 920, avatar: "👧" },
+  { rank: 5, name: "Quách Quốc Phúc Thịnh", points: 880, avatar: "👦" },
+  { rank: 6, name: "Nguyễn Trung Quân", points: 840, avatar: "👦" },
+  { rank: 7, name: "Lê Cát Mỹ Anh", points: 800, avatar: "👧" },
+  { rank: 8, name: "Mai Anh Khôi", points: 760, avatar: "👦" },
+  { rank: 9, name: "Nguyễn Trần Minh Ngọc", points: 720, avatar: "👧" },
+  { rank: 10, name: "Nguyễn Bùi Trúc Linh", points: 680, avatar: "👧" }
 ];
 
 export const badges = [
