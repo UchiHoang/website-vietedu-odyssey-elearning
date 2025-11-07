@@ -21,7 +21,7 @@ export const classes = [
     ageRange: "6-7",
     image: grade1Img,
     description: "Học toán qua truyện 12 con giáp",
-    gameRoute: null
+    gameRoute: "/classroom/grade1"
   },
   {
     level: "Lớp 2",
@@ -37,7 +37,7 @@ export const classes = [
     ageRange: "8-9",
     image: grade3Img,
     description: "Phiêu lưu toán học trên dòng sông Hồng",
-    gameRoute: null
+    gameRoute: "/classroom/songhong"
   },
   {
     level: "Lớp 4",

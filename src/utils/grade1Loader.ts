@@ -1,5 +1,5 @@
-import storyData from "@/data/story.grade0.trangquynh.json";
-import curriculumData from "@/data/curriculum.grade0.json";
+import storyData from "@/data/story.grade1.trangquynh.json";
+import curriculumData from "@/data/curriculum.grade1.json";
 
 export interface Question {
   id: string;
@@ -135,9 +135,9 @@ export const getBadgeInfo = (badgeId: string) => {
       description: "Hoàn thành thử thách về tiền"
     },
     "grade2-master": {
-      name: "Huy hiệu Giỏi toán mẫu giáo",
+      name: "Huy hiệu Giỏi toán lớp 1",
       icon: "/assets/user/icon_badge.png",
-      description: "Hoàn thành tất cả thử thách mẫu giáo"
+      description: "Hoàn thành tất cả thử thách lớp 1"
     }
   };
   
