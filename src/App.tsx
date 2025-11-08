@@ -12,6 +12,7 @@ import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 import PreschoolGame from "./pages/PreschoolGame";
 import Grade1Game from "./pages/Grade1Game";
+import Grade5Game from "./pages/Grade5Game";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="/classroom/preschool" element={<PreschoolGame />} />
           <Route path="/classroom/grade1" element={<Grade1Game />} />
+          <Route path="/classroom/grade5" element={<Grade5Game />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

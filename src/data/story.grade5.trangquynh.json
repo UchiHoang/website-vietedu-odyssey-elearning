@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "storyPackId": "trang-nguyen-protect-country-2025",
+    "title": "Trạng Nguyên bảo vệ đất nước",
+    "layout": "left-to-right",
+    "locale": "vi",
+    "description": "Trạng Nguyên dùng kiến thức toán học về số thập phân để tính toán xây thành, chuẩn bị lương thảo và bảo vệ biên cương đất nước."
+  },
+  "legalNote": "Create original character artwork only. Use only user-provided images in /public/assets/user/. Do NOT copy or reproduce any copyrighted art from existing works.",
+  "prologue": [
+    {
+      "id": "p1",
+      "bg": "assets/user/bg_festival.png",
+      "sprite": "assets/user/trang_idle.png",
+      "speaker": "Người kể chuyện",
+      "text": "Thời loạn lạc, giặc ngoại xâm đe dọa bờ cõi. Vua cần người tài giỏi giúp xây thành, tính lương, bảo vệ đất nước."
+    },
+    {
+      "id": "p2",
+      "bg": "assets/user/bg_festival.png",
+      "sprite": "assets/user/trang_cheer.png",
+      "speaker": "Nhà Vua",
+      "text": "Trạng Nguyên! Trẫm cần người dùng toán học để tính toán xây thành lũy, chuẩn bị lương thảo!"
+    },
+    {
+      "id": "p3",
+      "bg": "assets/user/bg_market.png",
+      "sprite": "assets/user/trang_idle.png",
+      "speaker": "Trạng Nguyên",
+      "text": "Thần xin nhận lời! Với kiến thức về số thập phân, thần sẽ tính toán chính xác để bảo vệ bờ cõi!"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "order": 1,
+      "title": "Tính toán vật liệu xây thành",
+      "mathTopic": "Số thập phân cơ bản",
+      "objective": "Nhận biết và sử dụng số thập phân để tính vật liệu",
+      "cutscene": [
+        {
+          "speaker": "Quan Quân Lương",
+          "text": "Thưa Trạng Nguyên, chúng ta cần tính chính xác số đá, vôi, gạch để xây thành."
+        },
+        {
+          "speaker": "Trạng Nguyên",
+          "text": "Được rồi! Hãy dùng số thập phân để tính toán cho chính xác!"
+        }
+      ],
+      "voiceLines": [
+        {
+          "speaker": "Narrator",
+          "text": "Trạng Nguyên tính toán vật liệu xây thành bằng số thập phân."
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_market.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_apple.png",
+        "alt": {
+          "bg": "Công trường xây thành",
+          "sprite_main_idle": "Trạng Nguyên đang tính toán",
+          "icon": "Vật liệu xây dựng"
+        }
+      },
+      "activityRef": "grade5.c1.l1.a1",
+      "xpOnCorrect": 10,
+      "badgeOnComplete": "decimal-master",
+      "hint": "Sử dụng số thập phân để tính toán chính xác vật liệu xây dựng."
+    },
+    {
+      "id": "n2",
+      "order": 2,
+      "title": "Tính chiều dài thành lũy",
+      "mathTopic": "Cộng trừ số thập phân",
+      "objective": "Tính toán chiều dài thành lũy cần xây dựng",
+      "cutscene": [
+        {
+          "speaker": "Quan Đốc Công",
+          "text": "Thưa Trạng Nguyên, chúng ta cần tính chiều dài các đoạn thành để phân bổ quân lính."
+        },
+        {
+          "speaker": "Trạng Nguyên",
+          "text": "Hãy cộng trừ các số thập phân để tính tổng chiều dài thành!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_bridge.png",
+        "sprite_main_think": "assets/user/trang_think.png",
+        "sprite_guard": "assets/user/guard.png",
+        "icon": "assets/user/icon_ticket.png",
+        "alt": {
+          "bg": "Bản đồ thành lũy",
+          "sprite_main_think": "Trạng Nguyên nghiên cứu bản đồ",
+          "icon": "Thước đo"
+        }
+      },
+      "activityRef": "grade5.c1.l2.a1",
+      "xpOnCorrect": 12,
+      "badgeOnComplete": "wall-calculator",
+      "hint": "Cộng trừ số thập phân để tính chiều dài chính xác."
+    },
+    {
+      "id": "n3",
+      "order": 3,
+      "title": "Tính khối lượng lương thảo",
+      "mathTopic": "Nhân chia số thập phân",
+      "objective": "Tính toán khối lượng lương thảo cần chuẩn bị",
+      "cutscene": [
+        {
+          "speaker": "Quan Quân Lương",
+          "text": "Mỗi binh sĩ cần 2.5kg lương thảo mỗi ngày. Chúng ta có 1250 binh sĩ."
+        },
+        {
+          "speaker": "Trạng Nguyên",
+          "text": "Hãy nhân chia số thập phân để tính tổng lương thảo cần thiết!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_areca_garden.png",
+        "sprite_owner": "assets/user/farmer.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_bunch.png",
+        "alt": {
+          "bg": "Kho lương thảo",
+          "sprite_owner": "Quan quân lương",
+          "icon": "Lương thảo"
+        }
+      },
+      "activityRef": "grade5.c1.l3.a1",
+      "xpOnCorrect": 15,
+      "badgeOnComplete": "supply-master",
+      "hint": "Nhân chia số thập phân để tính khối lượng lương thảo."
+    },
+    {
+      "id": "n4",
+      "order": 4,
+      "title": "Đo đạc diện tích đồn trú",
+      "mathTopic": "Đo lường với số thập phân",
+      "objective": "Ứng dụng số thập phân trong đo đạc diện tích",
+      "cutscene": [
+        {
+          "speaker": "Tướng Quân",
+          "text": "Chúng ta cần tính diện tích các đồn trú để bố trí quân sĩ hợp lý."
+        },
+        {
+          "speaker": "Trạng Nguyên",
+          "text": "Dùng số thập phân để đo đạc chính xác diện tích các khu vực!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_classroom.png",
+        "sprite_teacher": "assets/user/teacher.png",
+        "sprite_clock": "assets/user/clock_face.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_clock.png",
+        "alt": {
+          "bg": "Đồn trú quân sự",
+          "sprite_teacher": "Tướng quân",
+          "icon": "Dụng cụ đo đạc"
+        }
+      },
+      "activityRef": "grade5.c1.l4.a1",
+      "xpOnCorrect": 18,
+      "badgeOnComplete": "measurement-expert",
+      "hint": "Áp dụng số thập phân trong đo độ dài, diện tích thực tế."
+    },
+    {
+      "id": "n5",
+      "order": 5,
+      "title": "Tổng kiểm tra phòng thủ",
+      "mathTopic": "Tổng hợp số thập phân",
+      "objective": "Ôn tập toàn bộ kiến thức về số thập phân",
+      "cutscene": [
+        {
+          "speaker": "Nhà Vua",
+          "text": "Trạng Nguyên! Hãy tổng kiểm tra tất cả tính toán phòng thủ trước khi giặc tới!"
+        },
+        {
+          "speaker": "Trạng Nguyên",
+          "text": "Thần xin trình bày tất cả tính toán về thành lũy, lương thảo, bố trí quân sĩ!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_pond.png",
+        "sprite_fisher": "assets/user/fisher.png",
+        "sprite_ruler": "assets/user/ruler.png",
+        "icon": "assets/user/icon_ruler.png",
+        "alt": {
+          "bg": "Đại sảnh triều đình",
+          "sprite_fisher": "Nhà vua",
+          "icon": "Bản đồ phòng thủ"
+        }
+      },
+      "activityRef": "grade5.c1.l5.a1",
+      "xpOnCorrect": 25,
+      "badgeOnComplete": "country-protector",
+      "hint": "Tổng hợp tất cả kiến thức về số thập phân để bảo vệ đất nước."
+    }
+  ]
+}
