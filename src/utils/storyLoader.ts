@@ -13,6 +13,7 @@ export interface Activity {
 }
 
 export function loadStory(grade: string = "1"): Story {
+  console.log("Loading story for grade:", grade); // Debug log
   switch (grade) {
     case "0":
       return storyGrade0 as Story;
@@ -21,6 +22,7 @@ export function loadStory(grade: string = "1"): Story {
     case "5":
       return storyGrade5 as Story;
     default:
+      console.warn("Unknown grade, defaulting to grade 1:", grade);
       return storyGrade1 as Story;
   }
 }
@@ -29,6 +31,7 @@ export function findActivityByRef(
   activityRef: string,
   grade: string = "1"
 ): Activity | null {
+  console.log("Finding activity for grade:", grade, "ref:", activityRef); // Debug log
   let curriculum: Curriculum;
 
   switch (grade) {
@@ -42,6 +45,7 @@ export function findActivityByRef(
       curriculum = curriculumGrade5 as Curriculum;
       break;
     default:
+      console.warn("Unknown grade, defaulting to grade 1:", grade);
       curriculum = curriculumGrade1 as Curriculum;
   }
 

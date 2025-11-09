@@ -29,9 +29,12 @@ export const TrangQuynhMiniGame = () => {
   const navigate = useNavigate();
   const { grade } = useParams(); // Get grade from URL params
 
-  // Load the correct story based on grade
-  const story: Story = loadStory(grade || "1");
+  console.log("Current grade from URL:", grade); // Debug log
 
+  const gradeNumber = grade?.replace("grade", "") || "1";
+  console.log("Detected grade:", gradeNumber); // Debug log
+
+  const story: Story = loadStory(gradeNumber);
   const {
     progress,
     recordAnswer,
