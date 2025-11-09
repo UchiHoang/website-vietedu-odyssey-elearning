@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Lock, CheckCircle, Star } from "lucide-react";
 import { GameProgress } from "@/hooks/useGameEngine";
+import { StoryNode } from "@/types/game";
 
 // Import level icons
 import iconApple from "@/assets/icons/icon_apple.png";
@@ -14,26 +15,32 @@ import iconPuzzle from "@/assets/icons/icon_puzzle.png";
 import iconBadge from "@/assets/icons/icon_badge.png";
 
 const levelIcons = [
-  iconApple,   // Level 1
-  iconBridge,  // Level 2
-  iconBunch,   // Level 3
-  iconClock,   // Level 4
-  iconRuler,   // Level 5
-  iconSack,    // Level 6
-  iconMoney,   // Level 7
-  iconPuzzle,  // Level 8
-  iconBadge,   // Level 9
+  iconApple, // Level 1
+  iconBridge, // Level 2
+  iconBunch, // Level 3
+  iconClock, // Level 4
+  iconRuler, // Level 5
+  iconSack, // Level 6
+  iconMoney, // Level 7
+  iconPuzzle, // Level 8
+  iconBadge, // Level 9
 ];
 
 interface LevelSelectionProps {
   title: string;
   description: string;
-  nodes: any[];
+  nodes: StoryNode[];
   progress: GameProgress;
   onSelectLevel: (nodeIndex: number) => void;
 }
 
-export const LevelSelection = ({ title, description, nodes, progress, onSelectLevel }: LevelSelectionProps) => {
+export const LevelSelection = ({
+  title,
+  description,
+  nodes,
+  progress,
+  onSelectLevel,
+}: LevelSelectionProps) => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-primary/5 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
@@ -45,18 +52,22 @@ export const LevelSelection = ({ title, description, nodes, progress, onSelectLe
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {description}
           </p>
-          
+
           {/* Progress Summary */}
           <div className="flex items-center justify-center gap-6 mt-6">
             <div className="bg-card px-6 py-3 rounded-full border border-primary/20">
-              <span className="text-sm text-muted-foreground">Hoàn thành: </span>
+              <span className="text-sm text-muted-foreground">
+                Hoàn thành:{" "}
+              </span>
               <span className="text-lg font-bold text-primary">
                 {progress.completedNodes.length}/{nodes.length}
               </span>
             </div>
             <div className="bg-card px-6 py-3 rounded-full border border-primary/20">
               <Star className="w-4 h-4 text-primary inline mr-2" />
-              <span className="text-lg font-bold text-primary">{progress.totalXp} XP</span>
+              <span className="text-lg font-bold text-primary">
+                {progress.totalXp} XP
+              </span>
             </div>
           </div>
         </div>
@@ -65,7 +76,9 @@ export const LevelSelection = ({ title, description, nodes, progress, onSelectLe
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {nodes.map((node, index) => {
             const isCompleted = progress.completedNodes.includes(node.id);
-            const isUnlocked = index === 0 || progress.completedNodes.includes(nodes[index - 1]?.id);
+            const isUnlocked =
+              index === 0 ||
+              progress.completedNodes.includes(nodes[index - 1]?.id);
             const isCurrent = progress.currentNodeIndex === index;
 
             return (
@@ -75,9 +88,21 @@ export const LevelSelection = ({ title, description, nodes, progress, onSelectLe
                 disabled={!isUnlocked}
                 className={`
                   relative bg-card rounded-xl p-6 border-2 transition-all duration-300
-                  ${isUnlocked ? "hover:scale-105 hover:shadow-xl cursor-pointer" : "opacity-50 cursor-not-allowed"}
-                  ${isCurrent ? "border-primary ring-4 ring-primary/20" : "border-primary/20"}
-                  ${isCompleted ? "bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20" : ""}
+                  ${
+                    isUnlocked
+                      ? "hover:scale-105 hover:shadow-xl cursor-pointer"
+                      : "opacity-50 cursor-not-allowed"
+                  }
+                  ${
+                    isCurrent
+                      ? "border-primary ring-4 ring-primary/20"
+                      : "border-primary/20"
+                  }
+                  ${
+                    isCompleted
+                      ? "bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20"
+                      : ""
+                  }
                 `}
                 aria-label={`Màn ${node.order}: ${node.title}`}
               >
@@ -101,10 +126,12 @@ export const LevelSelection = ({ title, description, nodes, progress, onSelectLe
 
                 {/* Level Icon */}
                 <div className="mb-4 flex justify-center">
-                  <img 
-                    src={levelIcons[index]} 
+                  <img
+                    src={levelIcons[index]}
                     alt={node.title}
-                    className={`w-20 h-20 object-contain ${!isUnlocked ? 'opacity-50 grayscale' : ''}`}
+                    className={`w-20 h-20 object-contain ${
+                      !isUnlocked ? "opacity-50 grayscale" : ""
+                    }`}
                   />
                 </div>
 
@@ -116,7 +143,7 @@ export const LevelSelection = ({ title, description, nodes, progress, onSelectLe
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {node.objective}
                   </p>
-                  
+
                   {/* Math Topic Badge */}
                   <div className="pt-2">
                     <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">

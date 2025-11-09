@@ -1,149 +1,126 @@
-import storyData from "@/data/story.grade2.trangquynh.json";
-import curriculumData from "@/data/curriculum.grade2.json";
-
-export interface Question {
-  id: string;
-  type: string;
-  question: string;
-  options: string[];
-  correctAnswer: number;
-  explanation: string;
-}
+import curriculumGrade0 from "@/data/curriculum.grade0.json";
+import curriculumGrade1 from "@/data/curriculum.grade1.json";
+import curriculumGrade5 from "@/data/curriculum.grade5.json";
+import storyGrade0 from "@/data/story.grade0.trangquynh.json";
+import storyGrade1 from "@/data/story.grade1.trangquynh.json";
+import storyGrade5 from "@/data/story.grade5.trangquynh.json";
+import { Story, Curriculum, Question } from "@/types/game";
 
 export interface Activity {
   id: string;
-  title: string;
-  duration?: number;
   questions: Question[];
   xpReward?: number;
-  timerSec?: number;
 }
 
-export interface StoryNode {
-  id: string;
-  order: number;
-  title: string;
-  mathTopic: string;
-  objective: string;
-  cutscene: any[];
-  activityRef: string;
-  badgeOnComplete?: string;
-  assets?: {
-    bg?: string;
-    sprite_main_idle?: string;
-    sprite_main_cheer?: string;
-    icon?: string;
-    alt?: {
-      bg?: string;
-      sprite_main_idle?: string;
-      sprite_main_cheer?: string;
-      icon?: string;
-    };
-  };
+export function loadStory(grade: string = "1"): Story {
+  switch (grade) {
+    case "0":
+      return storyGrade0 as Story;
+    case "1":
+      return storyGrade1 as Story;
+    case "5":
+      return storyGrade5 as Story;
+    default:
+      return storyGrade1 as Story;
+  }
 }
 
-export interface StoryData {
-  meta: {
-    storyPackId: string;
-    title: string;
-    locale: string;
-    description: string;
-  };
-  prologue: any[];
-  nodes: StoryNode[];
-}
+export function findActivityByRef(
+  activityRef: string,
+  grade: string = "1"
+): Activity | null {
+  let curriculum: Curriculum;
 
-export const loadStory = (): StoryData => {
-  return storyData as StoryData;
-};
+  switch (grade) {
+    case "0":
+      curriculum = curriculumGrade0 as Curriculum;
+      break;
+    case "1":
+      curriculum = curriculumGrade1 as Curriculum;
+      break;
+    case "5":
+      curriculum = curriculumGrade5 as Curriculum;
+      break;
+    default:
+      curriculum = curriculumGrade1 as Curriculum;
+  }
 
-export const findActivityByRef = (activityRef: string): Activity | null => {
-  // Parse activityRef like "grade2.c1.l1.a1"
+  // Parse activityRef format: "gradeX.cY.lZ.aW"
   const parts = activityRef.split(".");
-  
-  if (parts.length < 4) return null;
-  
-  const chapterIndex = parseInt(parts[1].replace("c", "")) - 1;
-  const lessonIndex = parseInt(parts[2].replace("l", "")) - 1;
-  
-  const curriculum = curriculumData as any;
-  
-  if (!curriculum.chapters || !curriculum.chapters[chapterIndex]) {
-    return createFallbackActivity(activityRef);
-  }
-  
-  const chapter = curriculum.chapters[chapterIndex];
-  if (!chapter.lessons || !chapter.lessons[lessonIndex]) {
-    return createFallbackActivity(activityRef);
-  }
-  
-  const lesson = chapter.lessons[lessonIndex];
-  
+  if (parts.length !== 4) return null;
+
+  const chapterId = parts[1].replace("c", "");
+  const lessonId = parts[2].replace("l", "");
+  const activityId = parts[3].replace("a", "");
+
+  const chapter = curriculum.chapters.find((ch) => ch.id.includes(chapterId));
+  if (!chapter) return null;
+
+  const lesson = chapter.lessons.find((les) => les.id.includes(lessonId));
+  if (!lesson) return null;
+
   return {
     id: activityRef,
-    title: lesson.title || "Bài học",
-    duration: lesson.duration || 120,
-    questions: lesson.questions || [],
-    xpReward: 10,
-    timerSec: lesson.timerSec
+    questions: lesson.questions,
+    xpReward: 10, // Default XP reward
   };
-};
+}
 
-const createFallbackActivity = (ref: string): Activity => {
-  return {
-    id: ref,
-    title: "Đang cập nhật",
-    questions: [
-      {
-        id: "fallback1",
-        type: "multiple-choice",
-        question: "10 + 5 = ?",
-        options: ["15", "20", "25", "30"],
-        correctAnswer: 0,
-        explanation: "10 + 5 = 15"
-      }
-    ],
-    xpReward: 10
-  };
-};
+export function getBadgeInfo(badgeId: string | null) {
+  if (!badgeId) return null;
 
-export const getBadgeInfo = (badgeId: string) => {
-  const badges: Record<string, { name: string; icon: string; description: string }> = {
-    "addition-master": {
-      name: "Huy hiệu Tính nhanh",
-      icon: "/assets/user/icon_badge.png",
-      description: "Hoàn thành thử thách phép cộng"
+  const badges: Record<string, { name: string; description: string }> = {
+    "count-helper": {
+      name: "Trợ thủ đếm số",
+      description: "Giúp chú Cuội đếm bánh chưng",
     },
-    "subtraction-master": {
-      name: "Huy hiệu Tư duy",
-      icon: "/assets/user/icon_badge.png",
-      description: "Hoàn thành thử thách phép trừ"
+    "little-wrapper": {
+      name: "Gói bánh nhí",
+      description: "Gói bánh chưng thành thạo",
     },
-    "measurement-master": {
-      name: "Huy hiệu Đo lường",
-      icon: "/assets/user/icon_badge.png",
-      description: "Hoàn thành thử thách đo lường"
+    "cuoi-helper": {
+      name: "Bạn của Cuội",
+      description: "Hoàn thành hành trình với chú Cuội",
     },
-    "time-master": {
-      name: "Huy hiệu Thời gian",
-      icon: "/assets/user/icon_clock.png",
-      description: "Hoàn thành thử thách về thời gian"
+    "speed-math": {
+      name: "Tính toán nhanh",
+      description: "Giải phép tính thần tốc",
     },
-    "money-master": {
-      name: "Huy hiệu Tiền tệ",
-      icon: "/assets/user/icon_money.png",
-      description: "Hoàn thành thử thách về tiền"
+    "fast-thinker": {
+      name: "Suy nghĩ nhanh",
+      description: "Tốc độ tư duy đỉnh cao",
     },
-    "grade2-master": {
-      name: "Huy hiệu Giỏi toán lớp 2",
-      icon: "/assets/user/icon_badge.png",
-      description: "Hoàn thành tất cả thử thách lớp 2"
-    }
+    "memory-math": {
+      name: "Nhớ giỏi tính tài",
+      description: "Tính toán có nhớ xuất sắc",
+    },
+    "zodiac-champion": {
+      name: "Nhà vô địch",
+      description: "Chiến thắng cuộc đua 12 con giáp",
+    },
+    "decimal-master": {
+      name: "Bậc thầy số thập phân",
+      description: "Thành thạo số thập phân",
+    },
+    "wall-calculator": {
+      name: "Kỹ sư thành lũy",
+      description: "Tính toán xây thành chính xác",
+    },
+    "supply-master": {
+      name: "Quản lý hậu cần",
+      description: "Tính toán lương thảo hoàn hảo",
+    },
+    "measurement-expert": {
+      name: "Chuyên gia đo đạc",
+      description: "Đo đạc diện tích chuẩn xác",
+    },
+    "country-protector": {
+      name: "Bảo vệ tổ quốc",
+      description: "Hoàn thành sứ mệnh bảo vệ đất nước",
+    },
   };
-  
-  return badges[badgeId] || {
-    name: "Huy hiệu",
-    icon: "/assets/user/icon_badge.png",
-    description: "Hoàn thành thử thách"
-  };
-};
+
+  return (
+    badges[badgeId] || { name: "Huy hiệu", description: "Hoàn thành thử thách" }
+  );
+}
