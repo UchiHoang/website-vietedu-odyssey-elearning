@@ -5,7 +5,7 @@ const Grade5Game = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <TrangQuynhMiniGame />
+      <TrangQuynhMiniGame grade="5" />
     </div>
   );
 };

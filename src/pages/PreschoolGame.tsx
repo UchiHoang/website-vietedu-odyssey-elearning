@@ -1,11 +1,11 @@
-import { PreschoolMiniGame } from "@/components/game/PreschoolMiniGame";
+import { TrangQuynhMiniGame } from "@/components/game/TrangQuynhMiniGame";
 import Header from "@/components/Header";
 
 const PreschoolGame = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <PreschoolMiniGame />
+      <TrangQuynhMiniGame grade="0" />
     </div>
   );
 };

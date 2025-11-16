@@ -25,16 +25,23 @@ type GamePhase =
   | "questions"
   | "complete";
 
-export const TrangQuynhMiniGame = () => {
+interface TrangQuynhMiniGameProps {
+  grade?: string;
+}
+
+export const TrangQuynhMiniGame = ({ grade }: TrangQuynhMiniGameProps) => {
   const navigate = useNavigate();
-  const { grade } = useParams(); // Get grade from URL params
+  const urlParams = useParams();
 
-  console.log("Current grade from URL:", grade); // Debug log
+  // Use the prop if provided, otherwise try to get from URL params
+  const gradeFromUrl = urlParams.grade?.replace("grade", "");
+  const finalGrade = grade || gradeFromUrl || "1";
 
-  const gradeNumber = grade?.replace("grade", "") || "1";
-  console.log("Detected grade:", gradeNumber); // Debug log
+  console.log("Final grade:", finalGrade); // Debug log
 
-  const story: Story = loadStory(gradeNumber);
+  // Load the correct story based on grade
+  const story: Story = loadStory(finalGrade);
+
   const {
     progress,
     recordAnswer,
@@ -59,10 +66,10 @@ export const TrangQuynhMiniGame = () => {
 
   useEffect(() => {
     if (currentNode && gamePhase === "cutscene") {
-      const activity = findActivityByRef(currentNode.activityRef, grade || "1");
+      const activity = findActivityByRef(currentNode.activityRef, finalGrade);
       setCurrentActivity(activity);
     }
-  }, [currentNode, gamePhase, grade]);
+  }, [currentNode, gamePhase, finalGrade]);
 
   const handlePrologueComplete = () => {
     setGamePhase("level-selection");
@@ -205,9 +212,9 @@ export const TrangQuynhMiniGame = () => {
               🎉 Chúc mừng!
             </h1>
             <p className="text-xl text-muted-foreground">
-              {grade === "5"
+              {finalGrade === "5"
                 ? "Bạn đã hoàn thành bảo vệ đất nước cùng Trạng Nguyên!"
-                : grade === "1"
+                : finalGrade === "1"
                 ? "Bạn đã hoàn thành cuộc đua cùng 12 con giáp!"
                 : "Bạn đã hoàn thành hành trình đếm bánh chưng cùng chú Cuội!"}
             </p>
@@ -257,7 +264,7 @@ export const TrangQuynhMiniGame = () => {
         let sprite = undefined;
 
         // Map speaker to appropriate sprite based on grade
-        if (grade === "5") {
+        if (finalGrade === "5") {
           // Grade 5: Trạng Nguyên
           if (
             frame.speaker === "Trạng Nguyên" ||
@@ -269,7 +276,7 @@ export const TrangQuynhMiniGame = () => {
               ? currentNode.assets?.sprite_main_cheer
               : currentNode.assets?.sprite_main_idle;
           }
-        } else if (grade === "1") {
+        } else if (finalGrade === "1") {
           // Grade 1: Tí
           if (frame.speaker === "Tí") {
             const isExcited =
@@ -299,11 +306,15 @@ export const TrangQuynhMiniGame = () => {
           sprite = undefined;
         }
 
-        return {
-          ...frame,
+        // Create enhanced frame with proper type
+        const enhancedFrame: CutsceneFrame = {
+          speaker: frame.speaker,
+          text: frame.text,
           sprite,
           bg: currentNode.assets?.bg,
         };
+
+        return enhancedFrame;
       }
     );
 
