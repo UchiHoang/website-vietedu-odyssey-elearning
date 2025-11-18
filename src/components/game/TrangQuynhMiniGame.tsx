@@ -35,7 +35,7 @@ export const TrangQuynhMiniGame = ({ grade }: TrangQuynhMiniGameProps) => {
 
   // Use the prop if provided, otherwise try to get from URL params
   const gradeFromUrl = urlParams.grade?.replace("grade", "");
-  const finalGrade = grade || gradeFromUrl || "1";
+  const finalGrade = grade || gradeFromUrl || "2";
 
   console.log("Final grade:", finalGrade); // Debug log
 

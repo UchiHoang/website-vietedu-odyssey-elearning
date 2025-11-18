@@ -8,7 +8,7 @@ import { BadgeModal } from "./BadgeModal";
 import { LevelSelection } from "./LevelSelection";
 import { StoryIntro } from "./StoryIntro";
 import { loadStory, findActivityByRef, Activity, getBadgeInfo} from "@/utils/grade1Loader";
-import { useGameEngine } from "@/hooks/useGameEngine";
+import { useGameEngine } from "@/hooks/use1Engine";
 import { ArrowLeft, RotateCcw, Home } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 

@@ -1,8 +1,10 @@
 import curriculumGrade0 from "@/data/curriculum.grade0.json";
 import curriculumGrade1 from "@/data/curriculum.grade1.json";
+import curriculumGrade2 from "@/data/curriculum.grade2.json";
 import curriculumGrade5 from "@/data/curriculum.grade5.json";
 import storyGrade0 from "@/data/story.grade0.trangquynh.json";
 import storyGrade1 from "@/data/story.grade1.trangquynh.json";
+import storyGrade2 from "@/data/story.grade2.trangquynh.json";
 import storyGrade5 from "@/data/story.grade5.trangquynh.json";
 import { Story, Curriculum, Question } from "@/types/game";
 
@@ -19,6 +21,8 @@ export function loadStory(grade: string = "1"): Story {
       return storyGrade0 as Story;
     case "1":
       return storyGrade1 as Story;
+    case "2":
+      return storyGrade2 as Story;
     case "5":
       return storyGrade5 as Story;
     default:
@@ -40,6 +44,9 @@ export function findActivityByRef(
       break;
     case "1":
       curriculum = curriculumGrade1 as Curriculum;
+      break;
+    case "2":
+      curriculum = curriculumGrade2 as unknown as Curriculum;
       break;
     case "5":
       curriculum = curriculumGrade5 as Curriculum;
