@@ -49,7 +49,7 @@ export function findActivityByRef(
       curriculum = curriculumGrade2 as unknown as Curriculum;
       break;
     case "5":
-      curriculum = curriculumGrade5 as Curriculum;
+      curriculum = curriculumGrade5 as Curriculum; // <-- Lấy dữ liệu từ curriculum.grade5.json
       break;
     default:
       console.warn("Unknown grade, defaulting to grade 1:", grade);
@@ -60,19 +60,39 @@ export function findActivityByRef(
   const parts = activityRef.split(".");
   if (parts.length !== 4) return null;
 
-  const chapterId = parts[1].replace("c", "");
-  const lessonId = parts[2].replace("l", "");
-  const activityId = parts[3].replace("a", "");
+  // SỬ DỤNG INDEX (0-based) để truy cập dữ liệu, tương tự grade1Loader.ts
+  const chapterIndex = parseInt(parts[1].replace("c", "")) - 1; // c1 -> index 0
+  const lessonIndex = parseInt(parts[2].replace("l", "")) - 1; // l1 -> index 0
 
-  const chapter = curriculum.chapters.find((ch) => ch.id.includes(chapterId));
-  if (!chapter) return null;
+  if (
+    !curriculum.chapters ||
+    chapterIndex < 0 ||
+    chapterIndex >= curriculum.chapters.length
+  ) {
+    console.warn(
+      `Chapter index ${chapterIndex} not found for ref ${activityRef}`
+    );
+    return null;
+  }
 
-  const lesson = chapter.lessons.find((les) => les.id.includes(lessonId));
-  if (!lesson) return null;
+  const chapter = curriculum.chapters[chapterIndex];
+
+  if (
+    !chapter.lessons ||
+    lessonIndex < 0 ||
+    lessonIndex >= chapter.lessons.length
+  ) {
+    console.warn(
+      `Lesson index ${lessonIndex} not found for ref ${activityRef}`
+    );
+    return null;
+  }
+
+  const lesson = chapter.lessons[lessonIndex];
 
   return {
     id: activityRef,
-    questions: lesson.questions,
+    questions: lesson.questions, // <-- Trả về mảng câu hỏi
     xpReward: 10, // Default XP reward
   };
 }
