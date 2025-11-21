@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -27,9 +28,11 @@ const Hero = () => {
                 Bắt đầu chơi
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline" className="text-lg hover-scale">
-                Khám phá lớp học
-              </Button>
+              <Link to={"/data"}>
+                <Button size="lg" variant="outline" className="text-lg hover-scale">
+                  Khám phá lớp học
+                </Button>
+              </Link>
             </div>
 
             <div className="flex items-center gap-8 pt-4">
