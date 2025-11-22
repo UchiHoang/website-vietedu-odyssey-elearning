@@ -7,7 +7,7 @@ import { HudXpBar } from "./HudXpBar";
 import { BadgeModal } from "./BadgeModal";
 import { LevelSelection } from "./LevelSelection";
 import { StoryIntro } from "./StoryIntro";
-import { loadStory, findActivityByRef, Activity, getBadgeInfo, StoryData} from "@/utils/grade0Loader";
+import { loadStory, findActivityByRef, Activity, getBadgeInfo, StoryData, loadCurriculum} from "@/utils/grade0Loader";
 import { useGameEngine } from "@/hooks/use0Engine";
 import { ArrowLeft, RotateCcw, Home } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
@@ -44,8 +44,12 @@ export const PreschoolMiniGame = () => {
   if (story) {
     const currentNode = story.nodes[progress.currentNodeIndex];
     if (currentNode && gamePhase === "cutscene") {
-      const activity = findActivityByRef(currentNode.activityRef);
-      setCurrentActivity(activity);
+      // const activity = findActivityByRef(currentNode.activityRef);
+      // setCurrentActivity(activity);
+      loadCurriculum().then(curriculum => {
+        const activity = findActivityByRef(currentNode.activityRef, curriculum);
+        setCurrentActivity(activity);
+      });
     }
   }
 }, [story, progress.currentNodeIndex, gamePhase]);

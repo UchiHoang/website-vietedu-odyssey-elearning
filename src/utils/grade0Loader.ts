@@ -1,5 +1,5 @@
 //import storyData from "@/data/story.grade0.trangquynh.json";
-import curriculumData from "@/data/curriculum.grade0.json";
+//import curriculumData from "@/data/curriculum.grade0.json";
 
 export interface Question {
   id: string;
@@ -73,8 +73,26 @@ export const loadStory = async (): Promise<StoryData> => {
   throw new Error("No story data found");
 };
 
+export const loadCurriculum = async (): Promise<any> => {
+  const res = await fetch("http://localhost:3000/curriculumGrade0", {
+    cache: "no-store" // tránh cache 304
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch story");
+  }
+  const data = await res.json();
 
-export const findActivityByRef = (activityRef: string): Activity | null => {
+  console.log("Fetched data:", data); // kiểm tra dữ liệu thực tế
+
+  if (Array.isArray(data) && data.length > 0) {
+    return data[0].metadata;
+  }
+
+  throw new Error("No story data found");
+};
+
+
+export const findActivityByRef = (activityRef: string, curriculum: any): Activity | null => {
   // Parse activityRef like "grade0.c1.l1.a1"
   const parts = activityRef.split(".");
   
@@ -83,7 +101,8 @@ export const findActivityByRef = (activityRef: string): Activity | null => {
   const chapterIndex = parseInt(parts[1].replace("c", "")) - 1;
   const lessonIndex = parseInt(parts[2].replace("l", "")) - 1;
   
-  const curriculum = curriculumData as any;
+  //const curriculum = curriculumData as any;
+  //const curriculum = await loadCurriculum();
   
   if (!curriculum.chapters || !curriculum.chapters[chapterIndex]) {
     return createFallbackActivity(activityRef);
