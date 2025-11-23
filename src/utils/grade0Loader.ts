@@ -102,7 +102,6 @@ export const findActivityByRef = (activityRef: string, curriculum: any): Activit
   const lessonIndex = parseInt(parts[2].replace("l", "")) - 1;
   
   //const curriculum = curriculumData as any;
-  //const curriculum = await loadCurriculum();
   
   if (!curriculum.chapters || !curriculum.chapters[chapterIndex]) {
     return createFallbackActivity(activityRef);
