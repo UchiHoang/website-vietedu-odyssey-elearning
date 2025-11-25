@@ -28,7 +28,7 @@ export const PreschoolMiniGame = () => {
     }, []);
 
   const navigate = useNavigate();
-  const { progress, recordAnswer, nextQuestion, completeNode, resetProgress, selectNode } = useGameEngine();
+  const { progress, recordAnswer, nextQuestion, completeNode, resetProgress, selectNode } = useGameEngine('1');
   
   const [gamePhase, setGamePhase] = useState<GamePhase>("prologue");
   const [currentActivity, setCurrentActivity] = useState<Activity | null>(null);
