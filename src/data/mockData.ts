@@ -45,7 +45,7 @@ export const classes = [
     ageRange: "9-10",
     image: grade4Img,
     description: "Khám phá lịch sử qua bài toán",
-    gameRoute: null,
+    gameRoute: "/classroom/grade4",
   },
   {
     level: "Lớp 5",
