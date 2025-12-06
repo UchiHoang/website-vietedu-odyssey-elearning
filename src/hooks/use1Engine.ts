@@ -12,38 +12,38 @@ export interface GameProgress {
 
 const STORAGE_KEY = "zodiac_progress";
 
-export const useGameEngine = () => {
-  const [progress, setProgress] = useState<GameProgress>(() => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch {
-        return {
-          currentNodeIndex: 0,
-          completedNodes: [],
-          totalXp: 0,
-          earnedBadges: [],
-          currentQuestionIndex: 0,
-          correctAnswers: 0,
-          incorrectAnswers: 0
-        };
-      }
-    }
-    return {
-      currentNodeIndex: 0,
-      completedNodes: [],
-      totalXp: 0,
-      earnedBadges: [],
-      currentQuestionIndex: 0,
-      correctAnswers: 0,
-      incorrectAnswers: 0
-    };
-  });
+const defaultProgress: GameProgress = {
+  currentNodeIndex: 0,
+  completedNodes: [],
+  totalXp: 0,
+  earnedBadges: [],
+  currentQuestionIndex: 0,
+  correctAnswers: 0,
+  incorrectAnswers: 0
+};
 
+export const useGameEngine = (id: string) => {
+
+  const [progress, setProgress] = useState<GameProgress | null>(defaultProgress);
+
+  // Load từ backend
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-  }, [progress]);
+    fetch(`http://localhost:3000/progressGrade1/${id}`)
+      .then(res => res.json())
+      .then(setProgress)
+      .catch(console.error);
+  }, [id]);
+
+  // Mỗi khi progress thay đổi thì update backend
+  useEffect(() => {
+    if (progress) {
+      fetch(`http://localhost:3000/progressGrade1/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(progress),
+      });
+    }
+  }, [progress, id]);
 
   const awardXp = useCallback((amount: number) => {
     setProgress(prev => ({

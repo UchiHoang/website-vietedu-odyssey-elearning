@@ -26,7 +26,7 @@ export const useGameEngine = () => {
           earnedBadges: [],
           currentQuestionIndex: 0,
           correctAnswers: 0,
-          incorrectAnswers: 0
+          incorrectAnswers: 0,
         };
       }
     }
@@ -37,7 +37,7 @@ export const useGameEngine = () => {
       earnedBadges: [],
       currentQuestionIndex: 0,
       correctAnswers: 0,
-      incorrectAnswers: 0
+      incorrectAnswers: 0,
     };
   });
 
@@ -46,58 +46,68 @@ export const useGameEngine = () => {
   }, [progress]);
 
   const awardXp = useCallback((amount: number) => {
-    setProgress(prev => ({
+    setProgress((prev) => ({
       ...prev,
-      totalXp: prev.totalXp + amount
+      totalXp: prev.totalXp + amount,
     }));
   }, []);
 
   const awardBadge = useCallback((badgeId: string) => {
-    setProgress(prev => {
+    setProgress((prev) => {
       if (prev.earnedBadges.includes(badgeId)) return prev;
       return {
         ...prev,
-        earnedBadges: [...prev.earnedBadges, badgeId]
+        earnedBadges: [...prev.earnedBadges, badgeId],
       };
     });
   }, []);
 
-  const recordAnswer = useCallback((isCorrect: boolean, xpReward: number = 10) => {
-    setProgress(prev => ({
-      ...prev,
-      correctAnswers: isCorrect ? prev.correctAnswers + 1 : prev.correctAnswers,
-      incorrectAnswers: !isCorrect ? prev.incorrectAnswers + 1 : prev.incorrectAnswers
-    }));
-    
-    if (isCorrect) {
-      awardXp(xpReward);
-    }
-  }, [awardXp]);
+  const recordAnswer = useCallback(
+    (isCorrect: boolean, xpReward: number = 10) => {
+      setProgress((prev) => ({
+        ...prev,
+        correctAnswers: isCorrect
+          ? prev.correctAnswers + 1
+          : prev.correctAnswers,
+        incorrectAnswers: !isCorrect
+          ? prev.incorrectAnswers + 1
+          : prev.incorrectAnswers,
+      }));
+
+      if (isCorrect) {
+        awardXp(xpReward);
+      }
+    },
+    [awardXp]
+  );
 
   const nextQuestion = useCallback(() => {
-    setProgress(prev => ({
+    setProgress((prev) => ({
       ...prev,
-      currentQuestionIndex: prev.currentQuestionIndex + 1
+      currentQuestionIndex: prev.currentQuestionIndex + 1,
     }));
   }, []);
 
-  const completeNode = useCallback((nodeId: string, badgeId?: string) => {
-    setProgress(prev => {
-      const newProgress = {
-        ...prev,
-        completedNodes: [...prev.completedNodes, nodeId],
-        currentNodeIndex: prev.currentNodeIndex + 1,
-        currentQuestionIndex: 0,
-        correctAnswers: 0,
-        incorrectAnswers: 0
-      };
-      return newProgress;
-    });
-    
-    if (badgeId) {
-      awardBadge(badgeId);
-    }
-  }, [awardBadge]);
+  const completeNode = useCallback(
+    (nodeId: string, badgeId?: string) => {
+      setProgress((prev) => {
+        const newProgress = {
+          ...prev,
+          completedNodes: [...prev.completedNodes, nodeId],
+          currentNodeIndex: prev.currentNodeIndex + 1,
+          currentQuestionIndex: 0,
+          correctAnswers: 0,
+          incorrectAnswers: 0,
+        };
+        return newProgress;
+      });
+
+      if (badgeId) {
+        awardBadge(badgeId);
+      }
+    },
+    [awardBadge]
+  );
 
   const resetProgress = useCallback(() => {
     const newProgress = {
@@ -107,19 +117,19 @@ export const useGameEngine = () => {
       earnedBadges: [],
       currentQuestionIndex: 0,
       correctAnswers: 0,
-      incorrectAnswers: 0
+      incorrectAnswers: 0,
     };
     setProgress(newProgress);
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newProgress));
   }, []);
 
   const selectNode = useCallback((nodeIndex: number) => {
-    setProgress(prev => ({
+    setProgress((prev) => ({
       ...prev,
       currentNodeIndex: nodeIndex,
       currentQuestionIndex: 0,
       correctAnswers: 0,
-      incorrectAnswers: 0
+      incorrectAnswers: 0,
     }));
   }, []);
 
@@ -131,6 +141,6 @@ export const useGameEngine = () => {
     nextQuestion,
     completeNode,
     resetProgress,
-    selectNode
+    selectNode,
   };
 };

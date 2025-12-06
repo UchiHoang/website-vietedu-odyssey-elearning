@@ -7,17 +7,28 @@ import { HudXpBar } from "./HudXpBar";
 import { BadgeModal } from "./BadgeModal";
 import { LevelSelection } from "./LevelSelection";
 import { StoryIntro } from "./StoryIntro";
-import { loadStory, findActivityByRef, Activity, getBadgeInfo} from "@/utils/grade0Loader";
+import { loadStory, findActivityByRef, Activity, getBadgeInfo, StoryData, loadCurriculum} from "@/utils/grade0Loader";
 import { useGameEngine } from "@/hooks/use0Engine";
 import { ArrowLeft, RotateCcw, Home } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 type GamePhase = "prologue" | "level-selection" | "cutscene" | "questions" | "complete";
 
+
 export const PreschoolMiniGame = () => {
+  //const story = loadStory();
+  const [story, setStory] = useState<StoryData | null>(null);
+   useEffect(() => {
+    loadStory()
+        .then(story => {
+        console.log("Loaded story:", story);
+        setStory(story);
+        })
+        .catch(console.error);
+    }, []);
+
   const navigate = useNavigate();
-  const story = loadStory();
-  const { progress, recordAnswer, nextQuestion, completeNode, resetProgress, selectNode } = useGameEngine();
+  const { progress, recordAnswer, nextQuestion, completeNode, resetProgress, selectNode } = useGameEngine('1');
   
   const [gamePhase, setGamePhase] = useState<GamePhase>("prologue");
   const [currentActivity, setCurrentActivity] = useState<Activity | null>(null);
@@ -25,16 +36,27 @@ export const PreschoolMiniGame = () => {
   const [levelPerformance, setLevelPerformance] = useState<"excellent" | "good" | "retry">("good");
   const [earnedXpThisLevel, setEarnedXpThisLevel] = useState(0);
   const [completedBadgeId, setCompletedBadgeId] = useState<string | null>(null);
-
-  const currentNode = story.nodes[progress.currentNodeIndex];
-  const isGameComplete = progress.currentNodeIndex >= story.nodes.length;
-
+ 
+  const isGameComplete = progress.currentNodeIndex >= (story?.nodes?.length ?? 0);
+  
+  const currentNode = story?.nodes?.[progress.currentNodeIndex];
   useEffect(() => {
+  if (story) {
+    const currentNode = story.nodes[progress.currentNodeIndex];
     if (currentNode && gamePhase === "cutscene") {
-      const activity = findActivityByRef(currentNode.activityRef);
-      setCurrentActivity(activity);
+      // const activity = findActivityByRef(currentNode.activityRef);
+      // setCurrentActivity(activity);
+      loadCurriculum().then(curriculum => {
+        const activity = findActivityByRef(currentNode.activityRef, curriculum);
+        setCurrentActivity(activity);
+      });
     }
-  }, [currentNode, gamePhase]);
+  }
+}, [story, progress.currentNodeIndex, gamePhase]);
+
+if (!story) {
+  return <p>Loading story...</p>;
+}
 
   const handlePrologueComplete = () => {
     setGamePhase("level-selection");
@@ -129,7 +151,7 @@ export const PreschoolMiniGame = () => {
 
   // Prologue Phase
   if (gamePhase === "prologue") {
-    return <StoryIntro prologue={story.prologue} onComplete={handlePrologueComplete} />;
+    return <StoryIntro prologue={story?.prologue} onComplete={handlePrologueComplete} />;
   }
 
   // Level Selection Phase

@@ -24,3 +24,4 @@ npm run dev
 - React + TypeScript
 - Tailwind CSS
 - shadcn-ui components
+- NodeJS + Supabase

@@ -1,5 +1,5 @@
-import storyData from "@/data/story.grade1.trangquynh.json";
-import curriculumData from "@/data/curriculum.grade1.json";
+//import storyData from "@/data/story.grade0.trangquynh.json";
+//import curriculumData from "@/data/curriculum.grade0.json";
 
 export interface Question {
   id: string;
@@ -53,11 +53,46 @@ export interface StoryData {
   nodes: StoryNode[];
 }
 
-export const loadStory = (): StoryData => {
-  return storyData as StoryData;
+// Hàm bất đồng bộ để fetch từ backend
+export const loadStory = async (): Promise<StoryData> => {
+  const res = await fetch("http://localhost:3000/storyGrade1", {
+    cache: "no-store" // tránh cache 304
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch story");
+  }
+  const data = await res.json();
+
+  console.log("Fetched data:", data); // kiểm tra dữ liệu thực tế
+
+  // Nếu backend trả về mảng có 1 phần tử
+  if (Array.isArray(data) && data.length > 0) {
+    return data[0].metadata as StoryData;
+  }
+
+  throw new Error("No story data found");
 };
 
-export const findActivityByRef = (activityRef: string): Activity | null => {
+export const loadCurriculum = async (): Promise<any> => {
+  const res = await fetch("http://localhost:3000/curriculumGrade1", {
+    cache: "no-store" // tránh cache 304
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch story");
+  }
+  const data = await res.json();
+
+  console.log("Fetched data:", data); // kiểm tra dữ liệu thực tế
+
+  if (Array.isArray(data) && data.length > 0) {
+    return data[0].metadata;
+  }
+
+  throw new Error("No story data found");
+};
+
+
+export const findActivityByRef = (activityRef: string, curriculum: any): Activity | null => {
   // Parse activityRef like "grade0.c1.l1.a1"
   const parts = activityRef.split(".");
   
@@ -66,7 +101,7 @@ export const findActivityByRef = (activityRef: string): Activity | null => {
   const chapterIndex = parseInt(parts[1].replace("c", "")) - 1;
   const lessonIndex = parseInt(parts[2].replace("l", "")) - 1;
   
-  const curriculum = curriculumData as any;
+  //const curriculum = curriculumData as any;
   
   if (!curriculum.chapters || !curriculum.chapters[chapterIndex]) {
     return createFallbackActivity(activityRef);
@@ -135,9 +170,9 @@ export const getBadgeInfo = (badgeId: string) => {
       description: "Hoàn thành thử thách về tiền"
     },
     "grade2-master": {
-      name: "Huy hiệu Giỏi toán lớp 1",
+      name: "Huy hiệu Giỏi toán mẫu giáo",
       icon: "/assets/user/icon_badge.png",
-      description: "Hoàn thành tất cả thử thách lớp 1"
+      description: "Hoàn thành tất cả thử thách mẫu giáo"
     }
   };
   
