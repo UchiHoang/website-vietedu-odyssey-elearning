@@ -7,12 +7,14 @@ import Index from "./pages/Index";
 import Lessons from "./pages/Lessons";
 import Auth from "./pages/Auth";
 import TrangQuynhGame from "./pages/TrangQuynhGame";
-import SongHongGame from "./pages/SongHongGame";
-import ComingSoon from "./pages/ComingSoon";
+import Profile from "./pages/Profile";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
+import SongHongGame from "./pages/SongHongGame";
 import PreschoolGame from "./pages/PreschoolGame";
 import Grade1Game from "./pages/Grade1Game";
 import Grade5Game from "./pages/Grade5Game";
+
 
 const queryClient = new QueryClient();
 
@@ -26,9 +28,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/profile" element={<Profile />} />
+                    <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/classroom/trangquynh" element={<TrangQuynhGame />} />
           <Route path="/classroom/songhong" element={<SongHongGame />} />
-          <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="/classroom/preschool" element={<PreschoolGame />} />
           <Route path="/classroom/grade1" element={<Grade1Game />} />
           <Route path="/classroom/grade5" element={<Grade5Game />} />

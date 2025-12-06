@@ -1,7 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, GraduationCap } from "lucide-react";
-import { useState } from "react";
+import { Menu, GraduationCap, LogOut, User, Shield } from "lucide-react";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 interface HeaderProps {
   onRoleChange?: (role: "student" | "teacher" | "admin") => void;
@@ -9,28 +20,88 @@ interface HeaderProps {
 }
 
 const Header = ({ onRoleChange, currentRole = "student" }: HeaderProps) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+  // dùng đúng kiểu state như yêu cầu
+  const [user, setUser] = useState<any>(null);
+  const [profile, setProfile] = useState<any>(null);
+  const [userRole, setUserRole] = useState<string | null>(null);
+
+  // Scroll mượt
+  const navigateAndScroll = (id: string) => {
+    if (window.location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 350);
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement, MouseEvent>,
-    sectionId: string
-  ) => {
-    e.preventDefault();
-    if (window.location.pathname === "/") {
-      scrollToSection(sectionId);
-      setMobileMenuOpen(false);
+  // Load profile + role
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      setUser(session?.user ?? null);
+      if (session?.user) {
+        loadProfile(session.user.id);
+        loadUserRole(session.user.id);
+      } else {
+        setProfile(null);
+        setUserRole(null);
+      }
+    });
+
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+      if (session?.user) {
+        loadProfile(session.user.id);
+        loadUserRole(session.user.id);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const loadProfile = async (userId: string) => {
+    const { data } = await supabase
+      .from("profiles")
+      .select("*")
+      .eq("id", userId)
+      .single();
+
+    setProfile(data);
+  };
+
+  const loadUserRole = async (userId: string) => {
+    const { data } = await supabase
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", userId)
+      .single();
+
+    setUserRole(data?.role || null);
+  };
+
+  const isTeacherOrAdmin = userRole === "admin" || userRole === "teacher";
+
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      toast({
+        title: "Lỗi",
+        description: "Không thể đăng xuất",
+        variant: "destructive",
+      });
     } else {
-      navigate(`/#${sectionId}`);
-      // Delay to allow route change, then attempt smooth scroll
-      setTimeout(() => scrollToSection(sectionId), 0);
+      toast({
+        title: "Đã đăng xuất",
+        description: "Hẹn gặp lại bạn!",
+      });
+      navigate("/");
     }
   };
 
@@ -46,55 +117,83 @@ const Header = ({ onRoleChange, currentRole = "student" }: HeaderProps) => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <a
-            href="#home"
-            onClick={(e) => handleNavClick(e, "home")}
-            className="text-foreground hover:text-primary font-medium transition-colors"
-          >
+          <Link to="/" className="text-foreground hover:text-primary font-medium transition-colors">
             Trang chủ
-          </a>
+          </Link>
+
           <Link to="/lessons" className="text-foreground hover:text-primary font-medium transition-colors">
             Bài giảng
           </Link>
-          <a
-            href="#about"
-            onClick={(e) => handleNavClick(e, "about")}
-            className="text-foreground hover:text-primary font-medium transition-colors"
-          >
+
+          <button onClick={() => navigateAndScroll("about")}
+            className="text-foreground hover:text-primary font-medium transition-colors">
             Giới thiệu
-          </a>
-          <a
-            href="#classes"
-            onClick={(e) => handleNavClick(e, "classes")}
-            className="text-foreground hover:text-primary font-medium transition-colors"
-          >
+          </button>
+
+          <button onClick={() => navigateAndScroll("classes")}
+            className="text-foreground hover:text-primary font-medium transition-colors">
             Lớp học
-          </a>
-          <a
-            href="#leaderboard"
-            onClick={(e) => handleNavClick(e, "leaderboard")}
-            className="text-foreground hover:text-primary font-medium transition-colors"
-          >
+          </button>
+
+          <button onClick={() => navigateAndScroll("leaderboard")}
+            className="text-foreground hover:text-primary font-medium transition-colors">
             Xếp hạng
-          </a>
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, "contact")}
-            className="text-foreground hover:text-primary font-medium transition-colors"
-          >
+          </button>
+
+          <button onClick={() => navigateAndScroll("contact")}
+            className="text-foreground hover:text-primary font-medium transition-colors">
             Liên hệ
-          </a>
+          </button>
         </nav>
 
+        {/* User + Mobile toggle */}
         <div className="flex items-center gap-3">
-          <Button className="hidden md:flex" asChild>
-            <Link to="/auth">Đăng nhập</Link>
-          </Button>
+          {user ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="hidden md:flex items-center gap-2">
+                  <Avatar className="h-8 w-8">
+                    <AvatarFallback>
+                      {profile?.avatar || "👤"}
+                    </AvatarFallback>
+                  </Avatar>
+                  <span>{profile?.display_name || user.email?.split("@")[0]}</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuLabel>Tài khoản của tôi</DropdownMenuLabel>
+                <DropdownMenuSeparator />
 
-          <button
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
+                <DropdownMenuItem onClick={() => navigate("/profile")} className="cursor-pointer">
+                  <User className="mr-2 h-4 w-4" />
+                  Hồ sơ cá nhân
+                </DropdownMenuItem>
+
+                {isTeacherOrAdmin && (
+                  <DropdownMenuItem onClick={() => navigate("/admin")} className="cursor-pointer">
+                    <Shield className="mr-2 h-4 w-4" />
+                    Quản trị giáo viên
+                  </DropdownMenuItem>
+                )}
+
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  className="cursor-pointer text-destructive"
+                  onClick={handleLogout}
+                >
+                  <LogOut className="mr-2 h-4 w-4" />
+                  Đăng xuất
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <Button className="hidden md:flex" asChild>
+              <Link to="/auth">Đăng nhập</Link>
+            </Button>
+          )}
+
+          {/* Mobile menu toggle */}
+          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <Menu className="h-6 w-6" />
           </button>
         </div>
@@ -103,47 +202,59 @@ const Header = ({ onRoleChange, currentRole = "student" }: HeaderProps) => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-card p-4 space-y-3">
-          <a
-            href="#home"
-            onClick={(e) => handleNavClick(e, "home")}
-            className="block py-2 text-foreground hover:text-primary"
-          >
+          <button onClick={() => navigateAndScroll("home")} className="block py-2 text-foreground hover:text-primary">
             Trang chủ
-          </a>
+          </button>
+
           <Link to="/lessons" className="block py-2 text-foreground hover:text-primary">
             Bài giảng
           </Link>
-          <a
-            href="#about"
-            onClick={(e) => handleNavClick(e, "about")}
-            className="block py-2 text-foreground hover:text-primary"
-          >
+
+          <button onClick={() => navigateAndScroll("about")} className="block py-2 text-foreground hover:text-primary">
             Giới thiệu
-          </a>
-          <a
-            href="#classes"
-            onClick={(e) => handleNavClick(e, "classes")}
-            className="block py-2 text-foreground hover:text-primary"
-          >
+          </button>
+
+          <button onClick={() => navigateAndScroll("classes")} className="block py-2 text-foreground hover:text-primary">
             Lớp học
-          </a>
-          <a
-            href="#leaderboard"
-            onClick={(e) => handleNavClick(e, "leaderboard")}
-            className="block py-2 text-foreground hover:text-primary"
-          >
+          </button>
+
+          <button onClick={() => navigateAndScroll("leaderboard")} className="block py-2 text-foreground hover:text-primary">
             Xếp hạng
-          </a>
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, "contact")}
-            className="block py-2 text-foreground hover:text-primary"
-          >
+          </button>
+
+          <button onClick={() => navigateAndScroll("contact")} className="block py-2 text-foreground hover:text-primary">
             Liên hệ
-          </a>
-          <Button className="w-full" asChild>
-            <Link to="/auth">Đăng nhập</Link>
-          </Button>
+          </button>
+
+          {user ? (
+            <>
+              <div className="py-2 border-t">
+                <p className="text-sm font-medium">
+                  {profile?.display_name || user.email?.split("@")[0]}
+                </p>
+                <p className="text-xs text-muted-foreground">{user.email}</p>
+              </div>
+
+              <Link to="/profile" className="block py-2 text-foreground hover:text-primary">
+                Hồ sơ cá nhân
+              </Link>
+
+              {isTeacherOrAdmin && (
+                <Link to="/admin" className="block py-2 text-primary font-medium">
+                  Quản trị giáo viên
+                </Link>
+              )}
+
+              <Button className="w-full mt-2" variant="destructive" onClick={handleLogout}>
+                <LogOut className="mr-2 h-4 w-4" />
+                Đăng xuất
+              </Button>
+            </>
+          ) : (
+            <Button className="w-full" asChild>
+              <Link to="/auth">Đăng nhập</Link>
+            </Button>
+          )}
         </div>
       )}
     </header>

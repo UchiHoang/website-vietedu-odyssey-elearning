@@ -17,15 +17,44 @@ const Leaderboard = () => {
   const remaining = leaderboard.slice(3, 10);
 
   const getRankStyle = (rank: number) => {
+    // Provide explicit vertical offsets and slight scale differences so
+    // podiums visually stack: 1 > 2 > 3. We prefer explicit translate classes
+    // so the islands and avatars appear at slightly different heights.
     switch (rank) {
       case 1:
-        return "scale-110 -translate-y-4";
+        return "-translate-y-8 scale-110"; // highest, slightly larger
       case 2:
-        return "scale-100 -translate-y-2";
+        return "-translate-y-4 scale-105"; // middle
       case 3:
-        return "scale-95";
+        return "-translate-y-1 scale-100"; // lowest
       default:
         return "";
+    }
+  };
+
+  const getIslandSize = (rank: number) => {
+    switch (rank) {
+      case 1:
+        return "w-48 h-40 md:w-56 md:h-44";
+      case 2:
+        return "w-44 h-36 md:w-52 md:h-40";
+      case 3:
+        return "w-40 h-32 md:w-44 md:h-36";
+      default:
+        return "w-36 h-28 md:w-40 md:h-32";
+    }
+  };
+
+  const getAvatarSize = (rank: number) => {
+    switch (rank) {
+      case 1:
+        return "w-24 h-24 md:w-28 md:h-28 text-5xl";
+      case 2:
+        return "w-20 h-20 md:w-24 md:h-24 text-4xl";
+      case 3:
+        return "w-18 h-18 md:w-20 md:h-20 text-3xl";
+      default:
+        return "w-12 h-12 text-2xl";
     }
   };
 
@@ -115,17 +144,21 @@ const Leaderboard = () => {
                   )}
 
                   {/* Avatar with rank badge - with float animation */}
-                  <div className="relative mb-4 animate-float" style={{ animationDelay: `${idx * 0.5}s` }}>
-                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-full ${getRankBadge(actualRank)} flex items-center justify-center border-4 border-white shadow-2xl`}>
-                      <span className="text-4xl">{student.avatar}</span>
+                  <div className="relative mb-2 animate-float" style={{ animationDelay: `${idx * 0.5}s` }}>
+                    <div className={`rounded-full ${getRankBadge(actualRank)} flex items-center justify-center border-4 border-white shadow-2xl ${getAvatarSize(actualRank)}`}>
+                      <span className="leading-none">{student.avatar}</span>
                     </div>
-                    <div className={`absolute -bottom-2 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full ${getRankBadge(actualRank)} flex items-center justify-center border-3 border-white font-bold text-2xl text-white`}>
+
+                    {/* Smaller circular rank badge positioned at the avatar's top-right */}
+                    <div className={`absolute -top-2 -right-2 ${getRankBadge(actualRank)} flex items-center justify-center border-2 border-white font-bold text-white ${
+                      actualRank === 1 ? 'w-9 h-9 text-sm md:w-10 md:h-10 md:text-base' : actualRank === 2 ? 'w-8 h-8 text-sm' : 'w-7 h-7 text-xs'
+                    } rounded-full`}>
                       {actualRank}
                     </div>
                   </div>
 
                   {/* Student info - with float animation */}
-                  <div className="text-center mb-3 px-2 animate-float" style={{ animationDelay: `${idx * 0.5}s` }}>
+                  <div className="text-center mb-1 px-2 animate-float" style={{ animationDelay: `${idx * 0.5}s` }}>
                     <h3 className="font-heading font-bold text-base md:text-lg text-white drop-shadow-md mb-1">
                       {student.name}
                     </h3>
@@ -135,11 +168,11 @@ const Leaderboard = () => {
                   </div>
 
                   {/* Floating Island platform */}
-                  <div className="relative animate-float" style={{ animationDelay: `${idx * 0.5}s` }}>
+                  <div className="relative animate-float -mt-6" style={{ animationDelay: `${idx * 0.5}s` }}>
                     <img 
                       src="/assets/floating-island.png" 
                       alt="Floating Island" 
-                      className="w-36 h-32 md:w-44 md:h-36 object-contain drop-shadow-2xl"
+                      className={`${getIslandSize(actualRank)} object-contain drop-shadow-2xl`}
                     />
                     <div className="absolute inset-x-0 top-1/3 text-center">
                       <span className="font-bold text-5xl md:text-6xl text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]">

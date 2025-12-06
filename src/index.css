@@ -126,4 +126,15 @@ All colors MUST be HSL.
   .card-shadow {
     @apply shadow-md hover:shadow-xl transition-shadow duration-300;
   }
+  /* Floating animation used by leaderboard (gentle vertical float) */
+  @keyframes float-y {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+
+  .animate-float {
+    animation: float-y 3.5s ease-in-out infinite;
+    will-change: transform;
+  }
 }

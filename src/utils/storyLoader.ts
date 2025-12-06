@@ -1,157 +1,207 @@
-import curriculumGrade0 from "@/data/curriculum.grade0.json";
-import curriculumGrade1 from "@/data/curriculum.grade1.json";
-import curriculumGrade2 from "@/data/curriculum.grade2.json";
-import curriculumGrade5 from "@/data/curriculum.grade5.json";
-import storyGrade0 from "@/data/story.grade0.trangquynh.json";
-import storyGrade1 from "@/data/story.grade1.trangquynh.json";
-import storyGrade2 from "@/data/story.grade2.trangquynh.json";
-import storyGrade5 from "@/data/story.grade5.trangquynh.json";
-import { Story, Curriculum, Question } from "@/types/game";
+import storyData from "@/data/story.grade2.trangquynh.json";
+import curriculumData from "@/data/curriculum.grade2.json";
+
+export interface Question {
+  id: string;
+  type: "multiple-choice" | "matching-pairs" | "drag-drop" | "fill-blank" | "counting";
+  question: string;
+  options?: string[];
+  correctAnswer?: number;
+  explanation?: string;
+  
+  // For matching-pairs
+  pairs?: {
+    id: string;
+    left: string;
+    right: string;
+    leftImage?: string;
+    rightImage?: string;
+  }[];
+  
+  // For drag-drop
+  dragItems?: {
+    id: string;
+    content: string;
+    image?: string;
+    correctSlot: string;
+  }[];
+  dropSlots?: {
+    id: string;
+    label: string;
+    image?: string;
+  }[];
+  
+  // For fill-blank
+  blanks?: {
+    position: number;
+    answer: string;
+    placeholder?: string;
+  }[];
+  
+  // For counting
+  countingItems?: {
+    image: string;
+    count: number;
+  }[];
+  countingAnswer?: number;
+}
 
 export interface Activity {
   id: string;
+  title: string;
+  duration?: number;
   questions: Question[];
   xpReward?: number;
+  timerSec?: number;
 }
 
-export function loadStory(grade: string = "1"): Story {
-  console.log("Loading story for grade:", grade); // Debug log
-  switch (grade) {
-    case "0":
-      return storyGrade0 as Story;
-    case "1":
-      return storyGrade1 as Story;
-    case "2":
-      return storyGrade2 as Story;
-    case "5":
-      return storyGrade5 as Story;
-    default:
-      console.warn("Unknown grade, defaulting to grade 1:", grade);
-      return storyGrade1 as Story;
-  }
+export interface StoryNode {
+  id: string;
+  order: number;
+  title: string;
+  mathTopic: string;
+  objective: string;
+  cutscene: any[];
+  activityRef: string;
+  badgeOnComplete?: string;
+  assets?: {
+    bg?: string;
+    sprite_main_idle?: string;
+    sprite_main_cheer?: string;
+    icon?: string;
+    alt?: {
+      bg?: string;
+      sprite_main_idle?: string;
+      sprite_main_cheer?: string;
+      icon?: string;
+    };
+  };
 }
 
-export function findActivityByRef(
-  activityRef: string,
-  grade: string = "1"
-): Activity | null {
-  console.log("Finding activity for grade:", grade, "ref:", activityRef); // Debug log
-  let curriculum: Curriculum;
+export interface StoryData {
+  meta: {
+    storyPackId: string;
+    title: string;
+    locale: string;
+    description: string;
+  };
+  prologue: any[];
+  nodes: StoryNode[];
+}
 
-  switch (grade) {
-    case "0":
-      curriculum = curriculumGrade0 as Curriculum;
-      break;
-    case "1":
-      curriculum = curriculumGrade1 as Curriculum;
-      break;
-    case "2":
-      curriculum = curriculumGrade2 as unknown as Curriculum;
-      break;
-    case "5":
-      curriculum = curriculumGrade5 as Curriculum; // <-- Lấy dữ liệu từ curriculum.grade5.json
-      break;
-    default:
-      console.warn("Unknown grade, defaulting to grade 1:", grade);
-      curriculum = curriculumGrade1 as Curriculum;
+// Cache story data - only parse JSON once
+let cachedStory: StoryData | null = null;
+
+export const loadStory = (): StoryData => {
+  if (!cachedStory) {
+    cachedStory = storyData as StoryData;
+  }
+  return cachedStory;
+};
+
+// Cache activities to avoid repeated parsing
+const activityCache = new Map<string, Activity>();
+
+export const findActivityByRef = (activityRef: string): Activity | null => {
+  // Return cached activity if available
+  if (activityCache.has(activityRef)) {
+    return activityCache.get(activityRef)!;
   }
 
-  // Parse activityRef format: "gradeX.cY.lZ.aW"
+  // Parse activityRef like "grade2.c1.l1.a1"
   const parts = activityRef.split(".");
-  if (parts.length !== 4) return null;
-
-  // SỬ DỤNG INDEX (0-based) để truy cập dữ liệu, tương tự grade1Loader.ts
-  const chapterIndex = parseInt(parts[1].replace("c", "")) - 1; // c1 -> index 0
-  const lessonIndex = parseInt(parts[2].replace("l", "")) - 1; // l1 -> index 0
-
-  if (
-    !curriculum.chapters ||
-    chapterIndex < 0 ||
-    chapterIndex >= curriculum.chapters.length
-  ) {
-    console.warn(
-      `Chapter index ${chapterIndex} not found for ref ${activityRef}`
-    );
-    return null;
+  
+  if (parts.length < 4) return null;
+  
+  const chapterIndex = parseInt(parts[1].replace("c", "")) - 1;
+  const lessonIndex = parseInt(parts[2].replace("l", "")) - 1;
+  
+  const curriculum = curriculumData as any;
+  
+  if (!curriculum.chapters || !curriculum.chapters[chapterIndex]) {
+    const fallback = createFallbackActivity(activityRef);
+    activityCache.set(activityRef, fallback);
+    return fallback;
   }
-
+  
   const chapter = curriculum.chapters[chapterIndex];
-
-  if (
-    !chapter.lessons ||
-    lessonIndex < 0 ||
-    lessonIndex >= chapter.lessons.length
-  ) {
-    console.warn(
-      `Lesson index ${lessonIndex} not found for ref ${activityRef}`
-    );
-    return null;
+  if (!chapter.lessons || !chapter.lessons[lessonIndex]) {
+    const fallback = createFallbackActivity(activityRef);
+    activityCache.set(activityRef, fallback);
+    return fallback;
   }
-
+  
   const lesson = chapter.lessons[lessonIndex];
-
-  return {
+  
+  const activity: Activity = {
     id: activityRef,
-    questions: lesson.questions, // <-- Trả về mảng câu hỏi
-    xpReward: 10, // Default XP reward
-  };
-}
-
-export function getBadgeInfo(badgeId: string | null) {
-  if (!badgeId) return null;
-
-  const badges: Record<string, { name: string; description: string }> = {
-    "count-helper": {
-      name: "Trợ thủ đếm số",
-      description: "Giúp chú Cuội đếm bánh chưng",
-    },
-    "little-wrapper": {
-      name: "Gói bánh nhí",
-      description: "Gói bánh chưng thành thạo",
-    },
-    "cuoi-helper": {
-      name: "Bạn của Cuội",
-      description: "Hoàn thành hành trình với chú Cuội",
-    },
-    "speed-math": {
-      name: "Tính toán nhanh",
-      description: "Giải phép tính thần tốc",
-    },
-    "fast-thinker": {
-      name: "Suy nghĩ nhanh",
-      description: "Tốc độ tư duy đỉnh cao",
-    },
-    "memory-math": {
-      name: "Nhớ giỏi tính tài",
-      description: "Tính toán có nhớ xuất sắc",
-    },
-    "zodiac-champion": {
-      name: "Nhà vô địch",
-      description: "Chiến thắng cuộc đua 12 con giáp",
-    },
-    "decimal-master": {
-      name: "Bậc thầy số thập phân",
-      description: "Thành thạo số thập phân",
-    },
-    "wall-calculator": {
-      name: "Kỹ sư thành lũy",
-      description: "Tính toán xây thành chính xác",
-    },
-    "supply-master": {
-      name: "Quản lý hậu cần",
-      description: "Tính toán lương thảo hoàn hảo",
-    },
-    "measurement-expert": {
-      name: "Chuyên gia đo đạc",
-      description: "Đo đạc diện tích chuẩn xác",
-    },
-    "country-protector": {
-      name: "Bảo vệ tổ quốc",
-      description: "Hoàn thành sứ mệnh bảo vệ đất nước",
-    },
+    title: lesson.title || "Bài học",
+    duration: lesson.duration || 120,
+    questions: lesson.questions || [],
+    xpReward: 10,
+    timerSec: lesson.timerSec
   };
 
-  return (
-    badges[badgeId] || { name: "Huy hiệu", description: "Hoàn thành thử thách" }
-  );
-}
+  // Cache the result
+  activityCache.set(activityRef, activity);
+  return activity;
+};
+
+const createFallbackActivity = (ref: string): Activity => {
+  return {
+    id: ref,
+    title: "Đang cập nhật",
+    questions: [
+      {
+        id: "fallback1",
+        type: "multiple-choice",
+        question: "10 + 5 = ?",
+        options: ["15", "20", "25", "30"],
+        correctAnswer: 0,
+        explanation: "10 + 5 = 15"
+      }
+    ],
+    xpReward: 10
+  };
+};
+
+export const getBadgeInfo = (badgeId: string) => {
+  const badges: Record<string, { name: string; icon: string; description: string }> = {
+    "addition-master": {
+      name: "Huy hiệu Tính nhanh",
+      icon: "/assets/user/icon_badge.png",
+      description: "Hoàn thành thử thách phép cộng"
+    },
+    "subtraction-master": {
+      name: "Huy hiệu Tư duy",
+      icon: "/assets/user/icon_badge.png",
+      description: "Hoàn thành thử thách phép trừ"
+    },
+    "measurement-master": {
+      name: "Huy hiệu Đo lường",
+      icon: "/assets/user/icon_badge.png",
+      description: "Hoàn thành thử thách đo lường"
+    },
+    "time-master": {
+      name: "Huy hiệu Thời gian",
+      icon: "/assets/user/icon_clock.png",
+      description: "Hoàn thành thử thách về thời gian"
+    },
+    "money-master": {
+      name: "Huy hiệu Tiền tệ",
+      icon: "/assets/user/icon_money.png",
+      description: "Hoàn thành thử thách về tiền"
+    },
+    "grade2-master": {
+      name: "Huy hiệu Giỏi toán lớp 2",
+      icon: "/assets/user/icon_badge.png",
+      description: "Hoàn thành tất cả thử thách lớp 2"
+    }
+  };
+  
+  return badges[badgeId] || {
+    name: "Huy hiệu",
+    icon: "/assets/user/icon_badge.png",
+    description: "Hoàn thành thử thách"
+  };
+};
