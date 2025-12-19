@@ -1,0 +1,14 @@
+{
+  "currentNodeIndex": 3,
+  "completedNodes": ["n1", "n2", "n3"],
+  "totalXp": 350,
+  "earnedBadges": [
+    "addition-master",
+    "subtraction-master",
+    "measurement-master"
+  ],
+  "currentQuestionIndex": 0,
+  "correctAnswers": 0,
+  "incorrectAnswers": 0,
+  "description": "Example progress state showing a player who has completed 3 levels, earned 350 XP and 3 badges. This can be used for testing by copying to localStorage with key 'trangquynh_progress'."
+}

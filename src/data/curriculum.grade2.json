@@ -1,0 +1,729 @@
+{
+  "grade": 2,
+  "chapters": [
+    {
+      "id": "addition-subtraction",
+      "title": "Cộng trừ có nhớ",
+      "description": "Phép cộng và trừ các số có nhớ với nhiều hình thức tương tác",
+      "icon": "calculator",
+      "color": "primary",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Cộng có nhớ trong phạm vi 100",
+          "duration": 120,
+          "timerSec": 180,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "37 + 28 = ?",
+              "options": ["55", "65", "75", "85"],
+              "correctAnswer": 1,
+              "explanation": "37 + 28 = 65. Cộng hàng đơn vị: 7 + 8 = 15 (nhớ 1). Cộng hàng chục: 3 + 2 + 1 = 6."
+            },
+            {
+              "id": "q1b",
+              "type": "counting",
+              "question": "Đếm số quả táo có trong hình",
+              "countingItems": [
+                {
+                  "image": "/src/assets/game/counting-apple.png",
+                  "count": 7
+                }
+              ],
+              "countingAnswer": 7,
+              "explanation": "Đếm từng quả: 1, 2, 3, 4, 5, 6, 7. Có tất cả 7 quả táo."
+            },
+            {
+              "id": "q2",
+              "type": "fill-blank",
+              "question": "45 + ___ = 81",
+              "blanks": [
+                {
+                  "position": 5,
+                  "answer": "36",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "Để tìm số hạng còn thiếu, ta lấy tổng trừ đi số hạng đã biết: 81 - 45 = 36"
+            },
+            {
+              "id": "q3",
+              "type": "matching-pairs",
+              "question": "Nối các phép tính với kết quả đúng",
+              "pairs": [
+                {
+                  "id": "pair1",
+                  "left": "15 + 8",
+                  "right": "23"
+                },
+                {
+                  "id": "pair2",
+                  "left": "27 + 16",
+                  "right": "43"
+                },
+                {
+                  "id": "pair3",
+                  "left": "34 + 29",
+                  "right": "63"
+                }
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "49 + 38 = ?",
+              "options": ["77", "87", "97", "67"],
+              "correctAnswer": 1,
+              "explanation": "49 + 38 = 87"
+            }
+          ]
+        },
+        {
+          "id": "lesson-2",
+          "title": "Trừ có nhớ trong phạm vi 100",
+          "duration": 120,
+          "timerSec": 180,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "82 - 37 = ?",
+              "options": ["45", "55", "35", "65"],
+              "correctAnswer": 0,
+              "explanation": "82 - 37 = 45. Trừ hàng đơn vị: 2 - 7 không được, mượn 1. 12 - 7 = 5. Trừ hàng chục: 7 - 3 = 4."
+            },
+            {
+              "id": "q2",
+              "type": "fill-blank",
+              "question": "Hình 1 có 8 cái kẹo. Hình 2 có 5 cái kẹo. Hình 1 nhiều hơn Hình 2 ___ cái kẹo.",
+              "blanks": [
+                {
+                  "position": 65,
+                  "answer": "3",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "8 - 5 = 3. Vậy Hình 1 nhiều hơn Hình 2 là 3 cái kẹo."
+            },
+            {
+              "id": "q3",
+              "type": "counting",
+              "question": "Đếm số ngôi sao",
+              "countingItems": [
+                {
+                  "image": "/src/assets/game/counting-star.png",
+                  "count": 9
+                }
+              ],
+              "countingAnswer": 9,
+              "explanation": "Có 9 ngôi sao trong hình."
+            },
+            {
+              "id": "q4",
+              "type": "drag-drop",
+              "question": "Sắp xếp kết quả từ nhỏ đến lớn",
+              "dragItems": [
+                {
+                  "id": "d1",
+                  "content": "73 - 28 = 45",
+                  "correctSlot": "small"
+                },
+                {
+                  "id": "d2",
+                  "content": "91 - 36 = 55",
+                  "correctSlot": "medium"
+                },
+                {
+                  "id": "d3",
+                  "content": "84 - 19 = 65",
+                  "correctSlot": "large"
+                }
+              ],
+              "dropSlots": [
+                {
+                  "id": "small",
+                  "label": "Nhỏ nhất"
+                },
+                {
+                  "id": "medium",
+                  "label": "Trung bình"
+                },
+                {
+                  "id": "large",
+                  "label": "Lớn nhất"
+                }
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "84 - 47 = ?",
+              "options": ["27", "37", "47", "57"],
+              "correctAnswer": 1,
+              "explanation": "84 - 47 = 37"
+            }
+          ]
+        },
+        {
+          "id": "lesson-3",
+          "title": "Bài toán lời văn cộng trừ",
+          "duration": 150,
+          "timerSec": 200,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "Nhà có 50 buồng cau, bán 17 buồng, rồi cho 6 buồng. Còn lại bao nhiêu buồng?",
+              "options": ["17", "27", "33", "37"],
+              "correctAnswer": 1,
+              "explanation": "50 - 17 = 33 buồng. Sau đó 33 - 6 = 27 buồng còn lại."
+            },
+            {
+              "id": "q2",
+              "type": "fill-blank",
+              "question": "Minh có 25 viên bi. Minh cho bạn 8 viên bi. Minh còn lại ___ viên bi.",
+              "blanks": [
+                {
+                  "position": 56,
+                  "answer": "17",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "25 - 8 = 17 viên bi."
+            },
+            {
+              "id": "q3",
+              "type": "counting",
+              "question": "Đếm tổng số hoa trong 2 nhóm",
+              "countingItems": [
+                {
+                  "image": "/src/assets/game/counting-flower.png",
+                  "count": 5
+                },
+                {
+                  "image": "/src/assets/game/counting-flower.png",
+                  "count": 4
+                }
+              ],
+              "countingAnswer": 9,
+              "explanation": "Nhóm 1 có 5 bông hoa, nhóm 2 có 4 bông hoa. Tổng: 5 + 4 = 9 bông hoa."
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "Lan có 32 cái kẹo. Mẹ cho thêm 15 cái. Lan có tất cả bao nhiêu cái kẹo?",
+              "options": ["37", "42", "47", "52"],
+              "correctAnswer": 2,
+              "explanation": "32 + 15 = 47 cái kẹo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-measurement",
+      "title": "Thời gian và Đo lường",
+      "description": "Đọc đồng hồ và đo độ dài, khối lượng",
+      "icon": "clock",
+      "color": "secondary",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Đọc đồng hồ",
+          "duration": 120,
+          "timerSec": 150,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "Kim ngắn chỉ số 3, kim dài chỉ số 12. Đồng hồ chỉ mấy giờ?",
+              "options": ["3 giờ", "12 giờ", "3 giờ 30 phút", "12 giờ 30 phút"],
+              "correctAnswer": 0,
+              "explanation": "Kim ngắn chỉ giờ (3), kim dài chỉ phút (12 = 0 phút). Đồng hồ chỉ 3 giờ."
+            },
+            {
+              "id": "q2",
+              "type": "matching-pairs",
+              "question": "Nối đồng hồ với giờ tương ứng",
+              "pairs": [
+                {
+                  "id": "t1",
+                  "left": "🕐",
+                  "right": "1 giờ"
+                },
+                {
+                  "id": "t2",
+                  "left": "🕑",
+                  "right": "2 giờ"
+                },
+                {
+                  "id": "t3",
+                  "left": "🕒",
+                  "right": "3 giờ"
+                }
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "question": "1 giờ = ___ phút",
+              "blanks": [
+                {
+                  "position": 9,
+                  "answer": "60",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "1 giờ = 60 phút"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "2 giờ 30 phút = ? phút",
+              "options": ["120 phút", "130 phút", "150 phút", "230 phút"],
+              "correctAnswer": 2,
+              "explanation": "2 giờ = 120 phút. 2 giờ 30 phút = 120 + 30 = 150 phút"
+            }
+          ]
+        },
+        {
+          "id": "lesson-2",
+          "title": "Đo độ dài: cm và m",
+          "duration": 120,
+          "timerSec": 150,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "1 mét bằng bao nhiêu cm?",
+              "options": ["10 cm", "50 cm", "100 cm", "1000 cm"],
+              "correctAnswer": 2,
+              "explanation": "1 mét = 100 cm"
+            },
+            {
+              "id": "q2",
+              "type": "fill-blank",
+              "question": "Dây A dài 120 cm = ___ m ___ cm",
+              "blanks": [
+                {
+                  "position": 20,
+                  "answer": "1",
+                  "placeholder": "?"
+                },
+                {
+                  "position": 25,
+                  "answer": "20",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "120 cm = 100 cm + 20 cm = 1 m 20 cm"
+            },
+            {
+              "id": "q3",
+              "type": "drag-drop",
+              "question": "Sắp xếp độ dài từ nhỏ đến lớn",
+              "dragItems": [
+                {
+                  "id": "len1",
+                  "content": "50 cm",
+                  "correctSlot": "small"
+                },
+                {
+                  "id": "len2",
+                  "content": "1 m 20 cm",
+                  "correctSlot": "medium"
+                },
+                {
+                  "id": "len3",
+                  "content": "2 m",
+                  "correctSlot": "large"
+                }
+              ],
+              "dropSlots": [
+                {
+                  "id": "small",
+                  "label": "Nhỏ nhất"
+                },
+                {
+                  "id": "medium",
+                  "label": "Trung bình"
+                },
+                {
+                  "id": "large",
+                  "label": "Lớn nhất"
+                }
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "2 mét 50 cm = ? cm",
+              "options": ["200 cm", "250 cm", "205 cm", "520 cm"],
+              "correctAnswer": 1,
+              "explanation": "2 m 50 cm = 200 cm + 50 cm = 250 cm"
+            }
+          ]
+        },
+        {
+          "id": "lesson-3",
+          "title": "Đo khối lượng: kg và g",
+          "duration": 120,
+          "timerSec": 150,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "1 kg bằng bao nhiêu gam?",
+              "options": ["10 g", "100 g", "1000 g", "10000 g"],
+              "correctAnswer": 2,
+              "explanation": "1 kg = 1000 g"
+            },
+            {
+              "id": "q2",
+              "type": "matching-pairs",
+              "question": "Nối các khối lượng tương đương",
+              "pairs": [
+                {
+                  "id": "w1",
+                  "left": "1 kg",
+                  "right": "1000 g"
+                },
+                {
+                  "id": "w2",
+                  "left": "2 kg 500 g",
+                  "right": "2500 g"
+                },
+                {
+                  "id": "w3",
+                  "left": "3 kg",
+                  "right": "3000 g"
+                }
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "question": "Cân giúp mẹ 2 kg gạo. Biết 1 kg = 1000 g, vậy 2 kg = ___ g",
+              "blanks": [
+                {
+                  "position": 57,
+                  "answer": "2000",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "2 kg = 2 × 1000 = 2000 g"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "Quả dưa nặng 3 kg, quả bưởi nặng 1500 g. Quả dưa nặng hơn quả bưởi:",
+              "options": ["1 kg", "1 kg 500 g", "2 kg", "500 g"],
+              "correctAnswer": 1,
+              "explanation": "3 kg - 1500 g = 3000 g - 1500 g = 1500 g = 1 kg 500 g"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-logic",
+      "title": "Tiền tệ và Logic",
+      "description": "Tính tiền và giải câu đố",
+      "icon": "coins",
+      "color": "accent",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Tính tiền thưởng",
+          "duration": 120,
+          "timerSec": 150,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "50.000 đồng chia đều cho 5 người. Mỗi người được bao nhiêu?",
+              "options": ["5.000 đồng", "10.000 đồng", "15.000 đồng", "20.000 đồng"],
+              "correctAnswer": 1,
+              "explanation": "50.000 : 5 = 10.000 đồng mỗi người."
+            },
+            {
+              "id": "q2",
+              "type": "fill-blank",
+              "question": "Mua 3 cái bánh, mỗi cái 5.000 đồng. Tổng tiền là ___ đồng",
+              "blanks": [
+                {
+                  "position": 51,
+                  "answer": "15000",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "3 × 5.000 = 15.000 đồng"
+            },
+            {
+              "id": "q3",
+              "type": "counting",
+              "question": "Đếm số đồng xu trong hình",
+              "countingItems": [
+                {
+                  "image": "/src/assets/game/counting-dots.png",
+                  "count": 6
+                }
+              ],
+              "countingAnswer": 6,
+              "explanation": "Có 6 đồng xu trong hình."
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "Có 20.000 đồng, mua đồ chơi 12.000 đồng. Còn lại bao nhiêu?",
+              "options": ["6.000 đồng", "8.000 đồng", "10.000 đồng", "12.000 đồng"],
+              "correctAnswer": 1,
+              "explanation": "20.000 - 12.000 = 8.000 đồng còn lại."
+            }
+          ]
+        },
+        {
+          "id": "lesson-2",
+          "title": "Câu đố logic",
+          "duration": 150,
+          "timerSec": 180,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "drag-drop",
+              "question": "Xếp các số từ nhỏ đến lớn: 47, 23, 85",
+              "dragItems": [
+                {
+                  "id": "n1",
+                  "content": "23",
+                  "correctSlot": "pos1"
+                },
+                {
+                  "id": "n2",
+                  "content": "47",
+                  "correctSlot": "pos2"
+                },
+                {
+                  "id": "n3",
+                  "content": "85",
+                  "correctSlot": "pos3"
+                }
+              ],
+              "dropSlots": [
+                {
+                  "id": "pos1",
+                  "label": "Vị trí 1"
+                },
+                {
+                  "id": "pos2",
+                  "label": "Vị trí 2"
+                },
+                {
+                  "id": "pos3",
+                  "label": "Vị trí 3"
+                }
+              ]
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "Số nào lớn nhất trong các số: 56, 65, 55, 66?",
+              "options": ["56", "65", "55", "66"],
+              "correctAnswer": 3,
+              "explanation": "So sánh: 55 < 56 < 65 < 66. Số lớn nhất là 66."
+            },
+            {
+              "id": "q3",
+              "type": "matching-pairs",
+              "question": "Nối số với từ chỉ vị trí",
+              "pairs": [
+                {
+                  "id": "p1",
+                  "left": "15",
+                  "right": "Nhỏ nhất"
+                },
+                {
+                  "id": "p2",
+                  "left": "45",
+                  "right": "Giữa"
+                },
+                {
+                  "id": "p3",
+                  "left": "78",
+                  "right": "Lớn nhất"
+                }
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "fill-blank",
+              "question": "Số liền sau của 99 là ___. Số liền trước của 50 là ___.",
+              "blanks": [
+                {
+                  "position": 22,
+                  "answer": "100",
+                  "placeholder": "?"
+                },
+                {
+                  "position": 52,
+                  "answer": "49",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "Số liền sau 99 là 100. Số liền trước 50 là 49."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "final-review",
+      "title": "Ôn tập tổng hợp",
+      "description": "Ôn tập tất cả kiến thức với nhiều dạng câu hỏi",
+      "icon": "star",
+      "color": "primary",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Thử thách tổng hợp",
+          "duration": 180,
+          "timerSec": 240,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "37 + 45 = ?",
+              "options": ["72", "82", "92", "62"],
+              "correctAnswer": 1,
+              "explanation": "37 + 45 = 82"
+            },
+            {
+              "id": "q2",
+              "type": "counting",
+              "question": "Đếm tổng số quả trong cả 2 hình",
+              "countingItems": [
+                {
+                  "image": "/src/assets/game/counting-banana.png",
+                  "count": 4
+                },
+                {
+                  "image": "/src/assets/game/counting-apple.png",
+                  "count": 5
+                }
+              ],
+              "countingAnswer": 9,
+              "explanation": "4 quả chuối + 5 quả táo = 9 quả."
+            },
+            {
+              "id": "q3",
+              "type": "fill-blank",
+              "question": "81 - 37 = ___",
+              "blanks": [
+                {
+                  "position": 11,
+                  "answer": "44",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "81 - 37 = 44"
+            },
+            {
+              "id": "q4",
+              "type": "matching-pairs",
+              "question": "Nối phép tính với kết quả",
+              "pairs": [
+                {
+                  "id": "p1",
+                  "left": "25 + 38",
+                  "right": "63"
+                },
+                {
+                  "id": "p2",
+                  "left": "90 - 45",
+                  "right": "45"
+                },
+                {
+                  "id": "p3",
+                  "left": "1 giờ",
+                  "right": "60 phút"
+                },
+                {
+                  "id": "p4",
+                  "left": "1 kg",
+                  "right": "1000 g"
+                }
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "drag-drop",
+              "question": "Sắp xếp kết quả từ nhỏ đến lớn",
+              "dragItems": [
+                {
+                  "id": "r1",
+                  "content": "15 + 12 = 27",
+                  "correctSlot": "small"
+                },
+                {
+                  "id": "r2",
+                  "content": "40 + 15 = 55",
+                  "correctSlot": "medium"
+                },
+                {
+                  "id": "r3",
+                  "content": "60 + 25 = 85",
+                  "correctSlot": "large"
+                }
+              ],
+              "dropSlots": [
+                {
+                  "id": "small",
+                  "label": "Nhỏ nhất"
+                },
+                {
+                  "id": "medium",
+                  "label": "Trung bình"
+                },
+                {
+                  "id": "large",
+                  "label": "Lớn nhất"
+                }
+              ]
+            },
+            {
+              "id": "q6",
+              "type": "multiple-choice",
+              "question": "Kim ngắn chỉ 7, kim dài chỉ 6. Đồng hồ chỉ:",
+              "options": ["6 giờ 35 phút", "7 giờ 30 phút", "6 giờ 7 phút", "7 giờ 6 phút"],
+              "correctAnswer": 1,
+              "explanation": "Kim ngắn chỉ 7 = 7 giờ. Kim dài chỉ 6 = 30 phút. Đồng hồ chỉ 7 giờ 30 phút."
+            },
+            {
+              "id": "q7",
+              "type": "multiple-choice",
+              "question": "2 mét 30 cm = ? cm",
+              "options": ["203 cm", "230 cm", "23 cm", "2030 cm"],
+              "correctAnswer": 1,
+              "explanation": "2 m 30 cm = 200 cm + 30 cm = 230 cm"
+            },
+            {
+              "id": "q8",
+              "type": "fill-blank",
+              "question": "Có 80.000 đồng, mua sách 35.000 đồng. Còn lại ___ đồng.",
+              "blanks": [
+                {
+                  "position": 55,
+                  "answer": "45000",
+                  "placeholder": "?"
+                }
+              ],
+              "explanation": "80.000 - 35.000 = 45.000 đồng còn lại."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

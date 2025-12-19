@@ -1,0 +1,239 @@
+{
+  "grade": "5",
+  "chapters": [
+    {
+      "id": "decimals",
+      "title": "Số thập phân",
+      "description": "Nhận biết và làm quen với số thập phân",
+      "icon": "decimal",
+      "color": "primary",
+      "lessons": [
+        {
+          "id": "lesson-1",
+          "title": "Nhận biết số thập phân",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "Số nào là số thập phân?",
+              "options": ["5", "7/2", "3.5", "2 1/4"],
+              "correctAnswer": 2,
+              "explanation": "3.5 là số thập phân với phần nguyên là 3 và phần thập phân là 5."
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "Chữ số 7 trong số 12.75 có giá trị là:",
+              "options": [
+                "7 đơn vị",
+                "7 phần mười",
+                "7 phần trăm",
+                "7 phần nghìn"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Chữ số 7 ở hàng phần mười nên có giá trị là 7 phần mười."
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "Phân số 3/4 viết dưới dạng số thập phân là:",
+              "options": ["0.25", "0.5", "0.75", "1.25"],
+              "correctAnswer": 2,
+              "explanation": "3/4 = 0.75"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "Số thập phân 0.08 đọc là:",
+              "options": [
+                "Không phẩy tám",
+                "Không phẩy không tám",
+                "Không phẩy tám mươi",
+                "Tám phần trăm"
+              ],
+              "correctAnswer": 1,
+              "explanation": "0.08 đọc là 'không phẩy không tám' hoặc 'tám phần trăm'."
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "Số thập phân lớn hơn 2.3 và nhỏ hơn 2.4 là:",
+              "options": ["2.25", "2.35", "2.45", "2.5"],
+              "correctAnswer": 1,
+              "explanation": "2.35 nằm giữa 2.3 và 2.4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decimal-operations",
+      "title": "Cộng trừ số thập phân",
+      "description": "Thực hiện phép cộng, trừ với số thập phân",
+      "icon": "calculator",
+      "color": "secondary",
+      "lessons": [
+        {
+          "id": "lesson-2",
+          "title": "Cộng trừ số thập phân",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "3.25 + 1.75 = ?",
+              "options": ["4.5", "5.0", "4.75", "5.25"],
+              "correctAnswer": 1,
+              "explanation": "3.25 + 1.75 = 5.00 = 5.0"
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "7.8 - 2.45 = ?",
+              "options": ["5.35", "5.45", "5.25", "5.15"],
+              "correctAnswer": 0,
+              "explanation": "7.8 - 2.45 = 5.35"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "12.5 + 8.75 = ?",
+              "options": ["20.25", "21.0", "21.25", "20.75"],
+              "correctAnswer": 2,
+              "explanation": "12.5 + 8.75 = 21.25"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "15.2 - 6.8 = ?",
+              "options": ["8.4", "8.6", "9.4", "9.6"],
+              "correctAnswer": 0,
+              "explanation": "15.2 - 6.8 = 8.4"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "Tính: 4.3 + 2.7 - 1.5 = ?",
+              "options": ["5.0", "5.5", "6.0", "6.5"],
+              "correctAnswer": 1,
+              "explanation": "4.3 + 2.7 = 7.0; 7.0 - 1.5 = 5.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decimal-multiplication",
+      "title": "Nhân chia số thập phân",
+      "description": "Thực hiện phép nhân, chia với số thập phân",
+      "icon": "multiply",
+      "color": "accent",
+      "lessons": [
+        {
+          "id": "lesson-3",
+          "title": "Nhân chia số thập phân",
+          "duration": 90,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "multiple-choice",
+              "question": "2.5 × 4 = ?",
+              "options": ["8.5", "9.0", "10.0", "10.5"],
+              "correctAnswer": 2,
+              "explanation": "2.5 × 4 = 10.0"
+            },
+            {
+              "id": "q2",
+              "type": "multiple-choice",
+              "question": "7.2 ÷ 0.8 = ?",
+              "options": ["8.0", "9.0", "8.5", "9.5"],
+              "correctAnswer": 1,
+              "explanation": "7.2 ÷ 0.8 = 9.0"
+            },
+            {
+              "id": "q3",
+              "type": "multiple-choice",
+              "question": "3.6 × 2.5 = ?",
+              "options": ["8.0", "8.5", "9.0", "9.5"],
+              "correctAnswer": 2,
+              "explanation": "3.6 × 2.5 = 9.0"
+            },
+            {
+              "id": "q4",
+              "type": "multiple-choice",
+              "question": "12.8 ÷ 3.2 = ?",
+              "options": ["3.5", "4.0", "4.5", "5.0"],
+              "correctAnswer": 1,
+              "explanation": "12.8 ÷ 3.2 = 4.0"
+            },
+            {
+              "id": "q5",
+              "type": "multiple-choice",
+              "question": "Tính: (4.5 × 2) ÷ 1.5 = ?",
+              "options": ["5.0", "6.0", "5.5", "6.5"],
+              "correctAnswer": 1,
+              "explanation": "4.5 × 2 = 9.0; 9.0 ÷ 1.5 = 6.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measurement",
+      "title": "Đo lường với số thập phân",
+      "description": "Ứng dụng số thập phân trong đo độ dài, khối lượng, diện tích",
+      "icon": "ruler",
+      "color": "gold",
+      "lessons": [
+        {
+          "id": "lesson-4",
+          "title": "Đo lường thực tế",
+          "duration": 120,
+          "questions": [
+            {
+              "id": "q1",
+              "type": "interactive-choice",
+              "question": "Một bức tường dài 12.5m, cần xây thêm 3.75m nữa. Tổng chiều dài bức tường là:",
+              "options": ["15.25m", "16.0m", "16.25m", "16.5m"],
+              "correctAnswer": 2,
+              "explanation": "12.5 + 3.75 = 16.25m"
+            },
+            {
+              "id": "q2",
+              "type": "interactive-choice",
+              "question": "Một bao gạo nặng 45.5kg, đã dùng hết 12.75kg. Số gạo còn lại là:",
+              "options": ["31.75kg", "32.25kg", "32.75kg", "33.25kg"],
+              "correctAnswer": 2,
+              "explanation": "45.5 - 12.75 = 32.75kg"
+            },
+            {
+              "id": "q3",
+              "type": "interactive-choice",
+              "question": "Một mảnh đất hình chữ nhật có chiều dài 15.8m, chiều rộng 12.5m. Diện tích mảnh đất là:",
+              "options": ["187.5m²", "195.5m²", "197.5m²", "200.5m²"],
+              "correctAnswer": 2,
+              "explanation": "15.8 × 12.5 = 197.5m²"
+            },
+            {
+              "id": "q4",
+              "type": "interactive-choice",
+              "question": "Mỗi viên gạch nặng 2.25kg. 12 viên gạch nặng tổng cộng:",
+              "options": ["25kg", "26kg", "27kg", "28kg"],
+              "correctAnswer": 2,
+              "explanation": "2.25 × 12 = 27kg"
+            },
+            {
+              "id": "q5",
+              "type": "interactive-choice",
+              "question": "Chu vi một khu đất hình vuông là 45.6m. Độ dài mỗi cạnh là:",
+              "options": ["10.4m", "11.2m", "11.4m", "12.4m"],
+              "correctAnswer": 2,
+              "explanation": "45.6 ÷ 4 = 11.4m"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
