@@ -117,68 +117,89 @@ export const TrangQuynhMiniGame = ({ grade }: TrangQuynhMiniGameProps) => {
     if (isSubmitting) return;
     
     const xpReward = currentActivity?.xpReward || 10;
+    const totalQuestions = currentActivity?.questions.length || 1;
+    
+    // Tính toán chính xác số câu đúng/sai sau khi trả lời câu này
+    let newCorrect: number;
+    let newIncorrect: number;
     
     if (isCorrect) {
+      newCorrect = correctThisLevel + 1;
+      newIncorrect = incorrectThisLevel;
       setEarnedXpThisLevel(prev => prev + xpReward);
-      setCorrectThisLevel(prev => prev + 1);
+      setCorrectThisLevel(newCorrect);
       toast.success(`Chính xác! +${xpReward} XP`);
     } else {
-      setIncorrectThisLevel(prev => prev + 1);
+      newCorrect = correctThisLevel;
+      newIncorrect = incorrectThisLevel + 1;
+      setIncorrectThisLevel(newIncorrect);
     }
-
-    const totalQuestions = currentActivity?.questions.length || 1;
-    const newCorrect = correctThisLevel + (isCorrect ? 1 : 0);
-    const newIncorrect = incorrectThisLevel + (isCorrect ? 0 : 1);
     
-    if (currentQuestionIndex + 1 >= totalQuestions) {
+    // Kiểm tra xem đã hoàn thành tất cả câu hỏi chưa
+    const isLastQuestion = currentQuestionIndex + 1 >= totalQuestions;
+    
+    if (isLastQuestion) {
       // Level complete - submit to backend
       setIsSubmitting(true);
       
-      const timeSpent = Math.floor((Date.now() - levelStartTime.current) / 1000);
-      const score = newCorrect * xpReward;
-      const maxScore = totalQuestions * xpReward;
-      
-      const result = await completeStage(
-        currentNode?.id || `stage-${currentNodeIndex}`,
-        'grade2-trangquynh',
-        score,
-        maxScore,
-        newCorrect,
-        totalQuestions,
-        timeSpent
-      );
-      
-      setIsSubmitting(false);
-      
-      if (result) {
-        let performance: "excellent" | "good" | "retry";
-        if (result.accuracy >= 90) {
-          performance = "excellent";
-        } else if (result.accuracy >= 60) {
-          performance = "good";
+      try {
+        const timeSpent = Math.floor((Date.now() - levelStartTime.current) / 1000);
+        const score = newCorrect * xpReward;
+        const maxScore = totalQuestions * xpReward;
+        
+        const result = await completeStage(
+          currentNode?.id || `stage-${currentNodeIndex}`,
+          'grade2-trangquynh',
+          score,
+          maxScore,
+          newCorrect,
+          totalQuestions,
+          timeSpent
+        );
+        
+        if (result?.success) {
+          let performance: "excellent" | "good" | "retry";
+          if (result.accuracy >= 90) {
+            performance = "excellent";
+          } else if (result.accuracy >= 60) {
+            performance = "good";
+          } else {
+            performance = "retry";
+          }
+          
+          setLevelPerformance(performance);
+          setEarnedXpThisLevel(result.xpEarned);
+          
+          // Refresh progress to ensure UI is up to date
+          await fetchProgress();
+          
+          // Award badge if passed
+          if (performance !== "retry" && currentNode?.badgeOnComplete) {
+            try {
+              const badgeResult = await unlockBadge(
+                currentNode.badgeOnComplete,
+                currentNode.title,
+                `Hoàn thành: ${currentNode.title}`,
+                '🏆'
+              );
+              setCompletedBadgeId(badgeResult?.success ? currentNode.badgeOnComplete : null);
+            } catch (badgeError) {
+              console.error('Error unlocking badge:', badgeError);
+              setCompletedBadgeId(null);
+            }
+          } else {
+            setCompletedBadgeId(null);
+          }
+          
+          setShowBadgeModal(true);
         } else {
-          performance = "retry";
+          toast.error("Không thể lưu kết quả (chưa ghi vào tài khoản). Vui lòng thử lại.");
         }
-        
-        setLevelPerformance(performance);
-        setEarnedXpThisLevel(result.xpEarned);
-        
-        // Award badge if passed
-        if (performance !== "retry" && currentNode?.badgeOnComplete) {
-          const badgeResult = await unlockBadge(
-            currentNode.badgeOnComplete,
-            currentNode.title,
-            `Hoàn thành: ${currentNode.title}`,
-            '🏆'
-          );
-          setCompletedBadgeId(badgeResult?.success ? currentNode.badgeOnComplete : null);
-        } else {
-          setCompletedBadgeId(null);
-        }
-        
-        setShowBadgeModal(true);
-      } else {
-        toast.error("Không thể lưu kết quả. Vui lòng thử lại.");
+      } catch (error) {
+        console.error('Error completing stage:', error);
+        toast.error("Đã xảy ra lỗi khi lưu kết quả. Vui lòng thử lại.");
+      } finally {
+        setIsSubmitting(false);
       }
     } else {
       setCurrentQuestionIndex(prev => prev + 1);
@@ -438,10 +459,11 @@ export const TrangQuynhMiniGame = ({ grade }: TrangQuynhMiniGameProps) => {
         />
         
         {isSubmitting && (
-          <div className="fixed inset-0 bg-background/80 flex items-center justify-center z-50">
-            <div className="flex flex-col items-center gap-4">
+          <div className="fixed inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center z-50">
+            <div className="flex flex-col items-center gap-4 bg-card p-8 rounded-lg shadow-lg border">
               <Loader2 className="h-12 w-12 animate-spin text-primary" />
-              <p className="text-muted-foreground">Đang lưu kết quả...</p>
+              <p className="text-lg font-medium">Đang lưu kết quả...</p>
+              <p className="text-sm text-muted-foreground">Vui lòng đợi trong giây lát</p>
             </div>
           </div>
         )}
