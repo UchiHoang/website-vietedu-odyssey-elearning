@@ -52,7 +52,7 @@ const TrangQuynhGame = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <TrangQuynhMiniGame />
+      <TrangQuynhMiniGame courseId="grade2-trangquynh" />
     </div>
   );
 };

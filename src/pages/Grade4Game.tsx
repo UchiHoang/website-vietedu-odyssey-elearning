@@ -1,8 +1,24 @@
-import React from "react";
-import ThamHiemCoLoa from "@/components/game/thamhiemcoloathanh/ThamHiemCoLoa";
+import Header from "@/components/Header";
+import { TrangQuynhMiniGame } from "@/components/game/TrangQuynhMiniGame";
+import { loadStoryGrade4 } from "@/utils/storyLoaders";
 
-const Grade4Game: React.FC = () => {
-  return <ThamHiemCoLoa />;
+const theme = {
+  primary: "#c0392b",
+  secondary: "#d35400",
+  bg: "linear-gradient(180deg, #fff5f0 0%, #ffe9e0 100%)",
+  bannerUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920&q=80", // Placeholder - Thánh Gióng cưỡi ngựa sắt
 };
 
-export default Grade4Game;
+export default function Grade4Game() {
+  return (
+    <div className="min-h-screen" style={{ background: theme.bg }}>
+      <Header />
+      <TrangQuynhMiniGame
+        grade="4"
+        courseId="grade4-giong"
+        storyLoader={loadStoryGrade4}
+        theme={theme}
+      />
+    </div>
+  );
+}

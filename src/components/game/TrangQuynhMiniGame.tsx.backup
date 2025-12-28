@@ -8,7 +8,7 @@ import { BadgeModal } from "./BadgeModal";
 import { LevelSelection } from "./LevelSelection";
 import { StoryIntro } from "./StoryIntro";
 import { findActivityByRef as findActivityByRefLegacy, loadStory as loadStoryLegacy } from "@/utils/storyLoader";
-import { useGameProgress, type CourseState, type GlobalState } from "@/hooks/useGameProgress";
+import { useSupabaseProgress } from "@/hooks/useSupabaseProgress";
 import { ArrowLeft, RotateCcw, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -78,15 +78,33 @@ interface TrangQuynhMiniGameProps {
 }
 
 export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", storyLoader, theme }: TrangQuynhMiniGameProps) => {
-  // ========== HOOKS - Phải gọi theo thứ tự cố định ==========
-  
-  // 1. useNavigate, useParams (React Router hooks)
   const navigate = useNavigate();
   const urlParams = useParams();
+  // Memoize story to prevent reloading on every render
+    // Use the prop if provided, otherwise try to get from URL params
+  const gradeFromUrl = urlParams.grade?.replace("grade", "");
+  const finalGrade = grade || gradeFromUrl || "2";
+
+  console.log("Final grade:", finalGrade); // Debug log
+
+  const rootStyle = theme?.bg ? { background: theme.bg } : undefined;
+  const bannerStyle = theme?.bannerUrl ? { backgroundImage: `url(${theme.bannerUrl})`, backgroundSize: "cover", backgroundPosition: "center" } : {};
+  const story = useMemo<SimpleStory>(() => {
+    if (storyLoader) return storyLoader();
+    return loadStoryLegacy();
+  }, [storyLoader]);
+  const prologueSlides = useMemo(() => (story.prologue ?? []) as StoryFrame[], [story.prologue]);
+
+  const { 
+    progress, 
+    isLoading, 
+    completeStage, 
+    unlockBadge, 
+    updateCurrentNode, 
+    resetProgress,
+    fetchProgress 
+  } = useSupabaseProgress();
   
-  // 2. useState hooks (tất cả state phải gọi trước)
-  const [lastCourseState, setLastCourseState] = useState<CourseState | null>(null);
-  const [lastGlobals, setLastGlobals] = useState<GlobalState | null>(null);
   const [gamePhase, setGamePhase] = useState<GamePhase>("prologue");
   const [currentNodeIndex, setCurrentNodeIndex] = useState(0);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -100,77 +118,9 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
   const [incorrectThisLevel, setIncorrectThisLevel] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // 3. useRef
+  // Track time spent on level
   const levelStartTime = useRef<number>(Date.now());
-  
-  // 4. Custom hooks (useGameProgress)
-  const { 
-    globals,
-    course,
-    isLoading,
-    error: queryError,
-    completeStage: completeStageMutation,
-    refetch,
-    updateCurrentNode: updateCurrentNodeMutation
-  } = useGameProgress(courseId || "grade2-trangquynh");
 
-  // 5. Tính toán derived values (sau khi có hooks)
-  const gradeFromUrl = urlParams.grade?.replace("grade", "");
-  const finalGrade = grade || gradeFromUrl || "2";
-  console.log("Final grade:", finalGrade); // Debug log
-
-  // 6. useMemo (sau khi có data từ hooks)
-  const rootStyle = theme?.bg ? { background: theme.bg } : undefined;
-  const bannerStyle = theme?.bannerUrl ? { backgroundImage: `url(${theme.bannerUrl})`, backgroundSize: "cover", backgroundPosition: "center" } : {};
-  const story = useMemo<SimpleStory>(() => {
-    if (storyLoader) return storyLoader();
-    return loadStoryLegacy();
-  }, [storyLoader]);
-  const prologueSlides = useMemo(() => (story.prologue ?? []) as StoryFrame[], [story.prologue]);
-
-  // Safe progress với null checks để tránh crash
-  // Ưu tiên lastGlobals (từ mutation result) để XP được cập nhật ngay lập tức
-  const effectiveGlobals = lastGlobals ?? globals;
-  const progress = useMemo(() => {
-    try {
-      return {
-        // XP là global (từ game_globals.total_xp), không phải course-specific
-        // vì XP được tích lũy từ tất cả các course/game
-        // Ưu tiên lastGlobals để XP được cập nhật ngay sau khi complete stage
-        xp: (effectiveGlobals?.total_xp ?? 0),
-        level: (effectiveGlobals?.global_level ?? 1),
-        coins: (effectiveGlobals?.coins ?? 0),
-        currentNode: (lastCourseState?.current_node ?? course?.current_node ?? 0),
-        completedNodes: (lastCourseState?.completed_nodes ?? course?.completed_nodes ?? []) as string[],
-        earnedBadges: (effectiveGlobals?.unlocked_badges ?? []) as string[],
-        // Course-specific: total_stars để hiển thị sao, total_xp để hiển thị XP của course này
-        totalStars: (lastCourseState?.total_stars ?? course?.total_stars ?? 0),
-        courseXp: (lastCourseState?.total_xp ?? (course as any)?.total_xp ?? 0), // XP riêng của course này
-        points: 0, // Legacy field
-        streak: { current: 0, longest: 0, totalDays: 0 }, // Legacy field
-        leaderboardPoints: 0, // Legacy field
-        leaderboardRank: null, // Legacy field
-      };
-    } catch (error) {
-      console.error("Error building progress object:", error);
-      // Fallback to default để tránh crash
-      return {
-        xp: 0,
-        level: 1,
-        coins: 0,
-        currentNode: 0,
-        completedNodes: [],
-        earnedBadges: [],
-        totalStars: 0,
-        courseXp: 0,
-        points: 0,
-        streak: { current: 0, longest: 0, totalDays: 0 },
-        leaderboardPoints: 0,
-        leaderboardRank: null,
-      };
-    }
-  }, [lastCourseState, course, effectiveGlobals]);
-  
   const currentNode = story.nodes[currentNodeIndex];
   const isGameComplete = currentNodeIndex >= story.nodes.length;
 
@@ -273,23 +223,12 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
     return findActivityByRefLegacy(activityRef);
   }, [story.activities]);
 
-  // Initialize from Supabase progress (ưu tiên state trả về từ mutation)
+  // Initialize from Supabase progress
   useEffect(() => {
-    if (isLoading) return;
-    const serverNode = lastCourseState?.current_node ?? course?.current_node;
-    if (serverNode !== undefined && serverNode >= 0) {
-      setCurrentNodeIndex(serverNode);
+    if (!isLoading && progress.currentNode >= 0) {
+      setCurrentNodeIndex(progress.currentNode);
     }
-  }, [isLoading, course?.current_node, lastCourseState?.current_node]);
-
-  // Sync globals từ query (khi refetch hoặc load lần đầu)
-  // Chỉ sync khi không có lastGlobals hoặc khi query trả về giá trị mới hơn
-  useEffect(() => {
-    if (!isLoading && globals && (!lastGlobals || globals.total_xp >= lastGlobals.total_xp)) {
-      setLastGlobals(globals);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoading, globals?.total_xp, globals?.global_level]);
+  }, [isLoading, progress.currentNode]);
 
   // Memoize activity loading to prevent repeated lookups
   const loadedActivity = useMemo(() => {
@@ -317,19 +256,6 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
     }
   }, [gamePhase, currentNode, currentActivity, getActivity]);
 
-  // Error handling - hiển thị warning nhưng vẫn cho chơi (không block UI)
-  useEffect(() => {
-    if (queryError) {
-      console.warn("Query error (continuing with default state):", queryError);
-      const errorMessage = queryError instanceof Error ? queryError.message : String(queryError);
-      if (errorMessage.includes("function") || errorMessage.includes("does not exist")) {
-        toast.error("Lỗi: RPC function chưa được tạo. Vui lòng chạy SQL migration trước!");
-      } else {
-        toast.error("Không thể tải tiến độ từ server. Bạn vẫn có thể chơi nhưng tiến độ có thể không được lưu.");
-      }
-    }
-  }, [queryError]);
-
   const handlePrologueComplete = () => {
     setGamePhase("level-selection");
   };
@@ -353,7 +279,7 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
       }
     }
     
-    // Update current node (local state only, will be saved when complete stage)
+    await updateCurrentNode(nodeIndex);
     setGamePhase("cutscene");
   };
 
@@ -398,7 +324,7 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
       newIncorrect = incorrectThisLevel + 1;
       setIncorrectThisLevel(newIncorrect);
     }
-
+    
     // Kiểm tra xem đã hoàn thành tất cả câu hỏi chưa
     const isLastQuestion = currentQuestionIndex + 1 >= totalQuestions;
     
@@ -407,98 +333,63 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
       setIsSubmitting(true);
       
       try {
-      const timeSpent = Math.floor((Date.now() - levelStartTime.current) / 1000);
-      const score = newCorrect * xpReward;
-      const maxScore = totalQuestions * xpReward;
-        const accuracy = (newCorrect / totalQuestions) * 100;
+        const timeSpent = Math.floor((Date.now() - levelStartTime.current) / 1000);
+        const score = newCorrect * xpReward;
+        const maxScore = totalQuestions * xpReward;
         
-        // Tính số sao (0-3)
-        const stars = Math.floor((newCorrect / totalQuestions) * 3);
-        
-        // Tính XP reward dựa trên số câu đúng
-        const calculatedXpReward = newCorrect * xpReward;
-        
-        // Gọi RPC mới
-        const result = await completeStageMutation.mutateAsync({
-          nodeIndex: currentNodeIndex,
-          score: score,
-          stars: stars,
-          xpReward: calculatedXpReward,
-          gameSpecificData: {
-            correct: newCorrect,
-            incorrect: newIncorrect,
-            accuracy: accuracy,
-            timeSpent: timeSpent,
-            nodeId: currentNode?.id || `stage-${currentNodeIndex}`,
-          }
-        });
+      const result = await completeStage(
+        currentNode?.id || `stage-${currentNodeIndex}`,
+        courseId,
+        score,
+        maxScore,
+        newCorrect,
+        totalQuestions,
+        timeSpent
+      );
         
         if (result?.success) {
-        let performance: "excellent" | "good" | "retry";
-          if (accuracy >= 90) {
-          performance = "excellent";
-          } else if (accuracy >= 60) {
-          performance = "good";
-        } else {
-          performance = "retry";
-        }
-        
-        setLevelPerformance(performance);
-          
-          // Lưu course state và globals từ server để dùng ngay (tránh chờ refetch)
-          if ((result as any).course) {
-            setLastCourseState((result as any).course as CourseState);
+          let performance: "excellent" | "good" | "retry";
+          if (result.accuracy >= 90) {
+            performance = "excellent";
+          } else if (result.accuracy >= 60) {
+            performance = "good";
+          } else {
+            performance = "retry";
           }
           
-          // Lưu globals từ server để XP được cập nhật ngay lập tức
-          if ((result as any).globals) {
-            const resultGlobals = (result as any).globals;
-            setLastGlobals({
-              user_id: globals?.user_id || "",
-              total_xp: resultGlobals.total_xp || 0,
-              global_level: resultGlobals.global_level || 1,
-              coins: resultGlobals.coins || 0,
-              avatar_config: globals?.avatar_config || {},
-              unlocked_badges: globals?.unlocked_badges || [],
-              created_at: globals?.created_at || new Date().toISOString(),
-              updated_at: globals?.updated_at || new Date().toISOString(),
-            } as GlobalState);
+          setLevelPerformance(performance);
+          setEarnedXpThisLevel(result.xpEarned);
+          
+          // Refresh progress to ensure UI is up to date
+          await fetchProgress();
+          
+          // Award badge if passed
+          if (performance !== "retry" && currentNode?.badgeOnComplete) {
+            try {
+              const badgeResult = await unlockBadge(
+                currentNode.badgeOnComplete,
+                currentNode.title,
+                `Hoàn thành: ${currentNode.title}`,
+                '🏆'
+              );
+              setCompletedBadgeId(badgeResult?.success ? currentNode.badgeOnComplete : null);
+            } catch (badgeError) {
+              console.error('Error unlocking badge:', badgeError);
+              setCompletedBadgeId(null);
+            }
+          } else {
+            setCompletedBadgeId(null);
           }
-
-          // Cập nhật earnedXpThisLevel để hiển thị trong modal
-          setEarnedXpThisLevel(calculatedXpReward);
           
-          // Award badge if passed (TODO: Implement unlock badge RPC later)
-        if (performance !== "retry" && currentNode?.badgeOnComplete) {
-            setCompletedBadgeId(currentNode.badgeOnComplete);
+          setShowBadgeModal(true);
         } else {
-          setCompletedBadgeId(null);
-        }
-        
-          // Set submitting false TRƯỚC khi show modal để không block UI
-          setIsSubmitting(false);
-          
-          console.log("Stage completed successfully", {
-            performance,
-            earnedXp: calculatedXpReward,
-            badgeId: currentNode?.badgeOnComplete,
-          });
-          
-          // Show badge modal
-        setShowBadgeModal(true);
-          
-          // Refresh progress in background (không await để không block UI)
-          refetch().catch(err => {
-            console.error("Error refetching progress:", err);
-          });
-      } else {
-          setIsSubmitting(false);
           toast.error("Không thể lưu kết quả (chưa ghi vào tài khoản). Vui lòng thử lại.");
         }
       } catch (error) {
         console.error('Error completing stage:', error);
-        setIsSubmitting(false);
         toast.error("Đã xảy ra lỗi khi lưu kết quả. Vui lòng thử lại.");
+      } finally {
+        setIsSubmitting(false);
       }
     } else {
       setCurrentQuestionIndex(prev => prev + 1);
@@ -506,34 +397,21 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
   };
 
   const handleBadgeModalContinue = async () => {
-    console.log("BadgeModal Continue clicked", {
-      currentNodeIndex,
-      totalNodes: story.nodes.length,
-      levelPerformance,
-      serverNode: lastCourseState?.current_node,
-      completedNodes: lastCourseState?.completed_nodes
-    });
-    
     setShowBadgeModal(false);
     setEarnedXpThisLevel(0);
     setCurrentQuestionIndex(0);
     setCorrectThisLevel(0);
     setIncorrectThisLevel(0);
     
-    // Ưu tiên current_node từ server (lastCourseState), fallback +1
-    const nextIndexFromServer = lastCourseState?.current_node ?? currentNodeIndex + 1;
-    const nextIndex = levelPerformance !== "retry" ? nextIndexFromServer : currentNodeIndex;
-
-    if (nextIndex >= story.nodes.length) {
-      console.log("Game complete, moving to complete phase");
+    if (currentNodeIndex + 1 >= story.nodes.length) {
       setGamePhase("complete");
     } else if (levelPerformance !== "retry") {
-      console.log("Moving to next node:", nextIndex);
-      setCurrentNodeIndex(nextIndex);
+      const newIndex = currentNodeIndex + 1;
+      setCurrentNodeIndex(newIndex);
+      await updateCurrentNode(newIndex);
       setGamePhase("level-selection");
     } else {
       // Retry - stay on questions
-      console.log("Retry - staying on questions");
       levelStartTime.current = Date.now();
       setGamePhase("questions");
     }
@@ -554,13 +432,12 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
   };
 
   const handleRestart = async () => {
-    // TODO: Implement reset course progress RPC if needed
-    // For now, just reset local state
+    await resetProgress();
     setCurrentNodeIndex(0);
     setCurrentQuestionIndex(0);
     setGamePhase("level-selection");
     setEarnedXpThisLevel(0);
-    await refetch();
+    await fetchProgress();
   };
 
   const handleBackToLevelSelection = () => {
@@ -574,9 +451,6 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
         <div className="flex flex-col items-center gap-4">
           <Loader2 className="h-12 w-12 animate-spin text-primary" />
           <p className="text-muted-foreground">Đang tải tiến độ...</p>
-          {queryError && (
-            <p className="text-sm text-orange-500">Lưu ý: Không thể tải tiến độ từ server</p>
-          )}
         </div>
       </div>
     );
@@ -590,18 +464,17 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
   // Level Selection Phase - use progress from Supabase
   if (gamePhase === "level-selection") {
     // Convert Supabase progress to format expected by LevelSelection
-    // Hiển thị course XP (XP riêng của course này) trong LevelSelection, không phải global XP
     const gameEngineProgress = {
       currentNodeIndex,
       completedNodes: progress.completedNodes,
-      totalXp: progress.courseXp, // Dùng course XP (riêng của course này) thay vì global XP
+      totalXp: progress.xp,
       earnedBadges: progress.earnedBadges,
       currentQuestionIndex: 0,
       correctAnswers: 0,
       incorrectAnswers: 0,
     };
 
-     return (
+    return (
       <div className="min-h-screen" style={rootStyle}>
         <div className="fixed top-24 right-6 z-50">
           <Button 
@@ -750,9 +623,6 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
         </div>
       );
     }
-    
-    // Nếu đang show badge modal, vẫn render questions phase nhưng modal sẽ overlay
-    // Điều này đảm bảo không bị màn hình trắng
     
     const currentQuestionRaw = currentActivity.questions?.[currentQuestionIndex];
     

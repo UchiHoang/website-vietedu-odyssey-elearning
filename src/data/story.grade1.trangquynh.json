@@ -1,202 +1,166 @@
 {
   "meta": {
-    "storyPackId": "ti-race-zodiac-2025",
-    "title": "Tí và cuộc đua cùng 12 con giáp",
-    "layout": "left-to-right",
-    "locale": "vi",
-    "description": "Cậu bé Tí tham gia cuộc đua cùng 12 con giáp. Mỗi chặng đường là một thử thách toán học — giải phép tính thật nhanh để Tí tăng tốc và giành chiến thắng!"
+    "title": "Cuộc đua 12 Con Giáp",
+    "description": "Ngọc Hoàng mở cuộc đua, mỗi con vật là một thử thách Toán lớp 1: cộng trừ đến 100, xem giờ, đo độ dài."
   },
-  "legalNote": "Create only original character artwork and use assets in /public/assets/user/. Do not reuse copyrighted zodiac designs.",
   "prologue": [
-    {
-      "id": "p1",
-      "bg": "assets/user/bg_festival.png",
-      "sprite": "assets/user/trang_idle.png",
-      "speaker": "Người kể chuyện",
-      "text": "Một buổi sáng rực rỡ, cậu bé Tí nghe tin: 12 con giáp đang tổ chức cuộc đua quanh núi Ngọc Linh!"
-    },
-    {
-      "id": "p2",
-      "bg": "assets/user/bg_festival.png",
-      "sprite": "assets/user/trang_cheer.png",
-      "speaker": "Chuột",
-      "text": "Tí ơi! Muốn tham gia thì phải giải đúng phép toán để tiến về phía trước nhé!"
-    },
-    {
-      "id": "p3",
-      "bg": "assets/user/bg_market.png",
-      "sprite": "assets/user/trang_idle.png",
-      "speaker": "Tí",
-      "text": "Được rồi! Tí sẵn sàng! Cộng trừ là sở trường của mình mà!"
-    }
+    { "speaker": "Ngọc Hoàng", "text": "Ta tổ chức cuộc đua 12 con giáp, ai giỏi tính toán sẽ về đích!" },
+    { "speaker": "Người kể chuyện", "text": "Bạn sẽ đồng hành, giúp từng con vật giải thử thách để tiến lên." },
+    { "speaker": "Chuột", "text": "Đi thôi, tớ cần bạn bấm giờ, tính toán thật nhanh!" }
   ],
   "nodes": [
+    { "id": "g1-l1", "title": "Chuột Nhắt Xuất Phát", "badgeOnComplete": "g1-l1", "activityRef": "g1-l1-qs", "cutscene": [{ "speaker": "Chuột", "text": "Tớ nhỏ nhưng nhanh, giúp tớ cộng trừ để vượt vạch xuất phát!" }] },
+    { "id": "g1-l2", "title": "Trâu Vàng Lội Bùn", "badgeOnComplete": "g1-l2", "activityRef": "g1-l2-qs", "cutscene": [{ "speaker": "Trâu", "text": "Đo quãng bùn dài bao nhiêu để tớ bước chắc nhé." }] },
+    { "id": "g1-l3", "title": "Hổ Gầm Vang Núi", "badgeOnComplete": "g1-l3", "activityRef": "g1-l3-qs", "cutscene": [{ "speaker": "Hổ", "text": "Đếm bước lên núi, cộng trừ nhanh kẻo trời tối!" }] },
+    { "id": "g1-l4", "title": "Mèo Mướp Trèo Cau", "badgeOnComplete": "g1-l4", "activityRef": "g1-l4-qs", "cutscene": [{ "speaker": "Mèo", "text": "Tính chiều cao cây cau, đặt số vào thang giúp tớ leo." }] },
+    { "id": "g1-l5", "title": "Rồng Bay Phun Lửa", "badgeOnComplete": "g1-l5", "activityRef": "g1-l5-qs", "cutscene": [{ "speaker": "Rồng", "text": "Phun lửa tạo số đẹp, chọn đáp án đúng nha!" }] },
+    { "id": "g1-l6", "title": "Rắn Trườn Qua Hang", "badgeOnComplete": "g1-l6", "activityRef": "g1-l6-qs", "cutscene": [{ "speaker": "Rắn", "text": "Đo chiều dài hang, ghép số đúng để không lạc." }] },
+    { "id": "g1-l7", "title": "Ngựa Phi Nước Đại", "badgeOnComplete": "g1-l7", "activityRef": "g1-l7-qs", "cutscene": [{ "speaker": "Ngựa", "text": "Đồng hồ đếm giờ, kéo kim đúng để cán mốc." }] },
+    { "id": "g1-l8", "title": "Dê Trắng Qua Cầu", "badgeOnComplete": "g1-l8", "activityRef": "g1-l8-qs", "cutscene": [{ "speaker": "Dê", "text": "Cầu hẹp lắm, so sánh số để biết ai đi trước." }] },
+    { "id": "g1-l9", "title": "Khỉ Con Hái Đào", "badgeOnComplete": "g1-l9", "activityRef": "g1-l9-qs", "cutscene": [{ "speaker": "Khỉ", "text": "Nhảy cành hái đào, đếm trái cho đủ giỏ." }] },
+    { "id": "g1-l10", "title": "Gà Gáy Sáng", "badgeOnComplete": "g1-l10", "activityRef": "g1-l10-qs", "cutscene": [{ "speaker": "Gà", "text": "Gáy đúng giờ, điền số đúng trên đồng hồ!" }] },
+    { "id": "g1-l11", "title": "Chó Canh Giữ Nhà", "badgeOnComplete": "g1-l11", "activityRef": "g1-l11-qs", "cutscene": [{ "speaker": "Chó", "text": "Cộng xương thưởng, trừ xương phạt, tớ canh sân." }] },
+    { "id": "g1-l12", "title": "Lợn Ỉn Về Đích", "badgeOnComplete": "g1-l12", "activityRef": "g1-l12-qs", "cutscene": [{ "speaker": "Lợn", "text": "Tớ chậm nhưng chắc, ghép số để đủ bước cuối." }] },
+    { "id": "g1-l13", "title": "Vinh Danh Bảng Vàng", "badgeOnComplete": "g1-l13", "activityRef": "g1-l13-qs", "cutscene": [{ "speaker": "Ngọc Hoàng", "text": "Bảng vàng chờ tên, giải đề tổng hợp để ghi danh." }] },
+    { "id": "g1-l14", "title": "Tiệc Mừng Chiến Thắng", "badgeOnComplete": "g1-l14", "activityRef": "g1-l14-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Chuẩn bị tiệc, chia bánh và nước sao cho đều." }] },
+    { "id": "g1-l15", "title": "Ngọc Hoàng Ban Thưởng", "badgeOnComplete": "g1-l15", "activityRef": "g1-l15-qs", "cutscene": [{ "speaker": "Ngọc Hoàng", "text": "Thử thách cuối: thời gian + độ dài, bạn làm được không?" }] }
+  ],
+  "activities": [
     {
-      "id": "n1",
-      "order": 1,
-      "title": "Chặng 1: Đua với Chuột",
-      "mathTopic": "Cộng trong phạm vi 10–20",
-      "objective": "Giải phép cộng để Tí tăng tốc vượt qua Chuột.",
-      "cutscene": [
-        {
-          "speaker": "Chuột",
-          "text": "Ai nhanh trí hơn nào? Giải đúng phép cộng là chạy nhanh hơn đấy!"
-        },
-        {
-          "speaker": "Narrator",
-          "text": "Chuột phóng vèo, nhưng Tí vẫn có thể đuổi kịp nếu tính đúng!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Giải đúng, Tí tăng tốc!"
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_market.png",
-        "sprite_main_idle": "assets/user/trang_idle.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_apple.png",
-        "alt": {
-          "bg": "Đường đua đồng cỏ",
-          "sprite_opponent": "Chuột",
-          "icon": "Phép cộng"
-        }
-      },
-      "activityRef": "grade1.c1.l1.a1",
-      "xpOnCorrect": 8,
-      "badgeOnComplete": "speed-math",
-      "hint": "Mỗi phép cộng đúng giúp Tí chạy nhanh hơn."
+      "id": "g1-l1-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l1-q1", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l1-q2", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l1-q3", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." }
+      ]
     },
     {
-      "id": "n2",
-      "order": 2,
-      "title": "Chặng 2: Đua với Trâu",
-      "mathTopic": "Trừ trong phạm vi 30",
-      "objective": "Giải phép trừ để vượt qua Trâu.",
-      "cutscene": [
-        {
-          "speaker": "Trâu",
-          "text": "Tí ơi, đua với Trâu phải thật kiên trì và chính xác!"
-        },
-        {
-          "speaker": "Narrator",
-          "text": "Trâu chậm mà chắc, nhưng nếu Tí tính nhanh sẽ vượt lên trước!"
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_bridge.png",
-        "sprite_main_think": "assets/user/trang_think.png",
-        "sprite_guard": "assets/user/guard.png",
-        "icon": "assets/user/icon_ticket.png",
-        "alt": {
-          "bg": "Đường làng",
-          "sprite_opponent": "Trâu",
-          "icon": "Phép trừ"
-        }
-      },
-      "activityRef": "grade1.c1.l2.a1",
-      "xpOnCorrect": 10,
-      "badgeOnComplete": null,
-      "hint": "Cứ mỗi phép trừ đúng, Tí tăng tốc 5m."
+      "id": "g1-l2-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l2-q1", "type": "multiple-choice", "prompt": "Sợi dây dài 80 cm, cắt đi 25 cm còn lại?", "choices": ["45 cm", "50 cm", "55 cm", "60 cm"], "answer": "55 cm", "explanation": "80 - 25 = 55 cm." },
+        { "id": "g1-l2-q2", "type": "drag-drop", "question": "Kéo thước đo đúng vị trí 1 mét", "dragItems": [{ "id": "d1m", "content": "100 cm", "correctSlot": "slot-meter" }, { "id": "d50", "content": "50 cm", "correctSlot": "slot-half" }], "dropSlots": [{ "id": "slot-meter", "label": "1 m" }, { "id": "slot-half", "label": "Nửa mét" }], "explanation": "1 mét = 100 cm; nửa mét = 50 cm." },
+        { "id": "g1-l2-q3", "type": "fill-blank", "question": "30 cm + 20 cm = __ cm", "blanks": [{ "position": 0, "answer": "50" }], "explanation": "30 + 20 = 50 cm." }
+      ]
     },
     {
-      "id": "n3",
-      "order": 3,
-      "title": "Chặng 3: Đua với Hổ",
-      "mathTopic": "Cộng và trừ hỗn hợp (≤ 50)",
-      "objective": "Giải nhanh các phép cộng – trừ đan xen để giữ tốc độ.",
-      "cutscene": [
-        {
-          "speaker": "Hổ",
-          "text": "Hãy xem ai nhanh hơn – móng vuốt hay bộ não của Tí!"
-        },
-        {
-          "speaker": "Narrator",
-          "text": "Hổ lao vun vút, Tí phải tính đúng liên tục để không bị bỏ xa."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_areca_garden.png",
-        "sprite_owner": "assets/user/farmer.png",
-        "sprite_main_idle": "assets/user/trang_idle.png",
-        "icon": "assets/user/icon_bunch.png",
-        "alt": {
-          "bg": "Đường rừng",
-          "sprite_opponent": "Hổ",
-          "icon": "Cộng trừ hỗn hợp"
-        }
-      },
-      "activityRef": "grade1.c1.l3.a1",
-      "xpOnCorrect": 12,
-      "badgeOnComplete": "fast-thinker",
-      "hint": "Trả lời đúng liên tục để giữ tốc độ tối đa."
+      "id": "g1-l3-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l3-q1", "type": "multiple-choice", "prompt": "62 - 18 = ?", "choices": ["42", "44", "46", "48"], "answer": "44", "explanation": "62 - 18 = 44." },
+        { "id": "g1-l3-q2", "type": "matching-pairs", "question": "Ghép phép tính với kết quả", "pairs": [{ "id": "p1", "left": "23 + 17", "right": "40" }, { "id": "p2", "left": "50 - 9", "right": "41" }, { "id": "p3", "left": "36 + 4", "right": "40" }], "explanation": "Tính nhẩm rồi ghép." },
+        { "id": "g1-l3-q3", "type": "counting", "question": "Đếm bước leo 5 bậc, nghỉ, leo thêm 4 bậc. Tổng?", "prompt": "Bậc thang", "countingItems": [{ "image": "/assets/user/step.png", "count": 5 }, { "image": "/assets/user/step.png", "count": 4 }], "countingAnswer": 9, "explanation": "5 + 4 = 9 bậc." }
+      ]
     },
     {
-      "id": "n4",
-      "order": 4,
-      "title": "Chặng 4: Đua với Ngựa",
-      "mathTopic": "Cộng – trừ có nhớ (≤ 100)",
-      "objective": "Vượt chướng ngại bằng phép cộng, trừ có nhớ.",
-      "cutscene": [
-        {
-          "speaker": "Ngựa",
-          "text": "Muốn thắng Ngựa, Tí phải thật tinh mắt và nhớ tốt!"
-        },
-        {
-          "speaker": "Narrator",
-          "text": "Mỗi chướng ngại trên đường là một phép tính có nhớ."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_classroom.png",
-        "sprite_teacher": "assets/user/teacher.png",
-        "sprite_clock": "assets/user/clock_face.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_clock.png",
-        "alt": {
-          "bg": "Đường cát vàng",
-          "sprite_opponent": "Ngựa",
-          "icon": "Cộng trừ có nhớ"
-        }
-      },
-      "activityRef": "grade1.c1.l4.a1",
-      "xpOnCorrect": 15,
-      "badgeOnComplete": "memory-math",
-      "hint": "Mỗi đáp án đúng giúp Tí vượt chướng ngại vật."
+      "id": "g1-l4-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l4-q1", "type": "drag-drop", "question": "Kéo số đo vào thang", "dragItems": [{ "id": "c2", "content": "2 m", "correctSlot": "slot-top" }, { "id": "c1", "content": "1 m", "correctSlot": "slot-mid" }], "dropSlots": [{ "id": "slot-top", "label": "Đỉnh cây" }, { "id": "slot-mid", "label": "Giữa cây" }], "explanation": "Đỉnh cao hơn giữa." },
+        { "id": "g1-l4-q2", "type": "multiple-choice", "prompt": "70 - 45 = ?", "choices": ["15", "20", "25", "30"], "answer": "25", "explanation": "70 - 45 = 25." },
+        { "id": "g1-l4-q3", "type": "fill-blank", "question": "Cây cau cao 3 m, thêm 50 cm là ___ m.", "blanks": [{ "position": 0, "answer": "3.5" }], "explanation": "50 cm = 0.5 m, tổng 3.5 m." }
+      ]
     },
     {
-      "id": "n5",
-      "order": 5,
-      "title": "Chặng cuối: Về đích cùng Rồng",
-      "mathTopic": "Cộng trừ tổng hợp (10–100)",
-      "objective": "Ôn tập toàn bộ phép cộng trừ – giúp Tí chạm đích vinh quang.",
-      "cutscene": [
-        {
-          "speaker": "Rồng",
-          "text": "Muốn về đích, phải vượt qua thử thách cuối cùng của Rồng!"
-        },
-        {
-          "speaker": "Tí",
-          "text": "Tí không sợ! Cứ tính đúng là Tí thắng!"
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_pond.png",
-        "sprite_fisher": "assets/user/fisher.png",
-        "sprite_ruler": "assets/user/ruler.png",
-        "icon": "assets/user/icon_ruler.png",
-        "alt": {
-          "bg": "Đường đua trên mây",
-          "sprite_opponent": "Rồng",
-          "icon": "Cúp chiến thắng"
-        }
-      },
-      "activityRef": "grade1.c1.l5.a1",
-      "xpOnCorrect": 20,
-      "badgeOnComplete": "zodiac-champion",
-      "hint": "Đây là bài tổng hợp – tất cả phép tính ngẫu nhiên!"
+      "id": "g1-l5-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l5-q1", "type": "multiple-choice", "prompt": "90 - 27 = ?", "choices": ["61", "62", "63", "64"], "answer": "63", "explanation": "90 - 27 = 63." },
+        { "id": "g1-l5-q2", "type": "matching-pairs", "question": "Ghép phép tính lửa", "pairs": [{ "id": "p1", "left": "45 + 5", "right": "50" }, { "id": "p2", "left": "30 + 12", "right": "42" }, { "id": "p3", "left": "70 - 20", "right": "50" }], "explanation": "Tính rồi ghép." },
+        { "id": "g1-l5-q3", "type": "fill-blank", "question": "Rồng phun 10 ngọn lửa, tắt 4 ngọn còn __.", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "10 - 4 = 6." }
+      ]
+    },
+    {
+      "id": "g1-l6-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l6-q1", "type": "multiple-choice", "prompt": "Đoạn hang 60 cm, Rắn đã bò 35 cm, còn lại?", "choices": ["15 cm", "20 cm", "25 cm", "30 cm"], "answer": "25 cm", "explanation": "60 - 35 = 25 cm." },
+        { "id": "g1-l6-q2", "type": "drag-drop", "question": "Kéo thẻ độ dài", "dragItems": [{ "id": "small", "content": "Ngắn hơn 1 m", "correctSlot": "slot-short" }, { "id": "long", "content": "Dài hơn 1 m", "correctSlot": "slot-long" }], "dropSlots": [{ "id": "slot-short", "label": "Hang phụ" }, { "id": "slot-long", "label": "Hang chính" }], "explanation": "Hang chính dài hơn." },
+        { "id": "g1-l6-q3", "type": "fill-blank", "question": "Thước 1 m = __ cm", "blanks": [{ "position": 0, "answer": "100" }], "explanation": "1 m = 100 cm." }
+      ]
+    },
+    {
+      "id": "g1-l7-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l7-q1", "type": "matching-pairs", "question": "Ghép giờ với kim đồng hồ", "pairs": [{ "id": "p1", "left": "3 giờ", "right": "Kim giờ ở 3" }, { "id": "p2", "left": "6 giờ", "right": "Kim giờ ở 6" }, { "id": "p3", "left": "9 giờ", "right": "Kim giờ ở 9" }], "explanation": "Đọc giờ đúng." },
+        { "id": "g1-l7-q2", "type": "drag-drop", "question": "Kéo kim phút tới 12", "dragItems": [{ "id": "m12", "content": "Kim phút 12", "correctSlot": "slot-minute" }], "dropSlots": [{ "id": "slot-minute", "label": "Vị trí phút 12" }], "explanation": "Kim phút chỉ lên 12 khi tròn giờ." },
+        { "id": "g1-l7-q3", "type": "multiple-choice", "prompt": "Một giờ có bao nhiêu phút?", "choices": ["30", "45", "60", "90"], "answer": "60", "explanation": "1 giờ = 60 phút." }
+      ]
+    },
+    {
+      "id": "g1-l8-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l8-q1", "type": "multiple-choice", "prompt": "Số nào lớn hơn? 58 hay 65", "choices": ["58", "65"], "answer": "65", "explanation": "65 lớn hơn 58." },
+        { "id": "g1-l8-q2", "type": "fill-blank", "question": "Điền dấu (>, <, =) : 72 __ 27", "blanks": [{ "position": 0, "answer": ">" }], "explanation": "72 lớn hơn 27." },
+        { "id": "g1-l8-q3", "type": "matching-pairs", "question": "Ghép cầu với số thứ tự", "pairs": [{ "id": "p1", "left": "Cầu 1", "right": "Nhỏ nhất" }, { "id": "p2", "left": "Cầu 2", "right": "Trung bình" }, { "id": "p3", "left": "Cầu 3", "right": "Lớn nhất" }], "explanation": "So sánh độ dài." }
+      ]
+    },
+    {
+      "id": "g1-l9-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l9-q1", "type": "counting", "question": "Khỉ hái đào", "prompt": "Hái 7 quả, rơi mất 2 quả, còn lại?", "countingItems": [{ "image": "/assets/user/peach.png", "count": 7 }], "countingAnswer": 5, "explanation": "7 - 2 = 5." },
+        { "id": "g1-l9-q2", "type": "multiple-choice", "prompt": "30 + 25 = ?", "choices": ["45", "50", "55", "60"], "answer": "55", "explanation": "30 + 25 = 55." },
+        { "id": "g1-l9-q3", "type": "drag-drop", "question": "Kéo giỏ đủ 5 quả", "dragItems": [{ "id": "basket5", "content": "5 quả", "correctSlot": "slot-full" }, { "id": "basket3", "content": "3 quả", "correctSlot": "slot-less" }], "dropSlots": [{ "id": "slot-full", "label": "Giỏ đầy" }, { "id": "slot-less", "label": "Giỏ thiếu" }], "explanation": "Giỏ đầy cần 5 quả." }
+      ]
+    },
+    {
+      "id": "g1-l10-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l10-q1", "type": "multiple-choice", "prompt": "Đồng hồ chỉ 7 giờ, kim giờ ở đâu?", "choices": ["7", "6", "5", "8"], "answer": "7", "explanation": "Kim giờ ở số 7." },
+        { "id": "g1-l10-q2", "type": "matching-pairs", "question": "Ghép thời điểm với hoạt động", "pairs": [{ "id": "p1", "left": "5 giờ", "right": "Gà gáy" }, { "id": "p2", "left": "12 giờ", "right": "Ăn trưa" }, { "id": "p3", "left": "20 giờ", "right": "Đi ngủ" }], "explanation": "Thói quen thường ngày." },
+        { "id": "g1-l10-q3", "type": "fill-blank", "question": "Kim phút chỉ 12, kim giờ chỉ 6 => __ giờ", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "Đó là 6 giờ tròn." }
+      ]
+    },
+    {
+      "id": "g1-l11-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l11-q1", "type": "multiple-choice", "prompt": "Chó có 12 khúc xương, cho mèo 3 khúc, còn?", "choices": ["8", "9", "10", "11"], "answer": "9", "explanation": "12 - 3 = 9." },
+        { "id": "g1-l11-q2", "type": "matching-pairs", "question": "Ghép phép cộng với kết quả", "pairs": [{ "id": "p1", "left": "14 + 5", "right": "19" }, { "id": "p2", "left": "20 - 7", "right": "13" }, { "id": "p3", "left": "30 - 12", "right": "18" }], "explanation": "Tính nhẩm." },
+        { "id": "g1-l11-q3", "type": "fill-blank", "question": "15 - __ = 9", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "15 - 6 = 9." }
+      ]
+    },
+    {
+      "id": "g1-l12-qs",
+      "xpReward": 12,
+      "questions": [
+        { "id": "g1-l12-q1", "type": "multiple-choice", "prompt": "Lợn đi 40 bước, nghỉ, đi thêm 28 bước. Tổng?", "choices": ["58", "60", "68", "70"], "answer": "68", "explanation": "40 + 28 = 68." },
+        { "id": "g1-l12-q2", "type": "drag-drop", "question": "Kéo số hoàn thành 68", "dragItems": [{ "id": "n60", "content": "60", "correctSlot": "slot-ten" }, { "id": "n8", "content": "8", "correctSlot": "slot-one" }], "dropSlots": [{ "id": "slot-ten", "label": "Hàng chục" }, { "id": "slot-one", "label": "Hàng đơn vị" }], "explanation": "68 gồm 6 chục và 8 đơn vị." },
+        { "id": "g1-l12-q3", "type": "fill-blank", "question": "70 - 2 = __", "blanks": [{ "position": 0, "answer": "68" }], "explanation": "70 - 2 = 68." }
+      ]
+    },
+    {
+      "id": "g1-l13-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g1-l13-q1", "type": "multiple-choice", "prompt": "Tổng 25 + 35 + 10 = ?", "choices": ["60", "70", "75", "80"], "answer": "70", "explanation": "25 + 35 = 60, 60 + 10 = 70." },
+        { "id": "g1-l13-q2", "type": "matching-pairs", "question": "Ghép dạng giờ", "pairs": [{ "id": "p1", "left": "7 giờ", "right": "7:00" }, { "id": "p2", "left": "7 giờ rưỡi", "right": "7:30" }, { "id": "p3", "left": "8 giờ kém 15", "right": "7:45" }], "explanation": "Cách đọc giờ khác nhau." },
+        { "id": "g1-l13-q3", "type": "fill-blank", "question": "Đoạn dây 1 m = __ cm", "blanks": [{ "position": 0, "answer": "100" }], "explanation": "Quy đổi độ dài." }
+      ]
+    },
+    {
+      "id": "g1-l14-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g1-l14-q1", "type": "multiple-choice", "prompt": "Có 24 cái bánh, chia 6 mâm, mỗi mâm?", "choices": ["3", "4", "5", "6"], "answer": "4", "explanation": "24 : 6 = 4." },
+        { "id": "g1-l14-q2", "type": "matching-pairs", "question": "Ghép đồ uống với số lượng", "pairs": [{ "id": "p1", "left": "Nước cam 5 ly", "right": "5" }, { "id": "p2", "left": "Sữa 8 ly", "right": "8" }, { "id": "p3", "left": "Trà 6 ly", "right": "6" }], "explanation": "Đếm đúng số ly." },
+        { "id": "g1-l14-q3", "type": "fill-blank", "question": "Bánh còn 4 cái, thêm 3 cái nữa là __.", "blanks": [{ "position": 0, "answer": "7" }], "explanation": "4 + 3 = 7." }
+      ]
+    },
+    {
+      "id": "g1-l15-qs",
+      "xpReward": 16,
+      "questions": [
+        { "id": "g1-l15-q1", "type": "multiple-choice", "prompt": "45 phút + 15 phút = ? phút", "choices": ["50", "55", "60", "70"], "answer": "60", "explanation": "45 + 15 = 60 phút = 1 giờ." },
+        { "id": "g1-l15-q2", "type": "drag-drop", "question": "Kéo thước đo 2 mét", "dragItems": [{ "id": "m2", "content": "200 cm", "correctSlot": "slot-2m" }], "dropSlots": [{ "id": "slot-2m", "label": "Vạch 2 m" }], "explanation": "2 m = 200 cm." },
+        { "id": "g1-l15-q3", "type": "matching-pairs", "question": "Ghép phép tính tổng hợp", "pairs": [{ "id": "p1", "left": "80 - 25", "right": "55" }, { "id": "p2", "left": "30 + 12", "right": "42" }, { "id": "p3", "left": "60 - 15", "right": "45" }], "explanation": "Ôn tập trước khi nhận thưởng." }
+      ]
     }
   ]
 }
+

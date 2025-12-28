@@ -1,0 +1,112 @@
+{
+  "meta": { "title": "Hành trình Chú Cuội đến Cung Trăng", "description": "Giúp cây đa lớn nhanh đưa Cuội lên trăng" },
+  "prologue": [
+    { "speaker": "Người kể chuyện", "text": "Chu Cuội muốn bay lên trăng chơi với chị Hằng." },
+    { "speaker": "Cuội", "text": "Cây đa chưa đủ lớn, tớ cần bạn giúp giải toán để nó cao lên!" }
+  ],
+  "nodes": [
+    {
+      "id": "cuoi-1",
+      "title": "Tưới nước cây đa",
+      "badgeOnComplete": "cuoi_water",
+      "activityRef": "cuoi-1-qs",
+      "cutscene": [
+        { "speaker": "Cuội", "text": "Tưới thêm nước nào! Giải toán để nước nhiệm màu chảy." }
+      ]
+    },
+    {
+      "id": "cuoi-2",
+      "title": "Lá xanh thêm",
+      "badgeOnComplete": "cuoi_leaf",
+      "activityRef": "cuoi-2-qs",
+      "cutscene": [
+        { "speaker": "Chị Hằng", "text": "Cây đa sắp chạm trăng rồi, tiếp tục nhé!" }
+      ]
+    },
+    {
+      "id": "cuoi-3",
+      "title": "Thân cây vươn cao",
+      "badgeOnComplete": "cuoi_trunk",
+      "activityRef": "cuoi-3-qs",
+      "cutscene": [
+        { "speaker": "Cuội", "text": "Thân cây dài ra từng chút một, giải nhanh nha!" }
+      ]
+    },
+    {
+      "id": "cuoi-4",
+      "title": "Chạm tới mây",
+      "badgeOnComplete": "cuoi_cloud",
+      "activityRef": "cuoi-4-qs",
+      "cutscene": [
+        { "speaker": "Người kể chuyện", "text": "Cây đa xuyên mây, còn chút nữa sẽ thấy trăng." }
+      ]
+    },
+    {
+      "id": "cuoi-5",
+      "title": "Gặp chị Hằng",
+      "badgeOnComplete": "cuoi_moon",
+      "activityRef": "cuoi-5-qs",
+      "cutscene": [
+        { "speaker": "Chị Hằng", "text": "Cuội giỏi quá! Cùng ngắm trăng nhé." }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "cuoi-1-qs",
+      "xpReward": 10,
+      "questions": [
+        { "prompt": "20 + 15 = ?", "choices": ["25","30","35","40"], "answer": "35" },
+        { "prompt": "50 - 8 = ?", "choices": ["42","43","44","45"], "answer": "42" },
+        { "prompt": "9 + 6 = ?", "choices": ["13","14","15","16"], "answer": "15" },
+        { "prompt": "70 - 25 = ?", "choices": ["35","45","55","60"], "answer": "45" },
+        { "prompt": "12 + 7 = ?", "choices": ["17","18","19","20"], "answer": "19" }
+      ]
+    },
+    {
+      "id": "cuoi-2-qs",
+      "xpReward": 10,
+      "questions": [
+        { "prompt": "33 + 22 = ?", "choices": ["45","54","55","56"], "answer": "55" },
+        { "prompt": "60 - 19 = ?", "choices": ["39","41","42","43"], "answer": "41" },
+        { "prompt": "14 + 5 = ?", "choices": ["17","18","19","20"], "answer": "19" },
+        { "prompt": "90 - 37 = ?", "choices": ["51","52","53","54"], "answer": "53" },
+        { "prompt": "18 + 21 = ?", "choices": ["37","38","39","40"], "answer": "39" }
+      ]
+    },
+    {
+      "id": "cuoi-3-qs",
+      "xpReward": 10,
+      "questions": [
+        { "prompt": "45 + 15 = ?", "choices": ["55","58","60","62"], "answer": "60" },
+        { "prompt": "80 - 24 = ?", "choices": ["54","56","57","58"], "answer": "56" },
+        { "prompt": "27 + 19 = ?", "choices": ["44","45","46","47"], "answer": "46" },
+        { "prompt": "63 - 18 = ?", "choices": ["43","44","45","46"], "answer": "45" },
+        { "prompt": "16 + 28 = ?", "choices": ["42","43","44","45"], "answer": "44" }
+      ]
+    },
+    {
+      "id": "cuoi-4-qs",
+      "xpReward": 10,
+      "questions": [
+        { "prompt": "72 - 29 = ?", "choices": ["41","42","43","44"], "answer": "43" },
+        { "prompt": "38 + 17 = ?", "choices": ["53","54","55","56"], "answer": "55" },
+        { "prompt": "64 - 36 = ?", "choices": ["26","28","30","32"], "answer": "28" },
+        { "prompt": "25 + 34 = ?", "choices": ["57","58","59","60"], "answer": "59" },
+        { "prompt": "90 - 47 = ?", "choices": ["41","42","43","44"], "answer": "43" }
+      ]
+    },
+    {
+      "id": "cuoi-5-qs",
+      "xpReward": 10,
+      "questions": [
+        { "prompt": "55 + 28 = ?", "choices": ["80","81","82","83"], "answer": "83" },
+        { "prompt": "99 - 45 = ?", "choices": ["52","53","54","55"], "answer": "54" },
+        { "prompt": "31 + 27 = ?", "choices": ["56","57","58","59"], "answer": "58" },
+        { "prompt": "70 - 33 = ?", "choices": ["35","36","37","38"], "answer": "37" },
+        { "prompt": "42 + 18 = ?", "choices": ["58","59","60","61"], "answer": "60" }
+      ]
+    }
+  ]
+}
+

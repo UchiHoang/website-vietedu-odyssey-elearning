@@ -1,202 +1,166 @@
 {
   "meta": {
-    "storyPackId": "trang-nguyen-protect-country-2025",
-    "title": "Trạng Nguyên bảo vệ đất nước",
-    "layout": "left-to-right",
-    "locale": "vi",
-    "description": "Trạng Nguyên dùng kiến thức toán học về số thập phân để tính toán xây thành, chuẩn bị lương thảo và bảo vệ biên cương đất nước."
+    "title": "Bảo vệ đất nước cùng Trạng Nguyên",
+    "description": "Bạn là quân sư Trạng Nguyên: tính số thập phân, hình học, chuyển động để chỉ huy."
   },
-  "legalNote": "Create original character artwork only. Use only user-provided images in /public/assets/user/. Do NOT copy or reproduce any copyrighted art from existing works.",
   "prologue": [
-    {
-      "id": "p1",
-      "bg": "assets/user/bg_festival.png",
-      "sprite": "assets/user/trang_idle.png",
-      "speaker": "Người kể chuyện",
-      "text": "Thời loạn lạc, giặc ngoại xâm đe dọa bờ cõi. Vua cần người tài giỏi giúp xây thành, tính lương, bảo vệ đất nước."
-    },
-    {
-      "id": "p2",
-      "bg": "assets/user/bg_festival.png",
-      "sprite": "assets/user/trang_cheer.png",
-      "speaker": "Nhà Vua",
-      "text": "Trạng Nguyên! Trẫm cần người dùng toán học để tính toán xây thành lũy, chuẩn bị lương thảo!"
-    },
-    {
-      "id": "p3",
-      "bg": "assets/user/bg_market.png",
-      "sprite": "assets/user/trang_idle.png",
-      "speaker": "Trạng Nguyên",
-      "text": "Thần xin nhận lời! Với kiến thức về số thập phân, thần sẽ tính toán chính xác để bảo vệ bờ cõi!"
-    }
+    { "speaker": "Trạng Nguyên", "text": "Ta cần một quân sư giỏi toán để giữ vững biên cương." },
+    { "speaker": "Người kể chuyện", "text": "Bạn sẽ tính toán lương thảo, đường hành quân và tốc độ chiến thuyền." },
+    { "speaker": "Tướng Quân", "text": "Mọi quyết định đều dựa trên số liệu, hãy thật chính xác." }
   ],
   "nodes": [
+    { "id": "g5-l1", "title": "Chiêu Mộ Binh Sĩ", "badgeOnComplete": "g5-l1", "activityRef": "g5-l1-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Đếm quân, chia nhóm, dùng số thập phân." }] },
+    { "id": "g5-l2", "title": "Kiểm Kê Kho Lương", "badgeOnComplete": "g5-l2", "activityRef": "g5-l2-qs", "cutscene": [{ "speaker": "Lính Hậu Cần", "text": "Đo cân nặng gạo theo kg, số thập phân." }] },
+    { "id": "g5-l3", "title": "Bản Đồ Biên Giới", "badgeOnComplete": "g5-l3", "activityRef": "g5-l3-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Tính tọa độ, khoảng cách trên bản đồ." }] },
+    { "id": "g5-l4", "title": "Tính Toán Quân Nhu", "badgeOnComplete": "g5-l4", "activityRef": "g5-l4-qs", "cutscene": [{ "speaker": "Tướng Quân", "text": "Cộng trừ số thập phân khi cấp phát." }] },
+    { "id": "g5-l5", "title": "Gấp Rút Hành Quân", "badgeOnComplete": "g5-l5", "activityRef": "g5-l5-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Tính vận tốc = quãng đường / thời gian." }] },
+    { "id": "g5-l6", "title": "Chia Nhỏ Đội Hình", "badgeOnComplete": "g5-l6", "activityRef": "g5-l6-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Chia quân bằng tỉ lệ, phân số và thập phân." }] },
+    { "id": "g5-l7", "title": "Đắp Đê Phòng Thủ", "badgeOnComplete": "g5-l7", "activityRef": "g5-l7-qs", "cutscene": [{ "speaker": "Dân Công", "text": "Tính thể tích đất, hình hộp chữ nhật." }] },
+    { "id": "g5-l8", "title": "Tính Thuế Quân Điền", "badgeOnComplete": "g5-l8", "activityRef": "g5-l8-qs", "cutscene": [{ "speaker": "Quan Lại", "text": "Nhân thập phân để tính thuế ruộng." }] },
+    { "id": "g5-l9", "title": "Trận Địa Hình Tam Giác", "badgeOnComplete": "g5-l9", "activityRef": "g5-l9-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Tính diện tích tam giác, chọn vị trí đặt quân." }] },
+    { "id": "g5-l10", "title": "Xây Thành Lũy", "badgeOnComplete": "g5-l10", "activityRef": "g5-l10-qs", "cutscene": [{ "speaker": "Thợ Xây", "text": "Chu vi, diện tích tường thành hình chữ nhật." }] },
+    { "id": "g5-l11", "title": "Vòng Vây Khép Kín", "badgeOnComplete": "g5-l11", "activityRef": "g5-l11-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Tính chu vi đường tròn bao quanh địch." }] },
+    { "id": "g5-l12", "title": "Thủy Chiến Trên Sông", "badgeOnComplete": "g5-l12", "activityRef": "g5-l12-qs", "cutscene": [{ "speaker": "Thủy Quân", "text": "Tốc độ thuyền ngược xuôi dòng, bài toán chuyển động." }] },
+    { "id": "g5-l13", "title": "Truy Kích Quân Thù", "badgeOnComplete": "g5-l13", "activityRef": "g5-l13-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Hai đội xuất phát khác thời gian, tính gặp nhau." }] },
+    { "id": "g5-l14", "title": "Cuộc Đua Thời Gian", "badgeOnComplete": "g5-l14", "activityRef": "g5-l14-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Tổng hợp thời gian, vận tốc, khoảng cách." }] },
+    { "id": "g5-l15", "title": "Khải Hoàn Ca", "badgeOnComplete": "g5-l15", "activityRef": "g5-l15-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Bài tổng hợp cuối cùng, nhận thưởng." }] }
+  ],
+  "activities": [
     {
-      "id": "n1",
-      "order": 1,
-      "title": "Tính toán vật liệu xây thành",
-      "mathTopic": "Số thập phân cơ bản",
-      "objective": "Nhận biết và sử dụng số thập phân để tính vật liệu",
-      "cutscene": [
-        {
-          "speaker": "Quan Quân Lương",
-          "text": "Thưa Trạng Nguyên, chúng ta cần tính chính xác số đá, vôi, gạch để xây thành."
-        },
-        {
-          "speaker": "Trạng Nguyên",
-          "text": "Được rồi! Hãy dùng số thập phân để tính toán cho chính xác!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Trạng Nguyên tính toán vật liệu xây thành bằng số thập phân."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_market.png",
-        "sprite_main_idle": "assets/user/trang_idle.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_apple.png",
-        "alt": {
-          "bg": "Công trường xây thành",
-          "sprite_main_idle": "Trạng Nguyên đang tính toán",
-          "icon": "Vật liệu xây dựng"
-        }
-      },
-      "activityRef": "grade5.c1.l1.a1",
-      "xpOnCorrect": 10,
-      "badgeOnComplete": "decimal-master",
-      "hint": "Sử dụng số thập phân để tính toán chính xác vật liệu xây dựng."
+      "id": "g5-l1-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l1-q1", "type": "multiple-choice", "prompt": "Chia 3500 lính thành 3 quân, mỗi quân khoảng?", "choices": ["1000", "1150", "1170", "1200"], "answer": "1170", "explanation": "3500 : 3 ≈ 1166,7 làm tròn 1170." },
+        { "id": "g5-l1-q2", "type": "matching-pairs", "question": "Ghép thập phân với phân số", "pairs": [{ "id": "p1", "left": "0,5", "right": "1/2" }, { "id": "p2", "left": "0,25", "right": "1/4" }, { "id": "p3", "left": "0,2", "right": "1/5" }], "explanation": "Đổi tương đương." },
+        { "id": "g5-l1-q3", "type": "fill-blank", "question": "1,5 + 2,25 = __", "blanks": [{ "position": 0, "answer": "3,75" }], "explanation": "Cộng thập phân." }
+      ]
     },
     {
-      "id": "n2",
-      "order": 2,
-      "title": "Tính chiều dài thành lũy",
-      "mathTopic": "Cộng trừ số thập phân",
-      "objective": "Tính toán chiều dài thành lũy cần xây dựng",
-      "cutscene": [
-        {
-          "speaker": "Quan Đốc Công",
-          "text": "Thưa Trạng Nguyên, chúng ta cần tính chiều dài các đoạn thành để phân bổ quân lính."
-        },
-        {
-          "speaker": "Trạng Nguyên",
-          "text": "Hãy cộng trừ các số thập phân để tính tổng chiều dài thành!"
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_bridge.png",
-        "sprite_main_think": "assets/user/trang_think.png",
-        "sprite_guard": "assets/user/guard.png",
-        "icon": "assets/user/icon_ticket.png",
-        "alt": {
-          "bg": "Bản đồ thành lũy",
-          "sprite_main_think": "Trạng Nguyên nghiên cứu bản đồ",
-          "icon": "Thước đo"
-        }
-      },
-      "activityRef": "grade5.c1.l2.a1",
-      "xpOnCorrect": 12,
-      "badgeOnComplete": "wall-calculator",
-      "hint": "Cộng trừ số thập phân để tính chiều dài chính xác."
+      "id": "g5-l2-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l2-q1", "type": "multiple-choice", "prompt": "Bao gạo 12,5 kg cộng thêm 7,3 kg. Tổng?", "choices": ["18,8 kg", "19,6 kg", "19,8 kg", "20 kg"], "answer": "19,8 kg", "explanation": "12,5 + 7,3 = 19,8." },
+        { "id": "g5-l2-q2", "type": "drag-drop", "question": "Kéo dấu đúng", "dragItems": [{ "id": "gt", "content": ">", "correctSlot": "slot-198" }, { "id": "lt", "content": "<", "correctSlot": "slot-125" }], "dropSlots": [{ "id": "slot-198", "label": "19,8 __ 19,5" }, { "id": "slot-125", "label": "12,5 __ 19,8" }], "explanation": "19,8 lớn hơn 19,5; 12,5 nhỏ hơn 19,8." },
+        { "id": "g5-l2-q3", "type": "fill-blank", "question": "19,8 - 0,8 = __ kg", "blanks": [{ "position": 0, "answer": "19" }], "explanation": "19,8 - 0,8 = 19,0." }
+      ]
     },
     {
-      "id": "n3",
-      "order": 3,
-      "title": "Tính khối lượng lương thảo",
-      "mathTopic": "Nhân chia số thập phân",
-      "objective": "Tính toán khối lượng lương thảo cần chuẩn bị",
-      "cutscene": [
-        {
-          "speaker": "Quan Quân Lương",
-          "text": "Mỗi binh sĩ cần 2.5kg lương thảo mỗi ngày. Chúng ta có 1250 binh sĩ."
-        },
-        {
-          "speaker": "Trạng Nguyên",
-          "text": "Hãy nhân chia số thập phân để tính tổng lương thảo cần thiết!"
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_areca_garden.png",
-        "sprite_owner": "assets/user/farmer.png",
-        "sprite_main_idle": "assets/user/trang_idle.png",
-        "icon": "assets/user/icon_bunch.png",
-        "alt": {
-          "bg": "Kho lương thảo",
-          "sprite_owner": "Quan quân lương",
-          "icon": "Lương thảo"
-        }
-      },
-      "activityRef": "grade5.c1.l3.a1",
-      "xpOnCorrect": 15,
-      "badgeOnComplete": "supply-master",
-      "hint": "Nhân chia số thập phân để tính khối lượng lương thảo."
+      "id": "g5-l3-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l3-q1", "type": "multiple-choice", "prompt": "Trên bản đồ, 1 cm ứng 5 km. Đo 6 cm nghĩa là?", "choices": ["20 km", "25 km", "30 km", "35 km"], "answer": "30 km", "explanation": "6 x 5 = 30 km." },
+        { "id": "g5-l3-q2", "type": "matching-pairs", "question": "Ghép hướng với tọa độ", "pairs": [{ "id": "p1", "left": "(3;5)", "right": "Đông Bắc" }, { "id": "p2", "left": "(3;-2)", "right": "Đông Nam" }, { "id": "p3", "left": "(-4;5)", "right": "Tây Bắc" }], "explanation": "Dựa vào dấu x,y." },
+        { "id": "g5-l3-q3", "type": "fill-blank", "question": "Quãng đường 30 km đi trong 2 giờ => vận tốc __ km/h", "blanks": [{ "position": 0, "answer": "15" }], "explanation": "v = s/t." }
+      ]
     },
     {
-      "id": "n4",
-      "order": 4,
-      "title": "Đo đạc diện tích đồn trú",
-      "mathTopic": "Đo lường với số thập phân",
-      "objective": "Ứng dụng số thập phân trong đo đạc diện tích",
-      "cutscene": [
-        {
-          "speaker": "Tướng Quân",
-          "text": "Chúng ta cần tính diện tích các đồn trú để bố trí quân sĩ hợp lý."
-        },
-        {
-          "speaker": "Trạng Nguyên",
-          "text": "Dùng số thập phân để đo đạc chính xác diện tích các khu vực!"
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_classroom.png",
-        "sprite_teacher": "assets/user/teacher.png",
-        "sprite_clock": "assets/user/clock_face.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_clock.png",
-        "alt": {
-          "bg": "Đồn trú quân sự",
-          "sprite_teacher": "Tướng quân",
-          "icon": "Dụng cụ đo đạc"
-        }
-      },
-      "activityRef": "grade5.c1.l4.a1",
-      "xpOnCorrect": 18,
-      "badgeOnComplete": "measurement-expert",
-      "hint": "Áp dụng số thập phân trong đo độ dài, diện tích thực tế."
+      "id": "g5-l4-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l4-q1", "type": "multiple-choice", "prompt": "5,6 + 2,48 = ?", "choices": ["7,98", "8,08", "8,18", "8,28"], "answer": "8,08", "explanation": "Cộng thập phân theo cột." },
+        { "id": "g5-l4-q2", "type": "matching-pairs", "question": "Ghép phép tính với kết quả", "pairs": [{ "id": "p1", "left": "7,5 - 3,2", "right": "4,3" }, { "id": "p2", "left": "1,25 + 0,75", "right": "2,0" }, { "id": "p3", "left": "2,4 + 0,6", "right": "3,0" }], "explanation": "Thực hiện cộng trừ." },
+        { "id": "g5-l4-q3", "type": "fill-blank", "question": "8,08 - 0,58 = __", "blanks": [{ "position": 0, "answer": "7,5" }], "explanation": "8,08 - 0,58 = 7,50." }
+      ]
     },
     {
-      "id": "n5",
-      "order": 5,
-      "title": "Tổng kiểm tra phòng thủ",
-      "mathTopic": "Tổng hợp số thập phân",
-      "objective": "Ôn tập toàn bộ kiến thức về số thập phân",
-      "cutscene": [
-        {
-          "speaker": "Nhà Vua",
-          "text": "Trạng Nguyên! Hãy tổng kiểm tra tất cả tính toán phòng thủ trước khi giặc tới!"
-        },
-        {
-          "speaker": "Trạng Nguyên",
-          "text": "Thần xin trình bày tất cả tính toán về thành lũy, lương thảo, bố trí quân sĩ!"
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_pond.png",
-        "sprite_fisher": "assets/user/fisher.png",
-        "sprite_ruler": "assets/user/ruler.png",
-        "icon": "assets/user/icon_ruler.png",
-        "alt": {
-          "bg": "Đại sảnh triều đình",
-          "sprite_fisher": "Nhà vua",
-          "icon": "Bản đồ phòng thủ"
-        }
-      },
-      "activityRef": "grade5.c1.l5.a1",
-      "xpOnCorrect": 25,
-      "badgeOnComplete": "country-protector",
-      "hint": "Tổng hợp tất cả kiến thức về số thập phân để bảo vệ đất nước."
+      "id": "g5-l5-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l5-q1", "type": "multiple-choice", "prompt": "Đi 24 km trong 2 giờ. Vận tốc?", "choices": ["10 km/h", "11 km/h", "12 km/h", "13 km/h"], "answer": "12 km/h", "explanation": "v = 24/2 = 12." },
+        { "id": "g5-l5-q2", "type": "drag-drop", "question": "Kéo công thức", "dragItems": [{ "id": "v", "content": "v = s : t", "correctSlot": "slot-v" }, { "id": "s", "content": "s = v x t", "correctSlot": "slot-s" }], "dropSlots": [{ "id": "slot-v", "label": "Vận tốc" }, { "id": "slot-s", "label": "Quãng đường" }], "explanation": "Công thức chuyển động thẳng." },
+        { "id": "g5-l5-q3", "type": "fill-blank", "question": "Muốn đi 36 km với v=12 km/h, cần __ giờ", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "t = s/v = 36/12 = 3." }
+      ]
+    },
+    {
+      "id": "g5-l6-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l6-q1", "type": "multiple-choice", "prompt": "Chia 1 200 lính theo tỉ lệ 2:3. Nhóm 1 có?", "choices": ["400", "450", "480", "500"], "answer": "480", "explanation": "Tổng phần 5; nhóm1=2/5*1200=480." },
+        { "id": "g5-l6-q2", "type": "matching-pairs", "question": "Ghép tỉ lệ với thập phân", "pairs": [{ "id": "p1", "left": "1/2", "right": "0,5" }, { "id": "p2", "left": "2/3", "right": "0,66" }, { "id": "p3", "left": "3/5", "right": "0,6" }], "explanation": "Đổi tỉ lệ." },
+        { "id": "g5-l6-q3", "type": "fill-blank", "question": "Nhóm 2 (3 phần) = __ lính", "blanks": [{ "position": 0, "answer": "720" }], "explanation": "3/5 * 1200 = 720." }
+      ]
+    },
+    {
+      "id": "g5-l7-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l7-q1", "type": "multiple-choice", "prompt": "Hào phòng thủ: dài 15 m, rộng 3 m, cao 2 m. Thể tích?", "choices": ["60 m3", "80 m3", "90 m3", "100 m3"], "answer": "90 m3", "explanation": "15 x 3 x 2 = 90." },
+        { "id": "g5-l7-q2", "type": "matching-pairs", "question": "Ghép đơn vị", "pairs": [{ "id": "p1", "left": "m3", "right": "thể tích" }, { "id": "p2", "left": "m2", "right": "diện tích" }, { "id": "p3", "left": "m", "right": "độ dài" }], "explanation": "Phân biệt đơn vị." },
+        { "id": "g5-l7-q3", "type": "fill-blank", "question": "Nếu cao 2,5 m, thể tích = 15 x 3 x 2,5 = __ m3", "blanks": [{ "position": 0, "answer": "112,5" }], "explanation": "Tính nhân thập phân." }
+      ]
+    },
+    {
+      "id": "g5-l8-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l8-q1", "type": "multiple-choice", "prompt": "Thuế ruộng: 2,5 tạ/ha. 3,2 ha thu bao nhiêu?", "choices": ["7,5 tạ", "8,0 tạ", "8,5 tạ", "9,0 tạ"], "answer": "8,0 tạ", "explanation": "2,5 x 3,2 = 8,0." },
+        { "id": "g5-l8-q2", "type": "drag-drop", "question": "Kéo dấu thập phân", "dragItems": [{ "id": "dot", "content": ",", "correctSlot": "slot-25" }], "dropSlots": [{ "id": "slot-25", "label": "2 5 -> 2,5" }], "explanation": "Thêm dấu phẩy đúng." },
+        { "id": "g5-l8-q3", "type": "fill-blank", "question": "8,0 tạ = __ kg", "blanks": [{ "position": 0, "answer": "800" }], "explanation": "1 tạ = 100 kg." }
+      ]
+    },
+    {
+      "id": "g5-l9-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l9-q1", "type": "multiple-choice", "prompt": "Tam giác đáy 12 m, cao 5 m. Diện tích?", "choices": ["25", "30", "35", "40"], "answer": "30", "explanation": "S = 1/2 x 12 x 5 = 30." },
+        { "id": "g5-l9-q2", "type": "matching-pairs", "question": "Ghép công thức", "pairs": [{ "id": "p1", "left": "S tam giác", "right": "1/2 x a x h" }, { "id": "p2", "left": "Chu vi tam giác đều", "right": "3a" }, { "id": "p3", "left": "Chu vi HCN", "right": "2(a+b)" }], "explanation": "Nhớ công thức." },
+        { "id": "g5-l9-q3", "type": "fill-blank", "question": "Tam giác đều cạnh 6 m, chu vi = __ m", "blanks": [{ "position": 0, "answer": "18" }], "explanation": "3 x 6 = 18." }
+      ]
+    },
+    {
+      "id": "g5-l10-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l10-q1", "type": "multiple-choice", "prompt": "Tường thành: dài 40 m, rộng 6 m. Chu vi?", "choices": ["80 m", "88 m", "92 m", "96 m"], "answer": "92 m", "explanation": "2(40+6)=92." },
+        { "id": "g5-l10-q2", "type": "drag-drop", "question": "Kéo kết quả diện tích", "dragItems": [{ "id": "s240", "content": "240 m2", "correctSlot": "slot-area" }], "dropSlots": [{ "id": "slot-area", "label": "Diện tích 40 x 6" }], "explanation": "40 x 6 = 240 m2." },
+        { "id": "g5-l10-q3", "type": "fill-blank", "question": "92 - 40 = __", "blanks": [{ "position": 0, "answer": "52" }], "explanation": "Bài trừ đơn giản." }
+      ]
+    },
+    {
+      "id": "g5-l11-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l11-q1", "type": "multiple-choice", "prompt": "Chu vi đường tròn bán kính 7 m (lấy π=3,14)?", "choices": ["30 m", "40 m", "43,96 m", "45 m"], "answer": "43,96 m", "explanation": "C = 2πr = 2*3,14*7=43,96." },
+        { "id": "g5-l11-q2", "type": "matching-pairs", "question": "Ghép yếu tố đường tròn", "pairs": [{ "id": "p1", "left": "Bán kính", "right": "r" }, { "id": "p2", "left": "Đường kính", "right": "2r" }, { "id": "p3", "left": "Chu vi", "right": "2πr" }], "explanation": "Ôn công thức." },
+        { "id": "g5-l11-q3", "type": "fill-blank", "question": "Nếu r=3,14 m, chu vi = 2 x 3,14 x 3,14 ≈ __ m", "blanks": [{ "position": 0, "answer": "19,7" }], "explanation": "Tính gần đúng ~19,7." }
+      ]
+    },
+    {
+      "id": "g5-l12-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l12-q1", "type": "multiple-choice", "prompt": "Thuyền xuôi dòng: v_thuyền 15 km/h, dòng 2 km/h. V thực?", "choices": ["13 km/h", "15 km/h", "17 km/h", "18 km/h"], "answer": "17 km/h", "explanation": "Xuôi: v + v_dòng = 17." },
+        { "id": "g5-l12-q2", "type": "matching-pairs", "question": "Ghép chuyển động", "pairs": [{ "id": "p1", "left": "Xuôi dòng", "right": "v + v_d" }, { "id": "p2", "left": "Ngược dòng", "right": "v - v_d" }, { "id": "p3", "left": "Đứng yên", "right": "0" }], "explanation": "Quy tắc tốc độ." },
+        { "id": "g5-l12-q3", "type": "fill-blank", "question": "Ngược dòng: 15 - 2 = __ km/h", "blanks": [{ "position": 0, "answer": "13" }], "explanation": "Ngược: v - v_d." }
+      ]
+    },
+    {
+      "id": "g5-l13-qs",
+      "xpReward": 18,
+      "questions": [
+        { "id": "g5-l13-q1", "type": "multiple-choice", "prompt": "Đội A đi 10h, v=12 km/h. Đội B đi 8h, v=15 km/h. Ai đi xa hơn?", "choices": ["A", "B", "Bằng nhau"], "answer": "Bằng nhau", "explanation": "A: 10x12=120 km; B: 8x15=120 km." },
+        { "id": "g5-l13-q2", "type": "fill-blank", "question": "Nếu đội B xuất phát sau 1 giờ, để gặp A cần đi __ km (A đi 12 km trong giờ đầu).", "blanks": [{ "position": 0, "answer": "108" }], "explanation": "Cả hai cần đi thêm 108 km để gặp nhau (120-12)." },
+        { "id": "g5-l13-q3", "type": "matching-pairs", "question": "Ghép đại lượng chuyển động", "pairs": [{ "id": "p1", "left": "s", "right": "Quãng đường" }, { "id": "p2", "left": "v", "right": "Vận tốc" }, { "id": "p3", "left": "t", "right": "Thời gian" }], "explanation": "Nhớ ký hiệu cơ bản." }
+      ]
+    },
+    {
+      "id": "g5-l14-qs",
+      "xpReward": 20,
+      "questions": [
+        { "id": "g5-l14-q1", "type": "multiple-choice", "prompt": "Một đội đi 45 km trong 3 giờ 45 phút. Vận tốc trung bình?", "choices": ["10 km/h", "11 km/h", "12 km/h", "13 km/h"], "answer": "12 km/h", "explanation": "3h45 = 3,75h; 45/3,75=12." },
+        { "id": "g5-l14-q2", "type": "drag-drop", "question": "Kéo công thức thời gian", "dragItems": [{ "id": "t", "content": "t = s : v", "correctSlot": "slot-time" }], "dropSlots": [{ "id": "slot-time", "label": "Thời gian" }], "explanation": "Công thức tính t." },
+        { "id": "g5-l14-q3", "type": "fill-blank", "question": "Nếu v=15 km/h, muốn đi 60 km cần __ giờ", "blanks": [{ "position": 0, "answer": "4" }], "explanation": "t = 60/15 = 4." }
+      ]
+    },
+    {
+      "id": "g5-l15-qs",
+      "xpReward": 22,
+      "questions": [
+        { "id": "g5-l15-q1", "type": "multiple-choice", "prompt": "Tổng 3,5 + 2,75 + 1,25 = ?", "choices": ["7,25", "7,5", "7,75", "8,0"], "answer": "7,5", "explanation": "3,5+2,75=6,25; 6,25+1,25=7,5." },
+        { "id": "g5-l15-q2", "type": "matching-pairs", "question": "Ghép công thức tổng hợp", "pairs": [{ "id": "p1", "left": "v = s/t", "right": "Vận tốc" }, { "id": "p2", "left": "S tam giác", "right": "1/2 a h" }, { "id": "p3", "left": "C đường tròn", "right": "2πr" }], "explanation": "Ôn toàn bộ công thức chính." },
+        { "id": "g5-l15-q3", "type": "fill-blank", "question": "Hoàn thành: 240 m2 + 90 m2 = __ m2", "blanks": [{ "position": 0, "answer": "330" }], "explanation": "Cộng diện tích để tổng kết thành lũy." }
+      ]
     }
   ]
 }
+

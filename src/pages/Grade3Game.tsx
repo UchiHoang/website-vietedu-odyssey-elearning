@@ -8,18 +8,17 @@ const theme = {
   bg: "linear-gradient(180deg, #e8f5e9 0%, #e3f2fd 100%)",
 };
 
-const SongHongGame = () => {
+export default function Grade3Game() {
   return (
     <div className="min-h-screen" style={{ background: theme.bg }}>
       <Header />
       <TrangQuynhMiniGame
         grade="3"
-        courseId="grade3-songhong"
+        courseId="grade3-sontinh"
         storyLoader={loadStoryGrade3}
         theme={theme}
       />
     </div>
   );
-};
+}
 
-export default SongHongGame;

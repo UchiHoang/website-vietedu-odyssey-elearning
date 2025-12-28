@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "title": "Sơn Tinh - Thủy Tinh",
+    "description": "Bạn đồng hành cùng Sơn Tinh nhận sính lễ và chống lũ. Chủ đề: bảng nhân chia 6-9, số 5 chữ số, diện tích."
+  },
+  "prologue": [
+    { "speaker": "Vua Hùng", "text": "Ai mang đủ sính lễ sẽ được cưới Mị Nương." },
+    { "speaker": "Sơn Tinh", "text": "Ta cần tính toán thật nhanh để vượt Thủy Tinh." },
+    { "speaker": "Người kể chuyện", "text": "Hãy giúp Sơn Tinh luyện bảng nhân 6-9 và giải bài diện tích." }
+  ],
+  "nodes": [
+    { "id": "g3-l1", "title": "Chiếu Chỉ Vua Hùng", "badgeOnComplete": "g3-l1", "activityRef": "g3-l1-qs", "cutscene": [{ "speaker": "Vua Hùng", "text": "Bắt đầu bằng tính nhẩm bảng nhân để nhận lệnh." }] },
+    { "id": "g3-l2", "title": "Rừng Sâu Tìm Voi", "badgeOnComplete": "g3-l2", "activityRef": "g3-l2-qs", "cutscene": [{ "speaker": "Sơn Tinh", "text": "Tính số voi cần bắt, nhân 7 nào!" }] },
+    { "id": "g3-l3", "title": "Suối Nguồn Tìm Gà", "badgeOnComplete": "g3-l3", "activityRef": "g3-l3-qs", "cutscene": [{ "speaker": "Sơn Tinh", "text": "Đếm gà trống, chia đều cho dân." }] },
+    { "id": "g3-l4", "title": "Vực Thẳm Tìm Ngựa", "badgeOnComplete": "g3-l4", "activityRef": "g3-l4-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Tính diện tích bãi thả ngựa để đủ chỗ." }] },
+    { "id": "g3-l5", "title": "Sính Lễ Đầu Tiên", "badgeOnComplete": "g3-l5", "activityRef": "g3-l5-qs", "cutscene": [{ "speaker": "Vua Hùng", "text": "Đo núi, tính bước, ghi vào bảng năm chữ số." }] },
+    { "id": "g3-l6", "title": "Thử Thách Vua Hùng", "badgeOnComplete": "g3-l6", "activityRef": "g3-l6-qs", "cutscene": [{ "speaker": "Vua Hùng", "text": "Phép chia 8, nếu sai sẽ mất lượt." }] },
+    { "id": "g3-l7", "title": "Đường Lên Núi Tản", "badgeOnComplete": "g3-l7", "activityRef": "g3-l7-qs", "cutscene": [{ "speaker": "Sơn Tinh", "text": "Độ dài đường núi là số 5 chữ số, hãy so sánh." }] },
+    { "id": "g3-l8", "title": "Hang Động Bí Ẩn", "badgeOnComplete": "g3-l8", "activityRef": "g3-l8-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Ghép ghềnh đá, tính diện tích nền hang." }] },
+    { "id": "g3-l9", "title": "Sính Lễ Thứ Hai", "badgeOnComplete": "g3-l9", "activityRef": "g3-l9-qs", "cutscene": [{ "speaker": "Sơn Tinh", "text": "Mang gà, voi, ngựa đủ số, nhân chia thật chuẩn." }] },
+    { "id": "g3-l10", "title": "Thủy Tinh Dâng Nước", "badgeOnComplete": "g3-l10", "activityRef": "g3-l10-qs", "cutscene": [{ "speaker": "Thủy Tinh", "text": "Nước dâng cao, so sánh số đo mực nước." }] },
+    { "id": "g3-l11", "title": "Sơn Tinh Nâng Núi", "badgeOnComplete": "g3-l11", "activityRef": "g3-l11-qs", "cutscene": [{ "speaker": "Sơn Tinh", "text": "Nhân 9 để nâng từng phiến đá." }] },
+    { "id": "g3-l12", "title": "Trận Chiến Trên Mây", "badgeOnComplete": "g3-l12", "activityRef": "g3-l12-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Chia quân thành nhóm đều nhau." }] },
+    { "id": "g3-l13", "title": "Cứu Giúp Dân Làng", "badgeOnComplete": "g3-l13", "activityRef": "g3-l13-qs", "cutscene": [{ "speaker": "Sơn Tinh", "text": "Tính diện tích bờ đê cần đắp." }] },
+    { "id": "g3-l14", "title": "Đại Thắng Thủy Tinh", "badgeOnComplete": "g3-l14", "activityRef": "g3-l14-qs", "cutscene": [{ "speaker": "Vua Hùng", "text": "Tổng kết điểm, nhân cộng tất cả." }] },
+    { "id": "g3-l15", "title": "Đám Cưới Rước Dâu", "badgeOnComplete": "g3-l15", "activityRef": "g3-l15-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Chia quà cưới, hoàn thành bài tổng hợp." }] }
+  ],
+  "activities": [
+    {
+      "id": "g3-l1-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l1-q1", "type": "multiple-choice", "prompt": "6 x 7 = ?", "choices": ["36", "42", "48", "54"], "answer": "42", "explanation": "6 nhân 7 bằng 42." },
+        { "id": "g3-l1-q2", "type": "matching-pairs", "question": "Ghép phép nhân với kết quả", "pairs": [{ "id": "p1", "left": "8 x 6", "right": "48" }, { "id": "p2", "left": "9 x 5", "right": "45" }, { "id": "p3", "left": "7 x 7", "right": "49" }], "explanation": "Bảng nhân 6-9." },
+        { "id": "g3-l1-q3", "type": "fill-blank", "question": "9 x __ = 63", "blanks": [{ "position": 0, "answer": "7" }], "explanation": "63 chia 9 bằng 7." }
+      ]
+    },
+    {
+      "id": "g3-l2-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l2-q1", "type": "multiple-choice", "prompt": "Có 6 bãi, mỗi bãi cần 7 con voi. Tổng voi?", "choices": ["36", "40", "42", "45"], "answer": "42", "explanation": "6 x 7 = 42." },
+        { "id": "g3-l2-q2", "type": "drag-drop", "question": "Kéo kết quả đúng", "dragItems": [{ "id": "r42", "content": "42", "correctSlot": "slot-6x7" }, { "id": "r56", "content": "56", "correctSlot": "slot-7x8" }], "dropSlots": [{ "id": "slot-6x7", "label": "6 x 7" }, { "id": "slot-7x8", "label": "7 x 8" }], "explanation": "6x7=42, 7x8=56." },
+        { "id": "g3-l2-q3", "type": "fill-blank", "question": "7 x 8 = __", "blanks": [{ "position": 0, "answer": "56" }], "explanation": "Bảng nhân 7." }
+      ]
+    },
+    {
+      "id": "g3-l3-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l3-q1", "type": "multiple-choice", "prompt": "24 con gà chia đều 6 nhà, mỗi nhà?", "choices": ["3", "4", "5", "6"], "answer": "4", "explanation": "24 : 6 = 4." },
+        { "id": "g3-l3-q2", "type": "matching-pairs", "question": "Ghép phép chia", "pairs": [{ "id": "p1", "left": "54 : 9", "right": "6" }, { "id": "p2", "left": "63 : 7", "right": "9" }, { "id": "p3", "left": "48 : 6", "right": "8" }], "explanation": "Chia bảng 6-9." },
+        { "id": "g3-l3-q3", "type": "fill-blank", "question": "__ : 8 = 7", "blanks": [{ "position": 0, "answer": "56" }], "explanation": "56 chia 8 bằng 7." }
+      ]
+    },
+    {
+      "id": "g3-l4-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l4-q1", "type": "multiple-choice", "prompt": "Một sân hình chữ nhật dài 12 m, rộng 8 m. Diện tích?", "choices": ["80 m2", "90 m2", "96 m2", "100 m2"], "answer": "96 m2", "explanation": "12 x 8 = 96." },
+        { "id": "g3-l4-q2", "type": "drag-drop", "question": "Kéo công thức phù hợp", "dragItems": [{ "id": "area", "content": "S = dài x rộng", "correctSlot": "slot-rectangle" }, { "id": "perimeter", "content": "P = (dài + rộng) x 2", "correctSlot": "slot-perimeter" }], "dropSlots": [{ "id": "slot-rectangle", "label": "Diện tích HCN" }, { "id": "slot-perimeter", "label": "Chu vi HCN" }], "explanation": "Diện tích = dài x rộng." },
+        { "id": "g3-l4-q3", "type": "fill-blank", "question": "Chu vi HCN 12 m x 8 m là __ m", "blanks": [{ "position": 0, "answer": "40" }], "explanation": "(12+8)*2 = 40." }
+      ]
+    },
+    {
+      "id": "g3-l5-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l5-q1", "type": "multiple-choice", "prompt": "Số 68 250 là số có mấy chữ số?", "choices": ["4", "5", "6", "7"], "answer": "5", "explanation": "Gồm 5 chữ số." },
+        { "id": "g3-l5-q2", "type": "matching-pairs", "question": "Ghép giá trị hàng", "pairs": [{ "id": "p1", "left": "6 vạn", "right": "60 000" }, { "id": "p2", "left": "8 nghìn", "right": "8 000" }, { "id": "p3", "left": "2 trăm", "right": "200" }], "explanation": "Phân tích số 68 250." },
+        { "id": "g3-l5-q3", "type": "fill-blank", "question": "68 250 = 60 000 + 8 000 + __ + 50 + 0", "blanks": [{ "position": 0, "answer": "200" }], "explanation": "Hàng trăm là 200." }
+      ]
+    },
+    {
+      "id": "g3-l6-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l6-q1", "type": "multiple-choice", "prompt": "72 : 8 = ?", "choices": ["6", "7", "8", "9"], "answer": "9", "explanation": "72 chia 8 bằng 9." },
+        { "id": "g3-l6-q2", "type": "drag-drop", "question": "Kéo kết quả", "dragItems": [{ "id": "r8", "content": "8", "correctSlot": "slot-64div8" }, { "id": "r6", "content": "6", "correctSlot": "slot-48div8" }], "dropSlots": [{ "id": "slot-64div8", "label": "64 : 8" }, { "id": "slot-48div8", "label": "48 : 8" }], "explanation": "64:8=8, 48:8=6." },
+        { "id": "g3-l6-q3", "type": "fill-blank", "question": "__ : 9 = 7", "blanks": [{ "position": 0, "answer": "63" }], "explanation": "63 chia 9 bằng 7." }
+      ]
+    },
+    {
+      "id": "g3-l7-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l7-q1", "type": "multiple-choice", "prompt": "Số nào lớn nhất? 54 321; 53 999; 54 123", "choices": ["54 321", "53 999", "54 123"], "answer": "54 321", "explanation": "So sánh hàng vạn, nghìn..." },
+        { "id": "g3-l7-q2", "type": "matching-pairs", "question": "Ghép số với dạng đọc", "pairs": [{ "id": "p1", "left": "50 005", "right": "năm mươi nghìn lẻ năm" }, { "id": "p2", "left": "68 000", "right": "sáu mươi tám nghìn" }, { "id": "p3", "left": "70 120", "right": "bảy mươi nghìn một trăm hai mươi" }], "explanation": "Đọc số 5 chữ số." },
+        { "id": "g3-l7-q3", "type": "fill-blank", "question": "54 321 - 1 = __", "blanks": [{ "position": 0, "answer": "54 320" }], "explanation": "Trừ đơn giản." }
+      ]
+    },
+    {
+      "id": "g3-l8-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l8-q1", "type": "multiple-choice", "prompt": "Nền hang dài 9 m, rộng 7 m. Diện tích?", "choices": ["54", "56", "63", "72"], "answer": "63", "explanation": "9 x 7 = 63 m2." },
+        { "id": "g3-l8-q2", "type": "drag-drop", "question": "Kéo hình vào công thức", "dragItems": [{ "id": "square", "content": "S = a x a", "correctSlot": "slot-square" }, { "id": "rect", "content": "S = d x r", "correctSlot": "slot-rect" }], "dropSlots": [{ "id": "slot-square", "label": "Hình vuông" }, { "id": "slot-rect", "label": "Hình chữ nhật" }], "explanation": "Công thức diện tích." },
+        { "id": "g3-l8-q3", "type": "fill-blank", "question": "Nếu rộng 7 m, muốn S=70 m2 thì dài = __ m", "blanks": [{ "position": 0, "answer": "10" }], "explanation": "70 : 7 = 10." }
+      ]
+    },
+    {
+      "id": "g3-l9-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l9-q1", "type": "multiple-choice", "prompt": "Có 9 mâm cỗ, mỗi mâm 8 con gà. Tổng?", "choices": ["64", "72", "80", "90"], "answer": "72", "explanation": "9 x 8 = 72." },
+        { "id": "g3-l9-q2", "type": "matching-pairs", "question": "Ghép nhân chia", "pairs": [{ "id": "p1", "left": "72 : 9", "right": "8" }, { "id": "p2", "left": "8 x 9", "right": "72" }, { "id": "p3", "left": "63 : 7", "right": "9" }], "explanation": "Liên hệ nhân-chia." },
+        { "id": "g3-l9-q3", "type": "fill-blank", "question": "Thêm 1 mâm nữa (8 con), tổng __ con", "blanks": [{ "position": 0, "answer": "80" }], "explanation": "72 + 8 = 80." }
+      ]
+    },
+    {
+      "id": "g3-l10-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l10-q1", "type": "multiple-choice", "prompt": "Mực nước 35 420 cm, tăng 500 cm. Mới là?", "choices": ["35 820", "35 920", "35 620", "35 480"], "answer": "35 920", "explanation": "35 420 + 500 = 35 920." },
+        { "id": "g3-l10-q2", "type": "matching-pairs", "question": "Ghép số đo nước", "pairs": [{ "id": "p1", "left": "3 m", "right": "300 cm" }, { "id": "p2", "left": "250 cm", "right": "2,5 m" }, { "id": "p3", "left": "1,2 m", "right": "120 cm" }], "explanation": "Đổi m - cm." },
+        { "id": "g3-l10-q3", "type": "fill-blank", "question": "35 920 - 920 = __", "blanks": [{ "position": 0, "answer": "35 000" }], "explanation": "Trừ số 5 chữ số." }
+      ]
+    },
+    {
+      "id": "g3-l11-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l11-q1", "type": "multiple-choice", "prompt": "9 x 9 = ?", "choices": ["72", "81", "88", "90"], "answer": "81", "explanation": "9 nhân 9 bằng 81." },
+        { "id": "g3-l11-q2", "type": "drag-drop", "question": "Kéo kết quả 7 x 8", "dragItems": [{ "id": "r56", "content": "56", "correctSlot": "slot-7x8" }], "dropSlots": [{ "id": "slot-7x8", "label": "7 x 8" }], "explanation": "7 x 8 = 56." },
+        { "id": "g3-l11-q3", "type": "fill-blank", "question": "81 : 9 = __", "blanks": [{ "position": 0, "answer": "9" }], "explanation": "81 chia 9 bằng 9." }
+      ]
+    },
+    {
+      "id": "g3-l12-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l12-q1", "type": "multiple-choice", "prompt": "Chia 54 lính thành 6 đội, mỗi đội?", "choices": ["6", "7", "8", "9"], "answer": "9", "explanation": "54 : 6 = 9." },
+        { "id": "g3-l12-q2", "type": "matching-pairs", "question": "Ghép phép chia", "pairs": [{ "id": "p1", "left": "56 : 7", "right": "8" }, { "id": "p2", "left": "63 : 9", "right": "7" }, { "id": "p3", "left": "72 : 8", "right": "9" }], "explanation": "Chia bảng 7-9." },
+        { "id": "g3-l12-q3", "type": "fill-blank", "question": "__ : 6 = 8", "blanks": [{ "position": 0, "answer": "48" }], "explanation": "48 chia 6 = 8." }
+      ]
+    },
+    {
+      "id": "g3-l13-qs",
+      "xpReward": 14,
+      "questions": [
+        { "id": "g3-l13-q1", "type": "multiple-choice", "prompt": "Đê dài 120 m, rộng 4 m. Diện tích mặt đê?", "choices": ["360", "440", "480", "520"], "answer": "480", "explanation": "120 x 4 = 480 m2." },
+        { "id": "g3-l13-q2", "type": "matching-pairs", "question": "Ghép đại lượng", "pairs": [{ "id": "p1", "left": "m2", "right": "diện tích" }, { "id": "p2", "left": "m", "right": "độ dài" }, { "id": "p3", "left": "cm", "right": "độ dài nhỏ" }], "explanation": "Nhớ đơn vị." },
+        { "id": "g3-l13-q3", "type": "fill-blank", "question": "Nếu rộng 5 m, dài 120 m, diện tích __ m2", "blanks": [{ "position": 0, "answer": "600" }], "explanation": "120 x 5 = 600." }
+      ]
+    },
+    {
+      "id": "g3-l14-qs",
+      "xpReward": 16,
+      "questions": [
+        { "id": "g3-l14-q1", "type": "multiple-choice", "prompt": "Tổng 8x7 + 9x6 = ?", "choices": ["96", "100", "108", "110"], "answer": "110", "explanation": "8x7=56; 9x6=54; 56+54=110." },
+        { "id": "g3-l14-q2", "type": "matching-pairs", "question": "Ghép phép nhân cuối trận", "pairs": [{ "id": "p1", "left": "6 x 9", "right": "54" }, { "id": "p2", "left": "7 x 8", "right": "56" }, { "id": "p3", "left": "9 x 9", "right": "81" }], "explanation": "Ôn bảng nhân." },
+        { "id": "g3-l14-q3", "type": "fill-blank", "question": "50 000 + 1 200 + 80 = __", "blanks": [{ "position": 0, "answer": "51 280" }], "explanation": "Cộng số 5 chữ số." }
+      ]
+    },
+    {
+      "id": "g3-l15-qs",
+      "xpReward": 16,
+      "questions": [
+        { "id": "g3-l15-q1", "type": "multiple-choice", "prompt": "90 phần quà chia đều 9 bàn, mỗi bàn?", "choices": ["8", "9", "10", "11"], "answer": "10", "explanation": "90 : 9 = 10." },
+        { "id": "g3-l15-q2", "type": "matching-pairs", "question": "Ghép kết quả cuối", "pairs": [{ "id": "p1", "left": "72 : 8", "right": "9" }, { "id": "p2", "left": "63 : 9", "right": "7" }, { "id": "p3", "left": "45 + 15", "right": "60" }], "explanation": "Kết hợp nhân, chia, cộng." },
+        { "id": "g3-l15-q3", "type": "fill-blank", "question": "Diện tích sân cưới 15 m x 6 m là __ m2", "blanks": [{ "position": 0, "answer": "90" }], "explanation": "15 x 6 = 90 m2." }
+      ]
+    }
+  ]
+}
+

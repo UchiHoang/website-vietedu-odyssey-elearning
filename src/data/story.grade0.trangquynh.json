@@ -1,268 +1,166 @@
 {
   "meta": {
-    "storyPackId": "cuoi-banhchung-2025",
-    "title": "Hành trình đếm bánh chưng cùng chú Cuội",
-    "layout": "left-to-right",
-    "locale": "vi",
-    "description": "Chú Cuội đi khắp làng để gói bánh chưng cho Tết. Hãy giúp chú đếm và chọn đúng số bánh để gói — vừa chơi vừa học đếm và so sánh!"
+    "title": "Hành trình Chú Cuội Cung Trăng",
+    "description": "Cuội và Thỏ Ngọc cùng bạn nhỏ đếm số, màu sắc, hình khối để bay lên trăng."
   },
-  "legalNote": "Create original character artwork only. Use only user-provided images in /public/assets/user/. Do NOT copy or reproduce any copyrighted art from existing works.",
   "prologue": [
-    {
-      "id": "p1",
-      "bg": "assets/user/bg_festival.png",
-      "sprite": "assets/user/trang_idle.png",
-      "speaker": "Người kể chuyện",
-      "text": "Đêm Rằm, chú Cuội xuống trần gian mang theo giỏ lá để gói bánh chưng cho mọi nhà."
-    },
-    {
-      "id": "p2",
-      "bg": "assets/user/bg_festival.png",
-      "sprite": "assets/user/trang_cheer.png",
-      "speaker": "Chú Cuội",
-      "text": "Ôi, giỏ bánh của ta lung tung rồi! Ta cần bạn nhỏ giúp đếm và chọn đúng số bánh để gói."
-    },
-    {
-      "id": "p3",
-      "bg": "assets/user/bg_market.png",
-      "sprite": "assets/user/trang_idle.png",
-      "speaker": "Người kể chuyện",
-      "text": "Trên đường đi, chú Cuội gặp nhiều gia đình: có nhà cần 2 bánh, có nhà cần 5 bánh. Bạn hãy giúp chú nhé!"
-    }
+    { "speaker": "Người kể chuyện", "text": "Đêm rằm, Chú Cuội ôm cây đa ao ước được lên Cung Trăng." },
+    { "speaker": "Cuội", "text": "Bạn ơi, giúp mình giải những câu đố để cây đa cao vút nhé!" },
+    { "speaker": "Thỏ Ngọc", "text": "Tớ sẽ tặng bụi sao nếu bạn hoàn thành từng thử thách." }
   ],
   "nodes": [
+    { "id": "g0-l1", "title": "Đom Đóm Đêm Hè", "badgeOnComplete": "g0-l1", "activityRef": "g0-l1-qs", "cutscene": [{ "speaker": "Cuội", "text": "Đêm nay đom đóm sáng rực, đếm cùng tớ nào!" }] },
+    { "id": "g0-l2", "title": "Giọt Sương Ban Mai", "badgeOnComplete": "g0-l2", "activityRef": "g0-l2-qs", "cutscene": [{ "speaker": "Thỏ Ngọc", "text": "Giọt sương lấp lánh, hãy chọn màu đúng nhé!" }] },
+    { "id": "g0-l3", "title": "Mầm Non Tỉnh Giấc", "badgeOnComplete": "g0-l3", "activityRef": "g0-l3-qs", "cutscene": [{ "speaker": "Cuội", "text": "Mầm nhỏ vươn lên, ghép hình đúng để cây khỏe." }] },
+    { "id": "g0-l4", "title": "Viên Đá Xây Bồn", "badgeOnComplete": "g0-l4", "activityRef": "g0-l4-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Xếp đá vào bồn, kéo thả cho khít nha." }] },
+    { "id": "g0-l5", "title": "Cây Đa Vươn Vai", "badgeOnComplete": "g0-l5", "activityRef": "g0-l5-qs", "cutscene": [{ "speaker": "Cuội", "text": "Cây vươn vai chạm trời, tô màu tán lá đủ sắc." }] },
+    { "id": "g0-l6", "title": "Bạn Chim Dẫn Lối", "badgeOnComplete": "g0-l6", "activityRef": "g0-l6-qs", "cutscene": [{ "speaker": "Thỏ Ngọc", "text": "Chim nhỏ chỉ đường, nghe số và chọn hình đúng nhé!" }] },
+    { "id": "g0-l7", "title": "Đám Mây Ngũ Sắc", "badgeOnComplete": "g0-l7", "activityRef": "g0-l7-qs", "cutscene": [{ "speaker": "Cuội", "text": "Mây đổi màu liên tục, xem bạn có nhớ không?" }] },
+    { "id": "g0-l8", "title": "Cầu Vồng Bắc Nhịp", "badgeOnComplete": "g0-l8", "activityRef": "g0-l8-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Ghép màu tạo cầu vồng, chuẩn bị bước lên cao." }] },
+    { "id": "g0-l9", "title": "Gió Thổi Bay Cao", "badgeOnComplete": "g0-l9", "activityRef": "g0-l9-qs", "cutscene": [{ "speaker": "Thỏ Ngọc", "text": "Gió đưa lá, đếm lá rơi để giữ thăng bằng." }] },
+    { "id": "g0-l10", "title": "Hái Sao Qua Núi", "badgeOnComplete": "g0-l10", "activityRef": "g0-l10-qs", "cutscene": [{ "speaker": "Cuội", "text": "Leo núi hái sao, chọn hình sáng nhất nhé!" }] },
+    { "id": "g0-l11", "title": "Cổng Trời Rộng Mở", "badgeOnComplete": "g0-l11", "activityRef": "g0-l11-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Cổng trời có mật mã số, điền đúng là qua." }] },
+    { "id": "g0-l12", "title": "Thỏ Ngọc Giã Thuốc", "badgeOnComplete": "g0-l12", "activityRef": "g0-l12-qs", "cutscene": [{ "speaker": "Thỏ Ngọc", "text": "Giã thuốc trăng, chia đều thành từng phần." }] },
+    { "id": "g0-l13", "title": "Chị Hằng Soi Gương", "badgeOnComplete": "g0-l13", "activityRef": "g0-l13-qs", "cutscene": [{ "speaker": "Chị Hằng", "text": "Gương tròn gương vuông, chọn đúng hình phản chiếu." }] },
+    { "id": "g0-l14", "title": "Lồng Đèn Đón Bạn", "badgeOnComplete": "g0-l14", "activityRef": "g0-l14-qs", "cutscene": [{ "speaker": "Cuội", "text": "Xếp lồng đèn ngũ sắc, ghép màu cho đủ." }] },
+    { "id": "g0-l15", "title": "Phá Cỗ Trăng Rằm", "badgeOnComplete": "g0-l15", "activityRef": "g0-l15-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Bàn tiệc sẵn sàng, chia bánh đều cho mọi người." }] }
+  ],
+  "activities": [
     {
-      "id": "n1",
-      "order": 1,
-      "title": "Gặp nhà bà Ngoại",
-      "mathTopic": "Counting 1-5",
-      "objective": "Đếm số bánh (1–5)",
-      "cutscene": [
-        {
-          "speaker": "Narrator",
-          "text": "Chú Cuội tới nhà bà Ngoại. Bà cần 2 chiếc bánh chưng."
-        },
-        {
-          "speaker": "Bà Ngoại",
-          "text": "Con ơi, bà chỉ cần 2 chiếc bánh thôi."
-        },
-        {
-          "speaker": "Chú Cuội",
-          "text": "Hừm, mình lấy đúng 2 nhé!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Chú Cuội tới nhà bà Ngoại. Bà cần 2 chiếc bánh chưng."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_market.png",
-        "sprite_main_idle": "assets/user/trang_idle.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_apple.png",
-        "alt": {
-          "bg": "Nhà bà ngoại",
-          "sprite_main_idle": "Chú Cuội đứng cười",
-          "icon": "Bánh chưng"
-        }
-      },
-      "activityRef": "grade0.c1.l1.a1",
-      "xpOnCorrect": 5,
-      "badgeOnComplete": "count-helper",
-      "hint": "Hiển thị bánh chưng dưới dạng hình để trẻ chạm chọn"
+      "id": "g0-l1-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l1-q1", "type": "counting", "question": "Đếm đom đóm đang bay", "prompt": "Có bao nhiêu đom đóm đang sáng?", "countingItems": [{ "image": "/assets/user/firefly.png", "count": 6 }, { "image": "/assets/user/firefly_blue.png", "count": 4 }], "countingAnswer": 10, "explanation": "6 đom đóm vàng + 4 đom đóm xanh = 10." },
+        { "id": "g0-l1-q2", "type": "multiple-choice", "prompt": "Đom đóm phát sáng màu gì?", "choices": ["Xanh", "Đỏ", "Tím", "Cam"], "answer": "Xanh", "explanation": "Đom đóm thường phát ánh sáng xanh lục." },
+        { "id": "g0-l1-q3", "type": "matching-pairs", "question": "Ghép tiếng kêu với con vật đêm", "pairs": [{ "id": "p1", "left": "Chuột", "right": "Chít chít" }, { "id": "p2", "left": "Cú mèo", "right": "Hú...hú..." }, { "id": "p3", "left": "Dế", "right": "Rích...rích..." }], "explanation": "Mỗi con vật có âm thanh riêng." }
+      ]
     },
     {
-      "id": "n2",
-      "order": 2,
-      "title": "Gặp nhà 2 trẻ con",
-      "mathTopic": "Counting 1-5 (visual)",
-      "objective": "Đếm số đồ vật và ghép số",
-      "cutscene": [
-        {
-          "speaker": "Narrator",
-          "text": "Hai anh em cần 3 bánh cho gia đình nhỏ của họ."
-        },
-        {
-          "speaker": "Child",
-          "text": "Chú Cuội ơi, chúng con muốn 3 bánh!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Hai anh em cần 3 bánh."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_bridge.png",
-        "sprite_main_think": "assets/user/trang_think.png",
-        "sprite_guard": "assets/user/guard.png",
-        "icon": "assets/user/icon_ticket.png",
-        "alt": {
-          "bg": "Nhà có trẻ con",
-          "sprite_kids": "Hai đứa trẻ",
-          "icon": "Bánh chưng"
-        }
-      },
-      "activityRef": "grade0.c1.l1.a2",
-      "xpOnCorrect": 5,
-      "badgeOnComplete": null,
-      "hint": "Cho trẻ kéo bánh vào giỏ để đếm"
+      "id": "g0-l2-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l2-q1", "type": "multiple-choice", "prompt": "Giọt sương có hình gì?", "choices": ["Tròn", "Vuông", "Tam giác", "Chữ nhật"], "answer": "Tròn", "explanation": "Giọt sương nhỏ thường tròn." },
+        { "id": "g0-l2-q2", "type": "drag-drop", "question": "Kéo màu vào giọt sương", "dragItems": [{ "id": "c1", "content": "Xanh lá", "correctSlot": "s1" }, { "id": "c2", "content": "Hồng", "correctSlot": "s2" }], "dropSlots": [{ "id": "s1", "label": "Giọt trên lá" }, { "id": "s2", "label": "Giọt trên hoa" }], "explanation": "Giọt trên lá thường xanh, trên hoa thì hồng." },
+        { "id": "g0-l2-q3", "type": "fill-blank", "question": "Có ___ giọt sương trên lá và 2 giọt trên hoa. Tổng là 5.", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "3 + 2 = 5." }
+      ]
     },
     {
-      "id": "n3",
-      "order": 3,
-      "title": "Ai nhiều hơn?",
-      "mathTopic": "Comparison (more / less)",
-      "objective": "So sánh 'nhiều hơn' và 'ít hơn' (1–5)",
-      "cutscene": [
-        {
-          "speaker": "Narrator",
-          "text": "Hai nhà hỏi: nhà A có 4 bánh, nhà B có 2 bánh — nhà nào nhiều hơn?"
-        },
-        {
-          "speaker": "Chú Cuội",
-          "text": "Nhà A nhiều hơn nhà B."
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "So sánh số bánh giữa hai nhà."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_areca_garden.png",
-        "sprite_owner": "assets/user/farmer.png",
-        "sprite_main_idle": "assets/user/trang_idle.png",
-        "icon": "assets/user/icon_bunch.png",
-        "alt": {
-          "bg": "Con đường làng",
-          "sprite_main_think": "Chú Cuội suy nghĩ",
-          "icon": "So sánh"
-        }
-      },
-      "activityRef": "grade0.c1.l2.a1",
-      "xpOnCorrect": 6,
-      "badgeOnComplete": null,
-      "hint": "Dùng biểu tượng bánh chưng để so sánh trực quan"
+      "id": "g0-l3-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l3-q1", "type": "multiple-choice", "prompt": "Mầm non có màu gì khi mới nhú?", "choices": ["Xanh nhạt", "Đỏ thẫm", "Tím", "Nâu"], "answer": "Xanh nhạt", "explanation": "Mầm mới thường xanh nhạt." },
+        { "id": "g0-l3-q2", "type": "matching-pairs", "question": "Ghép hình khối với tên", "pairs": [{ "id": "p1", "left": "Hình tròn", "right": "Bánh xe" }, { "id": "p2", "left": "Hình vuông", "right": "Viên gạch" }, { "id": "p3", "left": "Tam giác", "right": "Biển báo" }], "explanation": "Các vật quen thuộc có hình riêng." },
+        { "id": "g0-l3-q3", "type": "counting", "question": "Đếm lá non", "prompt": "Có 2 lá to và 3 lá nhỏ. Tổng lá là bao nhiêu?", "countingItems": [{ "image": "/assets/user/leaf.png", "count": 2 }, { "image": "/assets/user/leaf_small.png", "count": 3 }], "countingAnswer": 5, "explanation": "2 + 3 = 5 lá." }
+      ]
     },
     {
-      "id": "n4",
-      "order": 4,
-      "title": "Chọn đúng số bánh để gói",
-      "mathTopic": "Matching number to quantity",
-      "objective": "Ghép số với đúng số bánh (1–6)",
-      "cutscene": [
-        {
-          "speaker": "Narrator",
-          "text": "Chú Cuội phải gói bánh cho hội làng — mỗi nhóm bảo cần số khác nhau."
-        },
-        {
-          "speaker": "Chú Cuội",
-          "text": "Bạn giúp chú chọn số bánh đúng để gói nhé!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Chọn số đúng để gói bánh."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_classroom.png",
-        "sprite_teacher": "assets/user/teacher.png",
-        "sprite_clock": "assets/user/clock_face.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_clock.png",
-        "alt": {
-          "bg": "Đình làng",
-          "sprite_main_busy": "Chú Cuội gói bánh",
-          "icon": "Giỏ bánh"
-        }
-      },
-      "activityRef": "grade0.c1.l3.a1",
-      "xpOnCorrect": 8,
-      "badgeOnComplete": "little-wrapper",
-      "hint": "Hiển thị số lớn trên thẻ — kéo đúng số bánh vào giỏ"
+      "id": "g0-l4-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l4-q1", "type": "drag-drop", "question": "Kéo viên đá đúng vị trí", "dragItems": [{ "id": "d1", "content": "Đá vuông", "correctSlot": "slot-square" }, { "id": "d2", "content": "Đá tròn", "correctSlot": "slot-circle" }], "dropSlots": [{ "id": "slot-square", "label": "Ô vuông" }, { "id": "slot-circle", "label": "Ô tròn" }], "explanation": "Hình vuông vào ô vuông, tròn vào ô tròn." },
+        { "id": "g0-l4-q2", "type": "multiple-choice", "prompt": "Viên đá nào có 4 cạnh bằng nhau?", "choices": ["Tròn", "Vuông", "Tam giác", "Chữ nhật"], "answer": "Vuông", "explanation": "Hình vuông có 4 cạnh bằng nhau." },
+        { "id": "g0-l4-q3", "type": "fill-blank", "question": "Có 1 ô tròn, 1 ô vuông. Tổng ô là ___?", "blanks": [{ "position": 0, "answer": "2" }], "explanation": "1 + 1 = 2." }
+      ]
     },
     {
-      "id": "n5",
-      "order": 5,
-      "title": "Trò chơi đoán số nhanh",
-      "mathTopic": "Counting speed (review)",
-      "objective": "Ôn tập đếm nhanh 1–6",
-      "cutscene": [
-        {
-          "speaker": "Narrator",
-          "text": "Trò chơi: chú Cuội giơ thẻ số, bạn phải chọn số bánh nhanh nhất."
-        },
-        {
-          "speaker": "Chú Cuội",
-          "text": "Sẵn sàng? 1, 2, 3 — chạy thôi!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Trò chơi đếm nhanh để ôn lại."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_pond.png",
-        "sprite_fisher": "assets/user/fisher.png",
-        "sprite_ruler": "assets/user/ruler.png",
-        "icon": "assets/user/icon_ruler.png",
-        "alt": {
-          "bg": "Sân nhỏ lễ hội",
-          "sprite_main_cheer": "Chú Cuội cổ vũ",
-          "icon": "Đồng hồ bấm giờ"
-        }
-      },
-      "activityRef": "grade0.c1.l4.a1",
-      "xpOnCorrect": 5,
-      "badgeOnComplete": null,
-      "hint": "Không cần thời gian quá ngắn — giữ nhịp vui"
+      "id": "g0-l5-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l5-q1", "type": "multiple-choice", "prompt": "Tán cây đa màu gì đẹp nhất?", "choices": ["Xanh lá", "Xanh dương", "Hồng", "Vàng"], "answer": "Xanh lá", "explanation": "Cây đa tán xanh lá." },
+        { "id": "g0-l5-q2", "type": "matching-pairs", "question": "Ghép màu với vật", "pairs": [{ "id": "p1", "left": "Xanh lá", "right": "Lá cây" }, { "id": "p2", "left": "Nâu", "right": "Thân cây" }, { "id": "p3", "left": "Vàng", "right": "Ánh trăng" }], "explanation": "Màu đi với vật quen thuộc." },
+        { "id": "g0-l5-q3", "type": "counting", "question": "Đếm số quả đa", "prompt": "Cây đa có 4 quả chín và 2 quả xanh. Tổng bao nhiêu quả?", "countingItems": [{ "image": "/assets/user/fruit_red.png", "count": 4 }, { "image": "/assets/user/fruit_green.png", "count": 2 }], "countingAnswer": 6, "explanation": "4 + 2 = 6 quả." }
+      ]
     },
     {
-      "id": "n6",
-      "order": 6,
-      "title": "Hoàn thành: Lễ gói bánh",
-      "mathTopic": "Final review (count & compare)",
-      "objective": "Ôn tập tổng hợp: đếm và so sánh",
-      "cutscene": [
-        {
-          "speaker": "Narrator",
-          "text": "Mọi nhà đã nhận được bánh. Lễ gói bánh được tổ chức vui vẻ."
-        },
-        {
-          "speaker": "Chú Cuội",
-          "text": "Cảm ơn bạn đã giúp đếm và gói bánh. Tết thật vui!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Lễ gói bánh kết thúc trong niềm vui."
-        }
-      ],
-      "assets": {
-        "bg": "assets/user/bg_kitchen.png",
-        "sprite_mother": "assets/user/mother.png",
-        "sprite_scale": "assets/user/scale.png",
-        "icon": "assets/user/icon_sack.png",
-        "alt": {
-          "bg": "Sân đình lễ hội",
-          "sprite_main_cheer": "Chú Cuội vui mừng",
-          "icon": "Ngôi sao"
-        }
-      },
-      "activityRef": "grade0.c1.l5.a1",
-      "xpOnCorrect": 10,
-      "badgeOnComplete": "cuoi-helper",
-      "hint": "Tổng hợp câu hỏi ngắn, hình ảnh lớn dễ nhìn"
+      "id": "g0-l6-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l6-q1", "type": "multiple-choice", "prompt": "Bạn chim nói: 'Có 5 hạt', chọn hình có 5 chấm.", "choices": ["●●●", "●●●●●", "●●", "●●●●"], "answer": "●●●●●", "explanation": "Chuỗi 5 chấm." },
+        { "id": "g0-l6-q2", "type": "drag-drop", "question": "Kéo số vào tổ chim", "dragItems": [{ "id": "n3", "content": "3", "correctSlot": "nest-small" }, { "id": "n6", "content": "6", "correctSlot": "nest-big" }], "dropSlots": [{ "id": "nest-small", "label": "Tổ nhỏ (3 cánh)" }, { "id": "nest-big", "label": "Tổ to (6 cánh)" }], "explanation": "Tổ nhỏ chứa 3, tổ to chứa 6." },
+        { "id": "g0-l6-q3", "type": "fill-blank", "question": "Có 2 chim xanh và ___ chim vàng để đủ 5.", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "2 + 3 = 5." }
+      ]
+    },
+    {
+      "id": "g0-l7-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l7-q1", "type": "multiple-choice", "prompt": "Mây ngũ sắc có bao nhiêu màu?", "choices": ["3", "4", "5", "6"], "answer": "5", "explanation": "Ngũ sắc nghĩa là 5 màu." },
+        { "id": "g0-l7-q2", "type": "matching-pairs", "question": "Ghép màu mây với cảm xúc", "pairs": [{ "id": "p1", "left": "Xanh", "right": "Bình yên" }, { "id": "p2", "left": "Hồng", "right": "Vui tươi" }, { "id": "p3", "left": "Vàng", "right": "Ấm áp" }], "explanation": "Mỗi màu gợi một cảm xúc." },
+        { "id": "g0-l7-q3", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/cloud_blue.png", "count": 2 }, { "image": "/assets/user/cloud_pink.png", "count": 1 }, { "image": "/assets/user/cloud_yellow.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
+      ]
+    },
+    {
+      "id": "g0-l8-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l8-q1", "type": "drag-drop", "question": "Kéo màu tạo cầu vồng", "dragItems": [{ "id": "red", "content": "Đỏ", "correctSlot": "s1" }, { "id": "orange", "content": "Cam", "correctSlot": "s2" }, { "id": "green", "content": "Xanh lá", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "Vòm 1" }, { "id": "s2", "label": "Vòm 2" }, { "id": "s3", "label": "Vòm 3" }], "explanation": "Sắp thứ tự Đỏ - Cam - Xanh lá." },
+        { "id": "g0-l8-q2", "type": "multiple-choice", "prompt": "Sau màu xanh lá trong cầu vồng là màu gì?", "choices": ["Chàm", "Tím", "Vàng", "Xanh dương"], "answer": "Xanh dương", "explanation": "Thứ tự phổ: đỏ, cam, vàng, lục, lam, chàm, tím." },
+        { "id": "g0-l8-q3", "type": "fill-blank", "question": "Cầu vồng có ___ màu cơ bản (gợi ý: 7).", "blanks": [{ "position": 0, "answer": "7" }], "explanation": "Cầu vồng 7 màu." }
+      ]
+    },
+    {
+      "id": "g0-l9-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l9-q1", "type": "counting", "question": "Lá bay trong gió", "prompt": "Có 3 lá xanh và 4 lá vàng. Tổng lá?", "countingItems": [{ "image": "/assets/user/leaf.png", "count": 3 }, { "image": "/assets/user/leaf_yellow.png", "count": 4 }], "countingAnswer": 7, "explanation": "3 + 4 = 7." },
+        { "id": "g0-l9-q2", "type": "matching-pairs", "question": "Ghép hướng gió với đồ vật bay", "pairs": [{ "id": "p1", "left": "Gió mạnh", "right": "Diều cao" }, { "id": "p2", "left": "Gió nhẹ", "right": "Lá đung đưa" }, { "id": "p3", "left": "Không gió", "right": "Bánh xe đứng yên" }], "explanation": "Mức gió ảnh hưởng khác nhau." },
+        { "id": "g0-l9-q3", "type": "multiple-choice", "prompt": "Để giữ thăng bằng, chọn hình có 2 bên bằng nhau?", "choices": ["Hình vuông", "Hình tam giác", "Hình chữ nhật", "Hình tròn"], "answer": "Hình tròn", "explanation": "Tròn cân đối đều." }
+      ]
+    },
+    {
+      "id": "g0-l10-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l10-q1", "type": "multiple-choice", "prompt": "Ngôi sao có bao nhiêu đỉnh?", "choices": ["3", "4", "5", "6"], "answer": "5", "explanation": "Sao năm cánh có 5 đỉnh." },
+        { "id": "g0-l10-q2", "type": "drag-drop", "question": "Kéo sao vào rọ", "dragItems": [{ "id": "star5", "content": "Sao 5 cánh", "correctSlot": "basket-5" }, { "id": "star4", "content": "Sao 4 cánh", "correctSlot": "basket-4" }], "dropSlots": [{ "id": "basket-5", "label": "Rọ 5 cánh" }, { "id": "basket-4", "label": "Rọ 4 cánh" }], "explanation": "Sao nào rọ đó." },
+        { "id": "g0-l10-q3", "type": "fill-blank", "question": "Cuội hái 2 sao, Thỏ hái 3 sao. Tổng ___ sao.", "blanks": [{ "position": 0, "answer": "5" }], "explanation": "2 + 3 = 5." }
+      ]
+    },
+    {
+      "id": "g0-l11-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l11-q1", "type": "fill-blank", "question": "Cổng trời cần mật mã 1 2 __ 4 5. Điền số mất.", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "Dãy đếm 1-5 thiếu 3." },
+        { "id": "g0-l11-q2", "type": "multiple-choice", "prompt": "Cổng có 4 cột, mỗi cột 2 đèn. Tổng đèn?", "choices": ["6", "7", "8", "9"], "answer": "8", "explanation": "4 x 2 = 8 đèn." },
+        { "id": "g0-l11-q3", "type": "matching-pairs", "question": "Ghép chìa khóa với hình cổng", "pairs": [{ "id": "p1", "left": "Khóa tròn", "right": "Cổng tròn" }, { "id": "p2", "left": "Khóa vuông", "right": "Cổng vuông" }, { "id": "p3", "left": "Khóa sao", "right": "Cổng sao" }], "explanation": "Chìa khóa hợp hình cổng." }
+      ]
+    },
+    {
+      "id": "g0-l12-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l12-q1", "type": "multiple-choice", "prompt": "Thỏ Ngọc chia 6 viên thuốc vào 3 bát. Mỗi bát mấy viên?", "choices": ["1", "2", "3", "4"], "answer": "2", "explanation": "6 : 3 = 2." },
+        { "id": "g0-l12-q2", "type": "drag-drop", "question": "Kéo viên thuốc vào bát đúng số", "dragItems": [{ "id": "b1", "content": "2 viên", "correctSlot": "bowl1" }, { "id": "b2", "content": "2 viên", "correctSlot": "bowl2" }, { "id": "b3", "content": "2 viên", "correctSlot": "bowl3" }], "dropSlots": [{ "id": "bowl1", "label": "Bát 1" }, { "id": "bowl2", "label": "Bát 2" }, { "id": "bowl3", "label": "Bát 3" }], "explanation": "Mỗi bát 2 viên." },
+        { "id": "g0-l12-q3", "type": "fill-blank", "question": "Có 4 viên xanh và ___ viên hồng để đủ 6.", "blanks": [{ "position": 0, "answer": "2" }], "explanation": "4 + 2 = 6." }
+      ]
+    },
+    {
+      "id": "g0-l13-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l13-q1", "type": "multiple-choice", "prompt": "Gương tròn phản chiếu hình gì cân đối nhất?", "choices": ["Hình tròn", "Hình vuông", "Tam giác", "Chữ nhật"], "answer": "Hình tròn", "explanation": "Gương tròn hợp với hình tròn." },
+        { "id": "g0-l13-q2", "type": "matching-pairs", "question": "Ghép gương với vật", "pairs": [{ "id": "p1", "left": "Gương tròn", "right": "Mặt trăng" }, { "id": "p2", "left": "Gương vuông", "right": "Khung ảnh" }, { "id": "p3", "left": "Gương sao", "right": "Đèn lồng sao" }], "explanation": "Vật có hình tương ứng." },
+        { "id": "g0-l13-q3", "type": "fill-blank", "question": "Có 5 ngôi sao phản chiếu, thêm 1 nữa là ___.", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "5 + 1 = 6." }
+      ]
+    },
+    {
+      "id": "g0-l14-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l14-q1", "type": "drag-drop", "question": "Xếp lồng đèn theo màu", "dragItems": [{ "id": "lantern-red", "content": "Đỏ", "correctSlot": "slot-red" }, { "id": "lantern-yellow", "content": "Vàng", "correctSlot": "slot-yellow" }, { "id": "lantern-green", "content": "Xanh", "correctSlot": "slot-green" }], "dropSlots": [{ "id": "slot-red", "label": "Vị trí đỏ" }, { "id": "slot-yellow", "label": "Vị trí vàng" }, { "id": "slot-green", "label": "Vị trí xanh" }], "explanation": "Ghép đúng màu." },
+        { "id": "g0-l14-q2", "type": "multiple-choice", "prompt": "Lồng đèn ngôi sao có mấy cánh?", "choices": ["3", "4", "5", "6"], "answer": "5", "explanation": "Đèn sao thường 5 cánh." },
+        { "id": "g0-l14-q3", "type": "counting", "question": "Có 2 đèn đỏ, 2 đèn vàng, 1 đèn xanh. Tổng?", "prompt": "Đếm đèn", "countingItems": [{ "image": "/assets/user/lantern_red.png", "count": 2 }, { "image": "/assets/user/lantern_yellow.png", "count": 2 }, { "image": "/assets/user/lantern_green.png", "count": 1 }], "countingAnswer": 5, "explanation": "2+2+1=5." }
+      ]
+    },
+    {
+      "id": "g0-l15-qs",
+      "xpReward": 10,
+      "questions": [
+        { "id": "g0-l15-q1", "type": "multiple-choice", "prompt": "Có 8 chiếc bánh, chia đều 4 bạn. Mỗi bạn mấy chiếc?", "choices": ["1", "2", "3", "4"], "answer": "2", "explanation": "8 : 4 = 2." },
+        { "id": "g0-l15-q2", "type": "matching-pairs", "question": "Ghép món với vị", "pairs": [{ "id": "p1", "left": "Bánh nướng", "right": "Ngọt" }, { "id": "p2", "left": "Bánh dẻo", "right": "Mềm" }, { "id": "p3", "left": "Trà nóng", "right": "Ấm" }], "explanation": "Mỗi món có đặc trưng." },
+        { "id": "g0-l15-q3", "type": "fill-blank", "question": "Có 5 quả bưởi, thêm 2 quả là ___ quả.", "blanks": [{ "position": 0, "answer": "7" }], "explanation": "5 + 2 = 7." }
+      ]
     }
   ]
 }
+

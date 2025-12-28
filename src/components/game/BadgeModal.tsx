@@ -29,7 +29,7 @@ export const BadgeModal = ({
   onRetry
 }: BadgeModalProps) => {
   const [showConfetti, setShowConfetti] = useState(false);
-  const badge = badgeId ? badgeInfo(badgeId) : null;
+  const badge = badgeId && badgeInfo ? badgeInfo(badgeId) : null;
 
   useEffect(() => {
     if (isOpen && performance === "excellent") {

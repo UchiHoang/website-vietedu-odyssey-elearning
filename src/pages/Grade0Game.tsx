@@ -1,23 +1,24 @@
 import Header from "@/components/Header";
 import { TrangQuynhMiniGame } from "@/components/game/TrangQuynhMiniGame";
-import { loadStoryGrade5 } from "@/utils/storyLoaders";
+import { loadStoryGrade0 } from "@/utils/storyLoaders";
 
 const theme = {
-  primary: "#2c3e50",
-  secondary: "#8e44ad",
-  bg: "linear-gradient(180deg, #f4f6fb 0%, #e8ecf7 100%)",
+  primary: "#1c3d5a",
+  secondary: "#f7d046",
+  bg: "linear-gradient(180deg, #0b1f35 0%, #112b45 100%)",
 };
 
-export default function Grade5Game() {
+export default function Grade0Game() {
   return (
     <div className="min-h-screen" style={{ background: theme.bg }}>
       <Header />
       <TrangQuynhMiniGame
-        grade="5"
-        courseId="grade5-trangnguyen"
-        storyLoader={loadStoryGrade5}
+        grade="0"
+        courseId="grade0-cuoi"
+        storyLoader={loadStoryGrade0}
         theme={theme}
       />
     </div>
   );
 }
+

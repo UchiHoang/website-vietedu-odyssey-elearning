@@ -1,0 +1,57 @@
+{
+  "meta": { "title": "Cuộc Đua 12 Con Giáp", "description": "Giúp con giáp của bạn về đích đầu tiên!" },
+  "prologue": [
+    { "speaker": "Ngọc Hoàng", "text": "Cuộc đua 12 con giáp bắt đầu! Ai sẽ về đích đầu tiên?" },
+    { "speaker": "Chuột", "text": "Mình nhỏ nhưng nhanh, bạn giải toán giúp mình nhé!" }
+  ],
+  "nodes": [
+    { "id": "zodiac-1", "title": "Khởi động bến nước", "badgeOnComplete": "zodiac_start", "activityRef": "zodiac-1-qs",
+      "cutscene": [{ "speaker": "Trâu", "text": "Chậm mà chắc, cùng vượt sông nào!" }] },
+    { "id": "zodiac-2", "title": "Vượt rừng tre", "badgeOnComplete": "zodiac_bamboo", "activityRef": "zodiac-2-qs",
+      "cutscene": [{ "speaker": "Hổ", "text": "Rừng tre rậm rạp, cần tính nhanh để mở đường!" }] },
+    { "id": "zodiac-3", "title": "Qua cầu mây", "badgeOnComplete": "zodiac_cloud", "activityRef": "zodiac-3-qs",
+      "cutscene": [{ "speaker": "Rồng", "text": "Bay lên mây, giải toán để giữ thăng bằng!" }] },
+    { "id": "zodiac-4", "title": "Nước lũ dâng", "badgeOnComplete": "zodiac_flood", "activityRef": "zodiac-4-qs",
+      "cutscene": [{ "speaker": "Ngọc Hoàng", "text": "Nước dâng cao, mở đập bằng câu trả lời đúng!" }] },
+    { "id": "zodiac-5", "title": "Về đích", "badgeOnComplete": "zodiac_finish", "activityRef": "zodiac-5-qs",
+      "cutscene": [{ "speaker": "Chuột", "text": "Về đích rồi! Cảm ơn bạn đồng hành." }] }
+  ],
+  "activities": [
+    { "id": "zodiac-1-qs", "xpReward": 10, "questions": [
+      { "prompt": "18 + 25 = ?", "choices": ["41","42","43","44"], "answer": "43" },
+      { "prompt": "60 - 17 = ?", "choices": ["41","42","43","44"], "answer": "43" },
+      { "prompt": "33 + 12 = ?", "choices": ["43","44","45","46"], "answer": "45" },
+      { "prompt": "50 - 28 = ?", "choices": ["20","21","22","23"], "answer": "22" },
+      { "prompt": "7 + 19 = ?", "choices": ["24","25","26","27"], "answer": "26" }
+    ]},
+    { "id": "zodiac-2-qs", "xpReward": 10, "questions": [
+      { "prompt": "44 - 19 = ?", "choices": ["23","24","25","26"], "answer": "25" },
+      { "prompt": "26 + 17 = ?", "choices": ["41","42","43","44"], "answer": "43" },
+      { "prompt": "58 - 29 = ?", "choices": ["27","28","29","30"], "answer": "29" },
+      { "prompt": "19 + 34 = ?", "choices": ["51","52","53","54"], "answer": "53" },
+      { "prompt": "65 - 27 = ?", "choices": ["36","37","38","39"], "answer": "38" }
+    ]},
+    { "id": "zodiac-3-qs", "xpReward": 10, "questions": [
+      { "prompt": "72 - 18 = ?", "choices": ["52","53","54","55"], "answer": "54" },
+      { "prompt": "29 + 25 = ?", "choices": ["52","53","54","55"], "answer": "54" },
+      { "prompt": "47 - 23 = ?", "choices": ["22","23","24","25"], "answer": "24" },
+      { "prompt": "16 + 38 = ?", "choices": ["52","53","54","55"], "answer": "54" },
+      { "prompt": "90 - 47 = ?", "choices": ["41","42","43","44"], "answer": "43" }
+    ]},
+    { "id": "zodiac-4-qs", "xpReward": 10, "questions": [
+      { "prompt": "33 + 29 = ?", "choices": ["59","60","61","62"], "answer": "62" },
+      { "prompt": "81 - 36 = ?", "choices": ["44","45","46","47"], "answer": "45" },
+      { "prompt": "27 + 33 = ?", "choices": ["58","59","60","61"], "answer": "60" },
+      { "prompt": "74 - 28 = ?", "choices": ["44","45","46","47"], "answer": "46" },
+      { "prompt": "48 + 26 = ?", "choices": ["72","73","74","75"], "answer": "74" }
+    ]},
+    { "id": "zodiac-5-qs", "xpReward": 10, "questions": [
+      { "prompt": "55 + 37 = ?", "choices": ["90","91","92","93"], "answer": "92" },
+      { "prompt": "99 - 56 = ?", "choices": ["41","42","43","44"], "answer": "43" },
+      { "prompt": "68 - 29 = ?", "choices": ["37","38","39","40"], "answer": "39" },
+      { "prompt": "32 + 45 = ?", "choices": ["75","76","77","78"], "answer": "77" },
+      { "prompt": "84 - 38 = ?", "choices": ["44","45","46","47"], "answer": "46" }
+    ]}
+  ]
+}
+

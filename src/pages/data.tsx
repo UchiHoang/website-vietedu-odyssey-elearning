@@ -1,18 +1,15 @@
 import Header from "@/components/Header";
 import { useEffect, useState } from "react";
-import { loadCurriculum} from "@/utils/grade1Loader";
+import grade1Curriculum from "@/data/curriculum.grade1.json";
 
 
 export default function DataPage() {
     const [curriculum, setCurriculum] = useState(null);
 
     useEffect(() => {
-    loadCurriculum()
-        .then(curriculum => {
-        console.log("Loaded curriculum:", curriculum);
-        setCurriculum(curriculum);
-        })
-        .catch(console.error);
+        // Load curriculum directly from JSON
+        setCurriculum(grade1Curriculum);
+        console.log("Loaded curriculum:", grade1Curriculum);
     }, []);
 
 

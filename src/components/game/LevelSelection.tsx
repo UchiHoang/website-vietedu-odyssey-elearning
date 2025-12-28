@@ -75,9 +75,24 @@ const LevelSelectionComponent = ({
         {/* Level Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {nodes.map((node, index) => {
-            const isCompleted = progress.completedNodes.includes(node.id);
-            const isUnlocked =
-              index === 0 || progress.completedNodes.includes(nodes[index - 1]?.id);
+            // completedNodes từ backend là array số (node_index), cần convert sang index
+            // Hoặc có thể là array string (node.id), cần tìm index tương ứng
+            const completedNodeIndices: number[] = progress.completedNodes.map((n: unknown) => {
+              if (typeof n === 'number') return n;
+              if (typeof n === 'string') {
+                // Nếu là số dạng string, parse nó
+                if (!isNaN(Number(n))) return Number(n);
+                // Nếu là node.id, tìm index của nó trong nodes
+                const foundIndex = nodes.findIndex((nd) => nd.id === n);
+                return foundIndex >= 0 ? foundIndex : -1;
+              }
+              return -1;
+            }).filter((n: number) => n >= 0);
+            
+            const isCompleted = completedNodeIndices.includes(index);
+            // Màn được unlock nếu index <= currentNodeIndex (đã mở đến màn đó)
+            // Màn đầu tiên (index 0) luôn được unlock
+            const isUnlocked = index === 0 || index <= progress.currentNodeIndex;
             const isCurrent = progress.currentNodeIndex === index;
 
             return (

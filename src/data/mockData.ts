@@ -2,14 +2,14 @@
 import preSchoolImg from "@/assets/class-preschool.png";
 import grade1Img from "@/assets/class-grade1.png";
 import grade2Img from "@/assets/class-grade2.png";
-import grade3Img from "@/assets/class-grade3.jpg";
-import grade4Img from "@/assets/class-grade4.jpg";
+import grade3Img from "@/assets/class-grade3.png";
+import grade4Img from "@/assets/class-grade4.png";
 import grade5Img from "@/assets/class-grade5.jpg";
 
 export const classes = [
   {
     level: "Mầm non",
-    title: "Hành trình đếm bánh chưng cùng chú Cuội",
+    title: "Hành trình chú Cuội đến Cung Trăng",
     ageRange: "3-5",
     image: preSchoolImg,
     description: "Khám phá số đếm qua câu chuyện dân gian",
@@ -33,7 +33,7 @@ export const classes = [
   },
   {
     level: "Lớp 3",
-    title: "Săn kho báu sông Hồng",
+    title: "Sơn Tinh - Thủy Tinh",
     ageRange: "8-9",
     image: grade3Img,
     description: "Phiêu lưu toán học trên dòng sông Hồng",
@@ -41,11 +41,11 @@ export const classes = [
   },
   {
     level: "Lớp 4",
-    title: "Thám hiểm Cổ Loa thành",
+    title: "Thánh Gióng bay về trời",
     ageRange: "9-10",
     image: grade4Img,
-    description: "Khám phá lịch sử qua bài toán",
-    gameRoute: null,
+    description: "Giúp Gióng ăn no, lớn nhanh, đánh giặc Ân",
+    gameRoute: "/classroom/grade4",
   },
   {
     level: "Lớp 5",
