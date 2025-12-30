@@ -13,6 +13,12 @@ import iconSack from "@/assets/icons/icon_sack.png";
 import iconMoney from "@/assets/icons/icon_money.png";
 import iconPuzzle from "@/assets/icons/icon_puzzle.png";
 import iconBadge from "@/assets/icons/icon_badge.png";
+import iconFly from "@/assets/icons/domdom.png";
+import iconGate from "@/assets/icons/gate.png";
+import iconRabbit from "@/assets/icons/rabbit.png";
+import icon13 from "@/assets/icons/chihang.png";
+import icon14 from "@/assets/icons/14.png";
+import icon15 from "@/assets/icons/15.png";
 
 const levelIcons = [
   iconApple,   // Level 1
@@ -24,6 +30,12 @@ const levelIcons = [
   iconMoney,   // Level 7
   iconPuzzle,  // Level 8
   iconBadge,   // Level 9
+  iconFly,
+  iconGate,
+  iconRabbit,
+  icon13,
+  icon14,
+  icon15,
 ];
 
 interface LevelSelectionProps {

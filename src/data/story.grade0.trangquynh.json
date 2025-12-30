@@ -4,12 +4,13 @@
     "description": "Cuội và Thỏ Ngọc cùng bạn nhỏ đếm số, màu sắc, hình khối để bay lên trăng."
   },
   "prologue": [
-    { "speaker": "Người kể chuyện", "text": "Đêm rằm, Chú Cuội ôm cây đa ao ước được lên Cung Trăng." },
-    { "speaker": "Cuội", "text": "Bạn ơi, giúp mình giải những câu đố để cây đa cao vút nhé!" },
-    { "speaker": "Thỏ Ngọc", "text": "Tớ sẽ tặng bụi sao nếu bạn hoàn thành từng thử thách." }
+    { "sprite": "assets/user/cuoi1.png", "speaker": "Người kể chuyện", "text": "Đêm rằm, Chú Cuội ôm cây đa ao ước được lên Cung Trăng." },
+    { "sprite": "assets/user/cuoi2.png", "speaker": "Cuội", "text": "Bạn ơi, giúp mình giải những câu đố để cây đa cao vút nhé!" },
+    { "sprite": "assets/user/cuoi3.png", "speaker": "Thỏ Ngọc", "text": "Tớ sẽ tặng bụi sao nếu bạn hoàn thành từng thử thách." }
   ],
   "nodes": [
-    { "id": "g0-l1", "title": "Đom Đóm Đêm Hè", "badgeOnComplete": "g0-l1", "activityRef": "g0-l1-qs", "cutscene": [{ "speaker": "Cuội", "text": "Đêm nay đom đóm sáng rực, đếm cùng tớ nào!" }] },
+    { "id": "g0-l1", "title": "Đom Đóm Đêm Hè", "badgeOnComplete": "g0-l1", "activityRef": "g0-l1-qs", "cutscene": [{ "speaker": "Cuội", "text": "Đêm nay đom đóm sáng rực, đếm cùng tớ nào!" }]
+    },
     { "id": "g0-l2", "title": "Giọt Sương Ban Mai", "badgeOnComplete": "g0-l2", "activityRef": "g0-l2-qs", "cutscene": [{ "speaker": "Thỏ Ngọc", "text": "Giọt sương lấp lánh, hãy chọn màu đúng nhé!" }] },
     { "id": "g0-l3", "title": "Mầm Non Tỉnh Giấc", "badgeOnComplete": "g0-l3", "activityRef": "g0-l3-qs", "cutscene": [{ "speaker": "Cuội", "text": "Mầm nhỏ vươn lên, ghép hình đúng để cây khỏe." }] },
     { "id": "g0-l4", "title": "Viên Đá Xây Bồn", "badgeOnComplete": "g0-l4", "activityRef": "g0-l4-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Xếp đá vào bồn, kéo thả cho khít nha." }] },
@@ -18,7 +19,8 @@
     { "id": "g0-l7", "title": "Đám Mây Ngũ Sắc", "badgeOnComplete": "g0-l7", "activityRef": "g0-l7-qs", "cutscene": [{ "speaker": "Cuội", "text": "Mây đổi màu liên tục, xem bạn có nhớ không?" }] },
     { "id": "g0-l8", "title": "Cầu Vồng Bắc Nhịp", "badgeOnComplete": "g0-l8", "activityRef": "g0-l8-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Ghép màu tạo cầu vồng, chuẩn bị bước lên cao." }] },
     { "id": "g0-l9", "title": "Gió Thổi Bay Cao", "badgeOnComplete": "g0-l9", "activityRef": "g0-l9-qs", "cutscene": [{ "speaker": "Thỏ Ngọc", "text": "Gió đưa lá, đếm lá rơi để giữ thăng bằng." }] },
-    { "id": "g0-l10", "title": "Hái Sao Qua Núi", "badgeOnComplete": "g0-l10", "activityRef": "g0-l10-qs", "cutscene": [{ "speaker": "Cuội", "text": "Leo núi hái sao, chọn hình sáng nhất nhé!" }] },
+    { "id": "g0-l10", "title": "Hái Sao Qua Núi", "badgeOnComplete": "g0-l10", "activityRef": "g0-l10-qs", "cutscene": [{ "speaker": "Cuội", "text": "Leo núi hái sao, chọn hình sáng nhất nhé!" }] 
+    },
     { "id": "g0-l11", "title": "Cổng Trời Rộng Mở", "badgeOnComplete": "g0-l11", "activityRef": "g0-l11-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Cổng trời có mật mã số, điền đúng là qua." }] },
     { "id": "g0-l12", "title": "Thỏ Ngọc Giã Thuốc", "badgeOnComplete": "g0-l12", "activityRef": "g0-l12-qs", "cutscene": [{ "speaker": "Thỏ Ngọc", "text": "Giã thuốc trăng, chia đều thành từng phần." }] },
     { "id": "g0-l13", "title": "Chị Hằng Soi Gương", "badgeOnComplete": "g0-l13", "activityRef": "g0-l13-qs", "cutscene": [{ "speaker": "Chị Hằng", "text": "Gương tròn gương vuông, chọn đúng hình phản chiếu." }] },
@@ -30,9 +32,80 @@
       "id": "g0-l1-qs",
       "xpReward": 10,
       "questions": [
-        { "id": "g0-l1-q1", "type": "counting", "question": "Đếm đom đóm đang bay", "prompt": "Có bao nhiêu đom đóm đang sáng?", "countingItems": [{ "image": "/assets/user/firefly.png", "count": 6 }, { "image": "/assets/user/firefly_blue.png", "count": 4 }], "countingAnswer": 10, "explanation": "6 đom đóm vàng + 4 đom đóm xanh = 10." },
+        { "id": "g0-l1-q1", "type": "counting", "question": "Đếm đom đóm đang bay", "prompt": "Có bao nhiêu đom đóm đang sáng?", "countingItems": [{ "image": "/assets/user/firefly.png", "count": 6 }, { "image": "/assets/user/fireflyblue.png", "count": 4 }], "countingAnswer": 10, "explanation": "6 đom đóm vàng + 4 đom đóm xanh = 10." },
         { "id": "g0-l1-q2", "type": "multiple-choice", "prompt": "Đom đóm phát sáng màu gì?", "choices": ["Xanh", "Đỏ", "Tím", "Cam"], "answer": "Xanh", "explanation": "Đom đóm thường phát ánh sáng xanh lục." },
-        { "id": "g0-l1-q3", "type": "matching-pairs", "question": "Ghép tiếng kêu với con vật đêm", "pairs": [{ "id": "p1", "left": "Chuột", "right": "Chít chít" }, { "id": "p2", "left": "Cú mèo", "right": "Hú...hú..." }, { "id": "p3", "left": "Dế", "right": "Rích...rích..." }], "explanation": "Mỗi con vật có âm thanh riêng." }
+        { "id": "g0-l1-q3", "type": "matching-pairs", "question": "Ghép tiếng kêu với con vật đêm", "pairs": [{ "id": "p1", "left": "Chuột", "right": "Chít chít" }, { "id": "p2", "left": "Cú mèo", "right": "Hú...hú..." }, { "id": "p3", "left": "Dế", "right": "Rích...rích..." }], "explanation": "Mỗi con vật có âm thanh riêng." },
+        { "id": "g0-l1-q4", "type": "fill-blank", "question": "Có 7 đom đóm vàng và ___ đom đóm xanh để đủ 10.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 10 - 7 = 3." },
+        { "id": "g0-l1-q5", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn",
+          "dragItems": [
+                {
+                  "id": "d1",
+                  "content": "4 - 1 = 3",
+                  "correctSlot": "small"
+                },
+                {
+                  "id": "d2",
+                  "content": "5 + 2 = 7",
+                  "correctSlot": "medium"
+                },
+                {
+                  "id": "d3",
+                  "content": "4 + 4 = 8",
+                  "correctSlot": "large"
+                }
+          ],
+          "dropSlots": [
+                {
+                  "id": "small",
+                  "label": "Nhỏ nhất"
+                },
+                {
+                  "id": "medium",
+                  "label": "Trung bình"
+                },
+                {
+                  "id": "large",
+                  "label": "Lớn nhất"
+                }
+          ] 
+        },
+        { "id": "g0-l1-q6", "type": "counting", "question": "Đếm lồng đèn đang bay", "prompt": "Có bao nhiêu lồng đèn đang sáng?", "countingItems": [{ "image": "/assets/user/l1q61.png", "count": 3 }, { "image": "/assets/user/l1q62.png", "count": 2 }], "countingAnswer": 5, "explanation": "3 lồng đèn xanh + 2 lồng đèn đỏ = 5." },
+        { "id": "g0-l1-q7", "type": "multiple-choice", "prompt": "Đom đóm phát sáng màu gì?", "choices": ["Xanh", "Đỏ", "Tím", "Cam"], "answer": "Xanh", "explanation": "Đom đóm thường phát ánh sáng xanh lục." },
+        { "id": "g0-l1-q8", "type": "matching-pairs", "question": "Ghép tiếng kêu với con vật đêm", "pairs": [{ "id": "p1", "left": "Chuột", "right": "Chít chít" }, { "id": "p2", "left": "Cú mèo", "right": "Hú...hú..." }, { "id": "p3", "left": "Dế", "right": "Rích...rích..." }], "explanation": "Mỗi con vật có âm thanh riêng." },
+        { "id": "g0-l1-q9", "type": "fill-blank", "question": "Có 7 đom đóm vàng và ___ đom đóm xanh để đủ 10.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 10 - 7 = 3." },
+        { "id": "g0-l1-q10", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn",
+          "dragItems": [
+            {
+              "id": "d1",
+              "content": "4 - 1 = 3",
+              "correctSlot": "small"
+            },
+            {
+              "id": "d2",
+              "content": "5 + 2 = 7",
+              "correctSlot": "medium"
+            },
+            {
+              "id": "d3",
+              "content": "4 + 4 = 8",
+              "correctSlot": "large"
+            }
+          ],
+          "dropSlots": [
+            {
+              "id": "small",
+              "label": "Nhỏ nhất"
+            },
+            {
+              "id": "medium",
+              "label": "Trung bình"
+            },
+            {
+              "id": "large",
+              "label": "Lớn nhất"
+            }
+          ] 
+        }
       ]
     },
     {
