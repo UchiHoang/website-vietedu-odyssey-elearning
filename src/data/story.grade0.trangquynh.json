@@ -33,24 +33,24 @@
       "xpReward": 10,
       "questions": [
         { "id": "g0-l1-q1", "type": "counting", "question": "Đếm đom đóm đang bay", "prompt": "Có bao nhiêu đom đóm đang sáng?", "countingItems": [{ "image": "/assets/user/firefly.png", "count": 6 }, { "image": "/assets/user/fireflyblue.png", "count": 4 }], "countingAnswer": 10, "explanation": "6 đom đóm vàng + 4 đom đóm xanh = 10." },
-        { "id": "g0-l1-q2", "type": "multiple-choice", "prompt": "Đom đóm phát sáng màu gì?", "choices": ["Xanh", "Đỏ", "Tím", "Cam"], "answer": "Xanh", "explanation": "Đom đóm thường phát ánh sáng xanh lục." },
-        { "id": "g0-l1-q3", "type": "matching-pairs", "question": "Ghép tiếng kêu với con vật đêm", "pairs": [{ "id": "p1", "left": "Chuột", "right": "Chít chít" }, { "id": "p2", "left": "Cú mèo", "right": "Hú...hú..." }, { "id": "p3", "left": "Dế", "right": "Rích...rích..." }], "explanation": "Mỗi con vật có âm thanh riêng." },
+        { "id": "g0-l1-q2", "type": "multiple-choice", "prompt": "Chọn hình tròn để vẽ mặt trăng", "choices": ["△", "◻︎", "▯", "◯"], "answer": "◯", "explanation": "Hình tròn" },
+        { "id": "g0-l1-q3", "type": "matching-pairs", "question": "Nối số với phép tính phù hợp", "pairs": [{ "id": "p1", "left": "1", "right": "2 - 1" }, { "id": "p2", "left": "4", "right": "2 + 2" }, { "id": "p3", "left": "2", "right": "3 - 1" }], "explanation": "" },
         { "id": "g0-l1-q4", "type": "fill-blank", "question": "Có 7 đom đóm vàng và ___ đom đóm xanh để đủ 10.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 10 - 7 = 3." },
         { "id": "g0-l1-q5", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn",
           "dragItems": [
                 {
                   "id": "d1",
-                  "content": "4 - 1 = 3",
+                  "content": "4 - 1",
                   "correctSlot": "small"
                 },
                 {
                   "id": "d2",
-                  "content": "5 + 2 = 7",
+                  "content": "5 + 2",
                   "correctSlot": "medium"
                 },
                 {
                   "id": "d3",
-                  "content": "4 + 4 = 8",
+                  "content": "4 + 4",
                   "correctSlot": "large"
                 }
           ],
@@ -70,39 +70,39 @@
           ] 
         },
         { "id": "g0-l1-q6", "type": "counting", "question": "Đếm lồng đèn đang bay", "prompt": "Có bao nhiêu lồng đèn đang sáng?", "countingItems": [{ "image": "/assets/user/l1q61.png", "count": 3 }, { "image": "/assets/user/l1q62.png", "count": 2 }], "countingAnswer": 5, "explanation": "3 lồng đèn xanh + 2 lồng đèn đỏ = 5." },
-        { "id": "g0-l1-q7", "type": "multiple-choice", "prompt": "Đom đóm phát sáng màu gì?", "choices": ["Xanh", "Đỏ", "Tím", "Cam"], "answer": "Xanh", "explanation": "Đom đóm thường phát ánh sáng xanh lục." },
-        { "id": "g0-l1-q8", "type": "matching-pairs", "question": "Ghép tiếng kêu với con vật đêm", "pairs": [{ "id": "p1", "left": "Chuột", "right": "Chít chít" }, { "id": "p2", "left": "Cú mèo", "right": "Hú...hú..." }, { "id": "p3", "left": "Dế", "right": "Rích...rích..." }], "explanation": "Mỗi con vật có âm thanh riêng." },
-        { "id": "g0-l1-q9", "type": "fill-blank", "question": "Có 7 đom đóm vàng và ___ đom đóm xanh để đủ 10.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 10 - 7 = 3." },
+        { "id": "g0-l1-q7", "type": "multiple-choice", "prompt": "Trong khu vườn đêm hè có 3 con đom đóm đang bay. Hỏi có tất cả bao nhiêu con đom đóm?", "choices": ["3", "4", "1", "2"], "answer": "3", "explanation": "Có tất cả 3 con đom đóm." },
+        { "id": "g0-l1-q8", "type": "matching-pairs", "question": "Ghép số với con vật đêm", "pairs": [{ "id": "p1", "left": "1", "right": "🐝" }, { "id": "p2", "left": "3", "right": "🐝🐝🐝" }, { "id": "p3", "left": "2", "right": "🐝🐝" }], "explanation": "" },
+        { "id": "g0-l1-q9", "type": "fill-blank", "question": "Có 2 con đom đóm bay trước nhà và thêm 1 con bay tới. Tất cả có ___ con đom đóm.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 2 + 1 = 3." },
         { "id": "g0-l1-q10", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn",
           "dragItems": [
             {
               "id": "d1",
-              "content": "4 - 1 = 3",
+              "content": "4 - 1",
               "correctSlot": "small"
             },
             {
               "id": "d2",
-              "content": "5 + 2 = 7",
+              "content": "5 + 2",
               "correctSlot": "medium"
             },
             {
               "id": "d3",
-              "content": "4 + 4 = 8",
+              "content": "4 + 4",
               "correctSlot": "large"
             }
           ],
           "dropSlots": [
             {
               "id": "small",
-              "label": "Nhỏ nhất"
+              "label": "3"
             },
             {
               "id": "medium",
-              "label": "Trung bình"
+              "label": "7"
             },
             {
               "id": "large",
-              "label": "Lớn nhất"
+              "label": "8"
             }
           ] 
         }
@@ -112,27 +112,48 @@
       "id": "g0-l2-qs",
       "xpReward": 10,
       "questions": [
-        { "id": "g0-l2-q1", "type": "multiple-choice", "prompt": "Giọt sương có hình gì?", "choices": ["Tròn", "Vuông", "Tam giác", "Chữ nhật"], "answer": "Tròn", "explanation": "Giọt sương nhỏ thường tròn." },
-        { "id": "g0-l2-q2", "type": "drag-drop", "question": "Kéo màu vào giọt sương", "dragItems": [{ "id": "c1", "content": "Xanh lá", "correctSlot": "s1" }, { "id": "c2", "content": "Hồng", "correctSlot": "s2" }], "dropSlots": [{ "id": "s1", "label": "Giọt trên lá" }, { "id": "s2", "label": "Giọt trên hoa" }], "explanation": "Giọt trên lá thường xanh, trên hoa thì hồng." },
-        { "id": "g0-l2-q3", "type": "fill-blank", "question": "Có ___ giọt sương trên lá và 2 giọt trên hoa. Tổng là 5.", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "3 + 2 = 5." }
+        { "id": "g0-l2-q1", "type": "multiple-choice", "prompt": "Giọt sương 🟢 có hình gì?", "choices": ["Tròn", "Vuông", "Tam giác", "Chữ nhật"], "answer": "Tròn", "explanation": "Giọt sương nhỏ thường tròn." },
+        { "id": "g0-l2-q2", "type": "drag-drop", "question": "Xếp lượng giọt sương từ nhỏ đến lớn", "dragItems": [{ "id": "c1", "content": "2 giọt", "correctSlot": "s1" }, { "id": "c2", "content": "4 giọt", "correctSlot": "s2" }], "dropSlots": [{ "id": "s1", "label": "ít hơn" }, { "id": "s2", "label": "nhiều hơn" }], "explanation": "2 nhỏ hơn 4" },
+        { "id": "g0-l2-q3", "type": "fill-blank", "question": "Có ___ giọt sương trên lá và 2 giọt trên hoa. Tổng là 5.", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "3 + 2 = 5." },
+        { "id": "g0-l2-q4", "type": "counting", "question": "Đếm lá khô", "prompt": "Có bao nhiêu chiếc lá khô?", "countingItems": [{ "image": "/assets/user/leafg.png", "count": 4 }, { "image": "/assets/user/leafo.png", "count": 3 }], "countingAnswer": 3, "explanation": "4 lá đọng sương và 3 lá khô" },
+        { "id": "g0-l2-q5", "type": "matching-pairs", "question": "Nối số với phép tính phù hợp", "pairs": [{ "id": "p1", "left": "1", "right": "2 - 1" }, { "id": "p2", "left": "4", "right": "2 + 2" }, { "id": "p3", "left": "2", "right": "3 - 1" }], "explanation": "" },
+        { "id": "g0-l2-q6", "type": "counting", "question": "Đếm số lượng giọt sương", "prompt": "", "countingItems": [{ "image": "/assets/user/water.png", "count": 3 }, { "image": "/assets/user/water2.png", "count": 2 }], "countingAnswer": 5, "explanation": "3 lồng đèn xanh + 2 lồng đèn đỏ = 5." },
+        { "id": "g0-l2-q7", "type": "multiple-choice", "prompt": "Trong khu vườn đêm hè có 7 giọt sương rơi, 4 giọt rơi vào lá. Hỏi có tất cả bao nhiêu giọt sương không rơi vào lá?", "choices": ["3", "4", "1", "2"], "answer": "3", "explanation": "7 - 4 = 3" },
+        { "id": "g0-l2-q8", "type": "matching-pairs", "question": "Ghép số với giọt sương đêm", "pairs": [{ "id": "p1", "left": "1", "right": "💧" }, { "id": "p2", "left": "3", "right": "💧💧💧" }, { "id": "p3", "left": "2", "right": "💧💧" }], "explanation": "" },
+        { "id": "g0-l2-q9", "type": "fill-blank", "question": "Có 2 con đom đóm bay trước nhà và thêm 1 con bay tới. Tất cả có ___ con đom đóm.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 2 + 1 = 3." },
+        { "id": "g0-l2-q10", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn","dragItems": [{"id": "d1","content": "4 - 1","correctSlot": "small"},{"id": "d2","content": "5 + 2","correctSlot": "medium"},{"id": "d3","content": "4 + 4","correctSlot": "large"}],"dropSlots": [{"id": "small","label": "3"},{"id": "medium","label": "7"},{"id": "large","label": "8"}]}
       ]
     },
     {
       "id": "g0-l3-qs",
       "xpReward": 10,
       "questions": [
-        { "id": "g0-l3-q1", "type": "multiple-choice", "prompt": "Mầm non có màu gì khi mới nhú?", "choices": ["Xanh nhạt", "Đỏ thẫm", "Tím", "Nâu"], "answer": "Xanh nhạt", "explanation": "Mầm mới thường xanh nhạt." },
-        { "id": "g0-l3-q2", "type": "matching-pairs", "question": "Ghép hình khối với tên", "pairs": [{ "id": "p1", "left": "Hình tròn", "right": "Bánh xe" }, { "id": "p2", "left": "Hình vuông", "right": "Viên gạch" }, { "id": "p3", "left": "Tam giác", "right": "Biển báo" }], "explanation": "Các vật quen thuộc có hình riêng." },
-        { "id": "g0-l3-q3", "type": "counting", "question": "Đếm lá non", "prompt": "Có 2 lá to và 3 lá nhỏ. Tổng lá là bao nhiêu?", "countingItems": [{ "image": "/assets/user/leaf.png", "count": 2 }, { "image": "/assets/user/leaf_small.png", "count": 3 }], "countingAnswer": 5, "explanation": "2 + 3 = 5 lá." }
+        { "id": "g0-l3-q1", "type": "multiple-choice", "prompt": "Có 2 mầm non có màu xanh mới nhú và 2 mầm bị gãy, có tất cả bao nhiêu?", "choices": ["3", "2", "4", "1"], "answer": "4", "explanation": "2 + 2 = 4." },
+        { "id": "g0-l3-q2", "type": "matching-pairs", "question": "Ghép hình khối với tên", "pairs": [{ "id": "p1", "left": "Hình tròn", "right": "⚽" }, { "id": "p2", "left": "Hình vuông", "right": "🧱" }, { "id": "p3", "left": "Tam giác", "right": "⚠️" }], "explanation": "Các vật quen thuộc có hình riêng." },
+        { "id": "g0-l3-q3", "type": "counting", "question": "Đếm chồi non", "prompt": "Có 2 chồi to và 3 chồi nhỏ. Tổng lá là bao nhiêu?", "countingItems": [{ "image": "/assets/user/plant.png", "count": 2 }, { "image": "/assets/user/plant2.png", "count": 3 }], "countingAnswer": 5, "explanation": "2 + 3 = 5 chồi." },
+        { "id": "g0-l3-q4", "type": "drag-drop", "question": "Xếp lượng giọt sương từ nhỏ đến lớn", "dragItems": [{ "id": "c1", "content": "2 giọt", "correctSlot": "s1" }, { "id": "c2", "content": "4 giọt", "correctSlot": "s2" }], "dropSlots": [{ "id": "s1", "label": "ít hơn" }, { "id": "s2", "label": "nhiều hơn" }], "explanation": "2 nhỏ hơn 4" },
+        { "id": "g0-l3-q5", "type": "fill-blank", "question": "Có ___ giọt sương trên lá và 2 giọt trên hoa. Tổng là 5.", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "3 + 2 = 5." },
+        { "id": "g0-l3-q6", "type": "counting", "question": "Đếm số lượng giọt sương", "prompt": "", "countingItems": [{ "image": "/assets/user/water.png", "count": 3 }, { "image": "/assets/user/water2.png", "count": 2 }], "countingAnswer": 5, "explanation": "3 lồng đèn xanh + 2 lồng đèn đỏ = 5." },
+        { "id": "g0-l3-q7", "type": "multiple-choice", "prompt": "Trong khu vườn đêm hè có 7 giọt sương rơi, 4 giọt rơi vào lá. Hỏi có tất cả bao nhiêu giọt sương không rơi vào lá?", "choices": ["3", "4", "1", "2"], "answer": "3", "explanation": "7 - 4 = 3" },
+        { "id": "g0-l3-q8", "type": "matching-pairs", "question": "Ghép số với giọt sương đêm", "pairs": [{ "id": "p1", "left": "1", "right": "💧" }, { "id": "p2", "left": "3", "right": "💧💧💧" }, { "id": "p3", "left": "2", "right": "💧💧" }], "explanation": "" },
+        { "id": "g0-l3-q9", "type": "fill-blank", "question": "Có 2 con đom đóm bay trước nhà và thêm 1 con bay tới. Tất cả có ___ con đom đóm.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 2 + 1 = 3." },
+        { "id": "g0-l3-q10", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn","dragItems": [{"id": "d1","content": "4 - 1","correctSlot": "small"},{"id": "d2","content": "5 + 2","correctSlot": "medium"},{"id": "d3","content": "4 + 4","correctSlot": "large"}],"dropSlots": [{"id": "small","label": "3"},{"id": "medium","label": "7"},{"id": "large","label": "8"}]}
       ]
     },
     {
       "id": "g0-l4-qs",
       "xpReward": 10,
       "questions": [
-        { "id": "g0-l4-q1", "type": "drag-drop", "question": "Kéo viên đá đúng vị trí", "dragItems": [{ "id": "d1", "content": "Đá vuông", "correctSlot": "slot-square" }, { "id": "d2", "content": "Đá tròn", "correctSlot": "slot-circle" }], "dropSlots": [{ "id": "slot-square", "label": "Ô vuông" }, { "id": "slot-circle", "label": "Ô tròn" }], "explanation": "Hình vuông vào ô vuông, tròn vào ô tròn." },
+        { "id": "g0-l4-q1", "type": "drag-drop", "question": "Kéo viên đá đúng vị trí", "dragItems": [{ "id": "d1", "content": "Đá vuông", "correctSlot": "slot-square" }, { "id": "d2", "content": "Đá tròn", "correctSlot": "slot-circle" }], "dropSlots": [{ "id": "slot-square", "label": "Ô vuông ☐" }, { "id": "slot-circle", "label": "Ô tròn ◯" }], "explanation": "Hình vuông vào ô vuông, tròn vào ô tròn." },
         { "id": "g0-l4-q2", "type": "multiple-choice", "prompt": "Viên đá nào có 4 cạnh bằng nhau?", "choices": ["Tròn", "Vuông", "Tam giác", "Chữ nhật"], "answer": "Vuông", "explanation": "Hình vuông có 4 cạnh bằng nhau." },
-        { "id": "g0-l4-q3", "type": "fill-blank", "question": "Có 1 ô tròn, 1 ô vuông. Tổng ô là ___?", "blanks": [{ "position": 0, "answer": "2" }], "explanation": "1 + 1 = 2." }
+        { "id": "g0-l4-q3", "type": "fill-blank", "question": "Có 1 ô tròn, 1 ô vuông. Tổng ô là ___?", "blanks": [{ "position": 0, "answer": "2" }], "explanation": "1 + 1 = 2." },
+        { "id": "g0-l4-q4", "type": "matching-pairs", "question": "Ghép hình khối với tên", "pairs": [{ "id": "p1", "left": "Hình tròn", "right": "⚽" }, { "id": "p2", "left": "Hình vuông", "right": "🧱" }, { "id": "p3", "left": "Tam giác", "right": "⚠️" }], "explanation": "Các vật quen thuộc có hình riêng." },
+        { "id": "g0-l4-q5", "type": "counting", "question": "Đếm đá và sỏi", "prompt": "Có 2 hòn đá và 3 viên sỏi. Tổng bao nhiêu?", "countingItems": [{ "image": "/assets/user/rock2.png", "count": 2 }, { "image": "/assets/user/rock.png", "count": 3 }], "countingAnswer": 5, "explanation": "2 + 3 = 5 chồi." },
+        { "id": "g0-l4-q6", "type": "counting", "question": "Đếm số lượng giọt sương", "prompt": "", "countingItems": [{ "image": "/assets/user/water.png", "count": 3 }, { "image": "/assets/user/water2.png", "count": 2 }], "countingAnswer": 5, "explanation": "3 lồng đèn xanh + 2 lồng đèn đỏ = 5." },
+        { "id": "g0-l4-q7", "type": "multiple-choice", "prompt": "Trong khu vườn đêm hè có 7 giọt sương rơi, 4 giọt rơi vào lá. Hỏi có tất cả bao nhiêu giọt sương không rơi vào lá?", "choices": ["3", "4", "1", "2"], "answer": "3", "explanation": "7 - 4 = 3" },
+        { "id": "g0-l4-q8", "type": "matching-pairs", "question": "Ghép số với giọt sương đêm", "pairs": [{ "id": "p1", "left": "1", "right": "💧" }, { "id": "p2", "left": "3", "right": "💧💧💧" }, { "id": "p3", "left": "2", "right": "💧💧" }], "explanation": "" },
+        { "id": "g0-l4-q9", "type": "fill-blank", "question": "Có 2 con đom đóm bay trước nhà và thêm 1 con bay tới. Tất cả có ___ con đom đóm.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 2 + 1 = 3." },
+        { "id": "g0-l4-q10", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn","dragItems": [{"id": "d1","content": "4 - 1","correctSlot": "small"},{"id": "d2","content": "5 + 2","correctSlot": "medium"},{"id": "d3","content": "4 + 4","correctSlot": "large"}],"dropSlots": [{"id": "small","label": "3"},{"id": "medium","label": "7"},{"id": "large","label": "8"}]}
       ]
     },
     {
