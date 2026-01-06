@@ -4,9 +4,9 @@
     "description": "Ngọc Hoàng mở cuộc đua, mỗi con vật là một thử thách Toán lớp 1: cộng trừ đến 100, xem giờ, đo độ dài."
   },
   "prologue": [
-    { "speaker": "Ngọc Hoàng", "text": "Ta tổ chức cuộc đua 12 con giáp, ai giỏi tính toán sẽ về đích!" },
-    { "speaker": "Người kể chuyện", "text": "Bạn sẽ đồng hành, giúp từng con vật giải thử thách để tiến lên." },
-    { "speaker": "Chuột", "text": "Đi thôi, tớ cần bạn bấm giờ, tính toán thật nhanh!" }
+    { "sprite": "assets/user/zodiac1.png", "speaker": "Ngọc Hoàng", "text": "Ta tổ chức cuộc đua 12 con giáp, ai giỏi tính toán sẽ về đích!" },
+    { "sprite": "assets/user/zodiac2.png", "speaker": "Người kể chuyện", "text": "Bạn sẽ đồng hành, giúp từng con vật giải thử thách để tiến lên." },
+    { "sprite": "assets/user/zodiac3.png", "speaker": "Chuột", "text": "Đi thôi, tớ cần bạn bấm giờ, tính toán thật nhanh!" }
   ],
   "nodes": [
     { "id": "g1-l1", "title": "Chuột Nhắt Xuất Phát", "badgeOnComplete": "g1-l1", "activityRef": "g1-l1-qs", "cutscene": [{ "speaker": "Chuột", "text": "Tớ nhỏ nhưng nhanh, giúp tớ cộng trừ để vượt vạch xuất phát!" }] },
