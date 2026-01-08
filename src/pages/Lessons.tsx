@@ -50,6 +50,27 @@ const lessons: Lesson[] = [
     topicCount: 4,
     quizCount: 3,
     completed: false
+  },
+  {
+    id: "5",
+    title: "Phép trừ trong phạm vi đến 10",
+    topicCount: 4,
+    quizCount: 3,
+    completed: false
+  },
+  {
+    id: "6",
+    title: "Thời gian, thời điểm",
+    topicCount: 4,
+    quizCount: 3,
+    completed: false
+  },
+  {
+    id: "7",
+    title: "Toán tư duy",
+    topicCount: 4,
+    quizCount: 3,
+    completed: false
   }
 ];
 
@@ -85,7 +106,127 @@ const topics: Topic[] = [
     videoUrl: "https://www.youtube.com/embed/EX8DR1YMlRE",
     description: "Học số 10 và ôn tập tất cả các số đã học",
     completed: false
-  }
+  },
+  {
+    id: "1.5",
+    lessonId: "1",
+    title: "1.1.5. Số 0",
+    videoUrl: "https://www.youtube.com/embed/aMJgvwRAL_k",
+    description: "Học Làm quen với số 0",
+    completed: false
+  },
+  {
+    id: "2.1",
+    lessonId: "2",
+    title: "1.2.1. So Sánh Các Dấu Cho Bé Mới Bắt Đầu",
+    videoUrl: "https://www.youtube.com/embed/nz5PWLtaokw",
+    description: "Cách dùng các dấu trong phép so sánh",
+    completed: false
+  },
+  {
+    id: "2.2",
+    lessonId: "2",
+    title: "1.2.2. Học Cách So Sánh Nhiều Hơn, Ít Hơn, Bằng Nhau",
+    videoUrl: "https://www.youtube.com/embed/Z8P-pmHMxDU",
+    description: "Học cách nhận biết và so sánh số lượng: nhiều – ít – bằng nhau",
+    completed: false
+  },
+  {
+    id: "3.1",
+    lessonId: "3",
+    title: "1.3.1. Vẽ Đoạn Thẳng Có Độ Dài Cho Trước Như Thế Nào?",
+    videoUrl: "https://www.youtube.com/embed/F3yktQ99TYw",
+    description: "Học cách kẻ vẽ đoạn thẳng có độ dài chính xác.",
+    completed: false
+  },
+  {
+    id: "4.1",
+    lessonId: "4",
+    title: "1.4.1. Học Cách Cộng Trong Phạm Vi 4, 5, 6 Đơn Giản",
+    videoUrl: "https://www.youtube.com/embed/Ei0_VugQejo",
+    description: "Làm quen với phép cộng trong phạm vi 4, 5 và 6",
+    completed: false
+  },
+  {
+    id: "4.2",
+    lessonId: "4",
+    title: "1.4.2. Hiểu Nhanh Số 0 Trong Phép Cộng",
+    videoUrl: "https://www.youtube.com/embed/9zOo65_BiuQ",
+    description: "tìm hiểu Ý nghĩa của số 0 trong phép cộng",
+    completed: false
+  },
+  {
+    id: "4.3",
+    lessonId: "4",
+    title: "1.4.3. Học Cách Cộng Trong Phạm Vi 6, 7, 8 Đơn Giản",
+    videoUrl: "https://www.youtube.com/embed/Qq8r7-feu6s",
+    description: "Làm quen với phép cộng trong phạm vi 6, 7 và 8",
+    completed: false
+  },
+  {
+    id: "4.4",
+    lessonId: "4",
+    title: "1.4.4. Học Cách Cộng Trong Phạm Vi 9, 10 Đơn Giản",
+    videoUrl: "https://www.youtube.com/embed/s-goxNdmJPE",
+    description: "Làm quen với phép cộng trong phạm vi 9 và 10",
+    completed: false
+  },
+  {
+    id: "4.5",
+    lessonId: "4",
+    title: "1.4.5. Học Cách Cộng Các Số Tròn Chục",
+    videoUrl: "https://www.youtube.com/embed/yd5JHf4Blh0",
+    description: "Biết cách cộng các số tròn chục.",
+    completed: false
+  },
+  {
+    id: "5.1",
+    lessonId: "5",
+    title: "1.5.1. Học Cách Trừ Trong Phạm Vi 3, 4, 5 Đơn Giản",
+    videoUrl: "https://www.youtube.com/embed/55l906_zUyE",
+    description: "Làm quen với phép trừ trong phạm vi 3, 4 và 5",
+    completed: false
+  },
+  {
+    id: "5.2",
+    lessonId: "5",
+    title: "1.5.2. Hiểu Nhanh Số 0 Trong Phép Trừ",
+    videoUrl: "https://www.youtube.com/embed/CyeG3y7lKeg",
+    description: " tìm hiểu Ý nghĩa của số 0 trong phép trừ",
+    completed: false
+  },
+  {
+    id: "6.1",
+    lessonId: "6",
+    title: "1.6.1. Học Cách Đọc Lịch, Phân Biệt Các Ngày Trong Tuần",
+    videoUrl: "https://www.youtube.com/embed/yJ-WLksmJ8M",
+    description: "Học tên gọi của các ngày trong tuần và cách xác định ngày – thứ trên lịch.",
+    completed: false
+  },
+  {
+    id: "6.2",
+    lessonId: "6",
+    title: "1.6.2. Làm Quen Với Đồng Hồ Và Thời Gian",
+    videoUrl: "https://www.youtube.com/embed/mIPRUr0rrOc",
+    description: "Làm quen và nhận biết đồng hồ và thời gian.",
+    completed: false
+  },
+  {
+    id: "7.1",
+    lessonId: "7",
+    title: "1.7.1. Phân Biệt Điểm Ở Trong Hay Ở Ngoài Một Hình",
+    videoUrl: "https://www.youtube.com/embed/-Cnwmbv69Aw",
+    description: " Nhận biết điểm nằm trong hoặc ngoài một hình phẳng",
+    completed: false
+  },
+  {
+    id: "7.2",
+    lessonId: "7",
+    title: "1.7.2. Nhận Biết Vị Trí: Trên – Dưới, Trái – Phải, Trước – Sau, Ở Giữa",
+    videoUrl: "https://www.youtube.com/embed/ZD5O7uPbWhw",
+    description: "Nhận biết các vị trí cơ bản.",
+    completed: false
+  },
 ];
 
 const Lessons = () => {
