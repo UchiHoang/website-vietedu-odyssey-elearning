@@ -48,7 +48,14 @@
       "questions": [
         { "id": "g1-l2-q1", "type": "multiple-choice", "prompt": "Sợi dây dài 80 cm, cắt đi 25 cm còn lại?", "choices": ["45 cm", "50 cm", "55 cm", "60 cm"], "answer": "55 cm", "explanation": "80 - 25 = 55 cm." },
         { "id": "g1-l2-q2", "type": "drag-drop", "question": "Kéo thước đo đúng vị trí 1 mét", "dragItems": [{ "id": "d1m", "content": "100 cm", "correctSlot": "slot-meter" }, { "id": "d50", "content": "50 cm", "correctSlot": "slot-half" }], "dropSlots": [{ "id": "slot-meter", "label": "1 m" }, { "id": "slot-half", "label": "Nửa mét" }], "explanation": "1 mét = 100 cm; nửa mét = 50 cm." },
-        { "id": "g1-l2-q3", "type": "fill-blank", "question": "30 cm + 20 cm = __ cm", "blanks": [{ "position": 0, "answer": "50" }], "explanation": "30 + 20 = 50 cm." }
+        { "id": "g1-l2-q3", "type": "fill-blank", "question": "30 cm + 20 cm = __ cm", "blanks": [{ "position": 0, "answer": "50" }], "explanation": "30 + 20 = 50 cm." },
+        { "id": "g1-l2-q4", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l2-q5", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." },
+        { "id": "g1-l2-q6", "type": "counting", "question": "Đếm số lượng giọt sương", "prompt": "", "countingItems": [{ "image": "/assets/user/water.png", "count": 3 }, { "image": "/assets/user/water2.png", "count": 2 }], "countingAnswer": 5, "explanation": "3 lồng đèn xanh + 2 lồng đèn đỏ = 5." },
+        { "id": "g1-l2-q7", "type": "multiple-choice", "prompt": "Trong khu vườn đêm hè có 7 giọt sương rơi, 4 giọt rơi vào lá. Hỏi có tất cả bao nhiêu giọt sương không rơi vào lá?", "choices": ["3", "4", "1", "2"], "answer": "3", "explanation": "7 - 4 = 3" },
+        { "id": "g1-l2-q8", "type": "matching-pairs", "question": "Ghép số với giọt sương đêm", "pairs": [{ "id": "p1", "left": "1", "right": "💧" }, { "id": "p2", "left": "3", "right": "💧💧💧" }, { "id": "p3", "left": "2", "right": "💧💧" }], "explanation": "" },
+        { "id": "g1-l2-q9", "type": "fill-blank", "question": "Có 2 con đom đóm bay trước nhà và thêm 1 con bay tới. Tất cả có ___ con đom đóm.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 2 + 1 = 3." },
+        { "id": "g1-l2-q10", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn","dragItems": [{"id": "d1","content": "4 - 1","correctSlot": "small"},{"id": "d2","content": "5 + 2","correctSlot": "medium"},{"id": "d3","content": "4 + 4","correctSlot": "large"}],"dropSlots": [{"id": "small","label": "3"},{"id": "medium","label": "7"},{"id": "large","label": "8"}]}
       ]
     },
     {
@@ -57,7 +64,14 @@
       "questions": [
         { "id": "g1-l3-q1", "type": "multiple-choice", "prompt": "62 - 18 = ?", "choices": ["42", "44", "46", "48"], "answer": "44", "explanation": "62 - 18 = 44." },
         { "id": "g1-l3-q2", "type": "matching-pairs", "question": "Ghép phép tính với kết quả", "pairs": [{ "id": "p1", "left": "23 + 17", "right": "40" }, { "id": "p2", "left": "50 - 9", "right": "41" }, { "id": "p3", "left": "36 + 4", "right": "40" }], "explanation": "Tính nhẩm rồi ghép." },
-        { "id": "g1-l3-q3", "type": "counting", "question": "Đếm bước leo 5 bậc, nghỉ, leo thêm 4 bậc. Tổng?", "prompt": "Bậc thang", "countingItems": [{ "image": "/assets/user/step.png", "count": 5 }, { "image": "/assets/user/step.png", "count": 4 }], "countingAnswer": 9, "explanation": "5 + 4 = 9 bậc." }
+        { "id": "g1-l3-q3", "type": "counting", "question": "Đếm bước leo 5 bậc, nghỉ, leo thêm 4 bậc. Tổng?", "prompt": "Bậc thang", "countingItems": [{ "image": "/assets/user/stepb.png", "count": 5 }, { "image": "/assets/user/stepl.png", "count": 4 }], "countingAnswer": 9, "explanation": "5 + 4 = 9 bậc." },
+        { "id": "g1-l3-q4", "type": "drag-drop", "question": "Kéo thước đo đúng vị trí 1 mét", "dragItems": [{ "id": "d1m", "content": "100 cm", "correctSlot": "slot-meter" }, { "id": "d50", "content": "50 cm", "correctSlot": "slot-half" }], "dropSlots": [{ "id": "slot-meter", "label": "1 m" }, { "id": "slot-half", "label": "Nửa mét" }], "explanation": "1 mét = 100 cm; nửa mét = 50 cm." },
+        { "id": "g1-l3-q5", "type": "fill-blank", "question": "30 cm + 20 cm = __ cm", "blanks": [{ "position": 0, "answer": "50" }], "explanation": "30 + 20 = 50 cm." },
+        { "id": "g1-l3-q6", "type": "counting", "question": "Đếm số lượng giọt sương", "prompt": "", "countingItems": [{ "image": "/assets/user/water.png", "count": 3 }, { "image": "/assets/user/water2.png", "count": 2 }], "countingAnswer": 5, "explanation": "3 lồng đèn xanh + 2 lồng đèn đỏ = 5." },
+        { "id": "g1-l3-q7", "type": "multiple-choice", "prompt": "Trong khu vườn đêm hè có 7 giọt sương rơi, 4 giọt rơi vào lá. Hỏi có tất cả bao nhiêu giọt sương không rơi vào lá?", "choices": ["3", "4", "1", "2"], "answer": "3", "explanation": "7 - 4 = 3" },
+        { "id": "g1-l3-q8", "type": "matching-pairs", "question": "Ghép số với giọt sương đêm", "pairs": [{ "id": "p1", "left": "1", "right": "💧" }, { "id": "p2", "left": "3", "right": "💧💧💧" }, { "id": "p3", "left": "2", "right": "💧💧" }], "explanation": "" },
+        { "id": "g1-l3-q9", "type": "fill-blank", "question": "Có 2 con đom đóm bay trước nhà và thêm 1 con bay tới. Tất cả có ___ con đom đóm.", "blanks": [{ "position": 0, "answer": "3", "placeholder": "?" }], "explanation": " 2 + 1 = 3." },
+        { "id": "g1-l3-q10", "type": "drag-drop", "question": "Sắp xếp kết quả từ nhỏ đến lớn","dragItems": [{"id": "d1","content": "4 - 1","correctSlot": "small"},{"id": "d2","content": "5 + 2","correctSlot": "medium"},{"id": "d3","content": "4 + 4","correctSlot": "large"}],"dropSlots": [{"id": "small","label": "3"},{"id": "medium","label": "7"},{"id": "large","label": "8"}]}
       ]
     },
     {
@@ -66,7 +80,14 @@
       "questions": [
         { "id": "g1-l4-q1", "type": "drag-drop", "question": "Kéo số đo vào thang", "dragItems": [{ "id": "c2", "content": "2 m", "correctSlot": "slot-top" }, { "id": "c1", "content": "1 m", "correctSlot": "slot-mid" }], "dropSlots": [{ "id": "slot-top", "label": "Đỉnh cây" }, { "id": "slot-mid", "label": "Giữa cây" }], "explanation": "Đỉnh cao hơn giữa." },
         { "id": "g1-l4-q2", "type": "multiple-choice", "prompt": "70 - 45 = ?", "choices": ["15", "20", "25", "30"], "answer": "25", "explanation": "70 - 45 = 25." },
-        { "id": "g1-l4-q3", "type": "fill-blank", "question": "Cây cau cao 3 m, thêm 50 cm là ___ m.", "blanks": [{ "position": 0, "answer": "3.5" }], "explanation": "50 cm = 0.5 m, tổng 3.5 m." }
+        { "id": "g1-l4-q3", "type": "fill-blank", "question": "Cây cau cao 3 m, thêm 50 cm là ___ m.", "blanks": [{ "position": 0, "answer": "3.5" }], "explanation": "50 cm = 0.5 m, tổng 3.5 m." },
+        { "id": "g1-l4-q4", "type": "matching-pairs", "question": "Ghép phép tính với kết quả", "pairs": [{ "id": "p1", "left": "23 + 17", "right": "40" }, { "id": "p2", "left": "50 - 9", "right": "41" }, { "id": "p3", "left": "36 + 4", "right": "40" }], "explanation": "Tính nhẩm rồi ghép." },
+        { "id": "g1-l4-q5", "type": "counting", "question": "Đếm bước leo 5 bậc, nghỉ, leo thêm 4 bậc. Tổng?", "prompt": "Bậc thang", "countingItems": [{ "image": "/assets/user/stepb.png", "count": 5 }, { "image": "/assets/user/stepl.png", "count": 4 }], "countingAnswer": 9, "explanation": "5 + 4 = 9 bậc." },
+        { "id": "g1-l4-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l4-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l4-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l4-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l4-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -75,7 +96,14 @@
       "questions": [
         { "id": "g1-l5-q1", "type": "multiple-choice", "prompt": "90 - 27 = ?", "choices": ["61", "62", "63", "64"], "answer": "63", "explanation": "90 - 27 = 63." },
         { "id": "g1-l5-q2", "type": "matching-pairs", "question": "Ghép phép tính lửa", "pairs": [{ "id": "p1", "left": "45 + 5", "right": "50" }, { "id": "p2", "left": "30 + 12", "right": "42" }, { "id": "p3", "left": "70 - 20", "right": "50" }], "explanation": "Tính rồi ghép." },
-        { "id": "g1-l5-q3", "type": "fill-blank", "question": "Rồng phun 10 ngọn lửa, tắt 4 ngọn còn __.", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "10 - 4 = 6." }
+        { "id": "g1-l5-q3", "type": "fill-blank", "question": "Rồng phun 10 ngọn lửa, tắt 4 ngọn còn __.", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "10 - 4 = 6." },
+        { "id": "g1-l5-q4", "type": "drag-drop", "question": "Kéo số đo vào thang", "dragItems": [{ "id": "c2", "content": "2 m", "correctSlot": "slot-top" }, { "id": "c1", "content": "1 m", "correctSlot": "slot-mid" }], "dropSlots": [{ "id": "slot-top", "label": "Đỉnh cây" }, { "id": "slot-mid", "label": "Giữa cây" }], "explanation": "Đỉnh cao hơn giữa." },
+        { "id": "g1-l5-q5", "type": "counting", "question": "Đếm bước leo 5 bậc, nghỉ, leo thêm 4 bậc. Tổng?", "prompt": "Bậc thang", "countingItems": [{ "image": "/assets/user/stepb.png", "count": 5 }, { "image": "/assets/user/stepl.png", "count": 4 }], "countingAnswer": 9, "explanation": "5 + 4 = 9 bậc." },
+        { "id": "g1-l5-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l5-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l5-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l5-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l5-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -84,7 +112,14 @@
       "questions": [
         { "id": "g1-l6-q1", "type": "multiple-choice", "prompt": "Đoạn hang 60 cm, Rắn đã bò 35 cm, còn lại?", "choices": ["15 cm", "20 cm", "25 cm", "30 cm"], "answer": "25 cm", "explanation": "60 - 35 = 25 cm." },
         { "id": "g1-l6-q2", "type": "drag-drop", "question": "Kéo thẻ độ dài", "dragItems": [{ "id": "small", "content": "Ngắn hơn 1 m", "correctSlot": "slot-short" }, { "id": "long", "content": "Dài hơn 1 m", "correctSlot": "slot-long" }], "dropSlots": [{ "id": "slot-short", "label": "Hang phụ" }, { "id": "slot-long", "label": "Hang chính" }], "explanation": "Hang chính dài hơn." },
-        { "id": "g1-l6-q3", "type": "fill-blank", "question": "Thước 1 m = __ cm", "blanks": [{ "position": 0, "answer": "100" }], "explanation": "1 m = 100 cm." }
+        { "id": "g1-l6-q3", "type": "fill-blank", "question": "Thước 1 m = __ cm", "blanks": [{ "position": 0, "answer": "100" }], "explanation": "1 m = 100 cm." },
+        { "id": "g1-l6-q4", "type": "counting", "question": "Đếm bước leo 5 bậc, nghỉ, leo thêm 4 bậc. Tổng?", "prompt": "Bậc thang", "countingItems": [{ "image": "/assets/user/stepb.png", "count": 5 }, { "image": "/assets/user/stepl.png", "count": 4 }], "countingAnswer": 9, "explanation": "5 + 4 = 9 bậc." },
+        { "id": "g1-l6-q5", "type": "matching-pairs", "question": "Ghép phép tính lửa", "pairs": [{ "id": "p1", "left": "45 + 5", "right": "50" }, { "id": "p2", "left": "30 + 12", "right": "42" }, { "id": "p3", "left": "70 - 20", "right": "50" }], "explanation": "Tính rồi ghép." },
+        { "id": "g1-l6-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l6-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l6-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l6-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l6-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -93,7 +128,14 @@
       "questions": [
         { "id": "g1-l7-q1", "type": "matching-pairs", "question": "Ghép giờ với kim đồng hồ", "pairs": [{ "id": "p1", "left": "3 giờ", "right": "Kim giờ ở 3" }, { "id": "p2", "left": "6 giờ", "right": "Kim giờ ở 6" }, { "id": "p3", "left": "9 giờ", "right": "Kim giờ ở 9" }], "explanation": "Đọc giờ đúng." },
         { "id": "g1-l7-q2", "type": "drag-drop", "question": "Kéo kim phút tới 12", "dragItems": [{ "id": "m12", "content": "Kim phút 12", "correctSlot": "slot-minute" }], "dropSlots": [{ "id": "slot-minute", "label": "Vị trí phút 12" }], "explanation": "Kim phút chỉ lên 12 khi tròn giờ." },
-        { "id": "g1-l7-q3", "type": "multiple-choice", "prompt": "Một giờ có bao nhiêu phút?", "choices": ["30", "45", "60", "90"], "answer": "60", "explanation": "1 giờ = 60 phút." }
+        { "id": "g1-l7-q3", "type": "multiple-choice", "prompt": "Một giờ có bao nhiêu phút?", "choices": ["30", "45", "60", "90"], "answer": "60", "explanation": "1 giờ = 60 phút." },
+        { "id": "g1-l7-q4", "type": "fill-blank", "question": "Thước 1 m = __ cm", "blanks": [{ "position": 0, "answer": "100" }], "explanation": "1 m = 100 cm." },
+        { "id": "g1-l7-q5", "type": "counting", "question": "Đếm bước leo 5 bậc, nghỉ, leo thêm 4 bậc. Tổng?", "prompt": "Bậc thang", "countingItems": [{ "image": "/assets/user/stepb.png", "count": 5 }, { "image": "/assets/user/stepl.png", "count": 4 }], "countingAnswer": 9, "explanation": "5 + 4 = 9 bậc." },
+        { "id": "g1-l7-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l7-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l7-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l7-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l7-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -102,7 +144,14 @@
       "questions": [
         { "id": "g1-l8-q1", "type": "multiple-choice", "prompt": "Số nào lớn hơn? 58 hay 65", "choices": ["58", "65"], "answer": "65", "explanation": "65 lớn hơn 58." },
         { "id": "g1-l8-q2", "type": "fill-blank", "question": "Điền dấu (>, <, =) : 72 __ 27", "blanks": [{ "position": 0, "answer": ">" }], "explanation": "72 lớn hơn 27." },
-        { "id": "g1-l8-q3", "type": "matching-pairs", "question": "Ghép cầu với số thứ tự", "pairs": [{ "id": "p1", "left": "Cầu 1", "right": "Nhỏ nhất" }, { "id": "p2", "left": "Cầu 2", "right": "Trung bình" }, { "id": "p3", "left": "Cầu 3", "right": "Lớn nhất" }], "explanation": "So sánh độ dài." }
+        { "id": "g1-l8-q3", "type": "matching-pairs", "question": "Ghép cầu với số thứ tự", "pairs": [{ "id": "p1", "left": "Cầu 1", "right": "Nhỏ nhất" }, { "id": "p2", "left": "Cầu 2", "right": "Trung bình" }, { "id": "p3", "left": "Cầu 3", "right": "Lớn nhất" }], "explanation": "So sánh độ dài." },
+        { "id": "g1-l8-q4", "type": "drag-drop", "question": "Kéo kim phút tới 12", "dragItems": [{ "id": "m12", "content": "Kim phút 12", "correctSlot": "slot-minute" }], "dropSlots": [{ "id": "slot-minute", "label": "Vị trí phút 12" }], "explanation": "Kim phút chỉ lên 12 khi tròn giờ." },
+        { "id": "g1-l8-q5", "type": "counting", "question": "Đếm bước leo 5 bậc, nghỉ, leo thêm 4 bậc. Tổng?", "prompt": "Bậc thang", "countingItems": [{ "image": "/assets/user/stepb.png", "count": 5 }, { "image": "/assets/user/stepl.png", "count": 4 }], "countingAnswer": 9, "explanation": "5 + 4 = 9 bậc." },
+        { "id": "g1-l8-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l8-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l8-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l8-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l8-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -111,7 +160,14 @@
       "questions": [
         { "id": "g1-l9-q1", "type": "counting", "question": "Khỉ hái đào", "prompt": "Hái 7 quả, rơi mất 2 quả, còn lại?", "countingItems": [{ "image": "/assets/user/peach.png", "count": 7 }], "countingAnswer": 5, "explanation": "7 - 2 = 5." },
         { "id": "g1-l9-q2", "type": "multiple-choice", "prompt": "30 + 25 = ?", "choices": ["45", "50", "55", "60"], "answer": "55", "explanation": "30 + 25 = 55." },
-        { "id": "g1-l9-q3", "type": "drag-drop", "question": "Kéo giỏ đủ 5 quả", "dragItems": [{ "id": "basket5", "content": "5 quả", "correctSlot": "slot-full" }, { "id": "basket3", "content": "3 quả", "correctSlot": "slot-less" }], "dropSlots": [{ "id": "slot-full", "label": "Giỏ đầy" }, { "id": "slot-less", "label": "Giỏ thiếu" }], "explanation": "Giỏ đầy cần 5 quả." }
+        { "id": "g1-l9-q3", "type": "drag-drop", "question": "Kéo giỏ đủ 5 quả", "dragItems": [{ "id": "basket5", "content": "5 quả", "correctSlot": "slot-full" }, { "id": "basket3", "content": "3 quả", "correctSlot": "slot-less" }], "dropSlots": [{ "id": "slot-full", "label": "Giỏ đầy" }, { "id": "slot-less", "label": "Giỏ thiếu" }], "explanation": "Giỏ đầy cần 5 quả." },
+        { "id": "g1-l9-q4", "type": "fill-blank", "question": "Điền dấu (>, <, =) : 72 __ 27", "blanks": [{ "position": 0, "answer": ">" }], "explanation": "72 lớn hơn 27." },
+        { "id": "g1-l9-q5", "type": "matching-pairs", "question": "Ghép cầu với số thứ tự", "pairs": [{ "id": "p1", "left": "Cầu 1", "right": "Nhỏ nhất" }, { "id": "p2", "left": "Cầu 2", "right": "Trung bình" }, { "id": "p3", "left": "Cầu 3", "right": "Lớn nhất" }], "explanation": "So sánh độ dài." },
+        { "id": "g1-l9-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l9-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l9-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l9-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l9-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -120,7 +176,14 @@
       "questions": [
         { "id": "g1-l10-q1", "type": "multiple-choice", "prompt": "Đồng hồ chỉ 7 giờ, kim giờ ở đâu?", "choices": ["7", "6", "5", "8"], "answer": "7", "explanation": "Kim giờ ở số 7." },
         { "id": "g1-l10-q2", "type": "matching-pairs", "question": "Ghép thời điểm với hoạt động", "pairs": [{ "id": "p1", "left": "5 giờ", "right": "Gà gáy" }, { "id": "p2", "left": "12 giờ", "right": "Ăn trưa" }, { "id": "p3", "left": "20 giờ", "right": "Đi ngủ" }], "explanation": "Thói quen thường ngày." },
-        { "id": "g1-l10-q3", "type": "fill-blank", "question": "Kim phút chỉ 12, kim giờ chỉ 6 => __ giờ", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "Đó là 6 giờ tròn." }
+        { "id": "g1-l10-q3", "type": "fill-blank", "question": "Kim phút chỉ 12, kim giờ chỉ 6 => __ giờ", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "Đó là 6 giờ tròn." },
+        { "id": "g1-l10-q4", "type": "counting", "question": "Khỉ hái đào", "prompt": "Hái 7 quả, rơi mất 2 quả, còn lại?", "countingItems": [{ "image": "/assets/user/peach.png", "count": 7 }], "countingAnswer": 5, "explanation": "7 - 2 = 5." },
+        { "id": "g1-l10-q5", "type": "drag-drop", "question": "Kéo giỏ đủ 5 quả", "dragItems": [{ "id": "basket5", "content": "5 quả", "correctSlot": "slot-full" }, { "id": "basket3", "content": "3 quả", "correctSlot": "slot-less" }], "dropSlots": [{ "id": "slot-full", "label": "Giỏ đầy" }, { "id": "slot-less", "label": "Giỏ thiếu" }], "explanation": "Giỏ đầy cần 5 quả." },
+        { "id": "g1-l10-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l10-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l10-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l10-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l10-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -129,7 +192,14 @@
       "questions": [
         { "id": "g1-l11-q1", "type": "multiple-choice", "prompt": "Chó có 12 khúc xương, cho mèo 3 khúc, còn?", "choices": ["8", "9", "10", "11"], "answer": "9", "explanation": "12 - 3 = 9." },
         { "id": "g1-l11-q2", "type": "matching-pairs", "question": "Ghép phép cộng với kết quả", "pairs": [{ "id": "p1", "left": "14 + 5", "right": "19" }, { "id": "p2", "left": "20 - 7", "right": "13" }, { "id": "p3", "left": "30 - 12", "right": "18" }], "explanation": "Tính nhẩm." },
-        { "id": "g1-l11-q3", "type": "fill-blank", "question": "15 - __ = 9", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "15 - 6 = 9." }
+        { "id": "g1-l11-q3", "type": "fill-blank", "question": "15 - __ = 9", "blanks": [{ "position": 0, "answer": "6" }], "explanation": "15 - 6 = 9." },
+        { "id": "g1-l11-q4", "type": "counting", "question": "Khỉ hái đào", "prompt": "Hái 7 quả, rơi mất 2 quả, còn lại?", "countingItems": [{ "image": "/assets/user/peach.png", "count": 7 }], "countingAnswer": 5, "explanation": "7 - 2 = 5." },
+        { "id": "g1-l11-q5", "type": "drag-drop", "question": "Kéo giỏ đủ 5 quả", "dragItems": [{ "id": "basket5", "content": "5 quả", "correctSlot": "slot-full" }, { "id": "basket3", "content": "3 quả", "correctSlot": "slot-less" }], "dropSlots": [{ "id": "slot-full", "label": "Giỏ đầy" }, { "id": "slot-less", "label": "Giỏ thiếu" }], "explanation": "Giỏ đầy cần 5 quả." },
+        { "id": "g1-l11-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l11-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l11-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l11-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l11-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -138,7 +208,14 @@
       "questions": [
         { "id": "g1-l12-q1", "type": "multiple-choice", "prompt": "Lợn đi 40 bước, nghỉ, đi thêm 28 bước. Tổng?", "choices": ["58", "60", "68", "70"], "answer": "68", "explanation": "40 + 28 = 68." },
         { "id": "g1-l12-q2", "type": "drag-drop", "question": "Kéo số hoàn thành 68", "dragItems": [{ "id": "n60", "content": "60", "correctSlot": "slot-ten" }, { "id": "n8", "content": "8", "correctSlot": "slot-one" }], "dropSlots": [{ "id": "slot-ten", "label": "Hàng chục" }, { "id": "slot-one", "label": "Hàng đơn vị" }], "explanation": "68 gồm 6 chục và 8 đơn vị." },
-        { "id": "g1-l12-q3", "type": "fill-blank", "question": "70 - 2 = __", "blanks": [{ "position": 0, "answer": "68" }], "explanation": "70 - 2 = 68." }
+        { "id": "g1-l12-q3", "type": "fill-blank", "question": "70 - 2 = __", "blanks": [{ "position": 0, "answer": "68" }], "explanation": "70 - 2 = 68." },
+        { "id": "g1-l12-q4", "type": "counting", "question": "Khỉ hái đào", "prompt": "Hái 7 quả, rơi mất 2 quả, còn lại?", "countingItems": [{ "image": "/assets/user/peach.png", "count": 7 }], "countingAnswer": 5, "explanation": "7 - 2 = 5." },
+        { "id": "g1-l12-q5", "type": "matching-pairs", "question": "Ghép phép cộng với kết quả", "pairs": [{ "id": "p1", "left": "14 + 5", "right": "19" }, { "id": "p2", "left": "20 - 7", "right": "13" }, { "id": "p3", "left": "30 - 12", "right": "18" }], "explanation": "Tính nhẩm." },
+        { "id": "g1-l12-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l12-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l12-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l12-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l12-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -147,7 +224,14 @@
       "questions": [
         { "id": "g1-l13-q1", "type": "multiple-choice", "prompt": "Tổng 25 + 35 + 10 = ?", "choices": ["60", "70", "75", "80"], "answer": "70", "explanation": "25 + 35 = 60, 60 + 10 = 70." },
         { "id": "g1-l13-q2", "type": "matching-pairs", "question": "Ghép dạng giờ", "pairs": [{ "id": "p1", "left": "7 giờ", "right": "7:00" }, { "id": "p2", "left": "7 giờ rưỡi", "right": "7:30" }, { "id": "p3", "left": "8 giờ kém 15", "right": "7:45" }], "explanation": "Cách đọc giờ khác nhau." },
-        { "id": "g1-l13-q3", "type": "fill-blank", "question": "Đoạn dây 1 m = __ cm", "blanks": [{ "position": 0, "answer": "100" }], "explanation": "Quy đổi độ dài." }
+        { "id": "g1-l13-q3", "type": "fill-blank", "question": "Đoạn dây 1 m = __ cm", "blanks": [{ "position": 0, "answer": "100" }], "explanation": "Quy đổi độ dài." },
+        { "id": "g1-l13-q4", "type": "counting", "question": "Khỉ hái đào", "prompt": "Hái 7 quả, rơi mất 2 quả, còn lại?", "countingItems": [{ "image": "/assets/user/peach.png", "count": 7 }], "countingAnswer": 5, "explanation": "7 - 2 = 5." },
+        { "id": "g1-l13-q5", "type": "drag-drop", "question": "Kéo số hoàn thành 68", "dragItems": [{ "id": "n60", "content": "60", "correctSlot": "slot-ten" }, { "id": "n8", "content": "8", "correctSlot": "slot-one" }], "dropSlots": [{ "id": "slot-ten", "label": "Hàng chục" }, { "id": "slot-one", "label": "Hàng đơn vị" }], "explanation": "68 gồm 6 chục và 8 đơn vị." },
+        { "id": "g1-l13-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l13-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l13-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l13-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l13-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -156,7 +240,14 @@
       "questions": [
         { "id": "g1-l14-q1", "type": "multiple-choice", "prompt": "Có 24 cái bánh, chia 6 mâm, mỗi mâm?", "choices": ["3", "4", "5", "6"], "answer": "4", "explanation": "24 : 6 = 4." },
         { "id": "g1-l14-q2", "type": "matching-pairs", "question": "Ghép đồ uống với số lượng", "pairs": [{ "id": "p1", "left": "Nước cam 5 ly", "right": "5" }, { "id": "p2", "left": "Sữa 8 ly", "right": "8" }, { "id": "p3", "left": "Trà 6 ly", "right": "6" }], "explanation": "Đếm đúng số ly." },
-        { "id": "g1-l14-q3", "type": "fill-blank", "question": "Bánh còn 4 cái, thêm 3 cái nữa là __.", "blanks": [{ "position": 0, "answer": "7" }], "explanation": "4 + 3 = 7." }
+        { "id": "g1-l14-q3", "type": "fill-blank", "question": "Bánh còn 4 cái, thêm 3 cái nữa là __.", "blanks": [{ "position": 0, "answer": "7" }], "explanation": "4 + 3 = 7." },
+        { "id": "g1-l14-q4", "type": "counting", "question": "Khỉ hái đào", "prompt": "Hái 7 quả, rơi mất 2 quả, còn lại?", "countingItems": [{ "image": "/assets/user/peach.png", "count": 7 }], "countingAnswer": 5, "explanation": "7 - 2 = 5." },
+        { "id": "g1-l14-q5", "type": "drag-drop", "question": "Kéo số hoàn thành 68", "dragItems": [{ "id": "n60", "content": "60", "correctSlot": "slot-ten" }, { "id": "n8", "content": "8", "correctSlot": "slot-one" }], "dropSlots": [{ "id": "slot-ten", "label": "Hàng chục" }, { "id": "slot-one", "label": "Hàng đơn vị" }], "explanation": "68 gồm 6 chục và 8 đơn vị." },
+        { "id": "g1-l14-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l14-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l14-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l14-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l14-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     },
     {
@@ -165,7 +256,14 @@
       "questions": [
         { "id": "g1-l15-q1", "type": "multiple-choice", "prompt": "45 phút + 15 phút = ? phút", "choices": ["50", "55", "60", "70"], "answer": "60", "explanation": "45 + 15 = 60 phút = 1 giờ." },
         { "id": "g1-l15-q2", "type": "drag-drop", "question": "Kéo thước đo 2 mét", "dragItems": [{ "id": "m2", "content": "200 cm", "correctSlot": "slot-2m" }], "dropSlots": [{ "id": "slot-2m", "label": "Vạch 2 m" }], "explanation": "2 m = 200 cm." },
-        { "id": "g1-l15-q3", "type": "matching-pairs", "question": "Ghép phép tính tổng hợp", "pairs": [{ "id": "p1", "left": "80 - 25", "right": "55" }, { "id": "p2", "left": "30 + 12", "right": "42" }, { "id": "p3", "left": "60 - 15", "right": "45" }], "explanation": "Ôn tập trước khi nhận thưởng." }
+        { "id": "g1-l15-q3", "type": "matching-pairs", "question": "Ghép phép tính tổng hợp", "pairs": [{ "id": "p1", "left": "80 - 25", "right": "55" }, { "id": "p2", "left": "30 + 12", "right": "42" }, { "id": "p3", "left": "60 - 15", "right": "45" }], "explanation": "Ôn tập trước khi nhận thưởng." },
+        { "id": "g1-l15-q4", "type": "fill-blank", "question": "Bánh còn 4 cái, thêm 3 cái nữa là __.", "blanks": [{ "position": 0, "answer": "7" }], "explanation": "4 + 3 = 7." },
+        { "id": "g1-l15-q5", "type": "counting", "question": "Khỉ hái đào", "prompt": "Hái 7 quả, rơi mất 2 quả, còn lại?", "countingItems": [{ "image": "/assets/user/peach.png", "count": 7 }], "countingAnswer": 5, "explanation": "7 - 2 = 5." },
+        { "id": "g1-l15-q6", "type": "multiple-choice", "prompt": "35 + 14 = ?", "choices": ["39", "49", "50", "51"], "answer": "49", "explanation": "35 + 14 = 49." },
+        { "id": "g1-l15-q7", "type": "fill-blank", "question": "50 - __ = 27", "blanks": [{ "position": 0, "answer": "23" }], "explanation": "50 - 23 = 27." },
+        { "id": "g1-l15-q8", "type": "matching-pairs", "question": "Ghép số với chữ", "pairs": [{ "id": "p1", "left": "40", "right": "bốn mươi" }, { "id": "p2", "left": "27", "right": "hai mươi bảy" }, { "id": "p3", "left": "15", "right": "mười lăm" }], "explanation": "Đọc đúng tên số." },
+        { "id": "g1-l15-q9", "type": "drag-drop", "question": "Kéo phép toán và kết quả", "dragItems": [{ "id": "a", "content": "10 - 8 + 13", "correctSlot": "s1" }, { "id": "b", "content": "18 + 3 - 12", "correctSlot": "s2" }, { "id": "c", "content": "11 - 6 + 8", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "15" }, { "id": "s2", "label": "9" }, { "id": "s3", "label": "13" }], "explanation": "" },
+        { "id": "g1-l15-q10", "type": "counting", "question": "Đếm 2 mây xanh, 1 mây hồng, 2 mây vàng. Tổng?", "prompt": "Đếm mây", "countingItems": [{ "image": "/assets/user/g0l7q3b.png", "count": 2 }, { "image": "/assets/user/g0l7q3p.png", "count": 1 }, { "image": "/assets/user/g0l7q3y.png", "count": 2 }], "countingAnswer": 5, "explanation": "2+1+2=5." }
       ]
     }
   ]
