@@ -59,7 +59,7 @@ export default function Grade5Game() {
   return (
     <div className="min-h-screen" style={{ background: theme.bg }}>
       <Header />
-      <TrangQuynhMiniGame
+      <TrangQuynhMiniGame 
         grade="5"
         courseId="grade5-trangnguyen"
         storyLoader={loadStoryGrade5}

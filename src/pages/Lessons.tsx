@@ -1,10 +1,22 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { GraduationCap, Search, PlayCircle, BookOpen, CheckCircle } from "lucide-react";
+import { useState, useMemo } from "react";
+import { PlayCircle, BookOpen, CheckCircle, Search, Video, FileText } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+/* ==================================================================================
+   KHU VỰC ĐỊNH NGHĨA KIỂU DỮ LIỆU
+   ================================================================================== */
 interface Lesson {
   id: string;
   title: string;
@@ -16,467 +28,452 @@ interface Lesson {
 interface Topic {
   id: string;
   lessonId: string;
+  semester: 1 | 2;
   title: string;
   videoUrl: string;
   description: string;
   completed?: boolean;
 }
 
-const lessons: Lesson[] = [
-  {
-    id: "1",
-    title: "Các số từ 0 đến 10",
-    topicCount: 5,
-    quizCount: 3,
-    completed: false
-  },
-  {
-    id: "2",
-    title: "So sánh vị trí, nhiều ít, lớn bé",
-    topicCount: 3,
-    quizCount: 3,
-    completed: false
-  },
-  {
-    id: "3",
-    title: "Hình học",
-    topicCount: 2,
-    quizCount: 2,
-    completed: false
-  },
-  {
-    id: "4",
-    title: "Phép cộng trong phạm vi đến 10",
-    topicCount: 4,
-    quizCount: 3,
-    completed: false
-  },
-  {
-    id: "5",
-    title: "Phép trừ trong phạm vi đến 10",
-    topicCount: 4,
-    quizCount: 3,
-    completed: false
-  },
-  {
-    id: "6",
-    title: "Thời gian, thời điểm",
-    topicCount: 4,
-    quizCount: 3,
-    completed: false
-  },
-  {
-    id: "7",
-    title: "Toán tư duy",
-    topicCount: 4,
-    quizCount: 3,
-    completed: false
-  }
+/* ==================================================================================
+   KHU VỰC DỮ LIỆU (CÁC BẠN SỬA Ở ĐÂY)
+   ================================================================================== */
+
+// 1. DANH SÁCH LỚP HỌC (LESSONS)
+const lessonsData: Lesson[] = [
+  { id: "L1", title: "Toán Lớp 1", topicCount: 5, quizCount: 3 },
+  { id: "L2", title: "Toán Lớp 2", topicCount: 10, quizCount: 5 },
+  { id: "L3", title: "Toán Lớp 3", topicCount: 12, quizCount: 4 },
+  { id: "L4", title: "Toán Lớp 4", topicCount: 15, quizCount: 6 },
+  { id: "L5", title: "Toán Lớp 5", topicCount: 20, quizCount: 8 },
 ];
 
-const topics: Topic[] = [
+// 2. DANH SÁCH BÀI GIẢNG / VIDEO (TOPICS)
+const topicsData: Topic[] = [
+  /* --- LỚP 1 --- */
   {
-    id: "1.1",
-    lessonId: "1",
-    title: "1.1.1. Các số 1, 2, 3",
+    id: "L1-1",
+    lessonId: "L1",
+    semester: 1,
+    title: "Các số từ 1 đến 10",
     videoUrl: "https://www.youtube.com/embed/EX8DR1YMlRE",
-    description: "Học về các số cơ bản từ 1 đến 3 thông qua hình ảnh và hoạt động vui nhộn",
-    completed: false
+    description: "Học đếm số cơ bản.",
+    completed: true
+  },
+  
+  /* --- LỚP 5 --- */
+  /* --- LỚP 5 - HỌC KÌ 1 --- */
+  {
+    id: "L5-1",
+    lessonId: "L5",
+    semester: 1,
+    title: "Chia Một Số Tự Nhiên Cho Một Số Thập Phân",
+    videoUrl: "https://www.youtube.com/embed/8Akzlx2xODc",
+    description: "Chia Một Số Tự Nhiên Cho Một Số Thập Phân"
   },
   {
-    id: "1.2",
-    lessonId: "1",
-    title: "1.1.2. Các số 4, 5, 6",
-    videoUrl: "https://www.youtube.com/embed/EX8DR1YMlRE",
-    description: "Tiếp tục làm quen với các số từ 4 đến 6",
-    completed: false
+    id: "L5-2",
+    lessonId: "L5",
+    semester: 1,
+    title: "Khái Niệm Hỗn Số",
+    videoUrl: "https://www.youtube.com/embed/PFP0F64bxfI",
+    description: "Khái Niệm Hỗn Số"
   },
   {
-    id: "1.3",
-    lessonId: "1",
-    title: "1.1.3. Các số 7, 8, 9",
-    videoUrl: "https://www.youtube.com/embed/EX8DR1YMlRE",
-    description: "Khám phá các số từ 7 đến 9",
-    completed: false
+    id: "L5-3",
+    lessonId: "L5",
+    semester: 1,
+    title: "Chuyển Đổi Hỗn Số Thành Phân Số",
+    videoUrl: "https://www.youtube.com/embed/M5aZBfU4A7Y",
+    description: "Chuyển Đổi Hỗn Số Thành Phân Số"
   },
   {
-    id: "1.4",
-    lessonId: "1",
-    title: "1.1.4. Số 10 và ôn tập",
-    videoUrl: "https://www.youtube.com/embed/EX8DR1YMlRE",
-    description: "Học số 10 và ôn tập tất cả các số đã học",
-    completed: false
+    id: "L5-4",
+    lessonId: "L5",
+    semester: 1,
+    title: "Đọc, Viết Số Thập Phân",
+    videoUrl: "https://www.youtube.com/embed/jKuVl8lSUSE",
+    description: "Đọc, Viết Số Thập Phân"
   },
   {
-    id: "1.5",
-    lessonId: "1",
-    title: "1.1.5. Số 0",
-    videoUrl: "https://www.youtube.com/embed/aMJgvwRAL_k",
-    description: "Học Làm quen với số 0",
-    completed: false
+    id: "L5-5",
+    lessonId: "L5",
+    semester: 1,
+    title: "So Sánh 2 Số Thập Phân",
+    videoUrl: "https://www.youtube.com/embed/NSUiNNCdTDE",
+    description: "So Sánh 2 Số Thập Phân"
   },
   {
-    id: "2.1",
-    lessonId: "2",
-    title: "1.2.1. So Sánh Các Dấu Cho Bé Mới Bắt Đầu",
-    videoUrl: "https://www.youtube.com/embed/nz5PWLtaokw",
-    description: "Cách dùng các dấu trong phép so sánh",
-    completed: false
+    id: "L5-6",
+    lessonId: "L5",
+    semester: 1,
+    title: "Viết Số Đo Độ Dài Dưới Dạng Số Thập Phân",
+    videoUrl: "https://www.youtube.com/embed/AjyO6GMldDY",
+    description: "Viết Số Đo Độ Dài Dưới Dạng Số Thập Phân"
   },
   {
-    id: "2.2",
-    lessonId: "2",
-    title: "1.2.2. Học Cách So Sánh Nhiều Hơn, Ít Hơn, Bằng Nhau",
-    videoUrl: "https://www.youtube.com/embed/Z8P-pmHMxDU",
-    description: "Học cách nhận biết và so sánh số lượng: nhiều – ít – bằng nhau",
-    completed: false
+    id: "L5-7",
+    lessonId: "L5",
+    semester: 1,
+    title: "Ôn tập phép nhân",
+    videoUrl: "https://www.youtube.com/embed/S19Lbyt8U_0",
+    description: "Trừ Các Số Thập Phân"
   },
   {
-    id: "3.1",
-    lessonId: "3",
-    title: "1.3.1. Vẽ Đoạn Thẳng Có Độ Dài Cho Trước Như Thế Nào?",
-    videoUrl: "https://www.youtube.com/embed/F3yktQ99TYw",
-    description: "Học cách kẻ vẽ đoạn thẳng có độ dài chính xác.",
-    completed: false
+    id: "L5-8",
+    lessonId: "L5",
+    semester: 1,
+    title: "Nhân Một Số Thập Phân Với Một Số Thập Phân",
+    videoUrl: "https://www.youtube.com/embed/KhsxxdEo2QQ",
+    description: "Nhân Một Số Thập Phân Với Một Số Thập Phân"
   },
   {
-    id: "4.1",
-    lessonId: "4",
-    title: "1.4.1. Học Cách Cộng Trong Phạm Vi 4, 5, 6 Đơn Giản",
-    videoUrl: "https://www.youtube.com/embed/Ei0_VugQejo",
-    description: "Làm quen với phép cộng trong phạm vi 4, 5 và 6",
-    completed: false
+    id: "L5-9",
+    lessonId: "L5",
+    semester: 1,
+    title: "Chia Một Số Thập Phân Với Một Số Thập Phân",
+    videoUrl: "https://www.youtube.com/embed/aO0X57Mm91Q",
+    description: "Chia Một Số Thập Phân Với Một Số Thập Phân"
   },
   {
-    id: "4.2",
-    lessonId: "4",
-    title: "1.4.2. Hiểu Nhanh Số 0 Trong Phép Cộng",
-    videoUrl: "https://www.youtube.com/embed/9zOo65_BiuQ",
-    description: "tìm hiểu Ý nghĩa của số 0 trong phép cộng",
-    completed: false
+    id: "L5-10",
+    lessonId: "L5",
+    semester: 1,
+    title: "Làm Quen Với Tỉ Số Phần Trăm",
+    videoUrl: "https://www.youtube.com/embed/_Cjo_FpPnqQ",
+    description: "Làm Quen Với Tỉ Số Phần Trăm"
   },
   {
-    id: "4.3",
-    lessonId: "4",
-    title: "1.4.3. Học Cách Cộng Trong Phạm Vi 6, 7, 8 Đơn Giản",
-    videoUrl: "https://www.youtube.com/embed/Qq8r7-feu6s",
-    description: "Làm quen với phép cộng trong phạm vi 6, 7 và 8",
-    completed: false
+    id: "L5-11",
+    lessonId: "L5",
+    semester: 1,
+    title: "Cách Tính Diện Tích Hình Tam Giác",
+    videoUrl: "https://www.youtube.com/embed/clTUm_OZQb8",
+    description: "Cách Tính Diện Tích Hình Tam Giác"
   },
   {
-    id: "4.4",
-    lessonId: "4",
-    title: "1.4.4. Học Cách Cộng Trong Phạm Vi 9, 10 Đơn Giản",
-    videoUrl: "https://www.youtube.com/embed/s-goxNdmJPE",
-    description: "Làm quen với phép cộng trong phạm vi 9 và 10",
-    completed: false
+    id: "L5-12",
+    lessonId: "L5",
+    semester: 1,
+    title: "Cách Tính Diện Tích Hình Thang",
+    videoUrl: "https://www.youtube.com/embed/HMjoeADksbU",
+    description: "Cách Tính Diện Tích Hình Thang"
+  },
+
+  /* --- LỚP 5 - HỌC KÌ 2 --- */
+  {
+    id: "L5-13",
+    lessonId: "L5",
+    semester: 2,
+    title: "Cách Tính Diện Tích Hình Tròn",
+    videoUrl: "https://www.youtube.com/embed/TzzJ9PTVoyA",
+    description: "Cách Tính Diện Tích Hình Tròn"
   },
   {
-    id: "4.5",
-    lessonId: "4",
-    title: "1.4.5. Học Cách Cộng Các Số Tròn Chục",
-    videoUrl: "https://www.youtube.com/embed/yd5JHf4Blh0",
-    description: "Biết cách cộng các số tròn chục.",
-    completed: false
+    id: "L5-14",
+    lessonId: "L5",
+    semester: 2,
+    title: "Cách Tính Thời Gian, Quãng Đường, Vận Tốc",
+    videoUrl: "https://www.youtube.com/embed/zFjbAYD3w3w",
+    description: "Cách Tính Thời Gian, Quãng Đường, Vận Tốc"
   },
   {
-    id: "5.1",
-    lessonId: "5",
-    title: "1.5.1. Học Cách Trừ Trong Phạm Vi 3, 4, 5 Đơn Giản",
-    videoUrl: "https://www.youtube.com/embed/55l906_zUyE",
-    description: "Làm quen với phép trừ trong phạm vi 3, 4 và 5",
-    completed: false
+    id: "L5-15",
+    lessonId: "L5",
+    semester: 2,
+    title: "Diện Tích Xung Quanh Và Diện Tích Toàn Phần Hình Hộp Chữ Nhật",
+    videoUrl: "https://www.youtube.com/embed/0YrZsFToDIk",
+    description: "Diện Tích Xung Quanh Và Diện Tích Toàn Phần Hình Hộp Chữ Nhật"
   },
   {
-    id: "5.2",
-    lessonId: "5",
-    title: "1.5.2. Hiểu Nhanh Số 0 Trong Phép Trừ",
-    videoUrl: "https://www.youtube.com/embed/CyeG3y7lKeg",
-    description: " tìm hiểu Ý nghĩa của số 0 trong phép trừ",
-    completed: false
+    id: "L5-16",
+    lessonId: "L5",
+    semester: 2,
+    title: "Diện Tích Xung Quanh Và Diện Tích Toàn Phần Của Hình Lập Phương",
+    videoUrl: "https://www.youtube.com/embed/TNgBCGNgl4Q",
+    description: "Diện Tích Xung Quanh Và Diện Tích Toàn Phần Của Hình Lập Phương"
   },
   {
-    id: "6.1",
-    lessonId: "6",
-    title: "1.6.1. Học Cách Đọc Lịch, Phân Biệt Các Ngày Trong Tuần",
-    videoUrl: "https://www.youtube.com/embed/yJ-WLksmJ8M",
-    description: "Học tên gọi của các ngày trong tuần và cách xác định ngày – thứ trên lịch.",
-    completed: false
-  },
-  {
-    id: "6.2",
-    lessonId: "6",
-    title: "1.6.2. Làm Quen Với Đồng Hồ Và Thời Gian",
-    videoUrl: "https://www.youtube.com/embed/mIPRUr0rrOc",
-    description: "Làm quen và nhận biết đồng hồ và thời gian.",
-    completed: false
-  },
-  {
-    id: "7.1",
-    lessonId: "7",
-    title: "1.7.1. Phân Biệt Điểm Ở Trong Hay Ở Ngoài Một Hình",
-    videoUrl: "https://www.youtube.com/embed/-Cnwmbv69Aw",
-    description: " Nhận biết điểm nằm trong hoặc ngoài một hình phẳng",
-    completed: false
-  },
-  {
-    id: "7.2",
-    lessonId: "7",
-    title: "1.7.2. Nhận Biết Vị Trí: Trên – Dưới, Trái – Phải, Trước – Sau, Ở Giữa",
-    videoUrl: "https://www.youtube.com/embed/ZD5O7uPbWhw",
-    description: "Nhận biết các vị trí cơ bản.",
-    completed: false
+    id: "L5-17",
+    lessonId: "L5",
+    semester: 2,
+    title: "Thể Tích Của Một Hình",
+    videoUrl: "https://www.youtube.com/embed/rlGdd3rj3A4",
+    description: "Thể Tích Của Một Hình"
   },
 ];
 
+/* ==================================================================================
+   LOGIC GIAO DIỆN
+   ================================================================================== */
 const Lessons = () => {
-  const [selectedGrade, setSelectedGrade] = useState("Lớp 1");
-  const [selectedLesson, setSelectedLesson] = useState(lessons[0]);
-  const [selectedTopic, setSelectedTopic] = useState(topics[0]);
+  // State chọn Lớp
+  const [selectedLessonId, setSelectedLessonId] = useState<string>("L5");
+  
+  // State chọn Học kì (Mặc định là 1)
+  const [selectedSemester, setSelectedSemester] = useState<number>(1);
+
+  // State tìm kiếm
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredLessons = lessons.filter(lesson =>
-    lesson.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // State chọn Bài giảng (Video)
+  const [selectedTopicId, setSelectedTopicId] = useState<string>("");
 
-  const currentTopics = topics.filter(topic => topic.lessonId === selectedLesson.id);
+  // LỌC DỮ LIỆU: Lớp + Học kì + Tìm kiếm
+  const filteredTopics = useMemo(() => {
+    return topicsData.filter(t => 
+      t.lessonId === selectedLessonId && 
+      t.semester === selectedSemester && // Thêm điều kiện học kì
+      t.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [selectedLessonId, selectedSemester, searchQuery]);
+
+  // Tự động chọn bài đầu tiên
+  useMemo(() => {
+    if (filteredTopics.length > 0) {
+      if (!selectedTopicId || !filteredTopics.find(t => t.id === selectedTopicId)) {
+        setSelectedTopicId(filteredTopics[0].id);
+      }
+    } else {
+        setSelectedTopicId(""); 
+    }
+  }, [filteredTopics]);
+
+  const selectedLesson = lessonsData.find(l => l.id === selectedLessonId);
+  const selectedTopic = topicsData.find(t => t.id === selectedTopicId);
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <Link to="/" className="flex items-center gap-2 hover-scale">
-            <GraduationCap className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-heading font-bold text-primary">
-              VietEdu Odyssey
-            </span>
-          </Link>
-          <div className="flex items-center gap-3">
-            <Button variant="outline" asChild>
-              <Link to="/">Trang chủ</Link>
-            </Button>
-            <Button asChild>
-              <Link to="/auth">Đăng nhập</Link>
-            </Button>
+    <div className="flex h-screen bg-background overflow-hidden">
+      
+      {/* --- SIDEBAR TRÁI (320px) --- */}
+      <div className="w-[320px] border-r flex flex-col bg-card shadow-sm z-10 flex-shrink-0">
+        
+        {/* Phần điều khiển trên cùng */}
+        <div className="p-4 space-y-4">
+          
+          {/* 1. Chọn Lớp */}
+          <div>
+            <label className="text-xs font-semibold text-muted-foreground uppercase mb-1.5 block">
+              Lớp Học
+            </label>
+            <Select 
+              value={selectedLessonId} 
+              onValueChange={(val) => {
+                setSelectedLessonId(val);
+                setSearchQuery("");
+                // Khi đổi lớp, có thể reset về học kì 1 hoặc giữ nguyên tuỳ ý
+                setSelectedSemester(1); 
+              }}
+            >
+              <SelectTrigger className="w-full font-medium h-10 bg-background">
+                <SelectValue placeholder="Chọn lớp..." />
+              </SelectTrigger>
+              <SelectContent>
+                {lessonsData.map((lesson) => (
+                  <SelectItem key={lesson.id} value={lesson.id}>
+                    {lesson.title}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
-        </div>
-      </header>
 
-      <div className="flex">
-        {/* Sidebar */}
-        <aside className="w-80 border-r bg-card h-[calc(100vh-4rem)] overflow-y-auto sticky top-16">
-          <div className="p-4 space-y-4">
-            {/* Title */}
-            <div>
-              <h2 className="text-2xl font-heading font-bold mb-2">
-                Danh sách chủ điểm
-              </h2>
-              <div className="flex gap-2">
-                <select
-                  value={selectedGrade}
-                  onChange={(e) => setSelectedGrade(e.target.value)}
-                  className="flex-1 px-3 py-2 rounded-lg border bg-background text-sm font-medium"
-                >
-                  <option>Lớp 1</option>
-                  <option>Lớp 2</option>
-                  <option>Lớp 3</option>
-                  <option>Lớp 4</option>
-                  <option>Lớp 5</option>
-                </select>
-                <select
-                  className="px-3 py-2 rounded-lg border bg-background text-sm font-medium"
-                >
-                  <option>Toán bộ chủ đề</option>
-                </select>
-              </div>
-            </div>
-
-            {/* Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Tìm nhanh kỹ năng..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-9"
-              />
-            </div>
-
-            {/* Lesson Tabs */}
-            <div className="flex gap-2">
-              <Button
-                variant="default"
-                className="flex-1 bg-primary text-primary-foreground"
-              >
-                Học kì 1
-              </Button>
-              <Button variant="ghost" className="flex-1">
-                Học kì 2
-              </Button>
-            </div>
-
-            {/* Lessons List */}
-            <div className="space-y-2">
-              {filteredLessons.map((lesson) => (
+          {/* 2. Chọn Học Kì (Tabs) */}
+          <div className="bg-muted/50 p-1 rounded-lg">
+             <div className="grid grid-cols-2 gap-1">
                 <button
-                  key={lesson.id}
-                  onClick={() => {
-                    setSelectedLesson(lesson);
-                    const firstTopic = topics.find(t => t.lessonId === lesson.id);
-                    if (firstTopic) setSelectedTopic(firstTopic);
-                  }}
-                  className={`w-full text-left p-4 rounded-xl transition-all ${
-                    selectedLesson.id === lesson.id
-                      ? "bg-primary/10 border-2 border-primary"
-                      : "bg-background hover:bg-muted"
+                  onClick={() => setSelectedSemester(1)}
+                  className={`text-sm font-medium py-1.5 rounded-md transition-all ${
+                    selectedSemester === 1 
+                    ? "bg-white text-primary shadow-sm" 
+                    : "text-muted-foreground hover:bg-white/50"
                   }`}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                      lesson.completed 
-                        ? "bg-success text-white" 
-                        : selectedLesson.id === lesson.id
-                        ? "bg-primary text-white"
-                        : "bg-muted border-2 border-muted-foreground"
-                    }`}>
-                      {lesson.completed && <CheckCircle className="h-4 w-4" />}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-heading font-bold text-base mb-1 line-clamp-2">
-                        {lesson.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        Chủ điểm: {lesson.topicCount}
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        Bài kiểm tra: {lesson.quizCount}
-                      </p>
-                    </div>
-                  </div>
+                  Học kì 1
                 </button>
-              ))}
-            </div>
+                <button
+                   onClick={() => setSelectedSemester(2)}
+                   className={`text-sm font-medium py-1.5 rounded-md transition-all ${
+                    selectedSemester === 2
+                    ? "bg-white text-primary shadow-sm" 
+                    : "text-muted-foreground hover:bg-white/50"
+                  }`}
+                >
+                  Học kì 2
+                </button>
+             </div>
           </div>
-        </aside>
 
-        {/* Main Content */}
-        <main className="flex-1 p-6 md:p-8">
-          <div className="max-w-6xl mx-auto space-y-6">
-            {/* Topic Header */}
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <BookOpen className="h-6 w-6 text-primary" />
-                  <h1 className="text-3xl md:text-4xl font-heading font-bold">
-                    {selectedLesson.title}
-                  </h1>
-                </div>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <Badge variant="secondary" className="gap-1">
-                    <PlayCircle className="h-3 w-3" />
-                    0/{selectedLesson.topicCount} chủ điểm
-                  </Badge>
-                  <Badge variant="outline" className="gap-1">
-                    0/{selectedLesson.quizCount} bài kiểm tra
-                  </Badge>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <Badge variant="outline" className="text-muted-foreground">
-                  Chưa thực hành
-                </Badge>
-                <Badge variant="outline" className="text-accent">
-                  Đang thực hành
-                </Badge>
-                <Badge variant="outline" className="text-success">
-                  Đã Hoàn Thành
-                </Badge>
-                <Badge variant="outline" className="text-destructive">
-                  Chủ điểm còn yếu
-                </Badge>
-              </div>
-            </div>
+          {/* 3. Tìm kiếm */}
+          <div className="relative">
+            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+            <Input 
+              placeholder="Tìm bài học..." 
+              className="pl-9 bg-background"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
 
-            {/* Video Player */}
-            <div className="bg-card rounded-2xl overflow-hidden shadow-lg">
-              <div className="aspect-video bg-black">
-                <iframe
-                  src={selectedTopic.videoUrl}
-                  title={selectedTopic.title}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-              <div className="p-6 space-y-4">
-                <h2 className="text-2xl font-heading font-bold">
-                  {selectedTopic.title}
-                </h2>
-                <p className="text-muted-foreground">
-                  {selectedTopic.description}
-                </p>
-                <div className="flex gap-3">
-                  <Button className="gap-2">
-                    <PlayCircle className="h-4 w-4" />
-                    VIDEO LÝ THUYẾT
-                  </Button>
-                  <Button variant="outline" className="gap-2">
-                    <BookOpen className="h-4 w-4" />
-                    THỰC HÀNH
-                  </Button>
-                  <Button variant="outline" className="gap-2">
-                    TIẾN ĐỘ
-                  </Button>
-                </div>
-              </div>
-            </div>
+        <Separator />
 
-            {/* Topics Grid */}
-            <div>
-              <h3 className="text-xl font-heading font-bold mb-4">
-                Các chủ điểm trong bài
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {currentTopics.map((topic) => (
+        {/* Danh sách chủ điểm (Topics) */}
+        <div className="flex-1 overflow-hidden flex flex-col bg-muted/10">
+          <div className="p-3 bg-muted/20 text-xs font-semibold text-muted-foreground uppercase tracking-wider border-b flex justify-between items-center">
+             <span>Danh sách bài học</span>
+             <Badge variant="outline" className="text-[10px] h-5 bg-background">{filteredTopics.length} bài</Badge>
+          </div>
+          
+          <ScrollArea className="flex-1">
+            <div className="p-3 space-y-2">
+              {filteredTopics.length > 0 ? (
+                filteredTopics.map((topic, index) => (
                   <button
                     key={topic.id}
-                    onClick={() => setSelectedTopic(topic)}
-                    className={`bg-card rounded-xl overflow-hidden card-shadow hover-lift text-left transition-all ${
-                      selectedTopic.id === topic.id ? "ring-2 ring-primary" : ""
+                    onClick={() => setSelectedTopicId(topic.id)}
+                    className={`w-full text-left p-3 rounded-lg transition-all border flex gap-3 group items-start ${
+                      selectedTopicId === topic.id
+                        ? "bg-primary/5 border-primary shadow-sm"
+                        : "bg-card hover:bg-muted border-transparent hover:border-border shadow-sm"
                     }`}
                   >
-                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
-                      <img
-                        src="/placeholder.svg"
-                        alt={topic.title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                        <PlayCircle className="h-16 w-16 text-white opacity-80" />
+                    {/* Icon số thứ tự */}
+                    <div className="flex-shrink-0 mt-0.5">
+                       {selectedTopicId === topic.id ? (
+                          <div className="h-6 w-6 rounded-full bg-primary flex items-center justify-center text-primary-foreground shadow-sm">
+                            <Video className="h-3 w-3 fill-current" />
+                          </div>
+                       ) : (
+                          <div className="h-6 w-6 rounded-full bg-muted flex items-center justify-center text-xs font-medium text-muted-foreground group-hover:bg-white group-hover:shadow-sm transition-colors border">
+                            {index + 1}
+                          </div>
+                       )}
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      {/* SỬA LỖI CẮT CHỮ: dùng whitespace-normal thay vì truncate */}
+                      <h3 className={`text-sm font-medium leading-snug mb-1.5 whitespace-normal ${
+                        selectedTopicId === topic.id ? "text-primary" : "text-foreground"
+                      }`}>
+                        {topic.title}
+                      </h3>
+                      
+                      <div className="flex items-center gap-2 flex-wrap">
+                        {topic.completed ? (
+                          <Badge variant="secondary" className="text-[10px] h-5 px-1.5 bg-green-100 text-green-700 hover:bg-green-100 border-green-200">
+                             <CheckCircle className="h-3 w-3 mr-1" /> Đã học
+                          </Badge>
+                        ) : (
+                          <span className="text-[10px] text-muted-foreground flex items-center bg-muted px-1.5 py-0.5 rounded">
+                            <PlayCircle className="h-3 w-3 mr-1" /> 15p
+                          </span>
+                        )}
                       </div>
                     </div>
-                    <div className="p-4">
-                      <h4 className="font-heading font-bold text-lg mb-1">
-                        {topic.title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground line-clamp-2">
-                        {topic.description}
-                      </p>
-                    </div>
                   </button>
-                ))}
-              </div>
+                ))
+              ) : (
+                <div className="text-center py-10 px-4 text-muted-foreground">
+                  <FileText className="h-10 w-10 mx-auto mb-2 opacity-20" />
+                  <p className="text-sm">Không tìm thấy bài học nào cho Học kì {selectedSemester}.</p>
+                </div>
+              )}
             </div>
+          </ScrollArea>
+        </div>
+      </div>
 
-            {/* Purchase Notice */}
-            <div className="bg-card rounded-2xl p-8 text-center border-2 border-dashed border-primary/30">
-              <p className="text-lg font-medium text-muted-foreground">
-                Bạn cần mua khóa học để học chủ điểm này
-              </p>
-            </div>
+      {/* --- KHUNG CHÍNH (MAIN CONTENT) --- */}
+      <div className="flex-1 flex flex-col bg-background h-full overflow-hidden relative">
+        {!selectedTopic ? (
+          <div className="flex-1 flex flex-col items-center justify-center text-muted-foreground p-8 text-center bg-muted/5">
+            <BookOpen className="h-16 w-16 mb-4 opacity-20" />
+            <h2 className="text-xl font-semibold mb-2">Chưa chọn bài học</h2>
+            <p>Vui lòng chọn một bài học từ danh sách bên trái.</p>
           </div>
-        </main>
+        ) : (
+          <ScrollArea className="flex-1">
+             {/* SỬA LỖI VIDEO BÉ: Tăng max-w từ 5xl lên 7xl hoặc full */}
+             <div className="max-w-[1600px] mx-auto p-4 md:p-6 lg:p-8 space-y-6">
+                
+                {/* Header Bài Học */}
+                <div className="flex flex-col gap-2">
+                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <span className="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider">
+                        {selectedLesson?.title}
+                      </span>
+                      <span className="text-xs">/</span>
+                      <span className="bg-muted px-2 py-0.5 rounded text-xs font-medium">Học kì {selectedSemester}</span>
+                   </div>
+                   <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight">
+                      {selectedTopic.title}
+                   </h1>
+                </div>
+
+                {/* Video Player*/}
+                <div className="w-full bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-border/50">
+                  {/* Aspect ratio giữ nguyên để video không bị méo, nhưng width sẽ full container */}
+                  <div className="aspect-video w-full"> 
+                    <iframe
+                        src={selectedTopic.videoUrl}
+                        title={selectedTopic.title}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
+                  </div>
+                </div>
+
+                {/* Phần thông tin và nút bấm */}
+                <div className="grid lg:grid-cols-3 gap-6 lg:gap-10">
+                   {/* Cột trái: Nội dung mô tả */}
+                   <div className="lg:col-span-2 space-y-6">
+                      <div className="space-y-4">
+                         <h3 className="font-bold text-xl flex items-center gap-2 border-b pb-2">
+                            <BookOpen className="h-5 w-5 text-primary" />
+                            Nội dung bài học
+                         </h3>
+                         <div className="text-muted-foreground leading-relaxed text-lg">
+                            {selectedTopic.description}
+                            <p className="mt-4">
+                                Hãy xem kỹ video và ghi chép lại các công thức quan trọng. Sau khi xem xong, bạn có thể nhấn nút "Làm bài tập" bên cạnh để củng cố kiến thức.
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+
+                   {/* Cột phải: Actions Panel */}
+                   <div className="space-y-4">
+                      <div className="bg-card p-6 rounded-xl border shadow-sm space-y-4 sticky top-4">
+                         <h4 className="font-bold text-base text-foreground mb-2">Hoạt động học tập</h4>
+                         
+                         <Button className="w-full justify-start h-12 text-base font-medium" size="lg">
+                            <div className="bg-white/20 p-1 rounded mr-3">
+                                <BookOpen className="h-5 w-5" />
+                            </div>
+                            Làm bài tập ngay
+                         </Button>
+                         
+                         <Button variant="outline" className="w-full justify-start h-12 text-base font-medium border-primary/20 hover:bg-primary/5 hover:text-primary">
+                             <div className="bg-primary/10 p-1 rounded mr-3 text-primary">
+                                <FileText className="h-5 w-5" />
+                             </div>
+                             Tải tài liệu PDF
+                         </Button>
+
+                         <div className="pt-4 border-t mt-4">
+                            <div className="text-xs text-muted-foreground text-center">
+                               Hoàn thành bài học để nhận 20 XP
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+
+             </div>
+          </ScrollArea>
+        )}
       </div>
     </div>
   );
