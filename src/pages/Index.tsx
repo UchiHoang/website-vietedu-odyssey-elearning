@@ -14,9 +14,9 @@ const Index = () => {
   const [currentRole, setCurrentRole] = useState<UserRole>("student");
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header currentRole={currentRole} onRoleChange={setCurrentRole} />
-      <main>
+      <main className="flex-1">
         <Hero />
         <About />
         <ClassesSection />

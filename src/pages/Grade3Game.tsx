@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { TrangQuynhMiniGame } from "@/components/game/TrangQuynhMiniGame";
 import { loadStoryGrade3 } from "@/utils/storyLoaders";
 import { supabase } from "@/integrations/supabase/client";
@@ -57,14 +58,17 @@ export default function Grade3Game() {
   }
 
   return (
-    <div className="min-h-screen" style={{ background: theme.bg }}>
+    <div className="min-h-screen flex flex-col" style={{ background: theme.bg }}>
       <Header />
-      <TrangQuynhMiniGame
-        grade="3"
-        courseId="grade3-sontinh"
-        storyLoader={loadStoryGrade3}
-        theme={theme}
-      />
+      <div className="flex-1 min-h-0">
+        <TrangQuynhMiniGame
+          grade="3"
+          courseId="grade3-sontinh"
+          storyLoader={loadStoryGrade3}
+          theme={theme}
+        />
+      </div>
+      <Footer className="mt-auto" />
     </div>
   );
 }

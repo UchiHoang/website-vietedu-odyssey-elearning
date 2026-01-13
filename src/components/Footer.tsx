@@ -1,9 +1,13 @@
 import { GraduationCap, Mail, Phone, Facebook, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+interface FooterProps {
+  className?: string;
+}
+
+const Footer = ({ className = "" }: FooterProps) => {
   return (
-    <footer id="contact" className="bg-accent text-accent-foreground">
+    <footer id="contact" className={`bg-accent text-accent-foreground ${className}`}>
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">

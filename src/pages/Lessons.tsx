@@ -14,6 +14,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 /* ==================================================================================
    KHU VỰC ĐỊNH NGHĨA KIỂU DỮ LIỆU
@@ -249,7 +250,7 @@ const Lessons = () => {
       <Header />
 
       {/* KHU VỰC NỘI DUNG */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden min-h-0 flex-shrink">
       
       {/* --- SIDEBAR TRÁI (320px) --- */}
       <div className="w-[320px] border-r flex flex-col bg-card shadow-sm z-10 flex-shrink-0">
@@ -484,6 +485,7 @@ const Lessons = () => {
         )}
       </div>
       </div>
+      <Footer className="mt-auto" />
     </div>
   );
 };

@@ -3,9 +3,15 @@ import { classes } from "@/data/mockData";
 
 const ClassesSection = () => {
   return (
-    <section id="classes" className="py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12 space-y-4">
+    <section id="classes" className="py-16 md:py-24 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12 space-y-4 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
             Bắt đầu hành trình học tập của bé tại đây
           </h2>
