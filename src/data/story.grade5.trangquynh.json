@@ -4,9 +4,9 @@
     "description": "Bạn là quân sư Trạng Nguyên: tính số thập phân, hình học, chuyển động để chỉ huy."
   },
   "prologue": [
-    { "speaker": "Trạng Nguyên", "text": "Ta cần một quân sư giỏi toán để giữ vững biên cương." },
-    { "speaker": "Người kể chuyện", "text": "Bạn sẽ tính toán lương thảo, đường hành quân và tốc độ chiến thuyền." },
-    { "speaker": "Tướng Quân", "text": "Mọi quyết định đều dựa trên số liệu, hãy thật chính xác." }
+    { "sprite": "assets/user/tuongquan5.png","speaker": "Tướng Quân", "text": "Ta cần một quân sư giỏi toán để giữ vững biên cương." },
+    { "sprite": "assets/user/trangnguyen5.png","speaker": "Người kể chuyện", "text": "Bạn sẽ tính toán lương thảo, đường hành quân và tốc độ chiến thuyền." },
+    { "sprite": "assets/user/tuongquan5.png","speaker": "Tướng Quân", "text": "Mọi quyết định đều dựa trên số liệu, hãy thật chính xác." }
   ],
   "nodes": [
     { "id": "g5-l1", "title": "Chiêu Mộ Binh Sĩ", "badgeOnComplete": "g5-l1", "activityRef": "g5-l1-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Đếm quân, chia nhóm, dùng số thập phân." }] },
@@ -28,11 +28,18 @@
   "activities": [
     {
       "id": "g5-l1-qs",
-      "xpReward": 18,
+      "xpReward": 15,
       "questions": [
         { "id": "g5-l1-q1", "type": "multiple-choice", "prompt": "Chia 3500 lính thành 3 quân, mỗi quân khoảng?", "choices": ["1000", "1150", "1170", "1200"], "answer": "1170", "explanation": "3500 : 3 ≈ 1166,7 làm tròn 1170." },
-        { "id": "g5-l1-q2", "type": "matching-pairs", "question": "Ghép thập phân với phân số", "pairs": [{ "id": "p1", "left": "0,5", "right": "1/2" }, { "id": "p2", "left": "0,25", "right": "1/4" }, { "id": "p3", "left": "0,2", "right": "1/5" }], "explanation": "Đổi tương đương." },
-        { "id": "g5-l1-q3", "type": "fill-blank", "question": "1,5 + 2,25 = __", "blanks": [{ "position": 0, "answer": "3,75" }], "explanation": "Cộng thập phân." }
+        { "id": "g5-l1-q2", "type": "matching-pairs", "question": "Ghép thập phân với phân số", "pairs": [{ "id": "p1", "left": "0,5", "right": "1/2" }, { "id": "p2", "left": "0,25", "right": "1/4" }, { "id": "p3", "left": "0,2", "right": "1/5" }], "explanation": "0,5 = 5/10 = 1/2; 0,25 = 25/100 = 1/4." },
+        { "id": "g5-l1-q3", "type": "fill-blank", "question": "1,5 + 2,25 = __", "blanks": [{ "position": 0, "answer": "3,75" }], "explanation": "Cộng thập phân: 1,50 + 2,25 = 3,75." },
+        { "id": "g5-l1-q4", "type": "multiple-choice", "prompt": "Chữ số 5 trong số 12,357 thuộc hàng nào?", "choices": ["Hàng đơn vị", "Hàng phần mười", "Hàng phần trăm", "Hàng phần nghìn"], "answer": "Hàng phần trăm", "explanation": "Sau dấu phẩy: 3 là phần mười, 5 là phần trăm." },
+        { "id": "g5-l1-q5", "type": "drag-drop", "question": "Sắp xếp các số theo thứ tự từ bé đến lớn", "dragItems": [{ "id": "d1", "content": "3,05", "correctSlot": "s1" }, { "id": "d2", "content": "3,15", "correctSlot": "s2" }, { "id": "d3", "content": "3,5", "correctSlot": "s3" }], "dropSlots": [{ "id": "s1", "label": "Bé nhất" }, { "id": "s2", "label": "Giữa" }, { "id": "s3", "label": "Lớn nhất" }], "explanation": "So sánh phần thập phân: 05 < 15 < 50." },
+        { "id": "g5-l1-q6", "type": "fill-blank", "question": "Viết số thập phân thích hợp: 3 đơn vị, 5 phần mười = __", "blanks": [{ "position": 0, "answer": "3,5" }], "explanation": "3 và 5/10 viết là 3,5." },
+        { "id": "g5-l1-q7", "type": "multiple-choice", "prompt": "Hỗn số 3 2/5 chuyển thành số thập phân là?", "choices": ["3,2", "3,4", "3,5", "3,25"], "answer": "3,4", "explanation": "2/5 = 4/10 = 0,4. Vậy là 3,4." },
+        { "id": "g5-l1-q8", "type": "matching-pairs", "question": "Ghép phép tính với kết quả", "pairs": [{ "id": "p4", "left": "0,1 x 10", "right": "1" }, { "id": "p5", "left": "0,1 x 100", "right": "10" }, { "id": "p6", "left": "0,01 x 1000", "right": "10" }], "explanation": "Nhân với 10, 100 dịch dấu phẩy sang phải." },
+        { "id": "g5-l1-q9", "type": "fill-blank", "question": "Tìm x biết: x - 1,2 = 4,5. Vậy x = __", "blanks": [{ "position": 0, "answer": "5,7" }], "explanation": "x = 4,5 + 1,2 = 5,7." },
+        { "id": "g5-l1-q10", "type": "multiple-choice", "prompt": "Mỗi xe chở 1,5 tấn gạo. 4 xe chở bao nhiêu tấn?", "choices": ["5 tấn", "6 tấn", "4,5 tấn", "7 tấn"], "answer": "6 tấn", "explanation": "1,5 x 4 = 6,0." }
       ]
     },
     {
@@ -41,7 +48,11 @@
       "questions": [
         { "id": "g5-l2-q1", "type": "multiple-choice", "prompt": "Bao gạo 12,5 kg cộng thêm 7,3 kg. Tổng?", "choices": ["18,8 kg", "19,6 kg", "19,8 kg", "20 kg"], "answer": "19,8 kg", "explanation": "12,5 + 7,3 = 19,8." },
         { "id": "g5-l2-q2", "type": "drag-drop", "question": "Kéo dấu đúng", "dragItems": [{ "id": "gt", "content": ">", "correctSlot": "slot-198" }, { "id": "lt", "content": "<", "correctSlot": "slot-125" }], "dropSlots": [{ "id": "slot-198", "label": "19,8 __ 19,5" }, { "id": "slot-125", "label": "12,5 __ 19,8" }], "explanation": "19,8 lớn hơn 19,5; 12,5 nhỏ hơn 19,8." },
-        { "id": "g5-l2-q3", "type": "fill-blank", "question": "19,8 - 0,8 = __ kg", "blanks": [{ "position": 0, "answer": "19" }], "explanation": "19,8 - 0,8 = 19,0." }
+        { "id": "g5-l2-q3", "type": "fill-blank", "question": "19,8 - 0,8 = __ kg", "blanks": [{ "position": 0, "answer": "19" }], "explanation": "19,8 - 0,8 = 19,0." },
+        { "id": "g5-l2-q4", "type": "matching-pairs", "question": "Đổi đơn vị khối lượng", "pairs": [{ "id": "p1", "left": "1 tấn", "right": "1000 kg" }, { "id": "p2", "left": "1 tạ", "right": "100 kg" }, { "id": "p3", "left": "1 yến", "right": "10 kg" }], "explanation": "Bảng đơn vị đo khối lượng." },
+        { "id": "g5-l2-q5", "type": "multiple-choice", "prompt": "Xe tải chở 2,5 tấn gạo. Đổi sang kg là?", "choices": ["250 kg", "2500 kg", "2050 kg", "25000 kg"], "answer": "2500 kg", "explanation": "2,5 x 1000 = 2500." },
+        { "id": "g5-l2-q6", "type": "fill-blank", "question": "3 tấn 50 kg = __ kg", "blanks": [{ "position": 0, "answer": "3050" }], "explanation": "3000 + 50 = 3050." },
+        { "id": "g5-l2-q7", "type": "multiple-choice", "prompt": "Một bao ngô nặng 5 yến. 4 bao nặng bao nhiêu tạ?", "choices": ["2 tạ", "20 tạ", "200 kg", "0,2 tạ"], "answer": "2 tạ", "explanation": "5 yến = 50kg. 4 bao = 200kg = 2 tạ." }
       ]
     },
     {
@@ -49,116 +60,174 @@
       "xpReward": 18,
       "questions": [
         { "id": "g5-l3-q1", "type": "multiple-choice", "prompt": "Trên bản đồ, 1 cm ứng 5 km. Đo 6 cm nghĩa là?", "choices": ["20 km", "25 km", "30 km", "35 km"], "answer": "30 km", "explanation": "6 x 5 = 30 km." },
-        { "id": "g5-l3-q2", "type": "matching-pairs", "question": "Ghép hướng với tọa độ", "pairs": [{ "id": "p1", "left": "(3;5)", "right": "Đông Bắc" }, { "id": "p2", "left": "(3;-2)", "right": "Đông Nam" }, { "id": "p3", "left": "(-4;5)", "right": "Tây Bắc" }], "explanation": "Dựa vào dấu x,y." },
-        { "id": "g5-l3-q3", "type": "fill-blank", "question": "Quãng đường 30 km đi trong 2 giờ => vận tốc __ km/h", "blanks": [{ "position": 0, "answer": "15" }], "explanation": "v = s/t." }
+        { "id": "g5-l3-q2", "type": "matching-pairs", "question": "Ghép hướng với tọa độ", "pairs": [{ "id": "p1", "left": "(3;5)", "right": "Đông Bắc" }, { "id": "p2", "left": "(3;-2)", "right": "Đông Nam" }, { "id": "p3", "left": "(-4;5)", "right": "Tây Bắc" }], "explanation": "Quy ước: Phải-Trên (+;+), Phải-Dưới (+;-)." },
+        { "id": "g5-l3-q3", "type": "fill-blank", "question": "Quãng đường 30 km đi trong 2 giờ => vận tốc __ km/h", "blanks": [{ "position": 0, "answer": "15" }], "explanation": "v = s/t." },
+        { "id": "g5-l3-q4", "type": "multiple-choice", "prompt": "Tỉ lệ bản đồ 1:1.000.000. Độ dài 1cm ứng với thực tế?", "choices": ["1 km", "10 km", "100 km", "1000 km"], "answer": "10 km", "explanation": "1.000.000 cm = 10.000 m = 10 km." },
+        { "id": "g5-l3-q5", "type": "fill-blank", "question": "Khoảng cách thực là 5km. Trên bản đồ tỉ lệ 1:100.000 vẽ dài __ cm", "blanks": [{ "position": 0, "answer": "5" }], "explanation": "5km = 500.000cm. 500.000 : 100.000 = 5." },
+        { "id": "g5-l3-q6", "type": "drag-drop", "question": "Xác định trục tọa độ", "dragItems": [{ "id": "ox", "content": "Trục hoành (Ngang)", "correctSlot": "s-x" }, { "id": "oy", "content": "Trục tung (Dọc)", "correctSlot": "s-y" }], "dropSlots": [{ "id": "s-x", "label": "Trục Ox" }, { "id": "s-y", "label": "Trục Oy" }], "explanation": "Ox nằm ngang, Oy thẳng đứng." },
+        { "id": "g5-l3-q7", "type": "multiple-choice", "prompt": "Điểm A(2;0) nằm ở đâu?", "choices": ["Gốc tọa độ", "Trên trục hoành", "Trên trục tung", "Giữa mặt phẳng"], "answer": "Trên trục hoành", "explanation": "Tung độ y=0 nên nằm trên trục hoành." }
       ]
     },
     {
       "id": "g5-l4-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l4-q1", "type": "multiple-choice", "prompt": "5,6 + 2,48 = ?", "choices": ["7,98", "8,08", "8,18", "8,28"], "answer": "8,08", "explanation": "Cộng thập phân theo cột." },
-        { "id": "g5-l4-q2", "type": "matching-pairs", "question": "Ghép phép tính với kết quả", "pairs": [{ "id": "p1", "left": "7,5 - 3,2", "right": "4,3" }, { "id": "p2", "left": "1,25 + 0,75", "right": "2,0" }, { "id": "p3", "left": "2,4 + 0,6", "right": "3,0" }], "explanation": "Thực hiện cộng trừ." },
-        { "id": "g5-l4-q3", "type": "fill-blank", "question": "8,08 - 0,58 = __", "blanks": [{ "position": 0, "answer": "7,5" }], "explanation": "8,08 - 0,58 = 7,50." }
+        { "id": "g5-l4-q1", "type": "multiple-choice", "prompt": "5,6 + 2,48 = ?", "choices": ["7,98", "8,08", "8,18", "8,28"], "answer": "8,08", "explanation": "Nhớ đặt thẳng hàng dấu phẩy." },
+        { "id": "g5-l4-q2", "type": "matching-pairs", "question": "Ghép phép tính", "pairs": [{ "id": "p1", "left": "7,5 - 3,2", "right": "4,3" }, { "id": "p2", "left": "1,25 + 0,75", "right": "2,0" }, { "id": "p3", "left": "2,4 + 0,6", "right": "3,0" }], "explanation": "Tính nhẩm." },
+        { "id": "g5-l4-q3", "type": "fill-blank", "question": "8,08 - 0,58 = __", "blanks": [{ "position": 0, "answer": "7,5" }], "explanation": "8,08 - 0,58 = 7,50." },
+        { "id": "g5-l4-q4", "type": "multiple-choice", "prompt": "Tìm x: x - 4,5 = 3,2", "choices": ["7,7", "1,3", "7,5", "8,7"], "answer": "7,7", "explanation": "x = 3,2 + 4,5 = 7,7." },
+        { "id": "g5-l4-q5", "type": "fill-blank", "question": "15,5 + 4,5 + 2,3 = __", "blanks": [{ "position": 0, "answer": "22,3" }], "explanation": "20 + 2,3 = 22,3." },
+        { "id": "g5-l4-q6", "type": "drag-drop", "question": "Sắp xếp kết quả", "dragItems": [{ "id": "nho", "content": "1,2 + 1,3", "correctSlot": "s1" }, { "id": "lon", "content": "1,5 + 1,5", "correctSlot": "s2" }], "dropSlots": [{ "id": "s1", "label": "Nhỏ hơn (2,5)" }, { "id": "s2", "label": "Lớn hơn (3,0)" }], "explanation": "2,5 < 3,0." },
+        { "id": "g5-l4-q7", "type": "multiple-choice", "prompt": "Một sọt cam 12,5kg, sọt quýt nhẹ hơn 2,5kg. Sọt quýt nặng?", "choices": ["10 kg", "15 kg", "10,5 kg", "14,5 kg"], "answer": "10 kg", "explanation": "12,5 - 2,5 = 10." }
       ]
     },
     {
       "id": "g5-l5-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l5-q1", "type": "multiple-choice", "prompt": "Đi 24 km trong 2 giờ. Vận tốc?", "choices": ["10 km/h", "11 km/h", "12 km/h", "13 km/h"], "answer": "12 km/h", "explanation": "v = 24/2 = 12." },
-        { "id": "g5-l5-q2", "type": "drag-drop", "question": "Kéo công thức", "dragItems": [{ "id": "v", "content": "v = s : t", "correctSlot": "slot-v" }, { "id": "s", "content": "s = v x t", "correctSlot": "slot-s" }], "dropSlots": [{ "id": "slot-v", "label": "Vận tốc" }, { "id": "slot-s", "label": "Quãng đường" }], "explanation": "Công thức chuyển động thẳng." },
-        { "id": "g5-l5-q3", "type": "fill-blank", "question": "Muốn đi 36 km với v=12 km/h, cần __ giờ", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "t = s/v = 36/12 = 3." }
+         { "id": "g5-l5-q1", "type": "multiple-choice", "prompt": "Đi 24 km trong 2 giờ. Vận tốc là bao nhiêu?", "choices": ["10 km/h", "11 km/h", "12 km/h", "13 km/h"], "answer": "12 km/h", "explanation": "v = s : t = 24 : 2 = 12." },
+        { "id": "g5-l5-q2", "type": "drag-drop", "question": "Kéo công thức vào đúng vị trí", "dragItems": [{ "id": "v", "content": "v = s : t", "correctSlot": "slot-v" }, { "id": "s", "content": "s = v x t", "correctSlot": "slot-s" }, { "id": "t", "content": "t = s : v", "correctSlot": "slot-t" }], "dropSlots": [{ "id": "slot-v", "label": "Tính Vận tốc" }, { "id": "slot-s", "label": "Tính Quãng đường" }, { "id": "slot-t", "label": "Tính Thời gian" }], "explanation": "Ghi nhớ bộ ba công thức chuyển động." },
+        { "id": "g5-l5-q3", "type": "fill-blank", "question": "Muốn đi 36 km với vận tốc 12 km/h, cần __ giờ", "blanks": [{ "position": 0, "answer": "3" }], "explanation": "t = 36 : 12 = 3." },
+        { "id": "g5-l5-q4", "type": "multiple-choice", "prompt": "Một con ngựa chạy với vận tốc 30 km/h. Sau 15 phút chạy được bao xa?", "choices": ["30 km", "15 km", "7,5 km", "5 km"], "answer": "7,5 km", "explanation": "15 phút = 0,25 giờ. s = 30 x 0,25 = 7,5." },
+        { "id": "g5-l5-q5", "type": "matching-pairs", "question": "Đổi đơn vị vận tốc", "pairs": [{ "id": "p1", "left": "36 km/h", "right": "10 m/s" }, { "id": "p2", "left": "72 km/h", "right": "20 m/s" }, { "id": "p3", "left": "54 km/h", "right": "15 m/s" }], "explanation": "Chia cho 3,6 để đổi từ km/h sang m/s." },
+        { "id": "g5-l5-q6", "type": "fill-blank", "question": "Xe máy đi 2 giờ được 80km. Vận tốc xe là __ km/h", "blanks": [{ "position": 0, "answer": "40" }], "explanation": "v = 80 : 2 = 40." },
+        { "id": "g5-l5-q7", "type": "multiple-choice", "prompt": "Quãng đường AB dài 120km. Xe đi với v = 60km/h. Mấy giờ thì đến?", "choices": ["1,5 giờ", "2 giờ", "2,5 giờ", "3 giờ"], "answer": "2 giờ", "explanation": "t = 120 : 60 = 2." },
+        { "id": "g5-l5-q8", "type": "fill-blank", "question": "Đi bộ 5 km/h trong 30 phút. Quãng đường là __ km", "blanks": [{ "position": 0, "answer": "2,5" }], "explanation": "30 phút = 0,5 giờ. s = 5 x 0,5 = 2,5." },
+        { "id": "g5-l5-q9", "type": "multiple-choice", "prompt": "Vận tốc âm thanh là 340 m/s. Trong 2 giây âm thanh truyền được?", "choices": ["340 m", "600 m", "680 m", "700 m"], "answer": "680 m", "explanation": "s = 340 x 2 = 680." },
+        { "id": "g5-l5-q10", "type": "drag-drop", "question": "Ai nhanh hơn?", "dragItems": [{ "id": "rua", "content": "Rùa (0,5 m/s)", "correctSlot": "s-cham" }, { "id": "tho", "content": "Thỏ (10 m/s)", "correctSlot": "s-nhanh" }], "dropSlots": [{ "id": "s-cham", "label": "Chậm hơn" }, { "id": "s-nhanh", "label": "Nhanh hơn" }], "explanation": "So sánh vận tốc." }
       ]
     },
     {
       "id": "g5-l6-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l6-q1", "type": "multiple-choice", "prompt": "Chia 1 200 lính theo tỉ lệ 2:3. Nhóm 1 có?", "choices": ["400", "450", "480", "500"], "answer": "480", "explanation": "Tổng phần 5; nhóm1=2/5*1200=480." },
-        { "id": "g5-l6-q2", "type": "matching-pairs", "question": "Ghép tỉ lệ với thập phân", "pairs": [{ "id": "p1", "left": "1/2", "right": "0,5" }, { "id": "p2", "left": "2/3", "right": "0,66" }, { "id": "p3", "left": "3/5", "right": "0,6" }], "explanation": "Đổi tỉ lệ." },
-        { "id": "g5-l6-q3", "type": "fill-blank", "question": "Nhóm 2 (3 phần) = __ lính", "blanks": [{ "position": 0, "answer": "720" }], "explanation": "3/5 * 1200 = 720." }
+        { "id": "g5-l6-q1", "type": "multiple-choice", "prompt": "Chia 1200 lính theo tỉ lệ 2:3. Nhóm 1 có?", "choices": ["400", "480", "500", "600"], "answer": "480", "explanation": "Tổng 5 phần. Nhóm 1: (1200:5)x2 = 480." },
+        { "id": "g5-l6-q2", "type": "matching-pairs", "question": "Tỉ số phần trăm", "pairs": [{ "id": "p1", "left": "1/2", "right": "50%" }, { "id": "p2", "left": "1/4", "right": "25%" }, { "id": "p3", "left": "3/4", "right": "75%" }], "explanation": "Đổi phân số sang %." },
+        { "id": "g5-l6-q3", "type": "fill-blank", "question": "Nhóm 2 (3 phần) = __ lính", "blanks": [{ "position": 0, "answer": "720" }], "explanation": "1200 - 480 = 720." },
+        { "id": "g5-l6-q4", "type": "multiple-choice", "prompt": "25% của 200 là bao nhiêu?", "choices": ["25", "50", "100", "40"], "answer": "50", "explanation": "200 x 25 : 100 = 50." },
+        { "id": "g5-l6-q5", "type": "fill-blank", "question": "Lớp có 40 bạn, 20 bạn nữ. Tỉ số phần trăm nữ là __ %", "blanks": [{ "position": 0, "answer": "50" }], "explanation": "20:40 = 0,5 = 50%." },
+        { "id": "g5-l6-q6", "type": "drag-drop", "question": "Phân loại tỉ số", "dragItems": [{ "id": "nho", "content": "10%", "correctSlot": "s-it" }, { "id": "lon", "content": "90%", "correctSlot": "s-nhieu" }], "dropSlots": [{ "id": "s-it", "label": "Thiểu số" }, { "id": "s-nhieu", "label": "Đa số" }], "explanation": "So sánh tỉ lệ." },
+        { "id": "g5-l6-q7", "type": "multiple-choice", "prompt": "Viết 0,35 dưới dạng tỉ số phần trăm", "choices": ["3,5%", "35%", "350%", "0,35%"], "answer": "35%", "explanation": "Nhân với 100 và thêm %." }
       ]
     },
     {
       "id": "g5-l7-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l7-q1", "type": "multiple-choice", "prompt": "Hào phòng thủ: dài 15 m, rộng 3 m, cao 2 m. Thể tích?", "choices": ["60 m3", "80 m3", "90 m3", "100 m3"], "answer": "90 m3", "explanation": "15 x 3 x 2 = 90." },
-        { "id": "g5-l7-q2", "type": "matching-pairs", "question": "Ghép đơn vị", "pairs": [{ "id": "p1", "left": "m3", "right": "thể tích" }, { "id": "p2", "left": "m2", "right": "diện tích" }, { "id": "p3", "left": "m", "right": "độ dài" }], "explanation": "Phân biệt đơn vị." },
-        { "id": "g5-l7-q3", "type": "fill-blank", "question": "Nếu cao 2,5 m, thể tích = 15 x 3 x 2,5 = __ m3", "blanks": [{ "position": 0, "answer": "112,5" }], "explanation": "Tính nhân thập phân." }
+        { "id": "g5-l7-q1", "type": "multiple-choice", "prompt": "Hào dài 15m, rộng 3m, cao 2m. Thể tích?", "choices": ["60 m3", "80 m3", "90 m3", "100 m3"], "answer": "90 m3", "explanation": "V = 15 x 3 x 2 = 90." },
+        { "id": "g5-l7-q2", "type": "matching-pairs", "question": "Đơn vị đo", "pairs": [{ "id": "p1", "left": "Thể tích", "right": "Mét khối" }, { "id": "p2", "left": "Diện tích", "right": "Mét vuông" }, { "id": "p3", "left": "Độ dài", "right": "Mét" }], "explanation": "Phân biệt m, m2, m3." },
+        { "id": "g5-l7-q3", "type": "fill-blank", "question": "Nếu cao 2,5m, thể tích = 15 x 3 x 2,5 = __ m3", "blanks": [{ "position": 0, "answer": "112,5" }], "explanation": "45 x 2,5 = 112,5." },
+        { "id": "g5-l7-q4", "type": "multiple-choice", "prompt": "Thể tích hình lập phương cạnh 3m?", "choices": ["9 m3", "27 m3", "18 m3", "12 m3"], "answer": "27 m3", "explanation": "V = a x a x a = 3 x 3 x 3 = 27." },
+        { "id": "g5-l7-q5", "type": "fill-blank", "question": "1 m3 = __ dm3 (lít)", "blanks": [{ "position": 0, "answer": "1000" }], "explanation": "Đổi đơn vị thể tích." },
+        { "id": "g5-l7-q6", "type": "drag-drop", "question": "Công thức tính thể tích HHCN", "dragItems": [{ "id": "v", "content": "a x b x c", "correctSlot": "s-v" }], "dropSlots": [{ "id": "s-v", "label": "V = ..." }], "explanation": "Dài x Rộng x Cao." },
+        { "id": "g5-l7-q7", "type": "multiple-choice", "prompt": "Một bể nước chứa 2000 lít. Tức là bao nhiêu m3?", "choices": ["20 m3", "2 m3", "0,2 m3", "200 m3"], "answer": "2 m3", "explanation": "1000 lít = 1 m3." }
       ]
     },
     {
       "id": "g5-l8-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l8-q1", "type": "multiple-choice", "prompt": "Thuế ruộng: 2,5 tạ/ha. 3,2 ha thu bao nhiêu?", "choices": ["7,5 tạ", "8,0 tạ", "8,5 tạ", "9,0 tạ"], "answer": "8,0 tạ", "explanation": "2,5 x 3,2 = 8,0." },
-        { "id": "g5-l8-q2", "type": "drag-drop", "question": "Kéo dấu thập phân", "dragItems": [{ "id": "dot", "content": ",", "correctSlot": "slot-25" }], "dropSlots": [{ "id": "slot-25", "label": "2 5 -> 2,5" }], "explanation": "Thêm dấu phẩy đúng." },
-        { "id": "g5-l8-q3", "type": "fill-blank", "question": "8,0 tạ = __ kg", "blanks": [{ "position": 0, "answer": "800" }], "explanation": "1 tạ = 100 kg." }
+        { "id": "g5-l8-q1", "type": "multiple-choice", "prompt": "Thuế: 2,5 tạ/ha. 3,2 ha thu bao nhiêu?", "choices": ["7,5 tạ", "8,0 tạ", "8,5 tạ", "9,0 tạ"], "answer": "8,0 tạ", "explanation": "2,5 x 3,2 = 8,0." },
+        { "id": "g5-l8-q2", "type": "drag-drop", "question": "Đặt dấu phẩy: 12,5 x 0,1", "dragItems": [{ "id": "kq", "content": "1,25", "correctSlot": "s1" }], "dropSlots": [{ "id": "s1", "label": "Kết quả" }], "explanation": "Dịch dấu phẩy sang trái 1 hàng." },
+        { "id": "g5-l8-q3", "type": "fill-blank", "question": "8,0 tạ = __ kg", "blanks": [{ "position": 0, "answer": "800" }], "explanation": "1 tạ = 100 kg." },
+        { "id": "g5-l8-q4", "type": "multiple-choice", "prompt": "15,2 x 10 = ?", "choices": ["1,52", "152", "1520", "15,20"], "answer": "152", "explanation": "Nhân 10 dịch phẩy sang phải 1 hàng." },
+        { "id": "g5-l8-q5", "type": "matching-pairs", "question": "Nhẩm nhanh", "pairs": [{ "id": "p1", "left": "x 0,5", "right": ": 2" }, { "id": "p2", "left": "x 0,25", "right": ": 4" }, { "id": "p3", "left": "x 0,2", "right": ": 5" }], "explanation": "Mẹo tính nhanh." },
+        { "id": "g5-l8-q6", "type": "fill-blank", "question": "Một mét vải giá 20,5 nghìn. 4 mét giá __ nghìn", "blanks": [{ "position": 0, "answer": "82" }], "explanation": "20,5 x 4 = 82." },
+        { "id": "g5-l8-q7", "type": "multiple-choice", "prompt": "Diện tích ruộng HCN: dài 40,5m, rộng 10m. S = ?", "choices": ["40,5 m2", "405 m2", "4050 m2", "4,05 m2"], "answer": "405 m2", "explanation": "40,5 x 10 = 405." }
       ]
     },
     {
       "id": "g5-l9-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l9-q1", "type": "multiple-choice", "prompt": "Tam giác đáy 12 m, cao 5 m. Diện tích?", "choices": ["25", "30", "35", "40"], "answer": "30", "explanation": "S = 1/2 x 12 x 5 = 30." },
-        { "id": "g5-l9-q2", "type": "matching-pairs", "question": "Ghép công thức", "pairs": [{ "id": "p1", "left": "S tam giác", "right": "1/2 x a x h" }, { "id": "p2", "left": "Chu vi tam giác đều", "right": "3a" }, { "id": "p3", "left": "Chu vi HCN", "right": "2(a+b)" }], "explanation": "Nhớ công thức." },
-        { "id": "g5-l9-q3", "type": "fill-blank", "question": "Tam giác đều cạnh 6 m, chu vi = __ m", "blanks": [{ "position": 0, "answer": "18" }], "explanation": "3 x 6 = 18." }
+        { "id": "g5-l9-q1", "type": "multiple-choice", "prompt": "Tam giác có đáy 12m, chiều cao 5m. Diện tích là?", "choices": ["25 m2", "30 m2", "35 m2", "60 m2"], "answer": "30 m2", "explanation": "S = (12 x 5) : 2 = 30." },
+        { "id": "g5-l9-q2", "type": "matching-pairs", "question": "Ghép công thức", "pairs": [{ "id": "p1", "left": "S tam giác", "right": "(a x h) : 2" }, { "id": "p2", "left": "S hình vuông", "right": "a x a" }, { "id": "p3", "left": "S chữ nhật", "right": "a x b" }], "explanation": "Phân biệt các công thức tính diện tích." },
+        { "id": "g5-l9-q3", "type": "fill-blank", "question": "Tam giác đều cạnh 6m, chu vi là __ m", "blanks": [{ "position": 0, "answer": "18" }], "explanation": "Chu vi = 6 x 3 = 18." },
+        { "id": "g5-l9-q4", "type": "multiple-choice", "prompt": "Một tam giác vuông có hai cạnh góc vuông là 3cm và 4cm. Diện tích là?", "choices": ["6 cm2", "12 cm2", "7 cm2", "5 cm2"], "answer": "6 cm2", "explanation": "Với tam giác vuông, coi 2 cạnh góc vuông là đáy và cao. S = (3x4):2 = 6." },
+        { "id": "g5-l9-q5", "type": "fill-blank", "question": "Diện tích tam giác là 20m2. Đáy là 8m. Chiều cao là __ m", "blanks": [{ "position": 0, "answer": "5" }], "explanation": "h = (S x 2) : a = (20 x 2) : 8 = 5." },
+        { "id": "g5-l9-q6", "type": "drag-drop", "question": "Phân loại tam giác", "dragItems": [{ "id": "nhon", "content": "Góc < 90 độ", "correctSlot": "s-nhon" }, { "id": "vuong", "content": "Góc = 90 độ", "correctSlot": "s-vuong" }], "dropSlots": [{ "id": "s-nhon", "label": "Tam giác nhọn" }, { "id": "s-vuong", "label": "Tam giác vuông" }], "explanation": "Dựa vào số đo góc." },
+        { "id": "g5-l9-q7", "type": "multiple-choice", "prompt": "Chiều cao tam giác tăng gấp đôi, đáy giữ nguyên thì diện tích?", "choices": ["Không đổi", "Tăng gấp đôi", "Tăng gấp 4", "Giảm một nửa"], "answer": "Tăng gấp đôi", "explanation": "S tỉ lệ thuận với chiều cao." },
+        { "id": "g5-l9-q8", "type": "fill-blank", "question": "Đáy = 0,5m, Cao = 0,4m. Diện tích = __ m2", "blanks": [{ "position": 0, "answer": "0,1" }], "explanation": "S = (0,5 x 0,4) : 2 = 0,1." },
+        { "id": "g5-l9-q9", "type": "multiple-choice", "prompt": "Tổng ba góc trong một tam giác luôn bằng?", "choices": ["90 độ", "180 độ", "360 độ", "100 độ"], "answer": "180 độ", "explanation": "Định lý tổng 3 góc của tam giác." },
+        { "id": "g5-l9-q10", "type": "matching-pairs", "question": "Đơn vị diện tích", "pairs": [{ "id": "u1", "left": "1 m2", "right": "100 dm2" }, { "id": "u2", "left": "1 km2", "right": "100 ha" }, { "id": "u3", "left": "1 ha", "right": "10.000 m2" }], "explanation": "Đổi đơn vị đo diện tích." }
       ]
     },
     {
       "id": "g5-l10-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l10-q1", "type": "multiple-choice", "prompt": "Tường thành: dài 40 m, rộng 6 m. Chu vi?", "choices": ["80 m", "88 m", "92 m", "96 m"], "answer": "92 m", "explanation": "2(40+6)=92." },
-        { "id": "g5-l10-q2", "type": "drag-drop", "question": "Kéo kết quả diện tích", "dragItems": [{ "id": "s240", "content": "240 m2", "correctSlot": "slot-area" }], "dropSlots": [{ "id": "slot-area", "label": "Diện tích 40 x 6" }], "explanation": "40 x 6 = 240 m2." },
-        { "id": "g5-l10-q3", "type": "fill-blank", "question": "92 - 40 = __", "blanks": [{ "position": 0, "answer": "52" }], "explanation": "Bài trừ đơn giản." }
+        { "id": "g5-l10-q1", "type": "multiple-choice", "prompt": "Tường thành: dài 40m, rộng 6m. Chu vi?", "choices": ["90 m", "92 m", "46 m", "80 m"], "answer": "92 m", "explanation": "(40 + 6) x 2 = 92." },
+        { "id": "g5-l10-q2", "type": "drag-drop", "question": "Tính diện tích", "dragItems": [{ "id": "s", "content": "240 m2", "correctSlot": "slot-area" }], "dropSlots": [{ "id": "slot-area", "label": "40m x 6m" }], "explanation": "40 x 6 = 240." },
+        { "id": "g5-l10-q3", "type": "fill-blank", "question": "92 - 40 = __", "blanks": [{ "position": 0, "answer": "52" }], "explanation": "Phép trừ đơn giản." },
+        { "id": "g5-l10-q4", "type": "multiple-choice", "prompt": "Diện tích hình thang: (đáy lớn 10m, đáy bé 6m, cao 4m)?", "choices": ["32 m2", "64 m2", "30 m2", "40 m2"], "answer": "32 m2", "explanation": "S = (10+6) x 4 : 2 = 32." },
+        { "id": "g5-l10-q5", "type": "fill-blank", "question": "Chu vi hình vuông cạnh 15m là __ m", "blanks": [{ "position": 0, "answer": "60" }], "explanation": "15 x 4 = 60." },
+        { "id": "g5-l10-q6", "type": "matching-pairs", "question": "Công thức S", "pairs": [{ "id": "p1", "left": "HCN", "right": "a x b" }, { "id": "p2", "left": "Vuông", "right": "a x a" }, { "id": "p3", "left": "Thang", "right": "(a+b) x h : 2" }], "explanation": "Ghi nhớ công thức." },
+        { "id": "g5-l10-q7", "type": "multiple-choice", "prompt": "Sân gạch hình vuông S = 36 m2. Cạnh là?", "choices": ["4 m", "5 m", "6 m", "9 m"], "answer": "6 m", "explanation": "Vì 6 x 6 = 36." }
       ]
     },
     {
       "id": "g5-l11-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l11-q1", "type": "multiple-choice", "prompt": "Chu vi đường tròn bán kính 7 m (lấy π=3,14)?", "choices": ["30 m", "40 m", "43,96 m", "45 m"], "answer": "43,96 m", "explanation": "C = 2πr = 2*3,14*7=43,96." },
-        { "id": "g5-l11-q2", "type": "matching-pairs", "question": "Ghép yếu tố đường tròn", "pairs": [{ "id": "p1", "left": "Bán kính", "right": "r" }, { "id": "p2", "left": "Đường kính", "right": "2r" }, { "id": "p3", "left": "Chu vi", "right": "2πr" }], "explanation": "Ôn công thức." },
-        { "id": "g5-l11-q3", "type": "fill-blank", "question": "Nếu r=3,14 m, chu vi = 2 x 3,14 x 3,14 ≈ __ m", "blanks": [{ "position": 0, "answer": "19,7" }], "explanation": "Tính gần đúng ~19,7." }
+        { "id": "g5-l11-q1", "type": "multiple-choice", "prompt": "Chu vi hình tròn bán kính 7m (π=3,14)?", "choices": ["43,96 m", "21,98 m", "44 m", "45 m"], "answer": "43,96 m", "explanation": "C = 7 x 2 x 3,14." },
+        { "id": "g5-l11-q2", "type": "matching-pairs", "question": "Ký hiệu", "pairs": [{ "id": "p1", "left": "Bán kính", "right": "r" }, { "id": "p2", "left": "Đường kính", "right": "d" }, { "id": "p3", "left": "d =", "right": "2 x r" }], "explanation": "Kiến thức cơ bản." },
+        { "id": "g5-l11-q3", "type": "fill-blank", "question": "Nếu d=10m thì Chu vi = __ m", "blanks": [{ "position": 0, "answer": "31,4" }], "explanation": "10 x 3,14 = 31,4." },
+        { "id": "g5-l11-q4", "type": "multiple-choice", "prompt": "Diện tích hình tròn r=2m?", "choices": ["6,28 m2", "12,56 m2", "10 m2", "12 m2"], "answer": "12,56 m2", "explanation": "S = 2 x 2 x 3,14 = 12,56." },
+        { "id": "g5-l11-q5", "type": "fill-blank", "question": "Bán kính r=5cm. Đường kính d = __ cm", "blanks": [{ "position": 0, "answer": "10" }], "explanation": "d = 2r." },
+        { "id": "g5-l11-q6", "type": "drag-drop", "question": "Công thức Hình tròn", "dragItems": [{ "id": "c", "content": "d x 3,14", "correctSlot": "sc" }, { "id": "s", "content": "r x r x 3,14", "correctSlot": "ss" }], "dropSlots": [{ "id": "sc", "label": "Chu vi" }, { "id": "ss", "label": "Diện tích" }], "explanation": "Phân biệt C và S." },
+        { "id": "g5-l11-q7", "type": "multiple-choice", "prompt": "Bánh xe đường kính 1m lăn 1 vòng được bao xa?", "choices": ["1 m", "3,14 m", "6,28 m", "1,57 m"], "answer": "3,14 m", "explanation": "Chính là chu vi: 1 x 3,14." }
       ]
     },
     {
       "id": "g5-l12-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l12-q1", "type": "multiple-choice", "prompt": "Thuyền xuôi dòng: v_thuyền 15 km/h, dòng 2 km/h. V thực?", "choices": ["13 km/h", "15 km/h", "17 km/h", "18 km/h"], "answer": "17 km/h", "explanation": "Xuôi: v + v_dòng = 17." },
-        { "id": "g5-l12-q2", "type": "matching-pairs", "question": "Ghép chuyển động", "pairs": [{ "id": "p1", "left": "Xuôi dòng", "right": "v + v_d" }, { "id": "p2", "left": "Ngược dòng", "right": "v - v_d" }, { "id": "p3", "left": "Đứng yên", "right": "0" }], "explanation": "Quy tắc tốc độ." },
-        { "id": "g5-l12-q3", "type": "fill-blank", "question": "Ngược dòng: 15 - 2 = __ km/h", "blanks": [{ "position": 0, "answer": "13" }], "explanation": "Ngược: v - v_d." }
+        { "id": "g5-l12-q1", "type": "multiple-choice", "prompt": "Thuyền xuôi dòng: V_thuyền 15km/h, dòng 2km/h. V_xuôi?", "choices": ["13 km/h", "15 km/h", "17 km/h", "30 km/h"], "answer": "17 km/h", "explanation": "Xuôi = V + Dòng = 17." },
+        { "id": "g5-l12-q2", "type": "matching-pairs", "question": "Công thức nước chảy", "pairs": [{ "id": "p1", "left": "Xuôi dòng", "right": "V + V_nước" }, { "id": "p2", "left": "Ngược dòng", "right": "V - V_nước" }, { "id": "p3", "left": "Nước lặng", "right": "V_thực" }], "explanation": "Quy tắc cộng vận tốc." },
+        { "id": "g5-l12-q3", "type": "fill-blank", "question": "Ngược dòng: 15 - 2 = __ km/h", "blanks": [{ "position": 0, "answer": "13" }], "explanation": "Cản lại 2km/h." },
+        { "id": "g5-l12-q4", "type": "multiple-choice", "prompt": "Vận tốc dòng nước là 0 km/h nghĩa là?", "choices": ["Nước chảy mạnh", "Nước đứng yên", "Thuyền đứng yên", "Bão tố"], "answer": "Nước đứng yên", "explanation": "Vận tốc dòng bằng 0." },
+        { "id": "g5-l12-q5", "type": "fill-blank", "question": "V_xuôi = 20, V_ngược = 16. Vận tốc dòng nước = __ km/h", "blanks": [{ "position": 0, "answer": "2" }], "explanation": "(20 - 16) : 2 = 2." },
+        { "id": "g5-l12-q6", "type": "drag-drop", "question": "So sánh tốc độ", "dragItems": [{ "id": "x", "content": "V_xuôi", "correctSlot": "s1" }, { "id": "n", "content": "V_ngược", "correctSlot": "s2" }], "dropSlots": [{ "id": "s1", "label": "Lớn nhất" }, { "id": "s2", "label": "Nhỏ nhất" }], "explanation": "Xuôi luôn nhanh hơn Ngược." },
+        { "id": "g5-l12-q7", "type": "multiple-choice", "prompt": "Cụm bèo trôi theo dòng nước. Vận tốc bèo bằng?", "choices": ["V_thuyền", "V_dòng nước", "0", "V_xuôi"], "answer": "V_dòng nước", "explanation": "Bèo không tự bơi, trôi theo dòng." }
       ]
     },
     {
       "id": "g5-l13-qs",
       "xpReward": 18,
       "questions": [
-        { "id": "g5-l13-q1", "type": "multiple-choice", "prompt": "Đội A đi 10h, v=12 km/h. Đội B đi 8h, v=15 km/h. Ai đi xa hơn?", "choices": ["A", "B", "Bằng nhau"], "answer": "Bằng nhau", "explanation": "A: 10x12=120 km; B: 8x15=120 km." },
-        { "id": "g5-l13-q2", "type": "fill-blank", "question": "Nếu đội B xuất phát sau 1 giờ, để gặp A cần đi __ km (A đi 12 km trong giờ đầu).", "blanks": [{ "position": 0, "answer": "108" }], "explanation": "Cả hai cần đi thêm 108 km để gặp nhau (120-12)." },
-        { "id": "g5-l13-q3", "type": "matching-pairs", "question": "Ghép đại lượng chuyển động", "pairs": [{ "id": "p1", "left": "s", "right": "Quãng đường" }, { "id": "p2", "left": "v", "right": "Vận tốc" }, { "id": "p3", "left": "t", "right": "Thời gian" }], "explanation": "Nhớ ký hiệu cơ bản." }
+        { "id": "g5-l13-q1", "type": "multiple-choice", "prompt": "A đi 120km, B đi 120km. Thời gian?", "choices": ["A nhanh hơn", "B nhanh hơn", "Chưa biết v", "Bằng nhau"], "answer": "Chưa biết v", "explanation": "Phải biết vận tốc mới so sánh được." },
+        { "id": "g5-l13-q2", "type": "fill-blank", "question": "Hai xe ngược chiều, cách 100km. Tổng vận tốc 50km/h. Gặp nhau sau __ giờ", "blanks": [{ "position": 0, "answer": "2" }], "explanation": "t = 100 : 50 = 2." },
+        { "id": "g5-l13-q3", "type": "matching-pairs", "question": "Đại lượng", "pairs": [{ "id": "p1", "left": "s", "right": "Quãng đường" }, { "id": "p2", "left": "v", "right": "Vận tốc" }, { "id": "p3", "left": "t", "right": "Thời gian" }], "explanation": "Ký hiệu vật lý." },
+        { "id": "g5-l13-q4", "type": "multiple-choice", "prompt": "Xe máy đuổi xe đạp. Xe máy 40km/h, xe đạp 10km/h. Hiệu vận tốc?", "choices": ["30 km/h", "50 km/h", "400 km/h", "4 km/h"], "answer": "30 km/h", "explanation": "Cùng chiều: 40 - 10 = 30." },
+        { "id": "g5-l13-q5", "type": "fill-blank", "question": "Khoảng cách 30km. Hiệu v = 30km/h. Đuổi kịp sau __ giờ", "blanks": [{ "position": 0, "answer": "1" }], "explanation": "t = 30 : 30 = 1." },
+        { "id": "g5-l13-q6", "type": "drag-drop", "question": "Quy tắc gặp nhau", "dragItems": [{ "id": "nguoc", "content": "Cộng vận tốc", "correctSlot": "s1" }, { "id": "cung", "content": "Trừ vận tốc", "correctSlot": "s2" }], "dropSlots": [{ "id": "s1", "label": "Ngược chiều" }, { "id": "s2", "label": "Cùng chiều (đuổi)" }], "explanation": "Ngược chiều đi nhanh gặp hơn." },
+        { "id": "g5-l13-q7", "type": "multiple-choice", "prompt": "Đi từ 7 giờ đến 9 giờ. t = ?", "choices": ["2 giờ", "3 giờ", "1,5 giờ", "16 giờ"], "answer": "2 giờ", "explanation": "9 - 7 = 2." }
       ]
     },
     {
       "id": "g5-l14-qs",
       "xpReward": 20,
       "questions": [
-        { "id": "g5-l14-q1", "type": "multiple-choice", "prompt": "Một đội đi 45 km trong 3 giờ 45 phút. Vận tốc trung bình?", "choices": ["10 km/h", "11 km/h", "12 km/h", "13 km/h"], "answer": "12 km/h", "explanation": "3h45 = 3,75h; 45/3,75=12." },
-        { "id": "g5-l14-q2", "type": "drag-drop", "question": "Kéo công thức thời gian", "dragItems": [{ "id": "t", "content": "t = s : v", "correctSlot": "slot-time" }], "dropSlots": [{ "id": "slot-time", "label": "Thời gian" }], "explanation": "Công thức tính t." },
-        { "id": "g5-l14-q3", "type": "fill-blank", "question": "Nếu v=15 km/h, muốn đi 60 km cần __ giờ", "blanks": [{ "position": 0, "answer": "4" }], "explanation": "t = 60/15 = 4." }
+        { "id": "g5-l14-q1", "type": "multiple-choice", "prompt": "Đi 45 km hết 3h45p (3,75h). Vận tốc?", "choices": ["10 km/h", "11 km/h", "12 km/h", "15 km/h"], "answer": "12 km/h", "explanation": "45 : 3,75 = 12." },
+        { "id": "g5-l14-q2", "type": "drag-drop", "question": "Công thức", "dragItems": [{ "id": "t", "content": "t = s : v", "correctSlot": "slot-time" }], "dropSlots": [{ "id": "slot-time", "label": "Tính thời gian" }], "explanation": "Công thức cơ bản." },
+        { "id": "g5-l14-q3", "type": "fill-blank", "question": "Đi 60km với v=15km/h mất __ giờ", "blanks": [{ "position": 0, "answer": "4" }], "explanation": "60 : 15 = 4." },
+        { "id": "g5-l14-q4", "type": "multiple-choice", "prompt": "2 giờ 30 phút = ? giờ", "choices": ["2,3h", "2,5h", "2,30h", "2,05h"], "answer": "2,5h", "explanation": "30 phút = 0,5 giờ." },
+        { "id": "g5-l14-q5", "type": "fill-blank", "question": "Xe chạy 100km/h. Để đi hết 50km cần __ phút", "blanks": [{ "position": 0, "answer": "30" }], "explanation": "0,5 giờ = 30 phút." },
+        { "id": "g5-l14-q6", "type": "matching-pairs", "question": "Đổi giờ phút", "pairs": [{ "id": "p1", "left": "1h15p", "right": "1,25h" }, { "id": "p2", "left": "1h30p", "right": "1,5h" }, { "id": "p3", "left": "1h45p", "right": "1,75h" }], "explanation": "15p=0,25; 30p=0,5." },
+        { "id": "g5-l14-q7", "type": "multiple-choice", "prompt": "Xuất phát 6h, đến nơi 10h30. Nghỉ 30p. Thời gian đi thực?", "choices": ["4,5h", "4h", "5h", "3,5h"], "answer": "4h", "explanation": "10h30 - 6h = 4h30. Trừ 30p nghỉ = 4h." }
       ]
     },
     {
       "id": "g5-l15-qs",
       "xpReward": 22,
       "questions": [
-        { "id": "g5-l15-q1", "type": "multiple-choice", "prompt": "Tổng 3,5 + 2,75 + 1,25 = ?", "choices": ["7,25", "7,5", "7,75", "8,0"], "answer": "7,5", "explanation": "3,5+2,75=6,25; 6,25+1,25=7,5." },
-        { "id": "g5-l15-q2", "type": "matching-pairs", "question": "Ghép công thức tổng hợp", "pairs": [{ "id": "p1", "left": "v = s/t", "right": "Vận tốc" }, { "id": "p2", "left": "S tam giác", "right": "1/2 a h" }, { "id": "p3", "left": "C đường tròn", "right": "2πr" }], "explanation": "Ôn toàn bộ công thức chính." },
-        { "id": "g5-l15-q3", "type": "fill-blank", "question": "Hoàn thành: 240 m2 + 90 m2 = __ m2", "blanks": [{ "position": 0, "answer": "330" }], "explanation": "Cộng diện tích để tổng kết thành lũy." }
+        { "id": "g5-l15-q1", "type": "multiple-choice", "prompt": "Tổng 3,5 + 2,75 + 1,25 = ?", "choices": ["7,25", "7,5", "8,0", "7,0"], "answer": "7,5", "explanation": "Nhóm (2,75+1,25)=4. 3,5+4=7,5." },
+        { "id": "g5-l15-q2", "type": "matching-pairs", "question": "Ôn tập công thức", "pairs": [{ "id": "p1", "left": "v = s/t", "right": "Chuyển động" }, { "id": "p2", "left": "S = a x a", "right": "Hình vuông" }, { "id": "p3", "left": "C = d x 3,14", "right": "Hình tròn" }], "explanation": "Tổng hợp." },
+        { "id": "g5-l15-q3", "type": "fill-blank", "question": "Diện tích 240 m2 + 90 m2 = __ m2", "blanks": [{ "position": 0, "answer": "330" }], "explanation": "Phép cộng đơn giản." },
+        { "id": "g5-l15-q4", "type": "multiple-choice", "prompt": "Số nào lớn nhất?", "choices": ["3,14", "3,41", "3,4", "3,04"], "answer": "3,41", "explanation": "So sánh phần thập phân." },
+        { "id": "g5-l15-q5", "type": "drag-drop", "question": "Hoàn thiện câu", "dragItems": [{ "id": "thang", "content": "Thành công", "correctSlot": "s1" }], "dropSlots": [{ "id": "s1", "label": "Thất bại là mẹ..." }], "explanation": "Tục ngữ." },
+        { "id": "g5-l15-q6", "type": "fill-blank", "question": "25% của 400 là __", "blanks": [{ "position": 0, "answer": "100" }], "explanation": "400 : 4 = 100." },
+        { "id": "g5-l15-q7", "type": "multiple-choice", "prompt": "Quãng đường s=100km, t=2h. v=?", "choices": ["50 km/h", "200 km/h", "40 km/h", "102 km/h"], "answer": "50 km/h", "explanation": "v = 100:2 = 50." }
       ]
     }
   ]
