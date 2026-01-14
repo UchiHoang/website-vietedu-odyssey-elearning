@@ -23,6 +23,7 @@
   "nodes": [
     {
       "id": "g3-l1",
+      "order": 1,
       "title": "Chiếu Chỉ Vua Hùng",
       "badgeOnComplete": "g3-l1",
       "activityRef": "g3-l1-qs",
@@ -35,6 +36,7 @@
     },
     {
       "id": "g3-l2",
+      "order": 2,
       "title": "Rừng Sâu Tìm Voi",
       "badgeOnComplete": "g3-l2",
       "activityRef": "g3-l2-qs",
@@ -47,6 +49,7 @@
     },
     {
       "id": "g3-l3",
+      "order": 3,
       "title": "Suối Nguồn Tìm Gà",
       "badgeOnComplete": "g3-l3",
       "activityRef": "g3-l3-qs",
@@ -59,6 +62,7 @@
     },
     {
       "id": "g3-l4",
+      "order": 4,
       "title": "Vực Thẳm Tìm Ngựa",
       "badgeOnComplete": "g3-l4",
       "activityRef": "g3-l4-qs",
@@ -71,6 +75,7 @@
     },
     {
       "id": "g3-l5",
+      "order": 5,
       "title": "Sính Lễ Đầu Tiên",
       "badgeOnComplete": "g3-l5",
       "activityRef": "g3-l5-qs",
@@ -83,6 +88,7 @@
     },
     {
       "id": "g3-l6",
+      "order": 6,
       "title": "Thử Thách Vua Hùng",
       "badgeOnComplete": "g3-l6",
       "activityRef": "g3-l6-qs",
@@ -95,6 +101,7 @@
     },
     {
       "id": "g3-l7",
+      "order": 7,
       "title": "Đường Lên Núi Tản",
       "badgeOnComplete": "g3-l7",
       "activityRef": "g3-l7-qs",
@@ -107,6 +114,7 @@
     },
     {
       "id": "g3-l8",
+      "order": 8,
       "title": "Hang Động Bí Ẩn",
       "badgeOnComplete": "g3-l8",
       "activityRef": "g3-l8-qs",
@@ -119,6 +127,7 @@
     },
     {
       "id": "g3-l9",
+      "order": 9,
       "title": "Sính Lễ Thứ Hai",
       "badgeOnComplete": "g3-l9",
       "activityRef": "g3-l9-qs",
@@ -131,6 +140,7 @@
     },
     {
       "id": "g3-l10",
+      "order": 10,
       "title": "Thủy Tinh Dâng Nước",
       "badgeOnComplete": "g3-l10",
       "activityRef": "g3-l10-qs",
@@ -143,6 +153,7 @@
     },
     {
       "id": "g3-l11",
+      "order": 11,
       "title": "Sơn Tinh Nâng Núi",
       "badgeOnComplete": "g3-l11",
       "activityRef": "g3-l11-qs",
@@ -155,6 +166,7 @@
     },
     {
       "id": "g3-l12",
+      "order": 12,
       "title": "Trận Chiến Trên Mây",
       "badgeOnComplete": "g3-l12",
       "activityRef": "g3-l12-qs",
@@ -167,6 +179,7 @@
     },
     {
       "id": "g3-l13",
+      "order": 13,
       "title": "Cứu Giúp Dân Làng",
       "badgeOnComplete": "g3-l13",
       "activityRef": "g3-l13-qs",
@@ -179,6 +192,7 @@
     },
     {
       "id": "g3-l14",
+      "order": 14,
       "title": "Đại Thắng Thủy Tinh",
       "badgeOnComplete": "g3-l14",
       "activityRef": "g3-l14-qs",
@@ -191,6 +205,7 @@
     },
     {
       "id": "g3-l15",
+      "order": 15,
       "title": "Đám Cưới Rước Dâu",
       "badgeOnComplete": "g3-l15",
       "activityRef": "g3-l15-qs",
@@ -207,144 +222,133 @@
       "id": "g3-l1-qs",
       "xpReward": 14,
       "questions": [
-        {
-          "id": "g3-l2-q1",
-          "type": "multiple-choice",
-          "prompt": "Theo chiếu chỉ vua Hùng, Sơn Tinh mang đến 1250 lễ vật. Số 1250 là số có mấy chữ số?",
-          "choices": [
-            "3 chữ số",
-            "4 chữ số",
-            "5 chữ số",
-            "6 chữ số"
-          ],
-          "answer": "4 chữ số",
-          "explanation": "Số 1250 gồm 4 chữ số."
-        },
-        {
-          "id": "g3-l2-q2",
-          "type": "fill-blank",
-          "question": "Quân lính của vua Hùng có 3000 người. Số 3000 đọc là __",
-          "blanks": [
-            {
-              "position": 0,
-              "answer": "ba nghìn"
-            }
-          ],
-          "explanation": "3000 đọc là ba nghìn."
-        },
-        {
-          "id": "g3-l2-q3",
-          "type": "multiple-choice",
-          "prompt": "Chữ số 7 trong số 4725 thuộc hàng nào?",
-          "choices": [
-            "Hàng đơn vị",
-            "Hàng chục",
-            "Hàng trăm",
-            "Hàng nghìn"
-          ],
-          "answer": "Hàng trăm",
-          "explanation": "4725 gồm 4 nghìn, 7 trăm, 2 chục, 5 đơn vị."
-        },
-        {
-          "id": "g3-l2-q4",
-          "type": "matching-pairs",
-          "question": "Ghép số La Mã với số tự nhiên",
-          "pairs": [
-            {
-              "id": "p1",
-              "left": "I",
-              "right": "1"
-            },
-            {
-              "id": "p2",
-              "left": "V",
-              "right": "5"
-            },
-            {
-              "id": "p3",
-              "left": "X",
-              "right": "10"
-            }
-          ],
-          "explanation": "I = 1, V = 5, X = 10."
-        },
-        {
-          "id": "g3-l2-q5",
-          "type": "multiple-choice",
-          "prompt": "Vua Hùng thứ V được viết bằng số La Mã là?",
-          "choices": [
-            "III",
-            "IV",
-            "V",
-            "VI"
-          ],
-          "answer": "V",
-          "explanation": "Số 5 trong La Mã là V."
-        },
-        {
-          "id": "g3-l2-q6",
-          "type": "fill-blank",
-          "question": "Số La Mã X tương ứng với số __",
-          "blanks": [
-            {
-              "position": 0,
-              "answer": "10"
-            }
-          ],
-          "explanation": "X là số 10."
-        },
-        {
-          "id": "g3-l2-q7",
-          "type": "multiple-choice",
-          "prompt": "Theo chiếu chỉ vua Hùng, có 23456 người dân tham gia lễ hội. Số 23456 là số có mấy chữ số?",
-          "choices": [
-            "3 chữ số",
-            "4 chữ số",
-            "5 chữ số",
-            "6 chữ số"
-          ],
-          "answer": "5 chữ số",
-          "explanation": "23456 gồm 5 chữ số."
-        },
-        {
-          "id": "g3-l2-q8",
-          "type": "fill-blank",
-          "question": "Viết số thích hợp: 2 chục nghìn, 3 nghìn, 4 trăm, 5 chục, 6 đơn vị = __",
-          "blanks": [
-            {
-              "position": 0,
-              "answer": "23456"
-            }
-          ],
-          "explanation": "Ghép các hàng ta được số 23456."
-        },
-        {
-          "id": "g3-l2-q9",
-          "type": "multiple-choice",
-          "prompt": "Chữ số 3 trong số 53124 thuộc hàng nào?",
-          "choices": [
-            "Hàng đơn vị",
-            "Hàng chục",
-            "Hàng trăm",
-            "Hàng nghìn",
-            "Hàng chục nghìn"
-          ],
-          "answer": "Hàng nghìn",
-          "explanation": "53124 gồm 5 chục nghìn, 3 nghìn, 1 trăm, 2 chục, 4 đơn vị."
-        },
-        {
-          "id": "g3-l2-q10",
-          "type": "multiple-choice",
-          "prompt": "Theo chiếu chỉ vua Hùng, Sơn Tinh mang đến 4098 lễ vật. Cách đọc đúng của số 4098 là?",
-          "choices": [
-            "Bốn nghìn không trăm chín mươi tám",
-            "Bốn nghìn chín mươi tám",
-            "Bốn nghìn không trăm chín tám",
-            "Bốn nghìn tám chín"
-          ],
-          "answer": "Bốn nghìn không trăm chín mươi tám",
-          "explanation": "Số 4098 gồm 4 nghìn, 0 trăm, 9 chục, 8 đơn vị."
-        }
+          {
+    "id": "g3-l1-q1",
+    "type": "multiple-choice",
+    "prompt": "Nhiệm vụ 1: Theo chiếu chỉ vua Hùng, Sơn Tinh chuẩn bị 1250 lễ vật. Số 1250 là số có mấy chữ số?",
+    "choices": [
+      "3 chữ số",
+      "4 chữ số",
+      "5 chữ số",
+      "6 chữ số"
+    ],
+    "answer": "4 chữ số",
+    "explanation": "Số 1250 gồm 4 chữ số."
+  },
+  {
+    "id": "g3-l1-q2",
+    "type": "fill-blank",
+    "question": "Nhiệm vụ 2: Quân lính vua Hùng có 3000 người. Số 3000 đọc là __",
+    "blanks": [
+      {
+        "position": 0,
+        "answer": "ba nghìn"
+      }
+    ],
+    "explanation": "3000 đọc là ba nghìn."
+  },
+  {
+    "id": "g3-l1-q3",
+    "type": "multiple-choice",
+    "prompt": "Nhiệm vụ 3: Trong số lễ vật 4725, chữ số 7 nằm ở hàng nào?",
+    "choices": [
+      "Hàng đơn vị",
+      "Hàng chục",
+      "Hàng trăm",
+      "Hàng nghìn"
+    ],
+    "answer": "Hàng trăm",
+    "explanation": "4725 gồm 4 nghìn, 7 trăm, 2 chục, 5 đơn vị."
+  },
+  {
+    "id": "g3-l1-q4",
+    "type": "matching-pairs",
+    "question": "Nhiệm vụ 4: Ghép số La Mã khắc trên bia đá với số tự nhiên tương ứng",
+    "pairs": [
+      { "id": "p1", "left": "I", "right": "1" },
+      { "id": "p2", "left": "V", "right": "5" },
+      { "id": "p3", "left": "X", "right": "10" }
+    ],
+    "explanation": "I = 1, V = 5, X = 10."
+  },
+  {
+    "id": "g3-l1-q5",
+    "type": "multiple-choice",
+    "prompt": "Nhiệm vụ 5: Vua Hùng đời thứ V được viết bằng số La Mã nào?",
+    "choices": [
+      "III",
+      "IV",
+      "V",
+      "VI"
+    ],
+    "answer": "V",
+    "explanation": "Số 5 trong hệ La Mã là V."
+  },
+  {
+    "id": "g3-l1-q6",
+    "type": "fill-blank",
+    "question": "Nhiệm vụ 6: Số La Mã X trên chiếu chỉ tương ứng với số __",
+    "blanks": [
+      {
+        "position": 0,
+        "answer": "10"
+      }
+    ],
+    "explanation": "X là số 10."
+  },
+  {
+    "id": "g3-l1-q7",
+    "type": "multiple-choice",
+    "prompt": "Nhiệm vụ 7: Lễ hội của vua Hùng có 23456 người tham gia. Số 23456 là số có mấy chữ số?",
+    "choices": [
+      "3 chữ số",
+      "4 chữ số",
+      "5 chữ số",
+      "6 chữ số"
+    ],
+    "answer": "5 chữ số",
+    "explanation": "23456 gồm 5 chữ số."
+  },
+  {
+    "id": "g3-l1-q8",
+    "type": "fill-blank",
+    "question": "Nhiệm vụ 8: Viết số theo lễ vật Sơn Tinh chuẩn bị: 2 chục nghìn, 3 nghìn, 4 trăm, 5 chục, 6 đơn vị = __",
+    "blanks": [
+      {
+        "position": 0,
+        "answer": "23456"
+      }
+    ],
+    "explanation": "Ghép các hàng ta được số 23456."
+  },
+  {
+    "id": "g3-l1-q9",
+    "type": "multiple-choice",
+    "prompt": "Nhiệm vụ 9: Trong số 53124, chữ số 3 nằm ở hàng nào?",
+    "choices": [
+      "Hàng đơn vị",
+      "Hàng chục",
+      "Hàng trăm",
+      "Hàng nghìn",
+      "Hàng chục nghìn"
+    ],
+    "answer": "Hàng nghìn",
+    "explanation": "53124 gồm 5 chục nghìn, 3 nghìn, 1 trăm, 2 chục, 4 đơn vị."
+  },
+  {
+    "id": "g3-l1-q10",
+    "type": "multiple-choice",
+    "prompt": "Nhiệm vụ cuối: Sơn Tinh mang đến 4098 lễ vật. Cách đọc đúng của số 4098 là?",
+    "choices": [
+      "Bốn nghìn không trăm chín mươi tám",
+      "Bốn nghìn chín mươi tám",
+      "Bốn nghìn không trăm chín tám",
+      "Bốn nghìn tám chín"
+    ],
+    "answer": "Bốn nghìn không trăm chín mươi tám",
+    "explanation": "Số 4098 gồm 4 nghìn, 0 trăm, 9 chục, 8 đơn vị."
+  }
+       
       ]
     },
     {
@@ -352,32 +356,32 @@
       "xpReward": 14,
       "questions": [
         {
-    "id": "g3-l3-q1",
+    "id": "g3-l2-q1",
     "type": "multiple-choice",
-    "prompt": "Sơn Tinh vào rừng sâu tìm voi lúc 7 giờ sáng. Kim giờ chỉ số nào?",
+    "prompt": "Nhiệm vụ 1: Sơn Tinh bắt đầu vào rừng sâu tìm voi lúc 7 giờ sáng. Kim giờ trên đồng hồ đang chỉ số nào?",
     "choices": ["7", "12", "6", "3"],
     "answer": "7",
     "explanation": "7 giờ sáng thì kim giờ chỉ số 7."
   },
   {
-    "id": "g3-l3-q2",
+    "id": "g3-l2-q2",
     "type": "fill-blank",
-    "question": "Thủy Tinh xuất phát lúc 3 giờ chiều. Viết bằng số là __ giờ.",
+    "question": "Nhiệm vụ 2: Thủy Tinh xuất phát muộn hơn, lúc 3 giờ chiều. Viết thời gian đó bằng số là __ giờ.",
     "blanks": [{ "position": 0, "answer": "3" }],
     "explanation": "3 giờ chiều viết là 3 giờ."
   },
   {
-    "id": "g3-l3-q3",
+    "id": "g3-l2-q3",
     "type": "multiple-choice",
-    "prompt": "Đồng hồ chỉ 9 giờ đúng. Kim phút đang chỉ vào số nào?",
+    "prompt": "Nhiệm vụ 3: Đồng hồ trong rừng chỉ 9 giờ đúng. Kim phút lúc này đang chỉ vào số nào?",
     "choices": ["3", "6", "9", "12"],
     "answer": "12",
     "explanation": "Giờ đúng thì kim phút chỉ số 12."
   },
   {
-    "id": "g3-l3-q4",
+    "id": "g3-l2-q4",
     "type": "matching-pairs",
-    "question": "Ghép số La Mã trên đồng hồ với số thường",
+    "question": "Nhiệm vụ 4: Ghép số La Mã trên đồng hồ cổ trong rừng với số thường tương ứng",
     "pairs": [
       { "id": "p1", "left": "III", "right": "3" },
       { "id": "p2", "left": "VI", "right": "6" },
@@ -386,51 +390,52 @@
     "explanation": "Đồng hồ La Mã: III = 3, VI = 6, XII = 12."
   },
   {
-    "id": "g3-l3-q5",
+    "id": "g3-l2-q5",
     "type": "multiple-choice",
-    "prompt": "Trên đồng hồ La Mã, số IX tương ứng với số nào?",
+    "prompt": "Nhiệm vụ 5: Trên đồng hồ La Mã trong đền cổ, số IX tương ứng với số nào?",
     "choices": ["7", "8", "9", "11"],
     "answer": "9",
     "explanation": "IX là số 9 trong hệ La Mã."
   },
   {
-    "id": "g3-l3-q6",
+    "id": "g3-l2-q6",
     "type": "fill-blank",
-    "question": "Sơn Tinh nghỉ trưa lúc đồng hồ La Mã chỉ VI giờ. Đó là __ giờ.",
+    "question": "Nhiệm vụ 6: Sơn Tinh nghỉ trưa khi đồng hồ La Mã chỉ VI giờ. Đó là __ giờ.",
     "blanks": [{ "position": 0, "answer": "6" }],
     "explanation": "VI trong La Mã là số 6."
   },
   {
-    "id": "g3-l3-q7",
+    "id": "g3-l2-q7",
     "type": "multiple-choice",
-    "prompt": "Vua Hùng ban chiếu chỉ vào tháng 3. Tháng 3 là quý mấy trong năm?",
+    "prompt": "Nhiệm vụ 7: Vua Hùng ban chiếu chỉ tìm voi vào tháng 3. Tháng 3 thuộc quý mấy trong năm?",
     "choices": ["Quý I", "Quý II", "Quý III", "Quý IV"],
     "answer": "Quý I",
     "explanation": "Quý I gồm các tháng 1, 2, 3."
   },
   {
-    "id": "g3-l3-q8",
+    "id": "g3-l2-q8",
     "type": "fill-blank",
-    "question": "Tháng có ngày ít nhất trong năm là tháng __.",
+    "question": "Nhiệm vụ 8: Trong hành trình, tháng có số ngày ít nhất trong năm là tháng __.",
     "blanks": [{ "position": 0, "answer": "2" }],
     "explanation": "Tháng 2 có 28 hoặc 29 ngày."
   },
   {
-    "id": "g3-l3-q9",
+    "id": "g3-l2-q9",
     "type": "multiple-choice",
-    "prompt": "Cuộc thi tìm voi trong rừng sâu diễn ra vào tháng 7. Tháng 7 có bao nhiêu ngày?",
+    "prompt": "Nhiệm vụ 9: Cuộc thi tìm voi trong rừng sâu diễn ra vào tháng 7. Tháng 7 có bao nhiêu ngày?",
     "choices": ["28 ngày", "29 ngày", "30 ngày", "31 ngày"],
     "answer": "31 ngày",
     "explanation": "Tháng 7 có 31 ngày."
   },
   {
-    "id": "g3-l3-q10",
+    "id": "g3-l2-q10",
     "type": "multiple-choice",
-    "prompt": "Một năm có bao nhiêu tháng?",
+    "prompt": "Nhiệm vụ cuối: Để hoàn thành hành trình, em cần biết một năm có bao nhiêu tháng?",
     "choices": ["10 tháng", "11 tháng", "12 tháng", "13 tháng"],
     "answer": "12 tháng",
     "explanation": "Một năm có 12 tháng."
   }
+
           
       ]
     },
@@ -438,54 +443,85 @@
       "id": "g3-l3-qs",
       "xpReward": 14,
       "questions": [
-        {
-          "id": "g3-l3-q1",
-          "type": "multiple-choice",
-          "prompt": "24 con gà chia đều 6 nhà, mỗi nhà?",
-          "choices": [
-            "3",
-            "4",
-            "5",
-            "6"
-          ],
-          "answer": "4",
-          "explanation": "24 : 6 = 4."
-        },
-        {
-          "id": "g3-l3-q2",
-          "type": "matching-pairs",
-          "question": "Ghép phép chia",
-          "pairs": [
-            {
-              "id": "p1",
-              "left": "54 : 9",
-              "right": "6"
-            },
-            {
-              "id": "p2",
-              "left": "63 : 7",
-              "right": "9"
-            },
-            {
-              "id": "p3",
-              "left": "48 : 6",
-              "right": "8"
-            }
-          ],
-          "explanation": "Chia bảng 6-9."
-        },
-        {
-          "id": "g3-l3-q3",
-          "type": "fill-blank",
-          "question": "__ : 8 = 7",
-          "blanks": [
-            {
-              "position": 0,
-              "answer": "56"
-            }
-          ],
-          "explanation": "56 chia 8 bằng 7."
-        }
+    {
+    "id": "g3-l3-q1",
+    "type": "multiple-choice",
+    "prompt": "Sơn Tinh đi dọc suối nguồn tìm gà, quãng đường dài 3 km. Đổi ra mét là?",
+    "choices": ["300 m", "3000 m", "30 m", "30000 m"],
+    "answer": "3000 m",
+    "explanation": "1 km = 1000 m nên 3 km = 3000 m."
+  },
+  {
+    "id": "g3-l3-q2",
+    "type": "matching-pairs",
+    "question": "Ghép đơn vị đo độ dài đúng",
+    "pairs": [
+      { "id": "p1", "left": "1 km", "right": "1000 m" },
+      { "id": "p2", "left": "1 m", "right": "100 cm" },
+      { "id": "p3", "left": "1 dm", "right": "10 cm" }
+    ],
+    "explanation": "Bảng đơn vị đo độ dài."
+  },
+  {
+    "id": "g3-l3-q3",
+    "type": "fill-blank",
+    "question": "Con đường Sơn Tinh đi dài 500 cm. Đổi ra mét là __ m",
+    "blanks": [{ "position": 0, "answer": "5" }],
+    "explanation": "500 cm = 5 m."
+  },
+  {
+    "id": "g3-l3-q4",
+    "type": "multiple-choice",
+    "prompt": "Một con gà rừng nặng 800 g. 1000 g bằng?",
+    "choices": ["1 kg", "10 kg", "100 g", "800 g"],
+    "answer": "1 kg",
+    "explanation": "1000 gam = 1 kilôgam."
+  },
+  {
+    "id": "g3-l3-q5",
+    "type": "fill-blank",
+    "question": "Sơn Tinh bắt được con gà nặng 2 kg. Đổi ra gam là __ g",
+    "blanks": [{ "position": 0, "answer": "2000" }],
+    "explanation": "1 kg = 1000 g nên 2 kg = 2000 g."
+  },
+  {
+    "id": "g3-l3-q6",
+    "type": "multiple-choice",
+    "prompt": "Hai đoạn suối dài lần lượt 120 m và 80 m. Tổng độ dài là?",
+    "choices": ["180 m", "200 m", "220 m", "300 m"],
+    "answer": "200 m",
+    "explanation": "120 + 80 = 200 m."
+  },
+  {
+    "id": "g3-l3-q7",
+    "type": "fill-blank",
+    "question": "Thủy Tinh đi 150 m buổi sáng và 250 m buổi chiều. Tổng quãng đường là __ m",
+    "blanks": [{ "position": 0, "answer": "400" }],
+    "explanation": "150 + 250 = 400 m."
+  },
+  {
+    "id": "g3-l3-q8",
+    "type": "multiple-choice",
+    "prompt": "Một mảnh đất bên suối có dạng hình vuông cạnh 4 cm. Diện tích là?",
+    "choices": ["8 cm²", "12 cm²", "16 cm²", "20 cm²"],
+    "answer": "16 cm²",
+    "explanation": "Diện tích hình vuông = cạnh × cạnh = 4 × 4 = 16 cm²."
+  },
+  {
+    "id": "g3-l3-q9",
+    "type": "multiple-choice",
+    "prompt": "Đơn vị đo diện tích thường dùng là?",
+    "choices": ["cm", "m", "cm²", "kg"],
+    "answer": "cm²",
+    "explanation": "Diện tích được đo bằng đơn vị vuông."
+  },
+  {
+    "id": "g3-l3-q10",
+    "type": "fill-blank",
+    "question": "Hình chữ nhật có chiều dài 5 cm, chiều rộng 3 cm. Diện tích là __ cm²",
+    "blanks": [{ "position": 0, "answer": "15" }],
+    "explanation": "Diện tích = dài × rộng = 5 × 3 = 15 cm²."
+  }
       ]
     },
     {
