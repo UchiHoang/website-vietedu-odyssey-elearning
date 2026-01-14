@@ -126,6 +126,43 @@ All colors MUST be HSL.
   .card-shadow {
     @apply shadow-md hover:shadow-xl transition-shadow duration-300;
   }
+
+  /* === Extra homepage motion helpers === */
+  .shimmer-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.35) 40%,
+      rgba(255, 255, 255, 0.15) 60%,
+      transparent 100%
+    );
+    animation: shimmer-slide 2.4s infinite;
+  }
+
+  @keyframes shimmer-slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(220%);
+    }
+  }
+
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/60 shadow-lg;
+  }
+
   /* Floating animation used by leaderboard (gentle vertical float) */
   @keyframes float-y {
     0% { transform: translateY(0); }

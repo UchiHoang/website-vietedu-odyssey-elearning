@@ -4,6 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import { motion } from "framer-motion";
+import { staggerContainer, fadeInUp, zoomIn } from "./animations";
+import { Mail, MessageCircle } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Vui lòng nhập họ tên" }).max(100, { message: "Họ tên không được quá 100 ký tự" }),
@@ -82,19 +85,38 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary/10">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12 space-y-4">
+    <section id="contact" className="py-16 md:py-20 bg-gradient-to-b from-background to-secondary/10 relative overflow-hidden">
+      {/* Subtle contact icons */}
+      <div className="absolute inset-0 pointer-events-none opacity-10">
+        <Mail className="absolute top-16 left-8 h-10 w-10 text-accent/80" />
+        <MessageCircle className="absolute bottom-10 right-10 h-10 w-10 text-primary/80" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          className="max-w-3xl mx-auto"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.35 }}
+        >
+          <motion.div
+            className="text-center mb-12 space-y-4"
+            variants={fadeInUp}
+          >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold">
               Liên hệ với chúng mình
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Có câu hỏi hoặc cần hỗ trợ? Chúng mình luôn sẵn sàng giúp đỡ bạn!
             </p>
-          </div>
+          </motion.div>
 
-          <form onSubmit={handleSubmit} className="bg-card border-4 border-accent rounded-2xl p-6 md:p-8 shadow-lg">
+          <motion.form
+            onSubmit={handleSubmit}
+            className="bg-card border-4 border-accent rounded-2xl p-6 md:p-8 shadow-lg glass-panel"
+            variants={zoomIn}
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="name" className="block font-semibold mb-2">
@@ -180,8 +202,8 @@ const ContactForm = () => {
             >
               {isSubmitting ? "Đang gửi..." : "Gửi tin nhắn"}
             </Button>
-          </form>
-        </div>
+          </motion.form>
+        </motion.div>
       </div>
     </section>
   );

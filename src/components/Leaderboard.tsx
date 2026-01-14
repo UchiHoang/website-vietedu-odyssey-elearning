@@ -77,6 +77,12 @@ const Leaderboard = () => {
       <div className="absolute top-20 right-20 w-40 h-20 bg-white/50 rounded-full blur-sm animate-float" style={{ animationDelay: "1s" }} />
       <div className="absolute bottom-32 left-1/4 w-36 h-18 bg-white/40 rounded-full blur-sm animate-float" style={{ animationDelay: "2s" }} />
 
+      {/* Subtle trophy background icons */}
+      <div className="absolute inset-0 pointer-events-none opacity-15">
+        <Trophy className="absolute top-24 left-1/3 h-10 w-10 text-yellow-200" />
+        <Medal className="absolute bottom-24 right-1/3 h-9 w-9 text-orange-200" />
+      </div>
+
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
