@@ -40,45 +40,31 @@ const FillInTheBlankGameComponent = ({ question, onComplete }: FillInTheBlankGam
     }, 2500);
   };
 
-  // Parse text and find blank positions by looking for ___ markers
+  // Parse text và chèn ô trống. Hỗ trợ 2 kiểu dữ liệu:
+  // 1) Có marker "___" trong câu hỏi (lớp 2 đang dùng)
+  // 2) Không có marker, dùng vị trí `position` trong mảng blanks (các lớp khác)
   const renderTextWithBlanks = useMemo(() => {
     const text = question.text;
     const parts: React.ReactNode[] = [];
-    let currentIndex = 0;
-    let blankIndex = 0;
 
-    // Find all ___ markers in the text
-    const regex = /___/g;
-    let match;
-
-    while ((match = regex.exec(text)) !== null) {
-      // Add text before the blank
-      if (match.index > currentIndex) {
-        parts.push(
-          <span key={`text-${currentIndex}`}>
-            {text.slice(currentIndex, match.index)}
-          </span>
-        );
-      }
-
-      // Get the blank config for this index (or use defaults)
-      const blankConfig = question.blanks[blankIndex] || { answer: "", placeholder: "?" };
+    const renderBlank = (blankIndex: number, blankConfig: { position?: number; answer: string; placeholder?: string }) => {
       const currentBlankIndex = blankIndex;
-
-      const isBlankCorrect = showFeedback && 
+      const isBlankCorrect =
+        showFeedback &&
         answers[currentBlankIndex]?.trim().toLowerCase() === blankConfig.answer.trim().toLowerCase();
       const isBlankIncorrect = showFeedback && !isBlankCorrect;
 
-      // Add input for the blank
-      parts.push(
+      return (
         <span key={`blank-${blankIndex}`} className="inline-flex items-center mx-1 align-middle">
           <Input
             type="text"
             value={answers[currentBlankIndex] || ""}
-            onChange={(e) => setAnswers(prev => ({
-              ...prev,
-              [currentBlankIndex]: e.target.value
-            }))}
+            onChange={(e) =>
+              setAnswers((prev) => ({
+                ...prev,
+                [currentBlankIndex]: e.target.value,
+              }))
+            }
             disabled={showFeedback}
             placeholder={blankConfig.placeholder || "?"}
             className={`
@@ -99,18 +85,53 @@ const FillInTheBlankGameComponent = ({ question, onComplete }: FillInTheBlankGam
           )}
         </span>
       );
+    };
 
-      currentIndex = match.index + BLANK_MARKER.length;
-      blankIndex++;
-    }
+    // Chấp nhận chuỗi gạch dưới dài >=2 (__, ___) làm marker
+    const markerRegex = /_{2,}/g;
+    const hasMarkers = markerRegex.test(text);
 
-    // Add remaining text after last blank
-    if (currentIndex < text.length) {
-      parts.push(
-        <span key="text-end">
-          {text.slice(currentIndex)}
-        </span>
-      );
+    if (hasMarkers) {
+      // Cách dùng marker: tìm mọi cụm __ hoặc ___
+      markerRegex.lastIndex = 0; // reset
+      let currentIndex = 0;
+      let blankIndex = 0;
+      let match: RegExpExecArray | null;
+
+      while ((match = markerRegex.exec(text)) !== null) {
+        if (match.index > currentIndex) {
+          parts.push(
+            <span key={`text-${currentIndex}`}>{text.slice(currentIndex, match.index)}</span>
+          );
+        }
+
+        const blankConfig = question.blanks[blankIndex] || { answer: "", placeholder: "?" };
+        parts.push(renderBlank(blankIndex, blankConfig));
+
+        currentIndex = match.index + BLANK_MARKER.length;
+        blankIndex++;
+      }
+
+      if (currentIndex < text.length) {
+        parts.push(<span key="text-end">{text.slice(currentIndex)}</span>);
+      }
+    } else {
+      // Không có marker: dùng vị trí position đã cho
+      const sortedBlanks = [...question.blanks].map((b, idx) => ({ ...b, idx })).sort((a, b) => a.position - b.position);
+      let currentIndex = 0;
+
+      sortedBlanks.forEach((blank, order) => {
+        const pos = Math.max(0, Math.min(blank.position, text.length));
+        if (pos > currentIndex) {
+          parts.push(<span key={`text-${currentIndex}`}>{text.slice(currentIndex, pos)}</span>);
+        }
+        parts.push(renderBlank(blank.idx, blank));
+        currentIndex = pos;
+      });
+
+      if (currentIndex < text.length) {
+        parts.push(<span key="text-end">{text.slice(currentIndex)}</span>);
+      }
     }
 
     return parts;
