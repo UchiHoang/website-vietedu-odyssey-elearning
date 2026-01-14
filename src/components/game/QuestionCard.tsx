@@ -49,51 +49,72 @@ const QuestionCardComponent = ({
 
   const isCorrect = selectedAnswer === question.correctAnswer;
 
+  // Question progress indicator for special game types
+  const QuestionProgress = () => (
+    <div className="text-center mb-4">
+      <span className="text-sm font-medium text-muted-foreground">
+        Câu hỏi {questionNumber} / {totalQuestions}
+      </span>
+    </div>
+  );
+
   // Render different game types
   if (question.type === "matching-pairs" && question.pairs) {
     return (
-      <MatchingPairsGame
-        pairs={question.pairs}
-        title={question.question}
-        onComplete={onAnswer}
-      />
+      <div className="w-full max-w-3xl mx-auto">
+        <QuestionProgress />
+        <MatchingPairsGame
+          pairs={question.pairs}
+          title={question.question}
+          onComplete={onAnswer}
+        />
+      </div>
     );
   }
 
   if (question.type === "drag-drop" && question.dragItems && question.dropSlots) {
     return (
-      <DragDropGame
-        items={question.dragItems}
-        slots={question.dropSlots}
-        title={question.question}
-        onComplete={onAnswer}
-      />
+      <div className="w-full max-w-3xl mx-auto">
+        <QuestionProgress />
+        <DragDropGame
+          items={question.dragItems}
+          slots={question.dropSlots}
+          title={question.question}
+          onComplete={onAnswer}
+        />
+      </div>
     );
   }
 
   if (question.type === "fill-blank" && question.blanks) {
     return (
-      <FillInTheBlankGame
-        question={{
-          id: question.id,
-          text: question.question,
-          blanks: question.blanks,
-          explanation: question.explanation
-        }}
-        onComplete={onAnswer}
-      />
+      <div className="w-full max-w-3xl mx-auto">
+        <QuestionProgress />
+        <FillInTheBlankGame
+          question={{
+            id: question.id,
+            text: question.question,
+            blanks: question.blanks,
+            explanation: question.explanation
+          }}
+          onComplete={onAnswer}
+        />
+      </div>
     );
   }
 
   if (question.type === "counting" && question.countingItems && question.countingAnswer !== undefined) {
     return (
-      <CountingGame
-        items={question.countingItems}
-        correctAnswer={question.countingAnswer}
-        question={question.question}
-        explanation={question.explanation}
-        onComplete={onAnswer}
-      />
+      <div className="w-full max-w-3xl mx-auto">
+        <QuestionProgress />
+        <CountingGame
+          items={question.countingItems}
+          correctAnswer={question.countingAnswer}
+          question={question.question}
+          explanation={question.explanation}
+          onComplete={onAnswer}
+        />
+      </div>
     );
   }
 

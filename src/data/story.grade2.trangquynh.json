@@ -4,497 +4,492 @@
     "title": "Trạng Quỳnh đi thi",
     "layout": "left-to-right",
     "locale": "vi",
-    "description": "Cậu bé Trạng Quỳnh chuẩn bị đi thi Toán rồi đó! Hãy giúp Quỳnh vượt qua từng màn thử thách và trở thành \"Trạng nhí thông minh\" nhé!"
+    "description": "Cậu bé Trạng Quỳnh chuẩn bị lên kinh đô dự thi Toán! Hãy giúp Quỳnh vượt qua 15 màn thử thách và trở thành \"Trạng Nguyên\" nhé!"
   },
-  "legalNote": "Create original character artwork only. Use only user-provided images in /public/assets/user/. Do NOT copy or reproduce any copyrighted art from existing works (for example, do NOT replicate artwork from 'Thần đồng đất Việt').",
+  "legalNote": "Create original character artwork only. Use only user-provided images in /public/assets/user/.",
   "prologue": [
     {
       "id": "p1",
-      "bg": "assets/user/bg_festival.png",
+      "bg": "assets/user/bg_village.png",
       "sprite": "assets/user/trang_idle.png",
       "speaker": "Người kể chuyện",
       "text": "Ngày xưa, ở một ngôi làng nhỏ bên bờ sông Hồng, có một cậu bé tên là Trạng Quỳnh. Cậu nổi tiếng thông minh, lanh lợi và rất giỏi toán."
     },
     {
       "id": "p2",
-      "bg": "assets/user/bg_festival.png",
+      "bg": "assets/user/bg_village.png",
       "sprite": "assets/user/trang_cheer.png",
       "speaker": "Người kể chuyện",
-      "text": "Một ngày nọ, tin đồn lan rộng về một cuộc thi toán lớn ở làng bên. Người chiến thắng sẽ nhận được phần thưởng vô cùng giá trị và danh hiệu 'Thần đồng toán học'."
+      "text": "Một ngày nọ, tin tức lan truyền về kỳ thi Toán tại Kinh Đô. Người chiến thắng sẽ nhận danh hiệu cao quý: Trạng Nguyên!"
     },
     {
       "id": "p3",
-      "bg": "assets/user/bg_market.png",
+      "bg": "assets/user/bg_village.png",
       "sprite": "assets/user/trang_idle.png",
       "speaker": "Trạng Quỳnh",
-      "text": "Ta phải tham gia cuộc thi này! Đây là cơ hội để ta chứng minh trí tuệ và giúp đỡ bà con trong làng."
+      "text": "Ta phải tham gia kỳ thi này! Đây là cơ hội để chứng minh trí tuệ và mang vinh quang về cho làng."
     },
     {
       "id": "p4",
-      "bg": "assets/user/bg_market.png",
+      "bg": "assets/user/bg_village.png",
       "sprite": "assets/user/trang_portrait.png",
       "speaker": "Người kể chuyện",
-      "text": "Và thế là, Trạng Quỳnh bắt đầu hành trình đến làng bên. Trên đường đi, cậu sẽ gặp nhiều thử thách toán học thú vị."
-    },
-    {
-      "id": "p5",
-      "bg": "assets/user/bg_market.png",
-      "sprite": "assets/user/trang_cheer.png",
-      "speaker": "Người kể chuyện",
-      "text": "Hãy cùng Trạng Quỳnh vượt qua các thử thách về phép cộng, phép trừ, đo lường, thời gian và tiền tệ. Mỗi thử thách vượt qua sẽ đưa cậu đến gần hơn với giấc mơ của mình!"
+      "text": "Và thế là, hành trình của Trạng Quỳnh bắt đầu - từ làng quê nhỏ bé đến tận điện Rồng nơi kinh thành."
     }
   ],
   "nodes": [
     {
       "id": "n1",
       "order": 1,
-      "title": "Khởi đầu: Làng Thi Nhỏ",
-      "mathTopic": "Addition within 100",
-      "objective": "Cộng trong phạm vi 100 (cộng có nhớ nhẹ)",
+      "title": "Làng Thi Nhỏ",
+      "mathTopic": "Cộng trong phạm vi 100 (cộng có nhớ)",
+      "objective": "Thực hiện phép cộng có nhớ trong phạm vi 100",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Tin đồn có cuộc thi toán ở làng bên lan rộng. Trạng Quỳnh quyết định đi thi để giúp bà con."
+          "speaker": "Người kể chuyện",
+          "text": "Trạng Quỳnh nhận tin có cuộc thi Toán ở kinh đô. Cậu bắt đầu chuẩn bị hành trang."
+        },
+        {
+          "speaker": "Mẹ",
+          "text": "Con ơi, mẹ chuẩn bị táo và cam cho con mang đi. Con tính giúp mẹ số lương thực nhé!"
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "Ôi, thi toán sao? Ta thích thử xem trí quốc sĩ có sáng không!"
-        },
-        {
-          "speaker": "Bà bán hàng",
-          "text": "Con ơi, mua 7 trái táo nữa, hàng sắp hết rồi, con nhớ tính kĩ nhé."
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Tin đồn có cuộc thi toán ở làng bên lan rộng."
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "Ôi, thi toán sao? Ta thích thử xem trí quốc sĩ có sáng không!"
-        },
-        {
-          "speaker": "Bà bán hàng",
-          "text": "Con ơi, mua 7 trái táo nữa, hàng sắp hết rồi, con nhớ tính kĩ nhé."
+          "text": "Vâng ạ! Con sẽ tính toán cẩn thận để không thiếu đồ ăn trên đường đi."
         }
       ],
       "assets": {
         "bg": "assets/user/bg_market.png",
         "sprite_main_idle": "assets/user/trang_idle.png",
         "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_apple.png",
-        "alt": {
-          "bg": "Chợ làng",
-          "sprite_main_idle": "Trạng Quỳnh đứng cười",
-          "icon": "Hình táo"
-        }
+        "icon": "assets/user/icon_apple.png"
       },
       "activityRef": "grade2.c1.l1.a1",
       "xpOnCorrect": 10,
-      "badgeOnComplete": "quick-math",
-      "hint": "Hiển thị trực quan số táo để trẻ đếm"
+      "badgeOnComplete": "addition-master"
     },
     {
       "id": "n2",
       "order": 2,
-      "title": "Thử thách trên cầu",
-      "mathTopic": "Subtraction within 100 (borrow)",
-      "objective": "Trừ trong phạm vi 100 (mượn đơn giản)",
+      "title": "Thử Thách Trên Cầu",
+      "mathTopic": "Trừ có nhớ trong phạm vi 100",
+      "objective": "Thực hiện phép trừ có nhớ trong phạm vi 100",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Trạng Quỳnh tới cầu, người thu vé hỏi một câu toán để cho qua."
+          "speaker": "Người kể chuyện",
+          "text": "Muốn ra khỏi làng, Quỳnh phải qua cây cầu tre yếu. Người gác cầu cần sự giúp đỡ."
         },
         {
-          "speaker": "Người thu vé",
-          "text": "Giải trước ta: 42 - 19 = ?"
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "Để ta mượn một chút trí óc…"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Trạng Quỳnh tới cầu, người thu vé hỏi một câu toán để cho qua."
-        },
-        {
-          "speaker": "Người thu vé",
-          "text": "Giải trước ta: 42 trừ 19 bằng bao nhiêu?"
+          "speaker": "Người gác cầu",
+          "text": "Cậu bé ơi, cầu này chỉ chịu được số người nhất định. Giúp ta tính toán số người đã qua với!"
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "Để ta mượn một chút trí óc…"
+          "text": "Để cháu tính! Phép trừ có nhớ là sở trường của cháu mà."
         }
       ],
       "assets": {
         "bg": "assets/user/bg_bridge.png",
-        "sprite_main_think": "assets/user/trang_think.png",
-        "sprite_guard": "assets/user/guard.png",
-        "icon": "assets/user/icon_ticket.png",
-        "alt": {
-          "bg": "Cầu nhỏ qua sông",
-          "sprite_main_think": "Trạng Quỳnh suy nghĩ",
-          "icon": "Vé thi"
-        }
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_bridge.png"
       },
       "activityRef": "grade2.c1.l2.a1",
       "xpOnCorrect": 10,
-      "badgeOnComplete": null,
-      "hint": "Hiển thị quy trình mượn khi trừ (tách hàng chục/hàng đơn vị)"
+      "badgeOnComplete": "subtraction-master"
     },
     {
       "id": "n3",
       "order": 3,
-      "title": "Bài thi vườn cau",
-      "mathTopic": "Mixed addition & subtraction (word problem)",
-      "objective": "Giải bài toán lời văn đơn giản",
+      "title": "Giúp Bà Hàng Xóm",
+      "mathTopic": "Bài toán lời văn (Cộng/Trừ)",
+      "objective": "Giải bài toán có lời văn về cộng và trừ",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Chủ vườn cau cần tính toán số cau còn lại sau khi bán và tặng."
+          "speaker": "Người kể chuyện",
+          "text": "Trước khi đi, Quỳnh ghé sang chào bà hàng xóm. Bà đang bận rộn với vườn cau."
         },
         {
-          "speaker": "Chủ vườn",
-          "text": "Chúng tôi có 50 buồng cau, bán 17 buồng, rồi cho 6 buồng — còn lại bao nhiêu?"
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "Ta chia nhỏ rồi tính — nhanh thôi!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Chủ vườn cau cần tính toán số cau còn lại."
-        },
-        {
-          "speaker": "Chủ vườn",
-          "text": "Chúng tôi có 50 buồng cau, bán 17 buồng, rồi cho 6 buồng — còn lại bao nhiêu?"
+          "speaker": "Bà hàng xóm",
+          "text": "Quỳnh ơi, bà già rồi tính toán kém. Con tính giúp bà số buồng cau bán và còn lại nhé!"
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "Ta chia nhỏ rồi tính — nhanh thôi!"
+          "text": "Bà yên tâm! Cháu sẽ giúp bà tính cẩn thận trước khi lên đường."
         }
       ],
       "assets": {
         "bg": "assets/user/bg_areca_garden.png",
-        "sprite_owner": "assets/user/farmer.png",
         "sprite_main_idle": "assets/user/trang_idle.png",
-        "icon": "assets/user/icon_bunch.png",
-        "alt": {
-          "bg": "Vườn cau",
-          "sprite_owner": "Chủ vườn cau",
-          "icon": "Bó cau"
-        }
+        "icon": "assets/user/icon_bunch.png"
       },
       "activityRef": "grade2.c1.l3.a1",
       "xpOnCorrect": 10,
-      "badgeOnComplete": null,
-      "hint": "Cho trẻ kéo-thả hoặc biểu diễn bằng số để minh họa hành động bán và cho"
+      "badgeOnComplete": null
     },
     {
       "id": "n4",
       "order": 4,
-      "title": "Thời gian lên lớp",
-      "mathTopic": "Time - hour and half-hour",
-      "objective": "Nhận biết giờ chẵn và giờ rưỡi (đọc đồng hồ)",
+      "title": "Giờ Học Cuối Cùng",
+      "mathTopic": "Xem đồng hồ (giờ đúng, giờ rưỡi)",
+      "objective": "Đọc giờ trên đồng hồ, phân biệt giờ đúng và giờ rưỡi",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Trạng Quỳnh giúp cô giáo điểm danh. Đồng hồ trường reo chuông."
+          "speaker": "Người kể chuyện",
+          "text": "Quỳnh ghé qua trường làng để bái biệt thầy đồ trước khi khởi hành."
         },
         {
-          "speaker": "Cô giáo",
-          "text": "Trạng Quỳnh, đồng hồ kia chỉ mấy giờ?"
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "Ba giờ rưỡi — cô ơi, mau vào lớp thôi!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Trạng Quỳnh giúp cô giáo điểm danh."
-        },
-        {
-          "speaker": "Cô giáo",
-          "text": "Trạng Quỳnh, đồng hồ kia chỉ mấy giờ?"
+          "speaker": "Thầy đồ",
+          "text": "Quỳnh à, ta sẽ thử thách con lần cuối. Con hãy đọc đồng hồ để tìm giờ hoàng đạo xuất hành!"
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "Ba giờ rưỡi — cô ơi, mau vào lớp thôi!"
+          "text": "Dạ thưa thầy! Con sẽ đọc thật chuẩn để khởi hành đúng giờ tốt."
         }
       ],
       "assets": {
         "bg": "assets/user/bg_classroom.png",
-        "sprite_teacher": "assets/user/teacher.png",
-        "sprite_clock": "assets/user/clock_face.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_clock.png",
-        "alt": {
-          "bg": "Lớp học",
-          "sprite_clock": "Đồng hồ trường",
-          "icon": "Hình đồng hồ"
-        }
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_clock.png"
       },
       "activityRef": "grade2.c2.l1.a1",
       "xpOnCorrect": 10,
-      "badgeOnComplete": null,
-      "hint": "Dùng đồng hồ SVG cho phép click kim phút/giờ"
+      "badgeOnComplete": "time-master"
     },
     {
       "id": "n5",
       "order": 5,
-      "title": "Đo đạc ở ao sen",
-      "mathTopic": "Length comparison (cm / m)",
-      "objective": "So sánh độ dài, khái niệm cm và m",
+      "title": "Lịch Trình May Mắn",
+      "mathTopic": "Xem lịch (Thứ, ngày, tháng)",
+      "objective": "Đọc và sử dụng lịch để xác định ngày, thứ, tháng",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Trạng Quỳnh giúp người chài đo dây câu cá tại ao sen."
-        },
-        {
-          "speaker": "Người chài",
-          "text": "Dây A dài 120 cm, dây B dài 1 m 30 cm — dây nào dài hơn?"
+          "speaker": "Người kể chuyện",
+          "text": "Quỳnh mở tờ lịch đỏ để tính toán ngày khởi hành và ngày đến kinh đô."
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "1 m 30 cm = 130 cm → B dài hơn A!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Trạng Quỳnh giúp người chài đo dây câu cá."
+          "text": "Mình phải tính kỹ để không bị trễ ngày thi. Xem nào, hôm nay là thứ mấy nhỉ?"
         },
         {
-          "speaker": "Người chài",
-          "text": "Dây A dài 120 cm, dây B dài 1 mét 30 cm — dây nào dài hơn?"
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "1 mét 30 cm bằng 130 cm nên B dài hơn A!"
+          "speaker": "Mẹ",
+          "text": "Con tính cẩn thận nhé! Đường xa lắm đó, phải dự trù đủ ngày."
         }
       ],
       "assets": {
-        "bg": "assets/user/bg_pond.png",
-        "sprite_fisher": "assets/user/fisher.png",
-        "sprite_ruler": "assets/user/ruler.png",
-        "icon": "assets/user/icon_ruler.png",
-        "alt": {
-          "bg": "Ao sen",
-          "sprite_ruler": "Thước đo",
-          "icon": "Hình thước"
-        }
+        "bg": "assets/user/bg_home.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_calendar.png"
       },
       "activityRef": "grade2.c2.l2.a1",
       "xpOnCorrect": 10,
-      "badgeOnComplete": null,
-      "hint": "Hiển thị chuyển đổi cm ↔ m trực quan"
+      "badgeOnComplete": null
     },
     {
       "id": "n6",
       "order": 6,
-      "title": "Cân gạo cho mẹ",
-      "mathTopic": "Mass (kg / g)",
-      "objective": "Nhận biết đơn vị kg và g, so sánh khối lượng",
+      "title": "Thước Đo Ao Sen",
+      "mathTopic": "Độ dài (cm, dm, m)",
+      "objective": "Đo và quy đổi đơn vị độ dài cm, dm, m",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Mẹ nhờ Trạng Quỳnh cân gạo chuẩn bị nấu cơm cho buổi lễ."
+          "speaker": "Người kể chuyện",
+          "text": "Bên bờ ao sen, Quỳnh gặp ngư dân đang lúng túng với cây thước cũ."
         },
         {
-          "speaker": "Mẹ",
-          "text": "Cân giúp mẹ 2 kg gạo nhé."
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "Ta biết 1 kg = 1000 g, vậy 2 kg = 2000 g."
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Mẹ nhờ Trạng Quỳnh cân gạo."
-        },
-        {
-          "speaker": "Mẹ",
-          "text": "Cân giúp mẹ 2 kg gạo nhé."
+          "speaker": "Ngư dân",
+          "text": "Cậu bé ơi, thước của ta chỉ còn vạch 'tấc'. Giúp ta đo chiều cao búp sen và quy đổi ra cm được không?"
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "1 kg bằng 1000 gram, vậy 2 kg bằng 2000 gram."
+          "text": "Dễ thôi bác ơi! 1 dm = 10 cm mà. Cháu sẽ giúp bác đo và tính."
         }
       ],
       "assets": {
-        "bg": "assets/user/bg_kitchen.png",
-        "sprite_mother": "assets/user/mother.png",
-        "sprite_scale": "assets/user/scale.png",
-        "icon": "assets/user/icon_sack.png",
-        "alt": {
-          "bg": "Bếp nhà",
-          "sprite_scale": "Cái cân gạo",
-          "icon": "Túi gạo"
-        }
+        "bg": "assets/user/bg_pond.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_ruler.png"
       },
       "activityRef": "grade2.c2.l3.a1",
       "xpOnCorrect": 10,
-      "badgeOnComplete": "logical-thinker",
-      "hint": "Minh họa kg ↔ g bằng quả cân đồ chơi"
+      "badgeOnComplete": "measurement-master"
     },
     {
       "id": "n7",
       "order": 7,
-      "title": "Tiền thưởng của làng",
-      "mathTopic": "Money (basic division/parts)",
-      "objective": "Tính tiền, chia đều, cộng/trừ tiền lẻ đơn giản",
+      "title": "Đường Đê Khúc Khuỷu",
+      "mathTopic": "Đường gấp khúc & Hình học",
+      "objective": "Tính độ dài đường gấp khúc, nhận biết tam giác và tứ giác",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Sau thi, làng trao tiền thưởng và nhờ Trạng Quỳnh chia đều cho mọi người."
+          "speaker": "Người kể chuyện",
+          "text": "Con đường đê dẫn ra sông bị sạt lở, tạo thành các đoạn gấp khúc."
         },
         {
-          "speaker": "Bạn",
-          "text": "Chia đều với tớ nhé, cậu có 50.000 đồng, chia cho 5 người mỗi người bao nhiêu?"
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "50.000 : 5 = 10.000 mỗi người."
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Sau thi, làng trao tiền thưởng."
-        },
-        {
-          "speaker": "Bạn",
-          "text": "Cậu có 50.000 đồng, chia cho 5 người mỗi người bao nhiêu?"
+          "speaker": "Trưởng thôn",
+          "text": "Cậu bé thông minh kia, giúp ta tính tổng chiều dài đường đê để dân làng biết rải đá nhé!"
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "Mỗi người 10.000 đồng."
+          "text": "Vâng ạ! Cháu sẽ cộng từng đoạn lại. Đường gấp khúc thì tính tổng các cạnh thôi!"
         }
       ],
       "assets": {
-        "bg": "assets/user/bg_village_square.png",
-        "sprite_money_box": "assets/user/money_box.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_money.png",
-        "alt": {
-          "bg": "Quảng trường làng",
-          "sprite_money_box": "Hòm tiền thưởng",
-          "icon": "Tiền giấy"
-        }
+        "bg": "assets/user/bg_road.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_shape.png"
       },
-      "activityRef": "grade2.c3.l1.a1",
+      "activityRef": "grade2.c2.l4.a1",
       "xpOnCorrect": 10,
-      "badgeOnComplete": null,
-      "hint": "Thiết kế bài toán chia/bổ sung tiền với phép chia đơn giản"
+      "badgeOnComplete": null
     },
     {
       "id": "n8",
       "order": 8,
-      "title": "Đố mẹo trong đình làng",
-      "mathTopic": "Comparison & logic puzzles",
-      "objective": "So sánh, sắp xếp, tư duy logic cơ bản",
+      "title": "Gạo Trắng, Nước Trong",
+      "mathTopic": "Khối lượng (kg) & Dung tích (lít)",
+      "objective": "Đo và tính toán khối lượng kg, dung tích lít",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Bô lão tổ chức trò đố mẹo cho trẻ — ai trả lời đúng sẽ nhận kẹo."
+          "speaker": "Người kể chuyện",
+          "text": "Đoàn người dừng chân nghỉ ngơi. Trưởng đoàn cần chia lương thực."
         },
         {
-          "speaker": "Bô lão",
-          "text": "Ai xếp đúng thứ tự từ nhỏ đến lớn sẽ nhận kẹo!"
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "Ta xếp ngay — dễ như cơm bữa!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Bô lão tổ chức trò đố mẹo trong đình làng."
-        },
-        {
-          "speaker": "Bô lão",
-          "text": "Ai xếp đúng thứ tự từ nhỏ đến lớn sẽ nhận kẹo!"
+          "speaker": "Trưởng đoàn",
+          "text": "Quỳnh à, giúp ta cân chia gạo vào các bao và đong nước từ chum lớn ra các bình nhỏ nhé!"
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "Ta xếp ngay — dễ thôi!"
+          "text": "Vâng ạ! Cháu biết cách cân kg và đong lít rồi. Để cháu chia cho đều."
         }
       ],
       "assets": {
-        "bg": "assets/user/bg_communal_house.png",
-        "sprite_elder": "assets/user/elder.png",
-        "sprite_main_think": "assets/user/trang_think.png",
-        "icon": "assets/user/icon_puzzle.png",
-        "alt": {
-          "bg": "Đình làng",
-          "sprite_elder": "Bô lão",
-          "icon": "Câu đố"
-        }
+        "bg": "assets/user/bg_rest_stop.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_sack.png"
       },
-      "activityRef": "grade2.c3.l2.a1",
+      "activityRef": "grade2.c2.l5.a1",
       "xpOnCorrect": 10,
-      "badgeOnComplete": null,
-      "hint": "Sử dụng các mảnh ghép kéo thả để sắp xếp"
+      "badgeOnComplete": null
     },
     {
       "id": "n9",
       "order": 9,
-      "title": "Đêm trao huy hiệu",
-      "mathTopic": "Final review (mixed)",
-      "objective": "Ôn tập tổng hợp, thử thách tốc độ và chính xác",
+      "title": "Chợ Phiên Kinh Kỳ",
+      "mathTopic": "Phép nhân (Bảng 2, Bảng 5)",
+      "objective": "Thực hiện phép nhân trong bảng 2 và bảng 5",
       "cutscene": [
         {
-          "speaker": "Narrator",
-          "text": "Đêm trao huy hiệu đã tới. Ai đạt đủ điểm sẽ nhận huy hiệu vàng."
+          "speaker": "Người kể chuyện",
+          "text": "Vào đến chợ kinh đô tấp nập, hàng hóa bày bán theo từng chùm, từng nhóm."
         },
         {
-          "speaker": "Quan thi",
-          "text": "Ai trả lời được 8/10 câu đúng trong thời gian sẽ nhận huy hiệu vàng."
-        },
-        {
-          "speaker": "Trạng Quỳnh",
-          "text": "Ta sẽ làm cho làng biết ta thông minh nhưng vẫn khiêm nhường!"
-        }
-      ],
-      "voiceLines": [
-        {
-          "speaker": "Narrator",
-          "text": "Đêm trao huy hiệu đã tới."
-        },
-        {
-          "speaker": "Quan thi",
-          "text": "Ai trả lời được 8 trên 10 câu đúng sẽ nhận huy hiệu vàng."
+          "speaker": "Bà bán hàng",
+          "text": "Cậu bé, mua táo không? Mỗi chùm có 5 quả. Cậu tính nhanh giúp bà tổng số quả trong các rổ!"
         },
         {
           "speaker": "Trạng Quỳnh",
-          "text": "Ta sẽ làm tốt thôi!"
+          "text": "Bảng nhân 5 à? Dễ thôi! 5 nhân mấy cũng có 5 hoặc 0 ở hàng đơn vị!"
         }
       ],
       "assets": {
-        "bg": "assets/user/bg_festival.png",
-        "sprite_master": "assets/user/judge.png",
-        "sprite_main_cheer": "assets/user/trang_cheer.png",
-        "icon": "assets/user/icon_badge.png",
-        "alt": {
-          "bg": "Sân đình lễ hội",
-          "sprite_master": "Quan thi",
-          "icon": "Huy hiệu"
+        "bg": "assets/user/bg_market.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_apple.png"
+      },
+      "activityRef": "grade2.c3.l1.a1",
+      "xpOnCorrect": 10,
+      "badgeOnComplete": null
+    },
+    {
+      "id": "n10",
+      "order": 10,
+      "title": "Chia Kẹo Cho Trẻ",
+      "mathTopic": "Phép chia (Bảng 2, Bảng 5)",
+      "objective": "Thực hiện phép chia trong bảng 2 và bảng 5",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Thấy lũ trẻ thành thị đang chơi ô ăn quan, Quỳnh muốn làm quen."
+        },
+        {
+          "speaker": "Trạng Quỳnh",
+          "text": "Các bạn ơi, mình mua kẹo về chia cho các bạn nè! Mình sẽ chia đều nhé."
+        },
+        {
+          "speaker": "Trẻ em",
+          "text": "Hay quá! Anh Quỳnh giỏi tính toán quá! Chia đều cho tụi mình nhé!"
         }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_playground.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_candy.png"
+      },
+      "activityRef": "grade2.c3.l2.a1",
+      "xpOnCorrect": 10,
+      "badgeOnComplete": null
+    },
+    {
+      "id": "n11",
+      "order": 11,
+      "title": "Tiền Thưởng Của Làng",
+      "mathTopic": "Tiền tệ Việt Nam",
+      "objective": "Tính toán với tiền Việt Nam: cộng, trừ, trả lại tiền thừa",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Quỳnh ghé vào tiệm sách, dùng số tiền dân làng quyên góp để mua giấy bút đi thi."
+        },
+        {
+          "speaker": "Chủ tiệm sách",
+          "text": "Chào cậu bé! Giấy và bút ở đây. Cậu có bao nhiêu tiền nào?"
+        },
+        {
+          "speaker": "Trạng Quỳnh",
+          "text": "Dạ cháu có tiền của dân làng. Cháu phải tính kỹ tiền trả và tiền thừa ạ!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_shop.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_money.png"
+      },
+      "activityRef": "grade2.c3.l3.a1",
+      "xpOnCorrect": 10,
+      "badgeOnComplete": "money-master"
+    },
+    {
+      "id": "n12",
+      "order": 12,
+      "title": "Kiểm Kê Kho Thóc",
+      "mathTopic": "Số tròn trăm & Số trong phạm vi 1000",
+      "objective": "Đọc, viết và đếm số trong phạm vi 1000",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Vòng thi thứ nhất bắt đầu tại hoàng cung. Đức Vua ra đề thử thách."
+        },
+        {
+          "speaker": "Đức Vua",
+          "text": "Các sĩ tử hãy kiểm đếm số bao thóc trong kho lương thực hoàng gia! Ai đếm đúng sẽ vào vòng sau."
+        },
+        {
+          "speaker": "Trạng Quỳnh",
+          "text": "Số lớn trong phạm vi 1000 ạ! Cháu sẽ đếm cẩn thận từng trăm một!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_warehouse.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_sack.png"
       },
       "activityRef": "grade2.c4.l1.a1",
-      "xpOnCorrect": 10,
-      "badgeOnComplete": "grade2-master",
-      "hint": "Tổng hợp các câu hỏi nhanh của các chủ đề trước"
+      "xpOnCorrect": 12,
+      "badgeOnComplete": null
+    },
+    {
+      "id": "n13",
+      "order": 13,
+      "title": "So Sánh Bổng Lộc",
+      "mathTopic": "So sánh số có 3 chữ số (>, <, =)",
+      "objective": "So sánh các số có 3 chữ số",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Vòng thi thứ hai liên quan đến sổ sách triều đình."
+        },
+        {
+          "speaker": "Quan thượng thư",
+          "text": "Sĩ tử hãy so sánh số thuế và bổng lộc của các trấn. Nơi nào nộp nhiều, nơi nào nộp ít?"
+        },
+        {
+          "speaker": "Trạng Quỳnh",
+          "text": "So sánh số có 3 chữ số thì phải so hàng trăm trước, rồi đến hàng chục, hàng đơn vị!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_palace.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_scroll.png"
+      },
+      "activityRef": "grade2.c4.l2.a1",
+      "xpOnCorrect": 12,
+      "badgeOnComplete": null
+    },
+    {
+      "id": "n14",
+      "order": 14,
+      "title": "Xây Dựng Thành Quách",
+      "mathTopic": "Cộng trừ không nhớ trong phạm vi 1000",
+      "objective": "Thực hiện phép cộng trừ không nhớ với số có 3 chữ số",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Vòng thi thứ ba về kiến thiết đất nước."
+        },
+        {
+          "speaker": "Quan kiến trúc",
+          "text": "Tính toán tổng số gạch cần thiết để tu sửa cổng thành phía Nam và phía Bắc!"
+        },
+        {
+          "speaker": "Trạng Quỳnh",
+          "text": "Cộng trừ số lớn? Cháu sẽ tính từng hàng: đơn vị, chục, rồi trăm!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_construction.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "icon": "assets/user/icon_brick.png"
+      },
+      "activityRef": "grade2.c4.l3.a1",
+      "xpOnCorrect": 12,
+      "badgeOnComplete": null
+    },
+    {
+      "id": "n15",
+      "order": 15,
+      "title": "Đối Đáp Trước Rồng Vàng",
+      "mathTopic": "Ôn tập tổng hợp nâng cao",
+      "objective": "Giải các câu đố logic và bài toán tổng hợp",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Màn cuối cùng tại điện Rồng. Đây là thử thách cuối cùng để giành danh hiệu Trạng Nguyên!"
+        },
+        {
+          "speaker": "Đức Vua",
+          "text": "Sĩ tử Quỳnh, hãy đối đáp những câu đố hóc búa nhất của ta! Ai vượt qua sẽ là Trạng Nguyên!"
+        },
+        {
+          "speaker": "Trạng Quỳnh",
+          "text": "Thần xin tuân lệnh! Dù khó đến đâu, thần cũng sẽ cố gắng hết sức!"
+        }
+      ],
+      "assets": {
+        "bg": "assets/user/bg_throne.png",
+        "sprite_main_idle": "assets/user/trang_idle.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_badge.png"
+      },
+      "activityRef": "grade2.c4.l4.a1",
+      "xpOnCorrect": 15,
+      "badgeOnComplete": "grade2-master"
+    }
+  ],
+  "epilogue": [
+    {
+      "id": "e1",
+      "bg": "assets/user/bg_throne.png",
+      "sprite": "assets/user/trang_cheer.png",
+      "speaker": "Đức Vua",
+      "text": "Quỳnh quả thật thông minh tuyệt đỉnh! Ta phong cho cậu danh hiệu Trạng Nguyên!"
+    },
+    {
+      "id": "e2",
+      "bg": "assets/user/bg_village.png",
+      "sprite": "assets/user/trang_cheer.png",
+      "speaker": "Người kể chuyện",
+      "text": "Trạng Quỳnh vinh quy bái tổ, mang vinh quang về cho làng quê nhỏ bé. Câu chuyện về cậu bé thông minh được truyền tụng mãi về sau."
     }
   ]
 }

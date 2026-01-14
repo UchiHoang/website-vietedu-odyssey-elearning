@@ -2,378 +2,558 @@
   "grade": 2,
   "chapters": [
     {
-      "id": "addition-subtraction",
-      "title": "Cộng trừ có nhớ",
-      "description": "Phép cộng và trừ các số có nhớ với nhiều hình thức tương tác",
+      "id": "c1-addition-subtraction-word",
+      "title": "Phần 1: Khởi Hành Tại Làng",
+      "description": "Cộng trừ trong phạm vi 100 và bài toán lời văn",
       "icon": "calculator",
       "color": "primary",
       "lessons": [
         {
           "id": "lesson-1",
-          "title": "Cộng có nhớ trong phạm vi 100",
-          "duration": 120,
-          "timerSec": 180,
+          "title": "Làng Thi Nhỏ - Cộng có nhớ",
+          "duration": 180,
+          "timerSec": 300,
           "questions": [
             {
-              "id": "q1",
+              "id": "n1-q1",
               "type": "multiple-choice",
-              "question": "37 + 28 = ?",
+              "question": "Mẹ chuẩn bị 37 quả táo và 28 quả cam. Tổng cộng có bao nhiêu quả?",
               "options": ["55", "65", "75", "85"],
               "correctAnswer": 1,
               "explanation": "37 + 28 = 65. Cộng hàng đơn vị: 7 + 8 = 15 (nhớ 1). Cộng hàng chục: 3 + 2 + 1 = 6."
             },
             {
-              "id": "q1b",
-              "type": "counting",
-              "question": "Đếm số quả táo có trong hình",
-              "countingItems": [
-                {
-                  "image": "/src/assets/game/counting-apple.png",
-                  "count": 7
-                }
-              ],
-              "countingAnswer": 7,
-              "explanation": "Đếm từng quả: 1, 2, 3, 4, 5, 6, 7. Có tất cả 7 quả táo."
-            },
-            {
-              "id": "q2",
+              "id": "n1-q2",
               "type": "fill-blank",
-              "question": "45 + ___ = 81",
-              "blanks": [
-                {
-                  "position": 5,
-                  "answer": "36",
-                  "placeholder": "?"
-                }
-              ],
-              "explanation": "Để tìm số hạng còn thiếu, ta lấy tổng trừ đi số hạng đã biết: 81 - 45 = 36"
+              "question": "Quỳnh có 45 cái bánh, mẹ cho thêm ___ cái để có tất cả 81 cái bánh.",
+              "blanks": [{ "position": 33, "answer": "36", "placeholder": "?" }],
+              "explanation": "Để tìm số bánh mẹ cho thêm: 81 - 45 = 36 cái bánh"
             },
             {
-              "id": "q3",
+              "id": "n1-q3",
+              "type": "multiple-choice",
+              "question": "Trong túi có 49 quả táo đỏ và 38 quả táo xanh. Tổng cộng có bao nhiêu quả táo?",
+              "options": ["77", "87", "97", "67"],
+              "correctAnswer": 1,
+              "explanation": "49 + 38 = 87 quả táo"
+            },
+            {
+              "id": "n1-q4",
               "type": "matching-pairs",
               "question": "Nối các phép tính với kết quả đúng",
               "pairs": [
-                {
-                  "id": "pair1",
-                  "left": "15 + 8",
-                  "right": "23"
-                },
-                {
-                  "id": "pair2",
-                  "left": "27 + 16",
-                  "right": "43"
-                },
-                {
-                  "id": "pair3",
-                  "left": "34 + 29",
-                  "right": "63"
-                }
+                { "id": "pair1", "left": "15 + 18", "right": "33" },
+                { "id": "pair2", "left": "27 + 36", "right": "63" },
+                { "id": "pair3", "left": "34 + 29", "right": "63" },
+                { "id": "pair4", "left": "46 + 27", "right": "73" }
               ]
             },
             {
-              "id": "q4",
+              "id": "n1-q5",
               "type": "multiple-choice",
-              "question": "49 + 38 = ?",
-              "options": ["77", "87", "97", "67"],
+              "question": "Mẹ mua 56 quả cam, bố mua thêm 37 quả. Nhà có tất cả bao nhiêu quả cam?",
+              "options": ["83", "93", "103", "73"],
               "correctAnswer": 1,
-              "explanation": "49 + 38 = 87"
+              "explanation": "56 + 37 = 93 quả cam"
+            },
+            {
+              "id": "n1-q6",
+              "type": "fill-blank",
+              "question": "28 + 47 = ___",
+              "blanks": [{ "position": 10, "answer": "75", "placeholder": "?" }],
+              "explanation": "28 + 47 = 75. Cộng hàng đơn vị: 8 + 7 = 15 (nhớ 1). Cộng hàng chục: 2 + 4 + 1 = 7."
+            },
+            {
+              "id": "n1-q7",
+              "type": "multiple-choice",
+              "question": "Quỳnh đếm được 64 quả trứng trong giỏ này và 29 quả trong giỏ kia. Tổng cộng có bao nhiêu quả trứng?",
+              "options": ["83", "93", "103", "73"],
+              "correctAnswer": 1,
+              "explanation": "64 + 29 = 93 quả trứng"
+            },
+            {
+              "id": "n1-q8",
+              "type": "drag-drop",
+              "question": "Sắp xếp kết quả từ nhỏ đến lớn",
+              "dragItems": [
+                { "id": "d1", "content": "35 + 28 = 63", "correctSlot": "slot2" },
+                { "id": "d2", "content": "47 + 15 = 62", "correctSlot": "slot1" },
+                { "id": "d3", "content": "39 + 46 = 85", "correctSlot": "slot3" }
+              ],
+              "dropSlots": [
+                { "id": "slot1", "label": "Nhỏ nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Lớn nhất" }
+              ]
             }
           ]
         },
         {
           "id": "lesson-2",
-          "title": "Trừ có nhớ trong phạm vi 100",
-          "duration": 120,
-          "timerSec": 180,
+          "title": "Thử Thách Trên Cầu - Trừ có nhớ",
+          "duration": 180,
+          "timerSec": 300,
           "questions": [
             {
-              "id": "q1",
+              "id": "n2-q1",
               "type": "multiple-choice",
-              "question": "82 - 37 = ?",
-              "options": ["45", "55", "35", "65"],
-              "correctAnswer": 0,
-              "explanation": "82 - 37 = 45. Trừ hàng đơn vị: 2 - 7 không được, mượn 1. 12 - 7 = 5. Trừ hàng chục: 7 - 3 = 4."
+              "question": "Sáng nay có 82 người qua cầu, chiều có 37 người. Sáng đông hơn chiều bao nhiêu người?",
+              "options": ["35", "45", "55", "65"],
+              "correctAnswer": 1,
+              "explanation": "82 - 37 = 45 người. Trừ hàng đơn vị: 2 - 7 không được, mượn 1 → 12 - 7 = 5. Trừ hàng chục: 7 - 3 = 4."
             },
             {
-              "id": "q2",
+              "id": "n2-q2",
               "type": "fill-blank",
-              "question": "Hình 1 có 8 cái kẹo. Hình 2 có 5 cái kẹo. Hình 1 nhiều hơn Hình 2 ___ cái kẹo.",
-              "blanks": [
-                {
-                  "position": 65,
-                  "answer": "3",
-                  "placeholder": "?"
-                }
-              ],
-              "explanation": "8 - 5 = 3. Vậy Hình 1 nhiều hơn Hình 2 là 3 cái kẹo."
+              "question": "71 - 34 = ___",
+              "blanks": [{ "position": 10, "answer": "37", "placeholder": "?" }],
+              "explanation": "71 - 34 = 37"
             },
             {
-              "id": "q3",
-              "type": "counting",
-              "question": "Đếm số ngôi sao",
-              "countingItems": [
-                {
-                  "image": "/src/assets/game/counting-star.png",
-                  "count": 9
-                }
-              ],
-              "countingAnswer": 9,
-              "explanation": "Có 9 ngôi sao trong hình."
+              "id": "n2-q3",
+              "type": "multiple-choice",
+              "question": "Có 93 chiếc xe qua cầu sáng nay, sau đó 48 chiếc đã đi. Còn lại bao nhiêu chiếc xe đang chờ?",
+              "options": ["35", "45", "55", "65"],
+              "correctAnswer": 1,
+              "explanation": "93 - 48 = 45 chiếc xe"
             },
             {
-              "id": "q4",
-              "type": "drag-drop",
-              "question": "Sắp xếp kết quả từ nhỏ đến lớn",
-              "dragItems": [
-                {
-                  "id": "d1",
-                  "content": "73 - 28 = 45",
-                  "correctSlot": "small"
-                },
-                {
-                  "id": "d2",
-                  "content": "91 - 36 = 55",
-                  "correctSlot": "medium"
-                },
-                {
-                  "id": "d3",
-                  "content": "84 - 19 = 65",
-                  "correctSlot": "large"
-                }
-              ],
-              "dropSlots": [
-                {
-                  "id": "small",
-                  "label": "Nhỏ nhất"
-                },
-                {
-                  "id": "medium",
-                  "label": "Trung bình"
-                },
-                {
-                  "id": "large",
-                  "label": "Lớn nhất"
-                }
+              "id": "n2-q4",
+              "type": "matching-pairs",
+              "question": "Nối phép tính với kết quả",
+              "pairs": [
+                { "id": "pair1", "left": "52 - 27", "right": "25" },
+                { "id": "pair2", "left": "84 - 39", "right": "45" },
+                { "id": "pair3", "left": "61 - 24", "right": "37" }
               ]
             },
             {
-              "id": "q5",
+              "id": "n2-q5",
               "type": "multiple-choice",
-              "question": "84 - 47 = ?",
-              "options": ["27", "37", "47", "57"],
+              "question": "Cầu chịu được 100 kg. Đã có 56 kg hàng trên cầu. Còn chở được thêm bao nhiêu kg?",
+              "options": ["34", "44", "54", "64"],
               "correctAnswer": 1,
-              "explanation": "84 - 47 = 37"
+              "explanation": "100 - 56 = 44 kg"
+            },
+            {
+              "id": "n2-q6",
+              "type": "fill-blank",
+              "question": "90 - 53 = ___",
+              "blanks": [{ "position": 10, "answer": "37", "placeholder": "?" }],
+              "explanation": "90 - 53 = 37"
+            },
+            {
+              "id": "n2-q7",
+              "type": "drag-drop",
+              "question": "Sắp xếp kết quả từ nhỏ đến lớn",
+              "dragItems": [
+                { "id": "d1", "content": "73 - 28 = 45", "correctSlot": "slot2" },
+                { "id": "d2", "content": "91 - 56 = 35", "correctSlot": "slot1" },
+                { "id": "d3", "content": "84 - 19 = 65", "correctSlot": "slot3" }
+              ],
+              "dropSlots": [
+                { "id": "slot1", "label": "Nhỏ nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Lớn nhất" }
+              ]
+            },
+            {
+              "id": "n2-q8",
+              "type": "multiple-choice",
+              "question": "Người gác cầu đếm được 75 người đi bộ và 28 người đi xe. Số người đi bộ nhiều hơn số người đi xe là bao nhiêu?",
+              "options": ["37", "47", "57", "67"],
+              "correctAnswer": 1,
+              "explanation": "75 - 28 = 47 người"
             }
           ]
         },
         {
           "id": "lesson-3",
-          "title": "Bài toán lời văn cộng trừ",
-          "duration": 150,
-          "timerSec": 200,
+          "title": "Giúp Bà Hàng Xóm - Bài toán lời văn",
+          "duration": 200,
+          "timerSec": 360,
           "questions": [
             {
-              "id": "q1",
+              "id": "n3-q1",
               "type": "multiple-choice",
-              "question": "Nhà có 50 buồng cau, bán 17 buồng, rồi cho 6 buồng. Còn lại bao nhiêu buồng?",
+              "question": "Bà có 50 buồng cau, bán 17 buồng, rồi cho 6 buồng. Còn lại bao nhiêu buồng?",
               "options": ["17", "27", "33", "37"],
               "correctAnswer": 1,
               "explanation": "50 - 17 = 33 buồng. Sau đó 33 - 6 = 27 buồng còn lại."
             },
             {
-              "id": "q2",
+              "id": "n3-q2",
               "type": "fill-blank",
-              "question": "Minh có 25 viên bi. Minh cho bạn 8 viên bi. Minh còn lại ___ viên bi.",
-              "blanks": [
-                {
-                  "position": 56,
-                  "answer": "17",
-                  "placeholder": "?"
-                }
-              ],
-              "explanation": "25 - 8 = 17 viên bi."
+              "question": "Bà hái được 45 quả trầu, bán đi 18 quả. Bà còn lại ___ quả trầu.",
+              "blanks": [{ "position": 54, "answer": "27", "placeholder": "?" }],
+              "explanation": "45 - 18 = 27 quả trầu"
             },
             {
-              "id": "q3",
-              "type": "counting",
-              "question": "Đếm tổng số hoa trong 2 nhóm",
-              "countingItems": [
-                {
-                  "image": "/src/assets/game/counting-flower.png",
-                  "count": 5
-                },
-                {
-                  "image": "/src/assets/game/counting-flower.png",
-                  "count": 4
-                }
-              ],
-              "countingAnswer": 9,
-              "explanation": "Nhóm 1 có 5 bông hoa, nhóm 2 có 4 bông hoa. Tổng: 5 + 4 = 9 bông hoa."
-            },
-            {
-              "id": "q4",
+              "id": "n3-q3",
               "type": "multiple-choice",
-              "question": "Lan có 32 cái kẹo. Mẹ cho thêm 15 cái. Lan có tất cả bao nhiêu cái kẹo?",
-              "options": ["37", "42", "47", "52"],
-              "correctAnswer": 2,
-              "explanation": "32 + 15 = 47 cái kẹo."
+              "question": "Trong vườn có 32 cây cau và 29 cây dừa. Hỏi trong vườn có tất cả bao nhiêu cây?",
+              "options": ["51", "61", "71", "41"],
+              "correctAnswer": 1,
+              "explanation": "32 + 29 = 61 cây"
+            },
+            {
+              "id": "n3-q4",
+              "type": "multiple-choice",
+              "question": "Bà có 65 quả trứng gà, cho hàng xóm 28 quả. Bà còn bao nhiêu quả trứng?",
+              "options": ["27", "37", "47", "57"],
+              "correctAnswer": 1,
+              "explanation": "65 - 28 = 37 quả trứng"
+            },
+            {
+              "id": "n3-q5",
+              "type": "fill-blank",
+              "question": "Quỳnh giúp bà đếm: 38 buồng cau + 27 buồng cau = ___ buồng cau",
+              "blanks": [{ "position": 45, "answer": "65", "placeholder": "?" }],
+              "explanation": "38 + 27 = 65 buồng cau"
+            },
+            {
+              "id": "n3-q6",
+              "type": "multiple-choice",
+              "question": "Bà bán 23 quả bưởi sáng, 34 quả bưởi chiều. Bà bán được tất cả bao nhiêu quả bưởi?",
+              "options": ["47", "57", "67", "77"],
+              "correctAnswer": 1,
+              "explanation": "23 + 34 = 57 quả bưởi"
+            },
+            {
+              "id": "n3-q7",
+              "type": "matching-pairs",
+              "question": "Nối bài toán với đáp án",
+              "pairs": [
+                { "id": "pair1", "left": "Có 40 quả, bán 15 quả", "right": "Còn 25 quả" },
+                { "id": "pair2", "left": "Có 28 quả, mua thêm 17 quả", "right": "Có 45 quả" },
+                { "id": "pair3", "left": "Có 55 quả, cho 19 quả", "right": "Còn 36 quả" }
+              ]
+            },
+            {
+              "id": "n3-q8",
+              "type": "multiple-choice",
+              "question": "Vườn bà có 84 buồng cau. Bà bán 45 buồng và cho 12 buồng. Còn lại bao nhiêu buồng cau?",
+              "options": ["17", "27", "37", "47"],
+              "correctAnswer": 1,
+              "explanation": "84 - 45 = 39 buồng. 39 - 12 = 27 buồng còn lại."
+            },
+            {
+              "id": "n3-q9",
+              "type": "fill-blank",
+              "question": "Bà có 72 quả cam, bán 35 quả, mua thêm 18 quả. Bà có ___ quả cam.",
+              "blanks": [{ "position": 55, "answer": "55", "placeholder": "?" }],
+              "explanation": "72 - 35 = 37. Sau đó 37 + 18 = 55 quả cam."
             }
           ]
         }
       ]
     },
     {
-      "id": "time-measurement",
-      "title": "Thời gian và Đo lường",
-      "description": "Đọc đồng hồ và đo độ dài, khối lượng",
+      "id": "c2-time-measurement",
+      "title": "Phần 1 (tiếp): Thời Gian và Lịch",
+      "description": "Xem đồng hồ và lịch",
       "icon": "clock",
       "color": "secondary",
       "lessons": [
         {
           "id": "lesson-1",
-          "title": "Đọc đồng hồ",
-          "duration": 120,
-          "timerSec": 150,
+          "title": "Giờ Học Cuối Cùng - Xem đồng hồ",
+          "duration": 180,
+          "timerSec": 300,
           "questions": [
             {
-              "id": "q1",
+              "id": "n4-q1",
               "type": "multiple-choice",
-              "question": "Kim ngắn chỉ số 3, kim dài chỉ số 12. Đồng hồ chỉ mấy giờ?",
-              "options": ["3 giờ", "12 giờ", "3 giờ 30 phút", "12 giờ 30 phút"],
+              "question": "Kim ngắn chỉ số 7, kim dài chỉ số 12. Đồng hồ chỉ mấy giờ?",
+              "options": ["7 giờ", "12 giờ", "7 giờ 30 phút", "12 giờ 30 phút"],
               "correctAnswer": 0,
-              "explanation": "Kim ngắn chỉ giờ (3), kim dài chỉ phút (12 = 0 phút). Đồng hồ chỉ 3 giờ."
+              "explanation": "Kim ngắn chỉ giờ (7), kim dài chỉ phút (12 = 0 phút). Đồng hồ chỉ 7 giờ đúng."
             },
             {
-              "id": "q2",
+              "id": "n4-q2",
               "type": "matching-pairs",
               "question": "Nối đồng hồ với giờ tương ứng",
               "pairs": [
-                {
-                  "id": "t1",
-                  "left": "🕐",
-                  "right": "1 giờ"
-                },
-                {
-                  "id": "t2",
-                  "left": "🕑",
-                  "right": "2 giờ"
-                },
-                {
-                  "id": "t3",
-                  "left": "🕒",
-                  "right": "3 giờ"
-                }
+                { "id": "t1", "left": "Kim ngắn: 5, Kim dài: 12", "right": "5 giờ" },
+                { "id": "t2", "left": "Kim ngắn: 8, Kim dài: 6", "right": "8 giờ 30 phút" },
+                { "id": "t3", "left": "Kim ngắn: 3, Kim dài: 12", "right": "3 giờ" }
               ]
             },
             {
-              "id": "q3",
+              "id": "n4-q3",
+              "type": "fill-blank",
+              "question": "Thầy đồ bảo: 'Giờ hoàng đạo là 6 giờ rưỡi'. Kim dài chỉ số ___.",
+              "blanks": [{ "position": 55, "answer": "6", "placeholder": "?" }],
+              "explanation": "Giờ rưỡi = 30 phút. Kim dài chỉ số 6 (vì 6 x 5 = 30 phút)."
+            },
+            {
+              "id": "n4-q4",
+              "type": "multiple-choice",
+              "question": "Quỳnh phải xuất hành lúc 9 giờ rưỡi. Kim ngắn và kim dài chỉ vào đâu?",
+              "options": [
+                "Kim ngắn: 9, Kim dài: 12",
+                "Kim ngắn: giữa 9 và 10, Kim dài: 6",
+                "Kim ngắn: 6, Kim dài: 9",
+                "Kim ngắn: 9, Kim dài: 6"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Lúc 9 giờ rưỡi, kim ngắn ở giữa 9 và 10, kim dài chỉ số 6."
+            },
+            {
+              "id": "n4-q5",
+              "type": "multiple-choice",
+              "question": "Thầy ra bài thi lúc 2 giờ, Quỳnh làm xong lúc 3 giờ. Quỳnh làm bài trong bao lâu?",
+              "options": ["30 phút", "1 giờ", "1 giờ 30 phút", "2 giờ"],
+              "correctAnswer": 1,
+              "explanation": "Từ 2 giờ đến 3 giờ là 1 giờ."
+            },
+            {
+              "id": "n4-q6",
               "type": "fill-blank",
               "question": "1 giờ = ___ phút",
-              "blanks": [
-                {
-                  "position": 9,
-                  "answer": "60",
-                  "placeholder": "?"
-                }
-              ],
+              "blanks": [{ "position": 9, "answer": "60", "placeholder": "?" }],
               "explanation": "1 giờ = 60 phút"
             },
             {
-              "id": "q4",
+              "id": "n4-q7",
               "type": "multiple-choice",
-              "question": "2 giờ 30 phút = ? phút",
-              "options": ["120 phút", "130 phút", "150 phút", "230 phút"],
-              "correctAnswer": 2,
-              "explanation": "2 giờ = 120 phút. 2 giờ 30 phút = 120 + 30 = 150 phút"
+              "question": "Quỳnh đến trường lúc 7 giờ, học 2 giờ rồi về. Quỳnh về nhà lúc mấy giờ?",
+              "options": ["8 giờ", "9 giờ", "10 giờ", "7 giờ 30 phút"],
+              "correctAnswer": 1,
+              "explanation": "7 giờ + 2 giờ = 9 giờ"
+            },
+            {
+              "id": "n4-q8",
+              "type": "drag-drop",
+              "question": "Sắp xếp các giờ theo thứ tự từ sớm đến muộn",
+              "dragItems": [
+                { "id": "t1", "content": "8 giờ rưỡi", "correctSlot": "slot2" },
+                { "id": "t2", "content": "7 giờ", "correctSlot": "slot1" },
+                { "id": "t3", "content": "10 giờ", "correctSlot": "slot3" }
+              ],
+              "dropSlots": [
+                { "id": "slot1", "label": "Sớm nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Muộn nhất" }
+              ]
             }
           ]
         },
         {
           "id": "lesson-2",
-          "title": "Đo độ dài: cm và m",
-          "duration": 120,
-          "timerSec": 150,
+          "title": "Lịch Trình May Mắn - Xem lịch",
+          "duration": 180,
+          "timerSec": 300,
           "questions": [
             {
-              "id": "q1",
+              "id": "n5-q1",
               "type": "multiple-choice",
-              "question": "1 mét bằng bao nhiêu cm?",
-              "options": ["10 cm", "50 cm", "100 cm", "1000 cm"],
+              "question": "Hôm nay là thứ Ba. Ngày mai là thứ mấy?",
+              "options": ["Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm"],
               "correctAnswer": 2,
-              "explanation": "1 mét = 100 cm"
+              "explanation": "Sau thứ Ba là thứ Tư."
             },
             {
-              "id": "q2",
+              "id": "n5-q2",
               "type": "fill-blank",
-              "question": "Dây A dài 120 cm = ___ m ___ cm",
-              "blanks": [
-                {
-                  "position": 20,
-                  "answer": "1",
-                  "placeholder": "?"
-                },
-                {
-                  "position": 25,
-                  "answer": "20",
-                  "placeholder": "?"
-                }
-              ],
-              "explanation": "120 cm = 100 cm + 20 cm = 1 m 20 cm"
+              "question": "Một tuần có ___ ngày.",
+              "blanks": [{ "position": 13, "answer": "7", "placeholder": "?" }],
+              "explanation": "Một tuần có 7 ngày: Thứ Hai, Thứ Ba, Thứ Tư, Thứ Năm, Thứ Sáu, Thứ Bảy, Chủ Nhật."
             },
             {
-              "id": "q3",
-              "type": "drag-drop",
-              "question": "Sắp xếp độ dài từ nhỏ đến lớn",
-              "dragItems": [
-                {
-                  "id": "len1",
-                  "content": "50 cm",
-                  "correctSlot": "small"
-                },
-                {
-                  "id": "len2",
-                  "content": "1 m 20 cm",
-                  "correctSlot": "medium"
-                },
-                {
-                  "id": "len3",
-                  "content": "2 m",
-                  "correctSlot": "large"
-                }
-              ],
-              "dropSlots": [
-                {
-                  "id": "small",
-                  "label": "Nhỏ nhất"
-                },
-                {
-                  "id": "medium",
-                  "label": "Trung bình"
-                },
-                {
-                  "id": "large",
-                  "label": "Lớn nhất"
-                }
+              "id": "n5-q3",
+              "type": "multiple-choice",
+              "question": "Quỳnh khởi hành ngày 5 tháng 3. Sau 7 ngày, Quỳnh đến kinh đô ngày nào?",
+              "options": ["Ngày 10 tháng 3", "Ngày 12 tháng 3", "Ngày 15 tháng 3", "Ngày 7 tháng 3"],
+              "correctAnswer": 1,
+              "explanation": "5 + 7 = 12. Quỳnh đến ngày 12 tháng 3."
+            },
+            {
+              "id": "n5-q4",
+              "type": "matching-pairs",
+              "question": "Nối thứ với số thứ tự trong tuần",
+              "pairs": [
+                { "id": "d1", "left": "Thứ Hai", "right": "Ngày đầu tuần" },
+                { "id": "d2", "left": "Thứ Tư", "right": "Ngày thứ 3 trong tuần" },
+                { "id": "d3", "left": "Chủ Nhật", "right": "Ngày cuối tuần" }
               ]
             },
             {
-              "id": "q4",
+              "id": "n5-q5",
               "type": "multiple-choice",
-              "question": "2 mét 50 cm = ? cm",
-              "options": ["200 cm", "250 cm", "205 cm", "520 cm"],
+              "question": "Tháng 3 có 31 ngày. Nếu ngày 1 tháng 3 là thứ Hai, thì ngày 8 tháng 3 là thứ mấy?",
+              "options": ["Thứ Hai", "Thứ Ba", "Thứ Bảy", "Chủ Nhật"],
+              "correctAnswer": 0,
+              "explanation": "Sau 7 ngày lại quay về cùng thứ. Ngày 8 tháng 3 cũng là thứ Hai."
+            },
+            {
+              "id": "n5-q6",
+              "type": "fill-blank",
+              "question": "Kỳ thi diễn ra ngày 20 tháng 4. Hôm nay là ngày 10 tháng 4. Còn ___ ngày nữa đến kỳ thi.",
+              "blanks": [{ "position": 60, "answer": "10", "placeholder": "?" }],
+              "explanation": "20 - 10 = 10 ngày"
+            },
+            {
+              "id": "n5-q7",
+              "type": "multiple-choice",
+              "question": "Quỳnh cần 5 ngày để đến kinh đô. Nếu thi vào ngày 15, Quỳnh phải khởi hành muộn nhất vào ngày nào?",
+              "options": ["Ngày 8", "Ngày 10", "Ngày 12", "Ngày 15"],
               "correctAnswer": 1,
-              "explanation": "2 m 50 cm = 200 cm + 50 cm = 250 cm"
+              "explanation": "15 - 5 = 10. Quỳnh phải đi muộn nhất vào ngày 10."
             }
           ]
         },
         {
           "id": "lesson-3",
-          "title": "Đo khối lượng: kg và g",
-          "duration": 120,
-          "timerSec": 150,
+          "title": "Thước Đo Ao Sen - Độ dài cm, dm, m",
+          "duration": 180,
+          "timerSec": 300,
           "questions": [
             {
-              "id": "q1",
+              "id": "n6-q1",
+              "type": "multiple-choice",
+              "question": "1 dm bằng bao nhiêu cm?",
+              "options": ["1 cm", "10 cm", "100 cm", "1000 cm"],
+              "correctAnswer": 1,
+              "explanation": "1 dm = 10 cm"
+            },
+            {
+              "id": "n6-q2",
+              "type": "fill-blank",
+              "question": "Búp sen cao 3 dm 5 cm = ___ cm",
+              "blanks": [{ "position": 24, "answer": "35", "placeholder": "?" }],
+              "explanation": "3 dm = 30 cm. Vậy 3 dm 5 cm = 30 + 5 = 35 cm"
+            },
+            {
+              "id": "n6-q3",
+              "type": "multiple-choice",
+              "question": "1 mét bằng bao nhiêu dm?",
+              "options": ["1 dm", "10 dm", "100 dm", "1000 dm"],
+              "correctAnswer": 1,
+              "explanation": "1 m = 10 dm = 100 cm"
+            },
+            {
+              "id": "n6-q4",
+              "type": "matching-pairs",
+              "question": "Nối các độ dài tương đương",
+              "pairs": [
+                { "id": "l1", "left": "2 dm", "right": "20 cm" },
+                { "id": "l2", "left": "1 m", "right": "100 cm" },
+                { "id": "l3", "left": "50 cm", "right": "5 dm" }
+              ]
+            },
+            {
+              "id": "n6-q5",
+              "type": "fill-blank",
+              "question": "Dây câu dài 1 m 20 cm = ___ cm",
+              "blanks": [{ "position": 25, "answer": "120", "placeholder": "?" }],
+              "explanation": "1 m = 100 cm. Vậy 1 m 20 cm = 100 + 20 = 120 cm"
+            },
+            {
+              "id": "n6-q6",
+              "type": "multiple-choice",
+              "question": "Cây sào dài 150 cm. Đổi ra m và cm là bao nhiêu?",
+              "options": ["15 m 0 cm", "1 m 50 cm", "1 m 5 cm", "10 m 50 cm"],
+              "correctAnswer": 1,
+              "explanation": "150 cm = 100 cm + 50 cm = 1 m 50 cm"
+            },
+            {
+              "id": "n6-q7",
+              "type": "drag-drop",
+              "question": "Sắp xếp độ dài từ ngắn đến dài",
+              "dragItems": [
+                { "id": "l1", "content": "50 cm", "correctSlot": "slot1" },
+                { "id": "l2", "content": "8 dm", "correctSlot": "slot2" },
+                { "id": "l3", "content": "1 m 20 cm", "correctSlot": "slot3" }
+              ],
+              "dropSlots": [
+                { "id": "slot1", "label": "Ngắn nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Dài nhất" }
+              ]
+            },
+            {
+              "id": "n6-q8",
+              "type": "multiple-choice",
+              "question": "Ngư dân cần sợi dây dài 2 m. Ông đã có sợi dây 1 m 60 cm. Cần thêm bao nhiêu cm nữa?",
+              "options": ["20 cm", "30 cm", "40 cm", "50 cm"],
+              "correctAnswer": 2,
+              "explanation": "2 m = 200 cm. Đã có 160 cm. Cần thêm: 200 - 160 = 40 cm"
+            }
+          ]
+        },
+        {
+          "id": "lesson-4",
+          "title": "Đường Đê Khúc Khuỷu - Đường gấp khúc & Hình học",
+          "duration": 200,
+          "timerSec": 320,
+          "questions": [
+            {
+              "id": "n7-q1",
+              "type": "multiple-choice",
+              "question": "Đường gấp khúc ABCD có 3 đoạn: AB = 15 cm, BC = 20 cm, CD = 25 cm. Tổng độ dài là bao nhiêu?",
+              "options": ["50 cm", "60 cm", "70 cm", "80 cm"],
+              "correctAnswer": 1,
+              "explanation": "15 + 20 + 25 = 60 cm"
+            },
+            {
+              "id": "n7-q2",
+              "type": "fill-blank",
+              "question": "Tam giác có ___ cạnh.",
+              "blanks": [{ "position": 13, "answer": "3", "placeholder": "?" }],
+              "explanation": "Tam giác có 3 cạnh và 3 đỉnh."
+            },
+            {
+              "id": "n7-q3",
+              "type": "multiple-choice",
+              "question": "Hình nào dưới đây là tứ giác?",
+              "options": ["Tam giác", "Hình vuông", "Hình tròn", "Đường thẳng"],
+              "correctAnswer": 1,
+              "explanation": "Hình vuông là tứ giác vì có 4 cạnh."
+            },
+            {
+              "id": "n7-q4",
+              "type": "matching-pairs",
+              "question": "Nối hình với số cạnh",
+              "pairs": [
+                { "id": "s1", "left": "Tam giác", "right": "3 cạnh" },
+                { "id": "s2", "left": "Tứ giác", "right": "4 cạnh" },
+                { "id": "s3", "left": "Ngũ giác", "right": "5 cạnh" }
+              ]
+            },
+            {
+              "id": "n7-q5",
+              "type": "multiple-choice",
+              "question": "Đường đê gồm 4 đoạn: 12 m, 18 m, 15 m, 25 m. Tổng chiều dài đường đê là?",
+              "options": ["60 m", "70 m", "80 m", "90 m"],
+              "correctAnswer": 1,
+              "explanation": "12 + 18 + 15 + 25 = 70 m"
+            },
+            {
+              "id": "n7-q6",
+              "type": "fill-blank",
+              "question": "Chu vi tam giác có 3 cạnh: 10 cm, 15 cm, 20 cm là ___ cm.",
+              "blanks": [{ "position": 48, "answer": "45", "placeholder": "?" }],
+              "explanation": "Chu vi = 10 + 15 + 20 = 45 cm"
+            },
+            {
+              "id": "n7-q7",
+              "type": "multiple-choice",
+              "question": "Hình chữ nhật có mấy cạnh?",
+              "options": ["2 cạnh", "3 cạnh", "4 cạnh", "5 cạnh"],
+              "correctAnswer": 2,
+              "explanation": "Hình chữ nhật có 4 cạnh (2 cạnh dài, 2 cạnh ngắn)."
+            }
+          ]
+        },
+        {
+          "id": "lesson-5",
+          "title": "Gạo Trắng, Nước Trong - Khối lượng và Dung tích",
+          "duration": 200,
+          "timerSec": 320,
+          "questions": [
+            {
+              "id": "n8-q1",
               "type": "multiple-choice",
               "question": "1 kg bằng bao nhiêu gam?",
               "options": ["10 g", "100 g", "1000 g", "10000 g"],
@@ -381,345 +561,656 @@
               "explanation": "1 kg = 1000 g"
             },
             {
-              "id": "q2",
+              "id": "n8-q2",
+              "type": "fill-blank",
+              "question": "Bao gạo nặng 5 kg = ___ g",
+              "blanks": [{ "position": 20, "answer": "5000", "placeholder": "?" }],
+              "explanation": "5 kg = 5 × 1000 = 5000 g"
+            },
+            {
+              "id": "n8-q3",
+              "type": "multiple-choice",
+              "question": "Chum nước chứa được 20 lít. Đã dùng 8 lít. Còn lại bao nhiêu lít nước?",
+              "options": ["10 lít", "12 lít", "14 lít", "28 lít"],
+              "correctAnswer": 1,
+              "explanation": "20 - 8 = 12 lít"
+            },
+            {
+              "id": "n8-q4",
               "type": "matching-pairs",
-              "question": "Nối các khối lượng tương đương",
+              "question": "Nối khối lượng tương đương",
               "pairs": [
-                {
-                  "id": "w1",
-                  "left": "1 kg",
-                  "right": "1000 g"
-                },
-                {
-                  "id": "w2",
-                  "left": "2 kg 500 g",
-                  "right": "2500 g"
-                },
-                {
-                  "id": "w3",
-                  "left": "3 kg",
-                  "right": "3000 g"
-                }
+                { "id": "w1", "left": "2 kg", "right": "2000 g" },
+                { "id": "w2", "left": "3 kg 500 g", "right": "3500 g" },
+                { "id": "w3", "left": "1 kg 200 g", "right": "1200 g" }
               ]
             },
             {
-              "id": "q3",
-              "type": "fill-blank",
-              "question": "Cân giúp mẹ 2 kg gạo. Biết 1 kg = 1000 g, vậy 2 kg = ___ g",
-              "blanks": [
-                {
-                  "position": 57,
-                  "answer": "2000",
-                  "placeholder": "?"
-                }
-              ],
-              "explanation": "2 kg = 2 × 1000 = 2000 g"
+              "id": "n8-q5",
+              "type": "multiple-choice",
+              "question": "Mỗi bình chứa 2 lít nước. Có 5 bình. Tổng cộng có bao nhiêu lít nước?",
+              "options": ["7 lít", "10 lít", "12 lít", "15 lít"],
+              "correctAnswer": 1,
+              "explanation": "2 × 5 = 10 lít"
             },
             {
-              "id": "q4",
+              "id": "n8-q6",
+              "type": "fill-blank",
+              "question": "Trưởng đoàn chia 15 kg gạo vào 3 bao đều nhau. Mỗi bao có ___ kg gạo.",
+              "blanks": [{ "position": 58, "answer": "5", "placeholder": "?" }],
+              "explanation": "15 : 3 = 5 kg"
+            },
+            {
+              "id": "n8-q7",
               "type": "multiple-choice",
-              "question": "Quả dưa nặng 3 kg, quả bưởi nặng 1500 g. Quả dưa nặng hơn quả bưởi:",
-              "options": ["1 kg", "1 kg 500 g", "2 kg", "500 g"],
+              "question": "Quả dưa nặng 3 kg, quả bưởi nặng 1500 g. Quả nào nặng hơn và nặng hơn bao nhiêu?",
+              "options": ["Dưa nặng hơn 1000 g", "Dưa nặng hơn 1500 g", "Bưởi nặng hơn 500 g", "Nặng bằng nhau"],
               "correctAnswer": 1,
-              "explanation": "3 kg - 1500 g = 3000 g - 1500 g = 1500 g = 1 kg 500 g"
+              "explanation": "3 kg = 3000 g. 3000 - 1500 = 1500 g. Dưa nặng hơn 1500 g."
+            },
+            {
+              "id": "n8-q8",
+              "type": "drag-drop",
+              "question": "Sắp xếp khối lượng từ nhẹ đến nặng",
+              "dragItems": [
+                { "id": "w1", "content": "500 g", "correctSlot": "slot1" },
+                { "id": "w2", "content": "2 kg", "correctSlot": "slot2" },
+                { "id": "w3", "content": "3 kg 500 g", "correctSlot": "slot3" }
+              ],
+              "dropSlots": [
+                { "id": "slot1", "label": "Nhẹ nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Nặng nhất" }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "id": "money-logic",
-      "title": "Tiền tệ và Logic",
-      "description": "Tính tiền và giải câu đố",
+      "id": "c3-multiplication-division-money",
+      "title": "Phần 3: Kinh Đô Nhộn Nhịp",
+      "description": "Phép nhân, phép chia và tiền tệ",
       "icon": "coins",
       "color": "accent",
       "lessons": [
         {
           "id": "lesson-1",
-          "title": "Tính tiền thưởng",
-          "duration": 120,
-          "timerSec": 150,
+          "title": "Chợ Phiên Kinh Kỳ - Phép nhân Bảng 2, Bảng 5",
+          "duration": 200,
+          "timerSec": 320,
           "questions": [
             {
-              "id": "q1",
+              "id": "n9-q1",
               "type": "multiple-choice",
-              "question": "50.000 đồng chia đều cho 5 người. Mỗi người được bao nhiêu?",
-              "options": ["5.000 đồng", "10.000 đồng", "15.000 đồng", "20.000 đồng"],
+              "question": "Mỗi chùm táo có 5 quả. Có 4 chùm táo. Tổng cộng có bao nhiêu quả táo?",
+              "options": ["15", "20", "25", "9"],
               "correctAnswer": 1,
-              "explanation": "50.000 : 5 = 10.000 đồng mỗi người."
+              "explanation": "5 × 4 = 20 quả táo"
             },
             {
-              "id": "q2",
+              "id": "n9-q2",
               "type": "fill-blank",
-              "question": "Mua 3 cái bánh, mỗi cái 5.000 đồng. Tổng tiền là ___ đồng",
-              "blanks": [
-                {
-                  "position": 51,
-                  "answer": "15000",
-                  "placeholder": "?"
-                }
-              ],
-              "explanation": "3 × 5.000 = 15.000 đồng"
+              "question": "2 × 7 = ___",
+              "blanks": [{ "position": 8, "answer": "14", "placeholder": "?" }],
+              "explanation": "2 × 7 = 14"
             },
             {
-              "id": "q3",
-              "type": "counting",
-              "question": "Đếm số đồng xu trong hình",
-              "countingItems": [
-                {
-                  "image": "/src/assets/game/counting-dots.png",
-                  "count": 6
-                }
-              ],
-              "countingAnswer": 6,
-              "explanation": "Có 6 đồng xu trong hình."
-            },
-            {
-              "id": "q4",
+              "id": "n9-q3",
               "type": "multiple-choice",
-              "question": "Có 20.000 đồng, mua đồ chơi 12.000 đồng. Còn lại bao nhiêu?",
-              "options": ["6.000 đồng", "8.000 đồng", "10.000 đồng", "12.000 đồng"],
+              "question": "5 × 6 = ?",
+              "options": ["25", "30", "35", "11"],
               "correctAnswer": 1,
-              "explanation": "20.000 - 12.000 = 8.000 đồng còn lại."
+              "explanation": "5 × 6 = 30"
+            },
+            {
+              "id": "n9-q4",
+              "type": "matching-pairs",
+              "question": "Nối phép nhân với kết quả",
+              "pairs": [
+                { "id": "m1", "left": "2 × 8", "right": "16" },
+                { "id": "m2", "left": "5 × 5", "right": "25" },
+                { "id": "m3", "left": "2 × 9", "right": "18" },
+                { "id": "m4", "left": "5 × 7", "right": "35" }
+              ]
+            },
+            {
+              "id": "n9-q5",
+              "type": "multiple-choice",
+              "question": "Có 8 rổ cam, mỗi rổ có 2 quả. Tổng cộng có bao nhiêu quả cam?",
+              "options": ["10", "14", "16", "18"],
+              "correctAnswer": 2,
+              "explanation": "2 × 8 = 16 quả cam"
+            },
+            {
+              "id": "n9-q6",
+              "type": "fill-blank",
+              "question": "5 × 9 = ___",
+              "blanks": [{ "position": 8, "answer": "45", "placeholder": "?" }],
+              "explanation": "5 × 9 = 45"
+            },
+            {
+              "id": "n9-q7",
+              "type": "multiple-choice",
+              "question": "Bà bán 7 chùm chuối, mỗi chùm 5 quả. Bà bán được tất cả bao nhiêu quả chuối?",
+              "options": ["12", "25", "35", "45"],
+              "correctAnswer": 2,
+              "explanation": "5 × 7 = 35 quả chuối"
+            },
+            {
+              "id": "n9-q8",
+              "type": "drag-drop",
+              "question": "Sắp xếp kết quả từ nhỏ đến lớn",
+              "dragItems": [
+                { "id": "m1", "content": "2 × 6 = 12", "correctSlot": "slot1" },
+                { "id": "m2", "content": "5 × 4 = 20", "correctSlot": "slot2" },
+                { "id": "m3", "content": "5 × 8 = 40", "correctSlot": "slot3" }
+              ],
+              "dropSlots": [
+                { "id": "slot1", "label": "Nhỏ nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Lớn nhất" }
+              ]
             }
           ]
         },
         {
           "id": "lesson-2",
-          "title": "Câu đố logic",
-          "duration": 150,
-          "timerSec": 180,
+          "title": "Chia Kẹo Cho Trẻ - Phép chia Bảng 2, Bảng 5",
+          "duration": 200,
+          "timerSec": 320,
           "questions": [
             {
-              "id": "q1",
+              "id": "n10-q1",
+              "type": "multiple-choice",
+              "question": "Quỳnh có 20 viên kẹo, chia đều cho 5 bạn. Mỗi bạn được bao nhiêu viên?",
+              "options": ["2", "4", "5", "10"],
+              "correctAnswer": 1,
+              "explanation": "20 : 5 = 4 viên kẹo"
+            },
+            {
+              "id": "n10-q2",
+              "type": "fill-blank",
+              "question": "18 : 2 = ___",
+              "blanks": [{ "position": 9, "answer": "9", "placeholder": "?" }],
+              "explanation": "18 : 2 = 9"
+            },
+            {
+              "id": "n10-q3",
+              "type": "multiple-choice",
+              "question": "35 : 5 = ?",
+              "options": ["5", "6", "7", "8"],
+              "correctAnswer": 2,
+              "explanation": "35 : 5 = 7"
+            },
+            {
+              "id": "n10-q4",
+              "type": "matching-pairs",
+              "question": "Nối phép chia với kết quả",
+              "pairs": [
+                { "id": "d1", "left": "16 : 2", "right": "8" },
+                { "id": "d2", "left": "25 : 5", "right": "5" },
+                { "id": "d3", "left": "14 : 2", "right": "7" },
+                { "id": "d4", "left": "45 : 5", "right": "9" }
+              ]
+            },
+            {
+              "id": "n10-q5",
+              "type": "multiple-choice",
+              "question": "Có 30 viên bi, chia đều vào 5 túi. Mỗi túi có bao nhiêu viên bi?",
+              "options": ["4", "5", "6", "7"],
+              "correctAnswer": 2,
+              "explanation": "30 : 5 = 6 viên bi"
+            },
+            {
+              "id": "n10-q6",
+              "type": "fill-blank",
+              "question": "12 : 2 = ___",
+              "blanks": [{ "position": 9, "answer": "6", "placeholder": "?" }],
+              "explanation": "12 : 2 = 6"
+            },
+            {
+              "id": "n10-q7",
+              "type": "multiple-choice",
+              "question": "Có 40 chiếc bánh, chia đều cho 5 nhóm trẻ. Mỗi nhóm được bao nhiêu chiếc bánh?",
+              "options": ["6", "7", "8", "9"],
+              "correctAnswer": 2,
+              "explanation": "40 : 5 = 8 chiếc bánh"
+            },
+            {
+              "id": "n10-q8",
               "type": "drag-drop",
-              "question": "Xếp các số từ nhỏ đến lớn: 47, 23, 85",
+              "question": "Sắp xếp kết quả từ nhỏ đến lớn",
               "dragItems": [
-                {
-                  "id": "n1",
-                  "content": "23",
-                  "correctSlot": "pos1"
-                },
-                {
-                  "id": "n2",
-                  "content": "47",
-                  "correctSlot": "pos2"
-                },
-                {
-                  "id": "n3",
-                  "content": "85",
-                  "correctSlot": "pos3"
-                }
+                { "id": "d1", "content": "10 : 2 = 5", "correctSlot": "slot1" },
+                { "id": "d2", "content": "35 : 5 = 7", "correctSlot": "slot2" },
+                { "id": "d3", "content": "18 : 2 = 9", "correctSlot": "slot3" }
               ],
               "dropSlots": [
-                {
-                  "id": "pos1",
-                  "label": "Vị trí 1"
-                },
-                {
-                  "id": "pos2",
-                  "label": "Vị trí 2"
-                },
-                {
-                  "id": "pos3",
-                  "label": "Vị trí 3"
-                }
+                { "id": "slot1", "label": "Nhỏ nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Lớn nhất" }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "id": "lesson-3",
+          "title": "Tiền Thưởng Của Làng - Tiền tệ Việt Nam",
+          "duration": 200,
+          "timerSec": 320,
+          "questions": [
             {
-              "id": "q2",
+              "id": "n11-q1",
               "type": "multiple-choice",
-              "question": "Số nào lớn nhất trong các số: 56, 65, 55, 66?",
-              "options": ["56", "65", "55", "66"],
-              "correctAnswer": 3,
-              "explanation": "So sánh: 55 < 56 < 65 < 66. Số lớn nhất là 66."
+              "question": "Quỳnh có 50.000 đồng, mua bút 15.000 đồng. Còn lại bao nhiêu tiền?",
+              "options": ["25.000 đồng", "35.000 đồng", "45.000 đồng", "65.000 đồng"],
+              "correctAnswer": 1,
+              "explanation": "50.000 - 15.000 = 35.000 đồng"
             },
             {
-              "id": "q3",
+              "id": "n11-q2",
+              "type": "fill-blank",
+              "question": "Mua 3 cuốn vở, mỗi cuốn 5.000 đồng. Tổng tiền là ___ đồng",
+              "blanks": [{ "position": 52, "answer": "15000", "placeholder": "?" }],
+              "explanation": "3 × 5.000 = 15.000 đồng"
+            },
+            {
+              "id": "n11-q3",
+              "type": "multiple-choice",
+              "question": "Giấy giá 8.000 đồng, bút giá 12.000 đồng. Mua cả hai hết bao nhiêu tiền?",
+              "options": ["15.000 đồng", "18.000 đồng", "20.000 đồng", "22.000 đồng"],
+              "correctAnswer": 2,
+              "explanation": "8.000 + 12.000 = 20.000 đồng"
+            },
+            {
+              "id": "n11-q4",
               "type": "matching-pairs",
-              "question": "Nối số với từ chỉ vị trí",
+              "question": "Nối giá tiền với tổng tiền phải trả",
               "pairs": [
-                {
-                  "id": "p1",
-                  "left": "15",
-                  "right": "Nhỏ nhất"
-                },
-                {
-                  "id": "p2",
-                  "left": "45",
-                  "right": "Giữa"
-                },
-                {
-                  "id": "p3",
-                  "left": "78",
-                  "right": "Lớn nhất"
-                }
+                { "id": "p1", "left": "2 cái × 5.000 đồng", "right": "10.000 đồng" },
+                { "id": "p2", "left": "3 cái × 10.000 đồng", "right": "30.000 đồng" },
+                { "id": "p3", "left": "4 cái × 2.000 đồng", "right": "8.000 đồng" }
               ]
             },
             {
-              "id": "q4",
+              "id": "n11-q5",
+              "type": "multiple-choice",
+              "question": "Quỳnh đưa 100.000 đồng, mua đồ hết 78.000 đồng. Tiền thừa là bao nhiêu?",
+              "options": ["12.000 đồng", "22.000 đồng", "32.000 đồng", "178.000 đồng"],
+              "correctAnswer": 1,
+              "explanation": "100.000 - 78.000 = 22.000 đồng tiền thừa"
+            },
+            {
+              "id": "n11-q6",
               "type": "fill-blank",
-              "question": "Số liền sau của 99 là ___. Số liền trước của 50 là ___.",
-              "blanks": [
-                {
-                  "position": 22,
-                  "answer": "100",
-                  "placeholder": "?"
-                },
-                {
-                  "position": 52,
-                  "answer": "49",
-                  "placeholder": "?"
-                }
+              "question": "Có 40.000 đồng chia đều cho 5 người. Mỗi người được ___ đồng.",
+              "blanks": [{ "position": 54, "answer": "8000", "placeholder": "?" }],
+              "explanation": "40.000 : 5 = 8.000 đồng"
+            },
+            {
+              "id": "n11-q7",
+              "type": "multiple-choice",
+              "question": "Mẹ cho Quỳnh 20.000 đồng, bố cho thêm 15.000 đồng. Quỳnh có tất cả bao nhiêu tiền?",
+              "options": ["25.000 đồng", "30.000 đồng", "35.000 đồng", "45.000 đồng"],
+              "correctAnswer": 2,
+              "explanation": "20.000 + 15.000 = 35.000 đồng"
+            },
+            {
+              "id": "n11-q8",
+              "type": "drag-drop",
+              "question": "Sắp xếp số tiền từ ít đến nhiều",
+              "dragItems": [
+                { "id": "m1", "content": "5.000 đồng", "correctSlot": "slot1" },
+                { "id": "m2", "content": "20.000 đồng", "correctSlot": "slot2" },
+                { "id": "m3", "content": "50.000 đồng", "correctSlot": "slot3" }
               ],
-              "explanation": "Số liền sau 99 là 100. Số liền trước 50 là 49."
+              "dropSlots": [
+                { "id": "slot1", "label": "Ít nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Nhiều nhất" }
+              ]
             }
           ]
         }
       ]
     },
     {
-      "id": "final-review",
-      "title": "Ôn tập tổng hợp",
-      "description": "Ôn tập tất cả kiến thức với nhiều dạng câu hỏi",
-      "icon": "star",
-      "color": "primary",
+      "id": "c4-large-numbers-final",
+      "title": "Phần 4: Vào Thi Đình",
+      "description": "Số lớn trong phạm vi 1000 và ôn tập tổng hợp",
+      "icon": "crown",
+      "color": "highlight",
       "lessons": [
         {
           "id": "lesson-1",
-          "title": "Thử thách tổng hợp",
-          "duration": 180,
-          "timerSec": 240,
+          "title": "Kiểm Kê Kho Thóc - Số trong phạm vi 1000",
+          "duration": 200,
+          "timerSec": 360,
           "questions": [
             {
-              "id": "q1",
+              "id": "n12-q1",
               "type": "multiple-choice",
-              "question": "37 + 45 = ?",
-              "options": ["72", "82", "92", "62"],
-              "correctAnswer": 1,
-              "explanation": "37 + 45 = 82"
+              "question": "Số nào được đọc là 'Năm trăm hai mươi ba'?",
+              "options": ["235", "325", "523", "532"],
+              "correctAnswer": 2,
+              "explanation": "523 = 5 trăm + 2 chục + 3 đơn vị = Năm trăm hai mươi ba"
             },
             {
-              "id": "q2",
-              "type": "counting",
-              "question": "Đếm tổng số quả trong cả 2 hình",
-              "countingItems": [
-                {
-                  "image": "/src/assets/game/counting-banana.png",
-                  "count": 4
-                },
-                {
-                  "image": "/src/assets/game/counting-apple.png",
-                  "count": 5
-                }
-              ],
-              "countingAnswer": 9,
-              "explanation": "4 quả chuối + 5 quả táo = 9 quả."
-            },
-            {
-              "id": "q3",
+              "id": "n12-q2",
               "type": "fill-blank",
-              "question": "81 - 37 = ___",
-              "blanks": [
-                {
-                  "position": 11,
-                  "answer": "44",
-                  "placeholder": "?"
-                }
-              ],
-              "explanation": "81 - 37 = 44"
+              "question": "Số 847 đọc là: Tám trăm bốn mươi ___.",
+              "blanks": [{ "position": 40, "answer": "bảy", "placeholder": "?" }],
+              "explanation": "847 = 8 trăm + 4 chục + 7 đơn vị = Tám trăm bốn mươi bảy"
             },
             {
-              "id": "q4",
+              "id": "n12-q3",
+              "type": "multiple-choice",
+              "question": "Kho thóc có 300 bao + 50 bao + 6 bao. Tổng cộng có bao nhiêu bao thóc?",
+              "options": ["356", "365", "536", "653"],
+              "correctAnswer": 0,
+              "explanation": "300 + 50 + 6 = 356 bao thóc"
+            },
+            {
+              "id": "n12-q4",
+              "type": "matching-pairs",
+              "question": "Nối cách đọc với cách viết số",
+              "pairs": [
+                { "id": "n1", "left": "Bốn trăm linh năm", "right": "405" },
+                { "id": "n2", "left": "Sáu trăm bảy mươi", "right": "670" },
+                { "id": "n3", "left": "Chín trăm mười hai", "right": "912" }
+              ]
+            },
+            {
+              "id": "n12-q5",
+              "type": "multiple-choice",
+              "question": "Số nào là số tròn trăm?",
+              "options": ["350", "305", "500", "503"],
+              "correctAnswer": 2,
+              "explanation": "500 là số tròn trăm (chữ số hàng chục và đơn vị đều bằng 0)"
+            },
+            {
+              "id": "n12-q6",
+              "type": "fill-blank",
+              "question": "Số 706 có ___ trăm, 0 chục, 6 đơn vị.",
+              "blanks": [{ "position": 8, "answer": "7", "placeholder": "?" }],
+              "explanation": "706 = 7 trăm + 0 chục + 6 đơn vị"
+            },
+            {
+              "id": "n12-q7",
+              "type": "multiple-choice",
+              "question": "Đếm tiếp theo: 997, 998, 999, ?",
+              "options": ["1000", "9910", "9100", "900"],
+              "correctAnswer": 0,
+              "explanation": "999 + 1 = 1000"
+            },
+            {
+              "id": "n12-q8",
+              "type": "drag-drop",
+              "question": "Sắp xếp các số từ bé đến lớn",
+              "dragItems": [
+                { "id": "n1", "content": "356", "correctSlot": "slot1" },
+                { "id": "n2", "content": "563", "correctSlot": "slot2" },
+                { "id": "n3", "content": "635", "correctSlot": "slot3" }
+              ],
+              "dropSlots": [
+                { "id": "slot1", "label": "Bé nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Lớn nhất" }
+              ]
+            },
+            {
+              "id": "n12-q9",
+              "type": "multiple-choice",
+              "question": "Số liền trước của 400 là số nào?",
+              "options": ["399", "401", "300", "500"],
+              "correctAnswer": 0,
+              "explanation": "Số liền trước của 400 là 400 - 1 = 399"
+            }
+          ]
+        },
+        {
+          "id": "lesson-2",
+          "title": "So Sánh Bổng Lộc - So sánh số có 3 chữ số",
+          "duration": 200,
+          "timerSec": 360,
+          "questions": [
+            {
+              "id": "n13-q1",
+              "type": "multiple-choice",
+              "question": "So sánh: 456 ... 465",
+              "options": ["456 > 465", "456 < 465", "456 = 465", "Không so sánh được"],
+              "correctAnswer": 1,
+              "explanation": "Hàng trăm bằng nhau (4 = 4). So hàng chục: 5 < 6. Vậy 456 < 465."
+            },
+            {
+              "id": "n13-q2",
+              "type": "fill-blank",
+              "question": "789 ___ 798 (điền >, < hoặc =)",
+              "blanks": [{ "position": 4, "answer": "<", "placeholder": "?" }],
+              "explanation": "Hàng trăm bằng nhau (7 = 7). So hàng chục: 8 < 9. Vậy 789 < 798."
+            },
+            {
+              "id": "n13-q3",
+              "type": "multiple-choice",
+              "question": "Trấn A nộp thuế 523 lạng vàng, Trấn B nộp 532 lạng vàng. Trấn nào nộp nhiều hơn?",
+              "options": ["Trấn A", "Trấn B", "Bằng nhau", "Không biết"],
+              "correctAnswer": 1,
+              "explanation": "523 < 532. Vậy Trấn B nộp nhiều hơn."
+            },
+            {
+              "id": "n13-q4",
+              "type": "matching-pairs",
+              "question": "Nối các cặp số với dấu so sánh đúng",
+              "pairs": [
+                { "id": "c1", "left": "345 và 354", "right": "345 < 354" },
+                { "id": "c2", "left": "678 và 678", "right": "678 = 678" },
+                { "id": "c3", "left": "901 và 899", "right": "901 > 899" }
+              ]
+            },
+            {
+              "id": "n13-q5",
+              "type": "multiple-choice",
+              "question": "Số lớn nhất trong các số sau: 489, 498, 849, 894?",
+              "options": ["489", "498", "849", "894"],
+              "correctAnswer": 3,
+              "explanation": "So hàng trăm: 894 và 849 có hàng trăm lớn nhất (8). So tiếp hàng chục: 9 > 4. Vậy 894 lớn nhất."
+            },
+            {
+              "id": "n13-q6",
+              "type": "fill-blank",
+              "question": "Số bé nhất có 3 chữ số là ___.",
+              "blanks": [{ "position": 30, "answer": "100", "placeholder": "?" }],
+              "explanation": "Số bé nhất có 3 chữ số là 100."
+            },
+            {
+              "id": "n13-q7",
+              "type": "multiple-choice",
+              "question": "Xếp các số theo thứ tự từ bé đến lớn: 756, 675, 567",
+              "options": ["756, 675, 567", "567, 675, 756", "675, 567, 756", "567, 756, 675"],
+              "correctAnswer": 1,
+              "explanation": "567 < 675 < 756"
+            },
+            {
+              "id": "n13-q8",
+              "type": "drag-drop",
+              "question": "Sắp xếp các số từ lớn đến bé",
+              "dragItems": [
+                { "id": "n1", "content": "423", "correctSlot": "slot3" },
+                { "id": "n2", "content": "432", "correctSlot": "slot2" },
+                { "id": "n3", "content": "524", "correctSlot": "slot1" }
+              ],
+              "dropSlots": [
+                { "id": "slot1", "label": "Lớn nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Bé nhất" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lesson-3",
+          "title": "Xây Dựng Thành Quách - Cộng trừ trong phạm vi 1000",
+          "duration": 200,
+          "timerSec": 360,
+          "questions": [
+            {
+              "id": "n14-q1",
+              "type": "multiple-choice",
+              "question": "Cổng phía Nam cần 234 viên gạch, cổng phía Bắc cần 352 viên. Tổng cộng cần bao nhiêu viên gạch?",
+              "options": ["486", "586", "576", "686"],
+              "correctAnswer": 1,
+              "explanation": "234 + 352 = 586 viên gạch"
+            },
+            {
+              "id": "n14-q2",
+              "type": "fill-blank",
+              "question": "425 + 134 = ___",
+              "blanks": [{ "position": 12, "answer": "559", "placeholder": "?" }],
+              "explanation": "425 + 134 = 559"
+            },
+            {
+              "id": "n14-q3",
+              "type": "multiple-choice",
+              "question": "Kho có 678 viên gạch, đã dùng 235 viên. Còn lại bao nhiêu viên gạch?",
+              "options": ["333", "443", "453", "543"],
+              "correctAnswer": 1,
+              "explanation": "678 - 235 = 443 viên gạch"
+            },
+            {
+              "id": "n14-q4",
               "type": "matching-pairs",
               "question": "Nối phép tính với kết quả",
               "pairs": [
-                {
-                  "id": "p1",
-                  "left": "25 + 38",
-                  "right": "63"
-                },
-                {
-                  "id": "p2",
-                  "left": "90 - 45",
-                  "right": "45"
-                },
-                {
-                  "id": "p3",
-                  "left": "1 giờ",
-                  "right": "60 phút"
-                },
-                {
-                  "id": "p4",
-                  "left": "1 kg",
-                  "right": "1000 g"
-                }
+                { "id": "c1", "left": "312 + 456", "right": "768" },
+                { "id": "c2", "left": "587 - 234", "right": "353" },
+                { "id": "c3", "left": "621 + 248", "right": "869" }
               ]
             },
             {
-              "id": "q5",
+              "id": "n14-q5",
+              "type": "multiple-choice",
+              "question": "789 - 456 = ?",
+              "options": ["323", "333", "343", "353"],
+              "correctAnswer": 1,
+              "explanation": "789 - 456 = 333"
+            },
+            {
+              "id": "n14-q6",
+              "type": "fill-blank",
+              "question": "543 + 321 = ___",
+              "blanks": [{ "position": 12, "answer": "864", "placeholder": "?" }],
+              "explanation": "543 + 321 = 864"
+            },
+            {
+              "id": "n14-q7",
+              "type": "multiple-choice",
+              "question": "Thợ xây có 500 viên gạch, dùng hết 178 viên. Còn lại bao nhiêu viên?",
+              "options": ["312", "322", "332", "342"],
+              "correctAnswer": 1,
+              "explanation": "500 - 178 = 322 viên gạch"
+            },
+            {
+              "id": "n14-q8",
               "type": "drag-drop",
-              "question": "Sắp xếp kết quả từ nhỏ đến lớn",
+              "question": "Sắp xếp kết quả từ bé đến lớn",
               "dragItems": [
-                {
-                  "id": "r1",
-                  "content": "15 + 12 = 27",
-                  "correctSlot": "small"
-                },
-                {
-                  "id": "r2",
-                  "content": "40 + 15 = 55",
-                  "correctSlot": "medium"
-                },
-                {
-                  "id": "r3",
-                  "content": "60 + 25 = 85",
-                  "correctSlot": "large"
-                }
+                { "id": "c1", "content": "234 + 123 = 357", "correctSlot": "slot1" },
+                { "id": "c2", "content": "456 + 123 = 579", "correctSlot": "slot2" },
+                { "id": "c3", "content": "654 + 234 = 888", "correctSlot": "slot3" }
               ],
               "dropSlots": [
-                {
-                  "id": "small",
-                  "label": "Nhỏ nhất"
-                },
-                {
-                  "id": "medium",
-                  "label": "Trung bình"
-                },
-                {
-                  "id": "large",
-                  "label": "Lớn nhất"
-                }
+                { "id": "slot1", "label": "Bé nhất" },
+                { "id": "slot2", "label": "Giữa" },
+                { "id": "slot3", "label": "Lớn nhất" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lesson-4",
+          "title": "Đối Đáp Trước Rồng Vàng - Ôn tập tổng hợp",
+          "duration": 250,
+          "timerSec": 420,
+          "questions": [
+            {
+              "id": "n15-q1",
+              "type": "multiple-choice",
+              "question": "Có 3 người: A cao hơn B, B cao hơn C. Ai cao nhất?",
+              "options": ["A", "B", "C", "Không biết được"],
+              "correctAnswer": 0,
+              "explanation": "A > B > C. Vậy A cao nhất."
+            },
+            {
+              "id": "n15-q2",
+              "type": "fill-blank",
+              "question": "Số tiếp theo trong dãy: 2, 4, 6, 8, ___",
+              "blanks": [{ "position": 32, "answer": "10", "placeholder": "?" }],
+              "explanation": "Đây là dãy số chẵn, mỗi số cách nhau 2. Số tiếp theo là 10."
+            },
+            {
+              "id": "n15-q3",
+              "type": "multiple-choice",
+              "question": "Đức Vua có 1000 lạng vàng, ban thưởng 235 lạng cho quan, 342 lạng cho dân. Còn lại bao nhiêu lạng?",
+              "options": ["323 lạng", "423 lạng", "523 lạng", "623 lạng"],
+              "correctAnswer": 1,
+              "explanation": "1000 - 235 - 342 = 1000 - 577 = 423 lạng vàng"
+            },
+            {
+              "id": "n15-q4",
+              "type": "matching-pairs",
+              "question": "Nối câu đố với đáp án",
+              "pairs": [
+                { "id": "r1", "left": "Số chẵn nhỏ nhất", "right": "0 hoặc 2" },
+                { "id": "r2", "left": "Số lẻ bé nhất có 2 chữ số", "right": "11" },
+                { "id": "r3", "left": "1 giờ có bao nhiêu phút?", "right": "60" }
               ]
             },
             {
-              "id": "q6",
+              "id": "n15-q5",
               "type": "multiple-choice",
-              "question": "Kim ngắn chỉ 7, kim dài chỉ 6. Đồng hồ chỉ:",
-              "options": ["6 giờ 35 phút", "7 giờ 30 phút", "6 giờ 7 phút", "7 giờ 6 phút"],
+              "question": "Một con gà có 2 chân. 5 con gà có bao nhiêu chân?",
+              "options": ["7 chân", "10 chân", "12 chân", "15 chân"],
               "correctAnswer": 1,
-              "explanation": "Kim ngắn chỉ 7 = 7 giờ. Kim dài chỉ 6 = 30 phút. Đồng hồ chỉ 7 giờ 30 phút."
+              "explanation": "2 × 5 = 10 chân"
             },
             {
-              "id": "q7",
-              "type": "multiple-choice",
-              "question": "2 mét 30 cm = ? cm",
-              "options": ["203 cm", "230 cm", "23 cm", "2030 cm"],
-              "correctAnswer": 1,
-              "explanation": "2 m 30 cm = 200 cm + 30 cm = 230 cm"
-            },
-            {
-              "id": "q8",
+              "id": "n15-q6",
               "type": "fill-blank",
-              "question": "Có 80.000 đồng, mua sách 35.000 đồng. Còn lại ___ đồng.",
-              "blanks": [
-                {
-                  "position": 55,
-                  "answer": "45000",
-                  "placeholder": "?"
-                }
-              ],
-              "explanation": "80.000 - 35.000 = 45.000 đồng còn lại."
+              "question": "Đức Vua hỏi: 'Số lớn nhất có 3 chữ số là ___?'",
+              "blanks": [{ "position": 40, "answer": "999", "placeholder": "?" }],
+              "explanation": "Số lớn nhất có 3 chữ số là 999."
+            },
+            {
+              "id": "n15-q7",
+              "type": "multiple-choice",
+              "question": "Nếu hôm nay là thứ Bảy, thì 3 ngày trước là thứ mấy?",
+              "options": ["Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm"],
+              "correctAnswer": 2,
+              "explanation": "Thứ Bảy → Thứ Sáu (1 ngày) → Thứ Năm (2 ngày) → Thứ Tư (3 ngày trước)"
+            },
+            {
+              "id": "n15-q8",
+              "type": "multiple-choice",
+              "question": "Tổng của số lớn nhất có 2 chữ số và số nhỏ nhất có 2 chữ số là bao nhiêu?",
+              "options": ["99", "100", "109", "110"],
+              "correctAnswer": 2,
+              "explanation": "Số lớn nhất có 2 chữ số: 99. Số nhỏ nhất có 2 chữ số: 10. Tổng: 99 + 10 = 109."
+            },
+            {
+              "id": "n15-q9",
+              "type": "fill-blank",
+              "question": "Dãy số: 100, 200, 300, ___, 500",
+              "blanks": [{ "position": 24, "answer": "400", "placeholder": "?" }],
+              "explanation": "Đây là dãy số tròn trăm, mỗi số cách nhau 100. Số tiếp theo là 400."
+            },
+            {
+              "id": "n15-q10",
+              "type": "multiple-choice",
+              "question": "Đức Vua hỏi: 'Một năm có bao nhiêu tháng?'",
+              "options": ["10 tháng", "11 tháng", "12 tháng", "13 tháng"],
+              "correctAnswer": 2,
+              "explanation": "Một năm có 12 tháng."
             }
           ]
         }

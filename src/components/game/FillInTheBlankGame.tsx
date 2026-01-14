@@ -16,6 +16,8 @@ interface FillInTheBlankGameProps {
   onComplete: (isCorrect: boolean) => void;
 }
 
+const BLANK_MARKER = "___";
+
 const FillInTheBlankGameComponent = ({ question, onComplete }: FillInTheBlankGameProps) => {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showFeedback, setShowFeedback] = useState(false);
@@ -24,8 +26,8 @@ const FillInTheBlankGameComponent = ({ question, onComplete }: FillInTheBlankGam
   onCompleteRef.current = onComplete;
 
   const handleSubmit = () => {
-    const correct = question.blanks.every(blank => {
-      const userAnswer = answers[blank.position]?.trim().toLowerCase();
+    const correct = question.blanks.every((blank, index) => {
+      const userAnswer = answers[index]?.trim().toLowerCase();
       const correctAnswer = blank.answer.trim().toLowerCase();
       return userAnswer === correctAnswer;
     });
@@ -38,48 +40,56 @@ const FillInTheBlankGameComponent = ({ question, onComplete }: FillInTheBlankGam
     }, 2500);
   };
 
-  // Memoize sorted blanks
-  const sortedBlanks = useMemo(() => 
-    [...question.blanks].sort((a, b) => a.position - b.position),
-    [question.blanks]
-  );
+  // Parse text and find blank positions by looking for ___ markers
+  const renderTextWithBlanks = useMemo(() => {
+    const text = question.text;
+    const parts: React.ReactNode[] = [];
+    let currentIndex = 0;
+    let blankIndex = 0;
 
-  const renderTextWithBlanks = () => {
-    const parts = [];
-    let lastIndex = 0;
+    // Find all ___ markers in the text
+    const regex = /___/g;
+    let match;
 
-    sortedBlanks.forEach((blank, blankIndex) => {
-      // Add text before blank
-      parts.push(
-        <span key={`text-${blankIndex}`}>
-          {question.text.slice(lastIndex, blank.position)}
-        </span>
-      );
+    while ((match = regex.exec(text)) !== null) {
+      // Add text before the blank
+      if (match.index > currentIndex) {
+        parts.push(
+          <span key={`text-${currentIndex}`}>
+            {text.slice(currentIndex, match.index)}
+          </span>
+        );
+      }
 
-      // Add input for blank
+      // Get the blank config for this index (or use defaults)
+      const blankConfig = question.blanks[blankIndex] || { answer: "", placeholder: "?" };
+      const currentBlankIndex = blankIndex;
+
       const isBlankCorrect = showFeedback && 
-        answers[blank.position]?.trim().toLowerCase() === blank.answer.trim().toLowerCase();
+        answers[currentBlankIndex]?.trim().toLowerCase() === blankConfig.answer.trim().toLowerCase();
       const isBlankIncorrect = showFeedback && !isBlankCorrect;
 
+      // Add input for the blank
       parts.push(
-        <span key={`blank-${blankIndex}`} className="inline-block mx-1">
+        <span key={`blank-${blankIndex}`} className="inline-flex items-center mx-1 align-middle">
           <Input
             type="text"
-            value={answers[blank.position] || ""}
+            value={answers[currentBlankIndex] || ""}
             onChange={(e) => setAnswers(prev => ({
               ...prev,
-              [blank.position]: e.target.value
+              [currentBlankIndex]: e.target.value
             }))}
             disabled={showFeedback}
-            placeholder={blank.placeholder || "___"}
+            placeholder={blankConfig.placeholder || "?"}
             className={`
-              w-24 h-10 text-center inline-block
-              ${isBlankCorrect ? "border-green-500 bg-green-50" : ""}
-              ${isBlankIncorrect ? "border-red-500 bg-red-50" : ""}
+              w-20 md:w-24 h-9 text-center text-base font-medium
+              ${isBlankCorrect ? "border-green-500 bg-green-50 text-green-700" : ""}
+              ${isBlankIncorrect ? "border-red-500 bg-red-50 text-red-700" : ""}
+              ${!showFeedback ? "border-primary/40 focus:border-primary" : ""}
             `}
           />
           {showFeedback && (
-            <span className="inline-block ml-1 align-middle">
+            <span className="ml-1">
               {isBlankCorrect ? (
                 <CheckCircle2 className="w-5 h-5 text-green-600" />
               ) : (
@@ -90,21 +100,24 @@ const FillInTheBlankGameComponent = ({ question, onComplete }: FillInTheBlankGam
         </span>
       );
 
-      lastIndex = blank.position;
-    });
+      currentIndex = match.index + BLANK_MARKER.length;
+      blankIndex++;
+    }
 
-    // Add remaining text
-    parts.push(
-      <span key="text-end">
-        {question.text.slice(lastIndex)}
-      </span>
-    );
+    // Add remaining text after last blank
+    if (currentIndex < text.length) {
+      parts.push(
+        <span key="text-end">
+          {text.slice(currentIndex)}
+        </span>
+      );
+    }
 
     return parts;
-  };
+  }, [question.text, question.blanks, answers, showFeedback]);
 
-  const allBlanksFilled = question.blanks.every(blank => 
-    answers[blank.position]?.trim().length > 0
+  const allBlanksFilled = question.blanks.every((_, index) => 
+    answers[index]?.trim().length > 0
   );
 
   return (
@@ -114,8 +127,8 @@ const FillInTheBlankGameComponent = ({ question, onComplete }: FillInTheBlankGam
           Điền vào chỗ trống
         </h2>
 
-        <div className="text-lg leading-relaxed mb-6">
-          {renderTextWithBlanks()}
+        <div className="text-lg leading-relaxed mb-6 flex flex-wrap items-center">
+          {renderTextWithBlanks}
         </div>
 
         {!showFeedback && allBlanksFilled && (
