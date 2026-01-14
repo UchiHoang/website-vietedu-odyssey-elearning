@@ -430,11 +430,10 @@ const topicsData: Topic[] = [
     description: "Cách Tính Diện Tích Hình Thang"
   },
 
-  /* --- LỚP 5 - HỌC KÌ 2 --- */
   {
     id: "L5-13",
     lessonId: "L5",
-    semester: 2,
+    semester: 1,
     title: "Cách Tính Diện Tích Hình Tròn",
     videoUrl: "https://www.youtube.com/embed/TzzJ9PTVoyA",
     description: "Cách Tính Diện Tích Hình Tròn"
@@ -442,11 +441,20 @@ const topicsData: Topic[] = [
   {
     id: "L5-14",
     lessonId: "L5",
-    semester: 2,
+    semester: 1,
     title: "Cách Tính Thời Gian, Quãng Đường, Vận Tốc",
     videoUrl: "https://www.youtube.com/embed/zFjbAYD3w3w",
     description: "Cách Tính Thời Gian, Quãng Đường, Vận Tốc"
+  }, 
+  {
+    id: "L5-22",
+    lessonId: "L5",
+    semester: 1,
+    title: "Tìm Tỉ Số Phần Trăm Của 2 Số",
+    videoUrl: "https://www.youtube.com/embed/kCmwalu89GM",
+    description: "Tìm Tỉ Số Phần Trăm Của 2 Số"
   },
+  /* --- LỚP 5 - HỌC KÌ 2 --- */
   {
     id: "L5-15",
     lessonId: "L5",
@@ -464,12 +472,84 @@ const topicsData: Topic[] = [
     description: "Diện Tích Xung Quanh Và Diện Tích Toàn Phần Của Hình Lập Phương"
   },
   {
+    id: "L5-23",
+    lessonId: "L5",
+    semester: 2,
+    title: "Giới Thiệu Về Hình Trụ, Hình Cầu",
+    videoUrl: "https://www.youtube.com/embed/0NewzRWSTfc",
+    description: "Giới Thiệu Về Hình Trụ, Hình Cầu"
+  },
+  {
+    id: "L5-24",
+    lessonId: "L5",
+    semester: 2,
+    title: "Cộng Số Đo Thời Gian",
+    videoUrl: "https://www.youtube.com/embed/6iRL5OsVLbc",
+    description: "Cộng Số Đo Thời Gian"
+  },
+  {
+    id: "L5-25",
+    lessonId: "L5",
+    semester: 2,
+    title: "Trừ Số Đo Thời Gian",
+    videoUrl: "https://www.youtube.com/embed/v3l00mOpelQ",
+    description: "Trừ Số Đo Thời Gian"
+  },
+  {
+    id: "L5-26",
+    lessonId: "L5",
+    semester: 2,
+    title: "Nhân Số Đo Thời Gian",
+    videoUrl: "https://www.youtube.com/embed/Fl1n_3_Lh40",
+    description: "Nhân Số Đo Thời Gian"
+  },
+  {
+    id: "L5-27",
+    lessonId: "L5",
+    semester: 2,
+    title: "Chia Số Đo Thời Gian",
+    videoUrl: "https://www.youtube.com/embed/c8-5gshbYiI",
+    description: "Chia Số Đo Thời Gian"
+  },
+  {
     id: "L5-17",
     lessonId: "L5",
     semester: 2,
     title: "Thể Tích Của Một Hình",
     videoUrl: "https://www.youtube.com/embed/rlGdd3rj3A4",
     description: "Thể Tích Của Một Hình"
+  },
+  {
+    id: "L5-18",
+    lessonId: "L5",
+    semester: 2,
+    title: "Thể Tích Hình Hộp Chữ Nhật",
+    videoUrl: "https://www.youtube.com/embed/D7AO_NwtoIs",
+    description: "Thể Tích Hình Hộp Chữ Nhật"
+  },
+  {
+    id: "L5-19",
+    lessonId: "L5",
+    semester: 2,
+    title: "Thể Tích Hình Lập Phương",
+    videoUrl: "https://www.youtube.com/embed/99tkJuwuMNQ",
+    description: "Thể Tích Hình Lập Phương"
+  },
+  {
+    id: "L5-20",
+    lessonId: "L5",
+    semester: 2,
+    title: "Tìm Số Khi Biết Giá Trị Phần Trăm",
+    videoUrl: "https://www.youtube.com/embed/vqY27sQnDcM",
+    description: "Tìm Số Khi Biết Giá Trị Phần Trăm"
+  },
+  {
+    id: "L5-21",
+    lessonId: "L5",
+    semester: 2,
+    title: "Cách Tìm Giá Trị Của 1 Số",
+    videoUrl: "https://www.youtube.com/embed/coQV2_IKiac",
+    description: "Cách Tìm Giá Trị Của 1 Số"
   },
 ];
 

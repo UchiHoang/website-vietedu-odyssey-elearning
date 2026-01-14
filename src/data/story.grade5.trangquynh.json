@@ -9,21 +9,156 @@
     { "sprite": "assets/user/tuongquan5.png","speaker": "Tướng Quân", "text": "Mọi quyết định đều dựa trên số liệu, hãy thật chính xác." }
   ],
   "nodes": [
-    { "id": "g5-l1", "title": "Chiêu Mộ Binh Sĩ", "badgeOnComplete": "g5-l1", "activityRef": "g5-l1-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Đếm quân, chia nhóm, dùng số thập phân." }] },
-    { "id": "g5-l2", "title": "Kiểm Kê Kho Lương", "badgeOnComplete": "g5-l2", "activityRef": "g5-l2-qs", "cutscene": [{ "speaker": "Lính Hậu Cần", "text": "Đo cân nặng gạo theo kg, số thập phân." }] },
-    { "id": "g5-l3", "title": "Bản Đồ Biên Giới", "badgeOnComplete": "g5-l3", "activityRef": "g5-l3-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Tính tọa độ, khoảng cách trên bản đồ." }] },
-    { "id": "g5-l4", "title": "Tính Toán Quân Nhu", "badgeOnComplete": "g5-l4", "activityRef": "g5-l4-qs", "cutscene": [{ "speaker": "Tướng Quân", "text": "Cộng trừ số thập phân khi cấp phát." }] },
-    { "id": "g5-l5", "title": "Gấp Rút Hành Quân", "badgeOnComplete": "g5-l5", "activityRef": "g5-l5-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Tính vận tốc = quãng đường / thời gian." }] },
-    { "id": "g5-l6", "title": "Chia Nhỏ Đội Hình", "badgeOnComplete": "g5-l6", "activityRef": "g5-l6-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Chia quân bằng tỉ lệ, phân số và thập phân." }] },
-    { "id": "g5-l7", "title": "Đắp Đê Phòng Thủ", "badgeOnComplete": "g5-l7", "activityRef": "g5-l7-qs", "cutscene": [{ "speaker": "Dân Công", "text": "Tính thể tích đất, hình hộp chữ nhật." }] },
-    { "id": "g5-l8", "title": "Tính Thuế Quân Điền", "badgeOnComplete": "g5-l8", "activityRef": "g5-l8-qs", "cutscene": [{ "speaker": "Quan Lại", "text": "Nhân thập phân để tính thuế ruộng." }] },
-    { "id": "g5-l9", "title": "Trận Địa Hình Tam Giác", "badgeOnComplete": "g5-l9", "activityRef": "g5-l9-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Tính diện tích tam giác, chọn vị trí đặt quân." }] },
-    { "id": "g5-l10", "title": "Xây Thành Lũy", "badgeOnComplete": "g5-l10", "activityRef": "g5-l10-qs", "cutscene": [{ "speaker": "Thợ Xây", "text": "Chu vi, diện tích tường thành hình chữ nhật." }] },
-    { "id": "g5-l11", "title": "Vòng Vây Khép Kín", "badgeOnComplete": "g5-l11", "activityRef": "g5-l11-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Tính chu vi đường tròn bao quanh địch." }] },
-    { "id": "g5-l12", "title": "Thủy Chiến Trên Sông", "badgeOnComplete": "g5-l12", "activityRef": "g5-l12-qs", "cutscene": [{ "speaker": "Thủy Quân", "text": "Tốc độ thuyền ngược xuôi dòng, bài toán chuyển động." }] },
-    { "id": "g5-l13", "title": "Truy Kích Quân Thù", "badgeOnComplete": "g5-l13", "activityRef": "g5-l13-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Hai đội xuất phát khác thời gian, tính gặp nhau." }] },
-    { "id": "g5-l14", "title": "Cuộc Đua Thời Gian", "badgeOnComplete": "g5-l14", "activityRef": "g5-l14-qs", "cutscene": [{ "speaker": "Trạng Nguyên", "text": "Tổng hợp thời gian, vận tốc, khoảng cách." }] },
-    { "id": "g5-l15", "title": "Khải Hoàn Ca", "badgeOnComplete": "g5-l15", "activityRef": "g5-l15-qs", "cutscene": [{ "speaker": "Người kể chuyện", "text": "Bài tổng hợp cuối cùng, nhận thưởng." }] }
+    {
+      "id": "g5-l1",
+      "title": "Chiêu Mộ Binh Sĩ",
+      "badgeOnComplete": "badge-soldier",
+      "activityRef": "g5-l1-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Hàng ngàn tráng sĩ đã về tụ hội. Nhưng quân số đông thế này, chia trại thế nào cho đều?", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Tướng quân yên tâm. Thần sẽ dùng phép tính thập phân và làm tròn số để phân bổ doanh trại hợp lý nhất.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l2",
+      "title": "Kiểm Kê Kho Lương",
+      "badgeOnComplete": "badge-rice",
+      "activityRef": "g5-l2-qs",
+      "cutscene": [
+        { "speaker": "Lính Hậu Cần", "text": "Bẩm Trạng Nguyên, lương thực từ các nơi gửi về có cả tấn, tạ, yến, lại còn số lẻ nữa!", "sprite": "assets/user/linh.png" },
+        { "speaker": "Trạng Nguyên", "text": "Đừng lo! Hãy quy đổi tất cả về cùng một đơn vị đo và dùng số thập phân. Ta sẽ tính toán không sai một hạt.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l3",
+      "title": "Bản Đồ Biên Giới",
+      "badgeOnComplete": "badge-map",
+      "activityRef": "g5-l3-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Địa hình hiểm trở, trên bản đồ vẽ nhỏ xíu thế này, làm sao biết đường đi thực tế bao xa?", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Đó là nhờ tỉ lệ bản đồ. Thần sẽ giúp ngài tính khoảng cách thực địa chính xác từng mét.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l4",
+      "title": "Tính Toán Quân Nhu",
+      "badgeOnComplete": "badge-calculator",
+      "activityRef": "g5-l4-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Chúng ta cần mua thêm vũ khí và thuốc men. Ngân khố có hạn, phải tính thật khéo.", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Cộng trừ số thập phân là sở trường của thần. Thần sẽ cân đối thu chi, đảm bảo quân ta đủ đầy.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l5",
+      "title": "Gấp Rút Hành Quân",
+      "badgeOnComplete": "badge-boot",
+      "activityRef": "g5-l5-qs",
+      "cutscene": [
+        { "speaker": "Lính Liên Lạc", "text": "Quân địch đang đến gần! Chúng ta phải di chuyển nhanh hơn!", "sprite": "assets/user/linh.png" },
+        { "speaker": "Trạng Nguyên", "text": "Muốn nhanh phải biết tính vận tốc. Ta sẽ vạch ra lộ trình tối ưu để đoàn quân đạt tốc độ cao nhất.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l6",
+      "title": "Chia Nhỏ Đội Hình",
+      "badgeOnComplete": "badge-percent",
+      "activityRef": "g5-l6-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Ta muốn chia quân thành các nhóm nhỏ để phục kích. Tỉ lệ bao nhiêu là hợp lý?", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Thần đề xuất dùng tỉ số phần trăm. 20% chặn đầu, 50% bọc sườn, số còn lại bảo vệ đại bản doanh.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l7",
+      "title": "Đắp Đê Phòng Thủ",
+      "badgeOnComplete": "badge-shovel",
+      "activityRef": "g5-l7-qs",
+      "cutscene": [
+        { "speaker": "Lính Công Binh", "text": "Nước sông đang lên cao, chúng ta cần đắp đê ngăn lũ bảo vệ doanh trại.", "sprite": "assets/user/linh.png" },
+        { "speaker": "Trạng Nguyên", "text": "Hãy tính thể tích đất cần đào đắp. Hình hộp chữ nhật hay hình lập phương, ta đều tính được hết.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l8",
+      "title": "Tính Thuế Quân Điền",
+      "badgeOnComplete": "badge-coin",
+      "activityRef": "g5-l8-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Mùa gặt đã tới, dân làng muốn đóng góp lúa gạo nuôi quân. Ta nên thu nhận thế nào?", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Thần sẽ dùng phép nhân số thập phân để tính sản lượng lúa trên từng hecta ruộng. Công bằng cho dân, no ấm cho quân.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l9",
+      "title": "Trận Địa Hình Tam Giác",
+      "badgeOnComplete": "badge-triangle",
+      "activityRef": "g5-l9-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Quân địch tấn công theo mũi nhọn. Ta phải bố trí trận địa phòng thủ ra sao?", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Trận đồ hình tam giác là vững chãi nhất. Hãy để thần tính diện tích để bố trí cung thủ vừa đủ.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l10",
+      "title": "Xây Thành Lũy",
+      "badgeOnComplete": "badge-wall",
+      "activityRef": "g5-l10-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Tường thành cũ đã yếu. Ta cần xây thêm các tháp canh hình thang.", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Diện tích hình thang: Đáy lớn đáy bé ta đem cộng vào, rồi nhân với chiều cao, chia đôi lấy nửa thế nào cũng ra!", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l11",
+      "title": "Vòng Vây Khép Kín",
+      "badgeOnComplete": "badge-circle",
+      "activityRef": "g5-l11-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Địch đang co cụm lại. Ta sẽ dùng chiến thuật vây tròn.", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Để vòng vây khép kín không kẽ hở, thần sẽ tính chu vi hình tròn. Số Pi 3,14 sẽ là chìa khóa chiến thắng.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l12",
+      "title": "Thủy Chiến Trên Sông",
+      "badgeOnComplete": "badge-ship",
+      "activityRef": "g5-l12-qs",
+      "cutscene": [
+        { "speaker": "Thuyền Trưởng", "text": "Nước sông chảy xiết quá! Thuyền đi ngược dòng chậm hơn hẳn!", "sprite": "assets/user/linh.png" },
+        { "speaker": "Trạng Nguyên", "text": "Đó là do vận tốc dòng nước. Xuôi dòng được cộng thêm, ngược dòng bị trừ đi. Ta phải tính toán kỹ để không lỡ thời cơ.", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l13",
+      "title": "Truy Kích Quân Thù",
+      "badgeOnComplete": "badge-horse",
+      "activityRef": "g5-l13-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Địch đã bỏ chạy được một quãng xa. Liệu ngựa của ta có đuổi kịp không?", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Thần sẽ tính toán thời gian gặp nhau dựa trên hiệu vận tốc. Chúng ta sẽ bắt kịp chúng trước khi trời tối!", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l14",
+      "title": "Cuộc Đua Thời Gian",
+      "badgeOnComplete": "badge-clock",
+      "activityRef": "g5-l14-qs",
+      "cutscene": [
+        { "speaker": "Lính Liên Lạc", "text": "Mật thư khẩn cấp! Phải đưa về kinh đô trước ngọ môn quan đóng cửa!", "sprite": "assets/user/linh.png" },
+        { "speaker": "Trạng Nguyên", "text": "Quãng đường đã biết, thời gian có hạn. Hãy phi ngựa với vận tốc tối đa mà thần đã tính toán!", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    },
+    {
+      "id": "g5-l15",
+      "title": "Khải Hoàn Ca",
+      "badgeOnComplete": "badge-medal",
+      "activityRef": "g5-l15-qs",
+      "cutscene": [
+        { "speaker": "Tướng Quân", "text": "Đất nước đã sạch bóng quân thù! Công đầu thuộc về quân sư Trạng Nguyên!", "sprite": "assets/user/tuongquan5.png" },
+        { "speaker": "Trạng Nguyên", "text": "Không chỉ có thần, mà nhờ tất cả các binh sĩ đã giỏi tính toán, thông thạo binh pháp. Toán học thực sự đã bảo vệ non sông!", "sprite": "assets/user/trangnguyen5.png" }
+      ]
+    }
   ],
   "activities": [
     {
