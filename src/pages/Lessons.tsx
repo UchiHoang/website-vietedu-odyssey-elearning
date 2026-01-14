@@ -62,7 +62,275 @@ const topicsData: Topic[] = [
     description: "Học đếm số cơ bản.",
     completed: true
   },
-  
+  {
+    id: "L1-2",
+    lessonId: "L1",
+    semester: 1,
+    title: "Các số 4, 5",
+    videoUrl: "https://www.youtube.com/embed/tLoZ3HB3n7c",
+    description: "Tiếp tục làm quen với các số từ 4, 5",
+  },
+  {
+    id: "L1-3",
+    lessonId: "L1",
+    semester: 1,
+    title: "Các số 6, 7, 8, 9",
+    videoUrl: "https://www.youtube.com/embed/6mEtEcxAOnQ",
+    description: "Khám phá các số từ 6 đến 9",
+  },
+  {
+    id: "L1-4",
+    lessonId: "L1",
+    semester: 1,
+    title: "Số 10 và ôn tập",
+    videoUrl: "https://www.youtube.com/embed/lRXAnk0wiGI",
+    description: "Học số 10 và ôn tập tất cả các số đã học",
+    completed: false
+  },
+  {
+    id: "L1-5",
+    lessonId: "L1",
+    semester: 1,
+    title: "Số 0",
+    videoUrl: "https://www.youtube.com/embed/aMJgvwRAL_k",
+    description: "Học Làm quen với số 0",
+    completed: false
+  },
+  {
+    id: "L1-6",
+    lessonId: "L1",
+    semester: 1,
+    title: "So Sánh Các Dấu Cho Bé Mới Bắt Đầu",
+    videoUrl: "https://www.youtube.com/embed/nz5PWLtaokw",
+    description: "Cách dùng các dấu trong phép so sánh",
+    completed: false
+  },
+  {
+    id: "L1-7",
+    lessonId: "L1",
+    semester: 1,
+    title: "Học Cách So Sánh Nhiều Hơn, Ít Hơn, Bằng Nhau",
+    videoUrl: "https://www.youtube.com/embed/Z8P-pmHMxDU",
+    description: "Học cách nhận biết và so sánh số lượng: nhiều – ít – bằng nhau",
+    completed: false
+  },
+  {
+    id: "L1-8",
+    lessonId: "L1",
+    semester: 1,
+    title: "Vẽ Đoạn Thẳng Có Độ Dài Cho Trước Như Thế Nào?",
+    videoUrl: "https://www.youtube.com/embed/F3yktQ99TYw",
+    description: "Học cách kẻ vẽ đoạn thẳng có độ dài chính xác.",
+    completed: false
+  },
+  {
+    id: "L1-9",
+    lessonId: "L1",
+    semester: 1,
+    title: "Học Cách Cộng Trong Phạm Vi 4, 5, 6 Đơn Giản",
+    videoUrl: "https://www.youtube.com/embed/Ei0_VugQejo",
+    description: "Làm quen với phép cộng trong phạm vi 4, 5 và 6",
+    completed: false
+  },
+  {
+    id: "L1-10",
+    lessonId: "L1",
+    semester: 1,
+    title: "Hiểu Nhanh Số 0 Trong Phép Cộng",
+    videoUrl: "https://www.youtube.com/embed/9zOo65_BiuQ",
+    description: "tìm hiểu Ý nghĩa của số 0 trong phép cộng",
+    completed: false
+  },
+  {
+    id: "L1-11",
+    lessonId: "L1",
+    semester: 1,
+    title: "Học Cách Cộng Trong Phạm Vi 6, 7, 8 Đơn Giản",
+    videoUrl: "https://www.youtube.com/embed/Qq8r7-feu6s",
+    description: "Làm quen với phép cộng trong phạm vi 6, 7 và 8",
+    completed: false
+  },
+  {
+    id: "L1-12",
+    lessonId: "L1",
+    semester: 1,
+    title: "Học Cách Cộng Trong Phạm Vi 9, 10 Đơn Giản",
+    videoUrl: "https://www.youtube.com/embed/s-goxNdmJPE",
+    description: "Làm quen với phép cộng trong phạm vi 9 và 10",
+    completed: false
+  },
+  {
+    id: "L1-13",
+    lessonId: "L1",
+    semester: 1,
+    title: "Học Cách Cộng Các Số Tròn Chục",
+    videoUrl: "https://www.youtube.com/embed/yd5JHf4Blh0",
+    description: "Biết cách cộng các số tròn chục.",
+    completed: false
+  },
+  {
+    id: "L1-14",
+    lessonId: "L1",
+    semester: 1,
+    title: "Học Cách Trừ Trong Phạm Vi 3, 4, 5 Đơn Giản",
+    videoUrl: "https://www.youtube.com/embed/55l906_zUyE",
+    description: "Làm quen với phép trừ trong phạm vi 3, 4 và 5",
+    completed: false
+  },
+  {
+    id: "L1-15",
+    lessonId: "L1",
+    semester: 1,
+    title: "Hiểu Nhanh Số 0 Trong Phép Trừ",
+    videoUrl: "https://www.youtube.com/embed/CyeG3y7lKeg",
+    description: "tìm hiểu Ý nghĩa của số 0 trong phép trừ",
+    completed: false
+  },
+  {
+    id: "L1-16",
+    lessonId: "L1",
+    semester: 1,
+    title: "Phân Biệt Điểm Ở Trong Hay Ở Ngoài Một Hình",
+    videoUrl: "https://www.youtube.com/embed/-Cnwmbv69Aw",
+    description: " Nhận biết điểm nằm trong hoặc ngoài một hình phẳng",
+    completed: false
+  },
+  {
+    id: "L1-17",
+    lessonId: "L1",
+    semester: 1,
+    title: "Nhận Biết Vị Trí: Trên – Dưới, Trái – Phải, Trước – Sau, Ở Giữa",
+    videoUrl: "https://www.youtube.com/embed/ZD5O7uPbWhw",
+    description: "Nhận biết các vị trí cơ bản.",
+    completed: false
+  },
+  {
+    id: "L1-18",
+    lessonId: "L1",
+    semester: 1,
+    title: "Học Cách So Sánh Nhiều Hơn, Ít Hơn, Bằng Nhau",
+    videoUrl: "https://www.youtube.com/embed/Z8P-pmHMxDU",
+    description: "Học cách nhận biết và so sánh số lượng: nhiều – ít – bằng nhau. ",
+    completed: false
+  },
+  {
+    id: "L1-19",
+    lessonId: "L1",
+    semester: 1,
+    title: "Nhận Biết Vị Trí: Trên – Dưới, Trái – Phải, Trước – Sau, Ở Giữa",
+    videoUrl: "https://www.youtube.com/embed/ZD5O7uPbWhw",
+    description: "Nhận biết các vị trí cơ bản.",
+    completed: false
+  },
+  /** Lớp 1 - kỳ 2 */
+  {
+    id: "L1-20",
+    lessonId: "L1",
+    semester: 2,
+    title: "Làm Quen Với Đồng Hồ Và Thời Gian",
+    videoUrl: "https://www.youtube.com/embed/mIPRUr0rrOc",
+    description: "Làm quen và nhận biết đồng hồ và thời gian.",
+    completed: false
+  },
+  {
+    id: "L1-21",
+    lessonId: "L1",
+    semester: 2,
+    title: "Làm Quen Với Đồng Hồ Và Thời Gian",
+    videoUrl: "https://www.youtube.com/embed/RJFSVVGgiTw",
+    description: "Làm quen và nhận biết đồng hồ và thời gian.",
+    completed: false
+  },
+  {
+    id: "L1-22",
+    lessonId: "L1",
+    semester: 2,
+    title: "Nhận Biết Các Hình Học Cơ Bản: Vuông, Tròn, Tam Giác, Chữ Nhật",
+    videoUrl: "https://www.youtube.com/embed/W3UzjLDA6M4",
+    description: "Nhận biết các hình học cơ bản",
+    completed: false
+  },
+  {
+    id: "L1-23",
+    lessonId: "L1",
+    semester: 2,
+    title: "Khối Lập Phương – Khối Hộp Chữ Nhật Là Gì?",
+    videoUrl: "https://www.youtube.com/embed/udOvVRBYfxo",
+    description: "Nhận biết hình khối cơ bản.",
+    completed: false
+  },
+  {
+    id: "L1-24",
+    lessonId: "L1",
+    semester: 2,
+    title: "Học Cách Đo Độ Dài Chính Xác",
+    videoUrl: "https://www.youtube.com/embed/_Z6BNEvcZHI",
+    description: "Hiểu khái niệm đo độ dài là gì.",
+    completed: false
+  },
+  {
+    id: "L1-25",
+    lessonId: "L1",
+    semester: 2,
+    title: " Làm Quen Với Các Số Từ 11 Đến 16 Dễ Hiểu",
+    videoUrl: "https://www.youtube.com/embed/xj6xmgfPTYA",
+    description: "Làm quen với các số từ 11 đến 16",
+    completed: false
+  },
+  {
+    id: "L1-26",
+    lessonId: "L1",
+    semester: 2,
+    title: "Làm Quen Với Các Số Từ 17 Đến 20 Dễ Hiểu",
+    videoUrl: "https://www.youtube.com/embed/cj_H-yURTkk",
+    description: " Làm quen với các số từ 17 đến 20.",
+    completed: false
+  },
+  {
+    id: "L1-27",
+    lessonId: "L1",
+    semester: 2,
+    title: "Làm Quen Với Các Số Từ 21 Đến 40",
+    videoUrl: "https://www.youtube.com/embed/kbd23ca3BTs",
+    description: "Làm quen với các số từ 21 đến 40.",
+    completed: false
+  },
+  {
+    id: "L1-28",
+    lessonId: "L1",
+    semester: 2,
+    title: "Làm Quen Với Các Số Từ 71 Đến 99",
+    videoUrl: "https://www.youtube.com/embed/vRSD68RnrHg",
+    description: "Làm quen với các số từ 71 đến 99.",
+    completed: false
+  },
+  {
+    id: "L1-29",
+    lessonId: "L1",
+    semester: 2,
+    title: "Phép Trừ Dạng 27 - 4 Và 63 - 40 Dễ Hiểu Dễ Nhớ",
+    videoUrl: "https://www.youtube.com/embed/_VJBjfIPXUw",
+    description: "Làm quen với phép trừ dạng 27 - 4 và 63 - 40",
+    completed: false
+  },
+  {
+    id: "L1-30",
+    lessonId: "L1",
+    semester: 2,
+    title: "Học Cách So Sánh Độ Dài: Dài Hơn Hay Ngắn Hơn?",
+    videoUrl: "https://www.youtube.com/embed/dl-mzVa01N0",
+    description: "Quan sát và so sánh độ dài",
+    completed: false
+  },
+  {
+    id: "L1-31",
+    lessonId: "L1",
+    semester: 2,
+    title: "Làm Quen Với Các Số Từ 41 Đến 70",
+    videoUrl: "https://www.youtube.com/embed/WOcDMWIiBFY",
+    description: "Làm quen với các số từ 41 đến 70",
+    completed: false
+  },
   /* --- LỚP 5 --- */
   /* --- LỚP 5 - HỌC KÌ 1 --- */
   {
