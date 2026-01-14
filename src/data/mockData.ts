@@ -36,7 +36,7 @@ export const classes = [
     title: "Sơn Tinh - Thủy Tinh",
     ageRange: "8-9",
     image: grade3Img,
-    description: "Phiêu lưu toán học trên dòng sông Hồng",
+    description: "Cuộc tranh tài giữa Sơn Tinh và Thủy Tinh",
     gameRoute: "/classroom/songhong",
   },
   {
