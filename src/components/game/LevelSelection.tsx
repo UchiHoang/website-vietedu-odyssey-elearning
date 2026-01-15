@@ -53,6 +53,24 @@ const LevelSelectionComponent = ({
   progress,
   onSelectLevel,
 }: LevelSelectionProps) => {
+  // Chuẩn hóa completed nodes và ngưỡng mở khóa để tránh khóa lùi khi chơi lại màn cũ
+  const completedNodeIndices: number[] = progress.completedNodes
+    .map((n: unknown) => {
+      if (typeof n === "number") return n;
+      if (typeof n === "string") {
+        if (!isNaN(Number(n))) return Number(n);
+        const foundIndex = nodes.findIndex((nd) => nd.id === n);
+        return foundIndex >= 0 ? foundIndex : -1;
+      }
+      return -1;
+    })
+    .filter((n: number) => n >= 0);
+
+  const maxCompletedIndex = completedNodeIndices.length
+    ? Math.max(...completedNodeIndices)
+    : -1;
+  const unlockUntil = Math.max(progress.currentNodeIndex, maxCompletedIndex + 1);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-primary/5 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
@@ -87,24 +105,9 @@ const LevelSelectionComponent = ({
         {/* Level Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {nodes.map((node, index) => {
-            // completedNodes từ backend là array số (node_index), cần convert sang index
-            // Hoặc có thể là array string (node.id), cần tìm index tương ứng
-            const completedNodeIndices: number[] = progress.completedNodes.map((n: unknown) => {
-              if (typeof n === 'number') return n;
-              if (typeof n === 'string') {
-                // Nếu là số dạng string, parse nó
-                if (!isNaN(Number(n))) return Number(n);
-                // Nếu là node.id, tìm index của nó trong nodes
-                const foundIndex = nodes.findIndex((nd) => nd.id === n);
-                return foundIndex >= 0 ? foundIndex : -1;
-              }
-              return -1;
-            }).filter((n: number) => n >= 0);
-            
             const isCompleted = completedNodeIndices.includes(index);
-            // Màn được unlock nếu index <= currentNodeIndex (đã mở đến màn đó)
-            // Màn đầu tiên (index 0) luôn được unlock
-            const isUnlocked = index === 0 || index <= progress.currentNodeIndex;
+            // Màn được unlock nếu index <= ngưỡng mở khóa cao nhất (max completed + 1) hoặc currentNodeIndex
+            const isUnlocked = index === 0 || index <= unlockUntil;
             const isCurrent = progress.currentNodeIndex === index;
 
             return (
