@@ -1,0 +1,1701 @@
+{
+  "meta": {
+    "title": "Thánh Gióng bay về trời",
+    "description": "Theo chân Thánh Gióng luyện Toán: phân số, số lớn, trung bình cộng."
+  },
+  "prologue": [
+    {
+      "speaker": "Sứ Giả",
+      "text": "Nhà vua cần người tài cứu nước, Gióng hãy lớn nhanh!"
+    },
+    {
+      "speaker": "Thánh Gióng",
+      "text": "Hãy giúp ta tính toán để rèn ngựa, giáp, roi sắt."
+    },
+    {
+      "speaker": "Người kể chuyện",
+      "text": "Phân số, số lớn, trung bình cộng sẽ là thử thách của bạn."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "g4-l1",
+      "title": "Tiếng Loa Sứ Giả",
+      "badgeOnComplete": "g4-l1",
+      "activityRef": "g4-l1-qs",
+      "cutscene": [{ "speaker": "Sứ Giả", "text": "Tính nhanh để báo vua!" }]
+    },
+    {
+      "id": "g4-l2",
+      "title": "Cơm Cà Của Mẹ",
+      "badgeOnComplete": "g4-l2",
+      "activityRef": "g4-l2-qs",
+      "cutscene": [
+        {
+          "speaker": "Mẹ Gióng",
+          "text": "Chia cơm đều cho con, dùng phân số nhé."
+        }
+      ]
+    },
+    {
+      "id": "g4-l3",
+      "title": "Gióng Vươn Vai",
+      "badgeOnComplete": "g4-l3",
+      "activityRef": "g4-l3-qs",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Gióng lớn nhanh, cộng các số lớn kiểm tra sức."
+        }
+      ]
+    },
+    {
+      "id": "g4-l4",
+      "title": "Lời Hứa Nhà Vua",
+      "badgeOnComplete": "g4-l4",
+      "activityRef": "g4-l4-qs",
+      "cutscene": [
+        {
+          "speaker": "Vua",
+          "text": "Chuẩn bị đủ lương thực, tính trung bình cho quân."
+        }
+      ]
+    },
+    {
+      "id": "g4-l5",
+      "title": "Dân Làng Góp Gạo",
+      "badgeOnComplete": "g4-l5",
+      "activityRef": "g4-l5-qs",
+      "cutscene": [
+        { "speaker": "Dân Làng", "text": "Gộp thóc thành bao lớn, so sánh số." }
+      ]
+    },
+    {
+      "id": "g4-l6",
+      "title": "Rèn Ngựa Sắt",
+      "badgeOnComplete": "g4-l6",
+      "activityRef": "g4-l6-qs",
+      "cutscene": [
+        { "speaker": "Thợ rèn", "text": "Cắt thép theo phân số độ dài." }
+      ]
+    },
+    {
+      "id": "g4-l7",
+      "title": "Đúc Giáp Vàng",
+      "badgeOnComplete": "g4-l7",
+      "activityRef": "g4-l7-qs",
+      "cutscene": [
+        {
+          "speaker": "Thánh Gióng",
+          "text": "Tính diện tích tấm giáp, số lớn cần chính xác."
+        }
+      ]
+    },
+    {
+      "id": "g4-l8",
+      "title": "Rèn Roi Sắt",
+      "badgeOnComplete": "g4-l8",
+      "activityRef": "g4-l8-qs",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Chia đoạn roi theo tỉ lệ phân số."
+        }
+      ]
+    },
+    {
+      "id": "g4-l9",
+      "title": "Ngựa Sắt Hí Vang",
+      "badgeOnComplete": "g4-l9",
+      "activityRef": "g4-l9-qs",
+      "cutscene": [
+        { "speaker": "Ngựa Sắt", "text": "Kiểm tra sức bằng phép cộng số lớn." }
+      ]
+    },
+    {
+      "id": "g4-l10",
+      "title": "Ra Quân Đánh Giặc",
+      "badgeOnComplete": "g4-l10",
+      "activityRef": "g4-l10-qs",
+      "cutscene": [
+        {
+          "speaker": "Thánh Gióng",
+          "text": "Chia quân đều, tính trung bình để sắp đội hình."
+        }
+      ]
+    },
+    {
+      "id": "g4-l11",
+      "title": "Trận Chiến Vũ Ninh",
+      "badgeOnComplete": "g4-l11",
+      "activityRef": "g4-l11-qs",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "So sánh vũ khí, chọn phân số lớn hơn."
+        }
+      ]
+    },
+    {
+      "id": "g4-l12",
+      "title": "Gióng Nhổ Tre Ngà",
+      "badgeOnComplete": "g4-l12",
+      "activityRef": "g4-l12-qs",
+      "cutscene": [
+        { "speaker": "Thánh Gióng", "text": "Bó tre thành bó đều nhau." }
+      ]
+    },
+    {
+      "id": "g4-l13",
+      "title": "Quét Sạch Giặc Ân",
+      "badgeOnComplete": "g4-l13",
+      "activityRef": "g4-l13-qs",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Cộng trừ số lớn khi đếm chiến công."
+        }
+      ]
+    },
+    {
+      "id": "g4-l14",
+      "title": "Lên Đỉnh Núi Sóc",
+      "badgeOnComplete": "g4-l14",
+      "activityRef": "g4-l14-qs",
+      "cutscene": [
+        {
+          "speaker": "Thánh Gióng",
+          "text": "Tính độ cao trung bình từng chặng."
+        }
+      ]
+    },
+    {
+      "id": "g4-l15",
+      "title": "Bay Về Trời",
+      "badgeOnComplete": "g4-l15",
+      "activityRef": "g4-l15-qs",
+      "cutscene": [
+        {
+          "speaker": "Người kể chuyện",
+          "text": "Bài tổng hợp cuối cùng trước khi Gióng bay lên trời."
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "g4-l1-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l1-q1",
+          "type": "multiple-choice",
+          "prompt": "200 000 + 35 000 = ?",
+          "choices": ["225 000", "230 000", "235 000", "240 000"],
+          "answer": "235 000",
+          "explanation": "Cộng số lớn hàng vạn."
+        },
+        {
+          "id": "g4-l1-q2",
+          "type": "matching-pairs",
+          "question": "Ghép phân số với cách đọc",
+          "pairs": [
+            { "id": "p1", "left": "1/2", "right": "một phần hai" },
+            { "id": "p2", "left": "3/4", "right": "ba phần tư" },
+            { "id": "p3", "left": "2/3", "right": "hai phần ba" }
+          ],
+          "explanation": "Đọc đúng phân số."
+        },
+        {
+          "id": "g4-l1-q3",
+          "type": "fill-blank",
+          "question": "500 000 - 120 000 = __",
+          "blanks": [{ "position": 0, "answer": "380 000" }],
+          "explanation": "Trừ số lớn."
+        },
+        {
+          "id": "g4-l1-q4",
+          "type": "multiple-choice",
+          "prompt": "Sứ giả chạy 150 000 bước, sau đó thêm 75 000 bước nữa. Tổng số bước?",
+          "choices": ["215 000", "220 000", "225 000", "230 000"],
+          "answer": "225 000",
+          "explanation": "150 000 + 75 000 = 225 000 bước."
+        },
+        {
+          "id": "g4-l1-q5",
+          "type": "fill-blank",
+          "question": "680 000 - 250 000 = __",
+          "blanks": [{ "position": 0, "answer": "430 000" }],
+          "explanation": "Thực hiện phép trừ số lớn."
+        },
+        {
+          "id": "g4-l1-q6",
+          "type": "multiple-choice",
+          "prompt": "Phân số nào chỉ một nửa?",
+          "choices": ["1/3", "1/2", "2/4", "Cả B và C"],
+          "answer": "Cả B và C",
+          "explanation": "1/2 = 2/4, cả hai đều là một nửa."
+        },
+        {
+          "id": "g4-l1-q7",
+          "type": "matching-pairs",
+          "question": "Ghép số lớn với cách đọc",
+          "pairs": [
+            {
+              "id": "p1",
+              "left": "235 000",
+              "right": "hai trăm ba mươi lăm nghìn"
+            },
+            {
+              "id": "p2",
+              "left": "380 000",
+              "right": "ba trăm tám mươi nghìn"
+            },
+            { "id": "p3", "left": "500 000", "right": "năm trăm nghìn" }
+          ],
+          "explanation": "Đọc đúng số lớn."
+        },
+        {
+          "id": "g4-l1-q8",
+          "type": "drag-drop",
+          "question": "Kéo dấu so sánh đúng",
+          "dragItems": [
+            { "id": "gt", "content": ">", "correctSlot": "slot-235" },
+            { "id": "lt", "content": "<", "correctSlot": "slot-150" }
+          ],
+          "dropSlots": [
+            { "id": "slot-235", "label": "235 000 __ 150 000" },
+            { "id": "slot-150", "label": "150 000 __ 235 000" }
+          ],
+          "explanation": "235 000 lớn hơn 150 000."
+        },
+        {
+          "id": "g4-l1-q9",
+          "type": "fill-blank",
+          "question": "1/3 + 2/3 = __",
+          "blanks": [{ "position": 0, "answer": "1" }],
+          "explanation": "1/3 + 2/3 = 3/3 = 1."
+        },
+        {
+          "id": "g4-l1-q10",
+          "type": "multiple-choice",
+          "prompt": "Trong 3 số: 235 000, 380 000, 150 000, số nào lớn nhất?",
+          "choices": ["235 000", "380 000", "150 000"],
+          "answer": "380 000",
+          "explanation": "380 000 là số lớn nhất trong ba số."
+        }
+      ]
+    },
+    {
+      "id": "g4-l2-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l2-q1",
+          "type": "multiple-choice",
+          "prompt": "Số nào có 6 chữ số?",
+          "choices": ["99 999", "100 000", "1 000 000", "10 000"],
+          "answer": "100 000",
+          "explanation": "100 000 có đủ 6 chữ số."
+        },
+        {
+          "id": "g4-l2-q2",
+          "type": "drag-drop",
+          "question": "Kéo số có 6 chữ số vào ô đúng",
+          "dragItems": [
+            { "id": "n1", "content": "235 678", "correctSlot": "slot-6digit" },
+            { "id": "n2", "content": "45 789", "correctSlot": "slot-5digit" }
+          ],
+          "dropSlots": [
+            { "id": "slot-6digit", "label": "Số có 6 chữ số" },
+            { "id": "slot-5digit", "label": "Số có 5 chữ số" }
+          ],
+          "explanation": "235 678 có 6 chữ số, 45 789 có 5 chữ số."
+        },
+        {
+          "id": "g4-l2-q3",
+          "type": "fill-blank",
+          "question": "Số lớn nhất có 6 chữ số là __",
+          "blanks": [{ "position": 0, "answer": "999 999" }],
+          "explanation": "999 999 là số lớn nhất có 6 chữ số."
+        },
+        {
+          "id": "g4-l2-q4",
+          "type": "multiple-choice",
+          "prompt": "Số 456 789 đọc là gì?",
+          "choices": [
+            "Bốn trăm năm mươi sáu nghìn bảy trăm tám mươi chín",
+            "Bốn mươi lăm nghìn sáu trăm bảy mươi tám",
+            "Bốn trăm năm mươi sáu",
+            "Bốn trăm năm mươi lăm nghìn"
+          ],
+          "answer": "Bốn trăm năm mươi sáu nghìn bảy trăm tám mươi chín",
+          "explanation": "Đọc đúng số có 6 chữ số."
+        },
+        {
+          "id": "g4-l2-q5",
+          "type": "matching-pairs",
+          "question": "Ghép số với cách đọc",
+          "pairs": [
+            { "id": "p1", "left": "100 000", "right": "một trăm nghìn" },
+            { "id": "p2", "left": "500 000", "right": "năm trăm nghìn" },
+            {
+              "id": "p3",
+              "left": "999 999",
+              "right": "chín trăm chín mươi chín nghìn chín trăm chín mươi chín"
+            }
+          ],
+          "explanation": "Đọc số có 6 chữ số."
+        },
+        {
+          "id": "g4-l2-q6",
+          "type": "fill-blank",
+          "question": "Số bé nhất có 6 chữ số là __",
+          "blanks": [{ "position": 0, "answer": "100 000" }],
+          "explanation": "100 000 là số bé nhất có 6 chữ số."
+        },
+        {
+          "id": "g4-l2-q7",
+          "type": "multiple-choice",
+          "prompt": "Trong số 234 567, chữ số 4 thuộc hàng nào?",
+          "choices": ["Hàng nghìn", "Hàng vạn", "Hàng trăm", "Hàng chục"],
+          "answer": "Hàng nghìn",
+          "explanation": "Chữ số 4 ở vị trí hàng nghìn."
+        },
+        {
+          "id": "g4-l2-q8",
+          "type": "drag-drop",
+          "question": "Sắp xếp số theo thứ tự từ bé đến lớn",
+          "dragItems": [
+            { "id": "n1", "content": "100 000", "correctSlot": "slot-1" },
+            { "id": "n2", "content": "500 000", "correctSlot": "slot-2" },
+            { "id": "n3", "content": "900 000", "correctSlot": "slot-3" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Nhỏ nhất" },
+            { "id": "slot-2", "label": "Vừa" },
+            { "id": "slot-3", "label": "Lớn nhất" }
+          ],
+          "explanation": "100 000 < 500 000 < 900 000."
+        },
+        {
+          "id": "g4-l2-q9",
+          "type": "fill-blank",
+          "question": "Viết số: Bảy trăm nghìn = __",
+          "blanks": [{ "position": 0, "answer": "700 000" }],
+          "explanation": "Bảy trăm nghìn = 700 000."
+        },
+        {
+          "id": "g4-l2-q10",
+          "type": "multiple-choice",
+          "prompt": "Số 123 456 có bao nhiêu chữ số?",
+          "choices": ["5", "6", "7", "8"],
+          "answer": "6",
+          "explanation": "Đếm được 6 chữ số: 1, 2, 3, 4, 5, 6."
+        }
+      ]
+    },
+    {
+      "id": "g4-l3-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l3-q1",
+          "type": "multiple-choice",
+          "prompt": "Số lớn nhất: 905 430; 904 999; 905 300",
+          "choices": ["905 430", "904 999", "905 300"],
+          "answer": "905 430",
+          "explanation": "So sánh hàng nghìn, trăm."
+        },
+        {
+          "id": "g4-l3-q2",
+          "type": "matching-pairs",
+          "question": "Ghép số với giá trị hàng",
+          "pairs": [
+            { "id": "p1", "left": "900 000", "right": "chín trăm nghìn" },
+            { "id": "p2", "left": "5 000", "right": "năm nghìn" },
+            { "id": "p3", "left": "430", "right": "bốn trăm ba mươi" }
+          ],
+          "explanation": "Phân tích 905 430."
+        },
+        {
+          "id": "g4-l3-q3",
+          "type": "fill-blank",
+          "question": "905 430 + 70 = __",
+          "blanks": [{ "position": 0, "answer": "905 500" }],
+          "explanation": "Cộng đơn giản."
+        },
+        {
+          "id": "g4-l3-q4",
+          "type": "multiple-choice",
+          "prompt": "Gióng cao 905 430 mm. Sau khi lớn thêm 5 570 mm. Chiều cao mới?",
+          "choices": ["910 000", "911 000", "910 500", "911 500"],
+          "answer": "911 000",
+          "explanation": "905 430 + 5 570 = 911 000."
+        },
+        {
+          "id": "g4-l3-q5",
+          "type": "fill-blank",
+          "question": "999 999 + 1 = __",
+          "blanks": [{ "position": 0, "answer": "1 000 000" }],
+          "explanation": "Cộng qua hàng triệu."
+        },
+        {
+          "id": "g4-l3-q6",
+          "type": "drag-drop",
+          "question": "Sắp xếp số từ bé đến lớn",
+          "dragItems": [
+            { "id": "n1", "content": "904 999", "correctSlot": "slot-1" },
+            { "id": "n2", "content": "905 300", "correctSlot": "slot-2" },
+            { "id": "n3", "content": "905 430", "correctSlot": "slot-3" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Vị trí 1" },
+            { "id": "slot-2", "label": "Vị trí 2" },
+            { "id": "slot-3", "label": "Vị trí 3" }
+          ],
+          "explanation": "904 999 < 905 300 < 905 430."
+        },
+        {
+          "id": "g4-l3-q7",
+          "type": "multiple-choice",
+          "prompt": "Số nào bé nhất: 900 000; 899 999; 901 000?",
+          "choices": ["900 000", "899 999", "901 000"],
+          "answer": "899 999",
+          "explanation": "899 999 bé hơn 900 000."
+        },
+        {
+          "id": "g4-l3-q8",
+          "type": "matching-pairs",
+          "question": "Ghép phép tính với kết quả",
+          "pairs": [
+            { "id": "p1", "left": "800 000 + 100 000", "right": "900 000" },
+            { "id": "p2", "left": "950 000 - 50 000", "right": "900 000" },
+            { "id": "p3", "left": "450 000 x 2", "right": "900 000" }
+          ],
+          "explanation": "Các cách tạo số 900 000."
+        },
+        {
+          "id": "g4-l3-q9",
+          "type": "fill-blank",
+          "question": "905 500 - 500 = __",
+          "blanks": [{ "position": 0, "answer": "905 000" }],
+          "explanation": "Trừ hàng trăm."
+        },
+        {
+          "id": "g4-l3-q10",
+          "type": "multiple-choice",
+          "prompt": "Trong số 905 430, chữ số 5 thuộc hàng nào?",
+          "choices": [
+            "Hàng nghìn",
+            "Hàng vạn",
+            "Hàng trăm nghìn",
+            "Hàng đơn vị"
+          ],
+          "answer": "Hàng nghìn",
+          "explanation": "Chữ số 5 ở vị trí hàng nghìn."
+        }
+      ]
+    },
+    {
+      "id": "g4-l4-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l4-q1",
+          "type": "multiple-choice",
+          "prompt": "Số 456 789 được cấu tạo từ?",
+          "choices": [
+            "456 nghìn + 789",
+            "45 vạn + 6789",
+            "4 trăm nghìn + 56 nghìn + 789",
+            "Tất cả đều đúng"
+          ],
+          "answer": "Tất cả đều đúng",
+          "explanation": "Có nhiều cách phân tích cấu tạo số."
+        },
+        {
+          "id": "g4-l4-q2",
+          "type": "matching-pairs",
+          "question": "Ghép số với cấu tạo",
+          "pairs": [
+            {
+              "id": "p1",
+              "left": "300 000 + 50 000 + 2 000",
+              "right": "352 000"
+            },
+            { "id": "p2", "left": "400 000 + 30 000", "right": "430 000" },
+            { "id": "p3", "left": "500 000 + 5 000 + 500", "right": "505 500" }
+          ],
+          "explanation": "Cấu tạo số từ các hàng."
+        },
+        {
+          "id": "g4-l4-q3",
+          "type": "fill-blank",
+          "question": "Số 234 567 = 200 000 + 30 000 + __ + 567",
+          "blanks": [{ "position": 0, "answer": "4 000" }],
+          "explanation": "Hàng nghìn là 4 000."
+        },
+        {
+          "id": "g4-l4-q4",
+          "type": "multiple-choice",
+          "prompt": "Trong số 678 543, chữ số 6 có giá trị là?",
+          "choices": ["6", "60 000", "600 000", "6 000"],
+          "answer": "600 000",
+          "explanation": "Chữ số 6 ở hàng trăm nghìn."
+        },
+        {
+          "id": "g4-l4-q5",
+          "type": "fill-blank",
+          "question": "Viết số: 5 trăm nghìn + 7 vạn + 3 nghìn = __",
+          "blanks": [{ "position": 0, "answer": "573 000" }],
+          "explanation": "500 000 + 70 000 + 3 000 = 573 000."
+        },
+        {
+          "id": "g4-l4-q6",
+          "type": "drag-drop",
+          "question": "Kéo hàng số đúng",
+          "dragItems": [
+            { "id": "h1", "content": "Trăm nghìn", "correctSlot": "slot-100k" },
+            { "id": "h2", "content": "Vạn", "correctSlot": "slot-10k" },
+            { "id": "h3", "content": "Nghìn", "correctSlot": "slot-1k" }
+          ],
+          "dropSlots": [
+            { "id": "slot-100k", "label": "100 000" },
+            { "id": "slot-10k", "label": "10 000" },
+            { "id": "slot-1k", "label": "1 000" }
+          ],
+          "explanation": "Phân biệt các hàng số."
+        },
+        {
+          "id": "g4-l4-q7",
+          "type": "multiple-choice",
+          "prompt": "Số nào được cấu tạo: 8 trăm nghìn + 9 nghìn?",
+          "choices": ["89 000", "809 000", "890 000", "800 900"],
+          "answer": "809 000",
+          "explanation": "800 000 + 9 000 = 809 000."
+        },
+        {
+          "id": "g4-l4-q8",
+          "type": "matching-pairs",
+          "question": "Ghép giá trị chữ số",
+          "pairs": [
+            { "id": "p1", "left": "Chữ số 5 ở hàng vạn", "right": "50 000" },
+            { "id": "p2", "left": "Chữ số 7 ở hàng nghìn", "right": "7 000" },
+            { "id": "p3", "left": "Chữ số 3 ở hàng trăm", "right": "300" }
+          ],
+          "explanation": "Giá trị phụ thuộc vị trí hàng."
+        },
+        {
+          "id": "g4-l4-q9",
+          "type": "fill-blank",
+          "question": "Số 456 000 = 400 000 + __ + 6 000",
+          "blanks": [{ "position": 0, "answer": "50 000" }],
+          "explanation": "Hàng vạn là 50 000."
+        },
+        {
+          "id": "g4-l4-q10",
+          "type": "multiple-choice",
+          "prompt": "Viết số: Sáu trăm nghìn không trăm lẻ năm",
+          "choices": ["600 005", "600 050", "600 500", "605 000"],
+          "answer": "600 005",
+          "explanation": "600 000 + 0 + 5 = 600 005."
+        }
+      ]
+    },
+    {
+      "id": "g4-l5-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l5-q1",
+          "type": "multiple-choice",
+          "prompt": "Số tự nhiên nhỏ nhất là?",
+          "choices": ["1", "0", "-1", "Không có"],
+          "answer": "0",
+          "explanation": "Số tự nhiên bắt đầu từ 0."
+        },
+        {
+          "id": "g4-l5-q2",
+          "type": "drag-drop",
+          "question": "Kéo số vào dãy số tự nhiên",
+          "dragItems": [
+            { "id": "n1", "content": "0", "correctSlot": "slot-first" },
+            { "id": "n2", "content": "-1", "correctSlot": "slot-not" }
+          ],
+          "dropSlots": [
+            { "id": "slot-first", "label": "Là số tự nhiên" },
+            { "id": "slot-not", "label": "Không phải số tự nhiên" }
+          ],
+          "explanation": "0 là số tự nhiên, -1 không phải."
+        },
+        {
+          "id": "g4-l5-q3",
+          "type": "fill-blank",
+          "question": "Dãy số tự nhiên: 0, 1, 2, 3, __, 5",
+          "blanks": [{ "position": 0, "answer": "4" }],
+          "explanation": "Số tiếp theo là 4."
+        },
+        {
+          "id": "g4-l5-q4",
+          "type": "multiple-choice",
+          "prompt": "Số tự nhiên liền sau của 99 999 là?",
+          "choices": ["99 998", "100 000", "100 001", "999 999"],
+          "answer": "100 000",
+          "explanation": "99 999 + 1 = 100 000."
+        },
+        {
+          "id": "g4-l5-q5",
+          "type": "matching-pairs",
+          "question": "Ghép số với số liền trước/sau",
+          "pairs": [
+            { "id": "p1", "left": "Liền sau 1 000", "right": "1 001" },
+            { "id": "p2", "left": "Liền trước 5 000", "right": "4 999" },
+            { "id": "p3", "left": "Liền sau 9 999", "right": "10 000" }
+          ],
+          "explanation": "Số liền trước/sau trong dãy số tự nhiên."
+        },
+        {
+          "id": "g4-l5-q6",
+          "type": "fill-blank",
+          "question": "Số liền trước của 100 000 là __",
+          "blanks": [{ "position": 0, "answer": "99 999" }],
+          "explanation": "100 000 - 1 = 99 999."
+        },
+        {
+          "id": "g4-l5-q7",
+          "type": "drag-drop",
+          "question": "Sắp xếp số tự nhiên tăng dần",
+          "dragItems": [
+            { "id": "n1", "content": "0", "correctSlot": "slot-1" },
+            { "id": "n2", "content": "100", "correctSlot": "slot-2" },
+            { "id": "n3", "content": "1 000", "correctSlot": "slot-3" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Nhỏ nhất" },
+            { "id": "slot-2", "label": "Vừa" },
+            { "id": "slot-3", "label": "Lớn nhất" }
+          ],
+          "explanation": "0 < 100 < 1 000."
+        },
+        {
+          "id": "g4-l5-q8",
+          "type": "multiple-choice",
+          "prompt": "Có bao nhiêu số tự nhiên từ 0 đến 10?",
+          "choices": ["9", "10", "11", "12"],
+          "answer": "11",
+          "explanation": "Đếm: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 = 11 số."
+        },
+        {
+          "id": "g4-l5-q9",
+          "type": "fill-blank",
+          "question": "Giữa 998 và 1002 có __ số tự nhiên",
+          "blanks": [{ "position": 0, "answer": "3" }],
+          "explanation": "999, 1000, 1001 là 3 số."
+        },
+        {
+          "id": "g4-l5-q10",
+          "type": "multiple-choice",
+          "prompt": "Dãy số tự nhiên có số lớn nhất không?",
+          "choices": ["Có", "Không", "Là 999 999", "Là 1 triệu"],
+          "answer": "Không",
+          "explanation": "Dãy số tự nhiên vô hạn, không có số lớn nhất."
+        }
+      ]
+    },
+    {
+      "id": "g4-l6-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l6-q1",
+          "type": "multiple-choice",
+          "prompt": "Hệ thập phân dùng bao nhiêu chữ số?",
+          "choices": ["9", "10", "11", "12"],
+          "answer": "10",
+          "explanation": "Dùng 10 chữ số: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9."
+        },
+        {
+          "id": "g4-l6-q2",
+          "type": "matching-pairs",
+          "question": "Ghép chữ số với vị trí",
+          "pairs": [
+            { "id": "p1", "left": "Vị trí đơn vị", "right": "10^0" },
+            { "id": "p2", "left": "Vị trí chục", "right": "10^1" },
+            { "id": "p3", "left": "Vị trí trăm", "right": "10^2" }
+          ],
+          "explanation": "Giá trị theo lũy thừa 10."
+        },
+        {
+          "id": "g4-l6-q3",
+          "type": "fill-blank",
+          "question": "Số 5 432 = 5 x 1000 + 4 x 100 + 3 x __ + 2",
+          "blanks": [{ "position": 0, "answer": "10" }],
+          "explanation": "Vị trí chục có giá trị x10."
+        },
+        {
+          "id": "g4-l6-q4",
+          "type": "multiple-choice",
+          "prompt": "Trong hệ thập phân, mỗi hàng gấp hàng bên phải?",
+          "choices": ["2 lần", "5 lần", "10 lần", "100 lần"],
+          "answer": "10 lần",
+          "explanation": "Mỗi hàng gấp 10 lần hàng bên phải."
+        },
+        {
+          "id": "g4-l6-q5",
+          "type": "fill-blank",
+          "question": "10 x 10 x 10 = __",
+          "blanks": [{ "position": 0, "answer": "1 000" }],
+          "explanation": "10^3 = 1 000."
+        },
+        {
+          "id": "g4-l6-q6",
+          "type": "drag-drop",
+          "question": "Kéo giá trị đúng theo vị trí",
+          "dragItems": [
+            { "id": "v1", "content": "1", "correctSlot": "slot-unit" },
+            { "id": "v2", "content": "10", "correctSlot": "slot-ten" },
+            { "id": "v3", "content": "100", "correctSlot": "slot-hundred" }
+          ],
+          "dropSlots": [
+            { "id": "slot-unit", "label": "Đơn vị" },
+            { "id": "slot-ten", "label": "Chục" },
+            { "id": "slot-hundred", "label": "Trăm" }
+          ],
+          "explanation": "Giá trị hàng trong hệ thập phân."
+        },
+        {
+          "id": "g4-l6-q7",
+          "type": "multiple-choice",
+          "prompt": "Viết dạng khai triển: 3 456",
+          "choices": [
+            "3000 + 400 + 50 + 6",
+            "300 + 40 + 5 + 6",
+            "30 + 4 + 5 + 6",
+            "3 + 4 + 5 + 6"
+          ],
+          "answer": "3000 + 400 + 50 + 6",
+          "explanation": "Phân tích theo giá trị hàng."
+        },
+        {
+          "id": "g4-l6-q8",
+          "type": "matching-pairs",
+          "question": "Ghép số với dạng khai triển",
+          "pairs": [
+            { "id": "p1", "left": "205", "right": "200 + 5" },
+            { "id": "p2", "left": "2 050", "right": "2 000 + 50" },
+            { "id": "p3", "left": "20 500", "right": "20 000 + 500" }
+          ],
+          "explanation": "Viết số theo hệ thập phân."
+        },
+        {
+          "id": "g4-l6-q9",
+          "type": "fill-blank",
+          "question": "7 x 1 000 + 8 x 100 + 9 = __",
+          "blanks": [{ "position": 0, "answer": "7 809" }],
+          "explanation": "7 000 + 800 + 9 = 7 809."
+        },
+        {
+          "id": "g4-l6-q10",
+          "type": "multiple-choice",
+          "prompt": "Số 60 304 có bao nhiêu chữ số 0?",
+          "choices": ["1", "2", "3", "4"],
+          "answer": "2",
+          "explanation": "Có 2 chữ số 0 trong số 60 304."
+        }
+      ]
+    },
+    {
+      "id": "g4-l7-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l7-q1",
+          "type": "multiple-choice",
+          "prompt": "Giáp hình chữ nhật 6 m x 4 m. Diện tích?",
+          "choices": ["20", "22", "24", "26"],
+          "answer": "24",
+          "explanation": "6 x 4 = 24 m2."
+        },
+        {
+          "id": "g4-l7-q2",
+          "type": "drag-drop",
+          "question": "Kéo đơn vị đúng",
+          "dragItems": [
+            { "id": "m2", "content": "m2", "correctSlot": "slot-area" },
+            { "id": "m", "content": "m", "correctSlot": "slot-length" }
+          ],
+          "dropSlots": [
+            { "id": "slot-area", "label": "Diện tích" },
+            { "id": "slot-length", "label": "Chu vi" }
+          ],
+          "explanation": "Diện tích dùng m2."
+        },
+        {
+          "id": "g4-l7-q3",
+          "type": "fill-blank",
+          "question": "Chu vi 6 m x 4 m = __ m",
+          "blanks": [{ "position": 0, "answer": "20" }],
+          "explanation": "(6+4)*2=20."
+        },
+        {
+          "id": "g4-l7-q4",
+          "type": "multiple-choice",
+          "prompt": "Tấm giáp vuông cạnh 5 m. Diện tích?",
+          "choices": ["20 m2", "25 m2", "30 m2", "35 m2"],
+          "answer": "25 m2",
+          "explanation": "5 x 5 = 25 m2."
+        },
+        {
+          "id": "g4-l7-q5",
+          "type": "matching-pairs",
+          "question": "Ghép hình với công thức diện tích",
+          "pairs": [
+            { "id": "p1", "left": "Hình vuông", "right": "Cạnh x Cạnh" },
+            { "id": "p2", "left": "Hình chữ nhật", "right": "Dài x Rộng" },
+            { "id": "p3", "left": "Chu vi HCN", "right": "(Dài + Rộng) x 2" }
+          ],
+          "explanation": "Công thức tính toán hình học."
+        },
+        {
+          "id": "g4-l7-q6",
+          "type": "fill-blank",
+          "question": "Hình vuông cạnh 8 m có chu vi = __ m",
+          "blanks": [{ "position": 0, "answer": "32" }],
+          "explanation": "8 x 4 = 32 m."
+        },
+        {
+          "id": "g4-l7-q7",
+          "type": "multiple-choice",
+          "prompt": "Giáp 12 m x 8 m. Chu vi là?",
+          "choices": ["36 m", "40 m", "44 m", "48 m"],
+          "answer": "40 m",
+          "explanation": "(12 + 8) x 2 = 20 x 2 = 40 m."
+        },
+        {
+          "id": "g4-l7-q8",
+          "type": "drag-drop",
+          "question": "Kéo công thức đúng",
+          "dragItems": [
+            { "id": "dt", "content": "Dài x Rộng", "correctSlot": "slot-dt" },
+            {
+              "id": "cv",
+              "content": "(Dài + Rộng) x 2",
+              "correctSlot": "slot-cv"
+            }
+          ],
+          "dropSlots": [
+            { "id": "slot-dt", "label": "Diện tích" },
+            { "id": "slot-cv", "label": "Chu vi" }
+          ],
+          "explanation": "Phân biệt công thức."
+        },
+        {
+          "id": "g4-l7-q9",
+          "type": "fill-blank",
+          "question": "HCN có chu vi 30 m, dài 10 m. Rộng = __ m",
+          "blanks": [{ "position": 0, "answer": "5" }],
+          "explanation": "30:2 - 10 = 15 - 10 = 5 m."
+        },
+        {
+          "id": "g4-l7-q10",
+          "type": "multiple-choice",
+          "prompt": "Diện tích 48 m2, dài 8 m. Chiều rộng?",
+          "choices": ["4 m", "5 m", "6 m", "7 m"],
+          "answer": "6 m",
+          "explanation": "48 : 8 = 6 m."
+        }
+      ]
+    },
+    {
+      "id": "g4-l8-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l8-q1",
+          "type": "multiple-choice",
+          "prompt": "1 yến bằng bao nhiêu kg?",
+          "choices": ["10 kg", "50 kg", "100 kg", "1 000 kg"],
+          "answer": "10 kg",
+          "explanation": "1 yến = 10 kg."
+        },
+        {
+          "id": "g4-l8-q2",
+          "type": "matching-pairs",
+          "question": "Ghép đơn vị khối lượng",
+          "pairs": [
+            { "id": "p1", "left": "1 yến", "right": "10 kg" },
+            { "id": "p2", "left": "1 tạ", "right": "100 kg" },
+            { "id": "p3", "left": "1 tấn", "right": "1 000 kg" }
+          ],
+          "explanation": "Các đơn vị khối lượng lớn."
+        },
+        {
+          "id": "g4-l8-q3",
+          "type": "fill-blank",
+          "question": "1 tạ = __ yến",
+          "blanks": [{ "position": 0, "answer": "10" }],
+          "explanation": "100 kg : 10 kg = 10 yến."
+        },
+        {
+          "id": "g4-l8-q4",
+          "type": "multiple-choice",
+          "prompt": "Roi sắt nặng 3 tạ. Bằng bao nhiêu kg?",
+          "choices": ["30 kg", "300 kg", "3 000 kg", "30 000 kg"],
+          "answer": "300 kg",
+          "explanation": "3 tạ = 3 x 100 = 300 kg."
+        },
+        {
+          "id": "g4-l8-q5",
+          "type": "fill-blank",
+          "question": "500 kg = __ tạ",
+          "blanks": [{ "position": 0, "answer": "5" }],
+          "explanation": "500 : 100 = 5 tạ."
+        },
+        {
+          "id": "g4-l8-q6",
+          "type": "drag-drop",
+          "question": "Sắp xếp đơn vị từ nhỏ đến lớn",
+          "dragItems": [
+            { "id": "u1", "content": "kg", "correctSlot": "slot-1" },
+            { "id": "u2", "content": "yến", "correctSlot": "slot-2" },
+            { "id": "u3", "content": "tạ", "correctSlot": "slot-3" },
+            { "id": "u4", "content": "tấn", "correctSlot": "slot-4" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Nhỏ nhất" },
+            { "id": "slot-2", "label": "Lớn hơn" },
+            { "id": "slot-3", "label": "Lớn hơn nữa" },
+            { "id": "slot-4", "label": "Lớn nhất" }
+          ],
+          "explanation": "kg < yến < tạ < tấn."
+        },
+        {
+          "id": "g4-l8-q7",
+          "type": "multiple-choice",
+          "prompt": "2 tấn = ? kg",
+          "choices": ["200 kg", "2 000 kg", "20 000 kg", "200 000 kg"],
+          "answer": "2 000 kg",
+          "explanation": "2 x 1 000 = 2 000 kg."
+        },
+        {
+          "id": "g4-l8-q8",
+          "type": "matching-pairs",
+          "question": "Ghép số liệu tương đương",
+          "pairs": [
+            { "id": "p1", "left": "50 yến", "right": "5 tạ" },
+            { "id": "p2", "left": "20 tạ", "right": "2 tấn" },
+            { "id": "p3", "left": "100 yến", "right": "1 tấn" }
+          ],
+          "explanation": "Đổi giữa các đơn vị."
+        },
+        {
+          "id": "g4-l8-q9",
+          "type": "fill-blank",
+          "question": "3 tấn 5 tạ = __ kg",
+          "blanks": [{ "position": 0, "answer": "3 500" }],
+          "explanation": "3 000 + 500 = 3 500 kg."
+        },
+        {
+          "id": "g4-l8-q10",
+          "type": "multiple-choice",
+          "prompt": "Ngựa sắt nặng 1,5 tấn. Bằng bao nhiêu kg?",
+          "choices": ["150 kg", "1 500 kg", "15 000 kg", "150 000 kg"],
+          "answer": "1 500 kg",
+          "explanation": "1,5 x 1 000 = 1 500 kg."
+        }
+      ]
+    },
+    {
+      "id": "g4-l9-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l9-q1",
+          "type": "multiple-choice",
+          "prompt": "180 000 + 25 000 = ?",
+          "choices": ["195 000", "200 000", "205 000", "210 000"],
+          "answer": "205 000",
+          "explanation": "Cộng số lớn."
+        },
+        {
+          "id": "g4-l9-q2",
+          "type": "drag-drop",
+          "question": "Kéo dấu đúng",
+          "dragItems": [
+            { "id": "gt", "content": ">", "correctSlot": "slot-205" },
+            { "id": "lt", "content": "<", "correctSlot": "slot-180" }
+          ],
+          "dropSlots": [
+            { "id": "slot-205", "label": "205 000 __ 180 000" },
+            { "id": "slot-180", "label": "180 000 __ 205 000" }
+          ],
+          "explanation": "205 000 lớn hơn 180 000."
+        },
+        {
+          "id": "g4-l9-q3",
+          "type": "fill-blank",
+          "question": "205 000 - 5 000 = __",
+          "blanks": [{ "position": 0, "answer": "200 000" }],
+          "explanation": "Trừ số lớn."
+        },
+        {
+          "id": "g4-l9-q4",
+          "type": "multiple-choice",
+          "prompt": "Ngựa sắt chạy 180 000 bước, sau đó thêm 45 000 bước. Tổng?",
+          "choices": ["215 000", "220 000", "225 000", "230 000"],
+          "answer": "225 000",
+          "explanation": "180 000 + 45 000 = 225 000 bước."
+        },
+        {
+          "id": "g4-l9-q5",
+          "type": "matching-pairs",
+          "question": "Ghép phép tính với kết quả",
+          "pairs": [
+            { "id": "p1", "left": "180 000 + 20 000", "right": "200 000" },
+            { "id": "p2", "left": "205 000 - 5 000", "right": "200 000" },
+            { "id": "p3", "left": "225 000 - 25 000", "right": "200 000" }
+          ],
+          "explanation": "Các cách tạo số 200 000."
+        },
+        {
+          "id": "g4-l9-q6",
+          "type": "fill-blank",
+          "question": "300 000 - 95 000 = __",
+          "blanks": [{ "position": 0, "answer": "205 000" }],
+          "explanation": "Thực hiện phép trừ."
+        },
+        {
+          "id": "g4-l9-q7",
+          "type": "drag-drop",
+          "question": "Sắp xếp số từ bé đến lớn",
+          "dragItems": [
+            { "id": "n1", "content": "180 000", "correctSlot": "slot-1" },
+            { "id": "n2", "content": "200 000", "correctSlot": "slot-2" },
+            { "id": "n3", "content": "225 000", "correctSlot": "slot-3" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Nhỏ nhất" },
+            { "id": "slot-2", "label": "Vừa" },
+            { "id": "slot-3", "label": "Lớn nhất" }
+          ],
+          "explanation": "180 000 < 200 000 < 225 000."
+        },
+        {
+          "id": "g4-l9-q8",
+          "type": "multiple-choice",
+          "prompt": "Ngựa sắt nặng 205 000 gram. Bằng bao nhiêu kg?",
+          "choices": ["20,5 kg", "205 kg", "2 050 kg", "20 500 kg"],
+          "answer": "205 kg",
+          "explanation": "205 000 g = 205 kg."
+        },
+        {
+          "id": "g4-l9-q9",
+          "type": "fill-blank",
+          "question": "225 000 : 5 = __",
+          "blanks": [{ "position": 0, "answer": "45 000" }],
+          "explanation": "Chia số lớn cho 5."
+        },
+        {
+          "id": "g4-l9-q10",
+          "type": "multiple-choice",
+          "prompt": "Số nào lớn hơn: 180 500 hay 180 050?",
+          "choices": ["180 500", "180 050", "Bằng nhau"],
+          "answer": "180 500",
+          "explanation": "Hàng trăm: 5 > 0."
+        }
+      ]
+    },
+    {
+      "id": "g4-l10-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l10-q1",
+          "type": "multiple-choice",
+          "prompt": "1 thế kỷ bằng bao nhiêu năm?",
+          "choices": ["10 năm", "50 năm", "100 năm", "1 000 năm"],
+          "answer": "100 năm",
+          "explanation": "1 thế kỷ = 100 năm."
+        },
+        {
+          "id": "g4-l10-q2",
+          "type": "matching-pairs",
+          "question": "Ghép đơn vị thời gian",
+          "pairs": [
+            { "id": "p1", "left": "1 năm", "right": "365 ngày" },
+            { "id": "p2", "left": "1 thập kỷ", "right": "10 năm" },
+            { "id": "p3", "left": "1 thế kỷ", "right": "100 năm" }
+          ],
+          "explanation": "Các đơn vị thời gian lớn."
+        },
+        {
+          "id": "g4-l10-q3",
+          "type": "fill-blank",
+          "question": "Năm 2024 thuộc thế kỷ thứ __",
+          "blanks": [{ "position": 0, "answer": "21" }],
+          "explanation": "Năm 2024 thuộc thế kỷ 21."
+        },
+        {
+          "id": "g4-l10-q4",
+          "type": "multiple-choice",
+          "prompt": "Thánh Gióng sống vào thế kỷ 6 (năm 500-599). Đã bao nhiêu thế kỷ trới qua?",
+          "choices": ["14 thế kỷ", "15 thế kỷ", "16 thế kỷ", "17 thế kỷ"],
+          "answer": "15 thế kỷ",
+          "explanation": "21 - 6 = 15 thế kỷ."
+        },
+        {
+          "id": "g4-l10-q5",
+          "type": "fill-blank",
+          "question": "200 năm = __ thế kỷ",
+          "blanks": [{ "position": 0, "answer": "2" }],
+          "explanation": "200 : 100 = 2 thế kỷ."
+        },
+        {
+          "id": "g4-l10-q6",
+          "type": "drag-drop",
+          "question": "Sắp xếp đơn vị từ nhỏ đến lớn",
+          "dragItems": [
+            { "id": "u1", "content": "Ngày", "correctSlot": "slot-1" },
+            { "id": "u2", "content": "Năm", "correctSlot": "slot-2" },
+            { "id": "u3", "content": "Thế kỷ", "correctSlot": "slot-3" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Nhỏ nhất" },
+            { "id": "slot-2", "label": "Vừa" },
+            { "id": "slot-3", "label": "Lớn nhất" }
+          ],
+          "explanation": "Ngày < Năm < Thế kỷ."
+        },
+        {
+          "id": "g4-l10-q7",
+          "type": "multiple-choice",
+          "prompt": "Thế kỷ 20 gồm các năm nào?",
+          "choices": ["1900-1999", "2000-2099", "1800-1899", "2100-2199"],
+          "answer": "1900-1999",
+          "explanation": "Thế kỷ 20 là 1901-2000, nhưng thông thường tính 1900-1999."
+        },
+        {
+          "id": "g4-l10-q8",
+          "type": "matching-pairs",
+          "question": "Ghép mốc thời gian lịch sử",
+          "pairs": [
+            { "id": "p1", "left": "Năm 1945", "right": "Thế kỷ 20" },
+            { "id": "p2", "left": "Năm 2000", "right": "Thế kỷ 21" },
+            { "id": "p3", "left": "Năm 1800", "right": "Thế kỷ 19" }
+          ],
+          "explanation": "Xác định thế kỷ của năm."
+        },
+        {
+          "id": "g4-l10-q9",
+          "type": "fill-blank",
+          "question": "1 năm nhuận có __ ngày",
+          "blanks": [{ "position": 0, "answer": "366" }],
+          "explanation": "Năm nhuận có 366 ngày."
+        },
+        {
+          "id": "g4-l10-q10",
+          "type": "multiple-choice",
+          "prompt": "Khoảng cách giữa năm 1000 và năm 2000?",
+          "choices": ["1 thế kỷ", "5 thế kỷ", "10 thế kỷ", "1 000 năm"],
+          "answer": "1 000 năm",
+          "explanation": "2000 - 1000 = 1 000 năm = 10 thế kỷ."
+        }
+      ]
+    },
+    {
+      "id": "g4-l11-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l11-q1",
+          "type": "multiple-choice",
+          "prompt": "So sánh 5/6 và 3/4, phân số nào lớn hơn?",
+          "choices": ["5/6", "3/4", "Bằng nhau"],
+          "answer": "5/6",
+          "explanation": "Quy đồng: 5/6 = 10/12; 3/4 = 9/12."
+        },
+        {
+          "id": "g4-l11-q2",
+          "type": "matching-pairs",
+          "question": "Ghép phân số với giá trị thập phân",
+          "pairs": [
+            { "id": "p1", "left": "1/5", "right": "0,2" },
+            { "id": "p2", "left": "2/5", "right": "0,4" },
+            { "id": "p3", "left": "3/5", "right": "0,6" }
+          ],
+          "explanation": "Đổi phân số thập phân."
+        },
+        {
+          "id": "g4-l11-q3",
+          "type": "fill-blank",
+          "question": "2/3 + 1/6 = __",
+          "blanks": [{ "position": 0, "answer": "5/6" }],
+          "explanation": "Quy đồng 2/3=4/6; 4/6+1/6=5/6."
+        },
+        {
+          "id": "g4-l11-q4",
+          "type": "multiple-choice",
+          "prompt": "Vũ khí A nặng 3/5 kg, B nặng 7/10 kg. Vũ khí nào nặng hơn?",
+          "choices": ["A", "B", "Bằng nhau"],
+          "answer": "B",
+          "explanation": "3/5 = 6/10; 7/10 > 6/10."
+        },
+        {
+          "id": "g4-l11-q5",
+          "type": "fill-blank",
+          "question": "So sánh: 4/5 __ 7/10",
+          "blanks": [{ "position": 0, "answer": ">" }],
+          "explanation": "4/5 = 8/10; 8/10 > 7/10."
+        },
+        {
+          "id": "g4-l11-q6",
+          "type": "drag-drop",
+          "question": "Kéo phân số theo thứ tự tăng dần",
+          "dragItems": [
+            { "id": "f1", "content": "1/6", "correctSlot": "slot-1" },
+            { "id": "f2", "content": "2/6", "correctSlot": "slot-2" },
+            { "id": "f3", "content": "5/6", "correctSlot": "slot-3" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Nhỏ nhất" },
+            { "id": "slot-2", "label": "Vừa" },
+            { "id": "slot-3", "label": "Lớn nhất" }
+          ],
+          "explanation": "1/6 < 2/6 < 5/6."
+        },
+        {
+          "id": "g4-l11-q7",
+          "type": "multiple-choice",
+          "prompt": "Phân số nào lớn nhất: 2/3; 3/4; 5/6?",
+          "choices": ["2/3", "3/4", "5/6"],
+          "answer": "5/6",
+          "explanation": "Quy đồng: 8/12; 9/12; 10/12."
+        },
+        {
+          "id": "g4-l11-q8",
+          "type": "matching-pairs",
+          "question": "Ghép phân số với phân số bằng nó",
+          "pairs": [
+            { "id": "p1", "left": "1/2", "right": "3/6" },
+            { "id": "p2", "left": "2/3", "right": "4/6" },
+            { "id": "p3", "left": "5/6", "right": "10/12" }
+          ],
+          "explanation": "Quy đồng mẫu số 6 và 12."
+        },
+        {
+          "id": "g4-l11-q9",
+          "type": "fill-blank",
+          "question": "1/4 + 2/4 + 1/4 = __",
+          "blanks": [{ "position": 0, "answer": "1" }],
+          "explanation": "(1+2+1)/4 = 4/4 = 1."
+        },
+        {
+          "id": "g4-l11-q10",
+          "type": "multiple-choice",
+          "prompt": "3/8 + 2/8 = ?",
+          "choices": ["5/16", "5/8", "1/8", "6/8"],
+          "answer": "5/8",
+          "explanation": "Cộng tử số: 3+2=5, giữ nguyên mẫu."
+        }
+      ]
+    },
+    {
+      "id": "g4-l12-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l12-q1",
+          "type": "multiple-choice",
+          "prompt": "Bó 24 cây tre thành 6 bó đều, mỗi bó?",
+          "choices": ["3", "4", "5", "6"],
+          "answer": "4",
+          "explanation": "24 : 6 = 4."
+        },
+        {
+          "id": "g4-l12-q2",
+          "type": "drag-drop",
+          "question": "Kéo số vào phép chia",
+          "dragItems": [
+            { "id": "r4", "content": "4", "correctSlot": "slot-24div6" },
+            { "id": "r6", "content": "6", "correctSlot": "slot-36div6" }
+          ],
+          "dropSlots": [
+            { "id": "slot-24div6", "label": "24 : 6" },
+            { "id": "slot-36div6", "label": "36 : 6" }
+          ],
+          "explanation": "24:6=4; 36:6=6."
+        },
+        {
+          "id": "g4-l12-q3",
+          "type": "fill-blank",
+          "question": "36 : 6 = __",
+          "blanks": [{ "position": 0, "answer": "6" }],
+          "explanation": "Chia đều."
+        },
+        {
+          "id": "g4-l12-q4",
+          "type": "multiple-choice",
+          "prompt": "Có 48 cây tre, chia thành 8 bó đều. Mỗi bó có?",
+          "choices": ["4 cây", "5 cây", "6 cây", "8 cây"],
+          "answer": "6 cây",
+          "explanation": "48 : 8 = 6 cây."
+        },
+        {
+          "id": "g4-l12-q5",
+          "type": "matching-pairs",
+          "question": "Ghép phép chia với kết quả",
+          "pairs": [
+            { "id": "p1", "left": "30 : 5", "right": "6" },
+            { "id": "p2", "left": "42 : 7", "right": "6" },
+            { "id": "p3", "left": "54 : 9", "right": "6" }
+          ],
+          "explanation": "Các phép chia cho kết quả 6."
+        },
+        {
+          "id": "g4-l12-q6",
+          "type": "fill-blank",
+          "question": "60 cây chia 10 bó, mỗi bó __ cây",
+          "blanks": [{ "position": 0, "answer": "6" }],
+          "explanation": "60 : 10 = 6 cây."
+        },
+        {
+          "id": "g4-l12-q7",
+          "type": "drag-drop",
+          "question": "Sắp xếp kết quả từ bé đến lớn",
+          "dragItems": [
+            { "id": "r1", "content": "12:6", "correctSlot": "slot-1" },
+            { "id": "r2", "content": "24:6", "correctSlot": "slot-2" },
+            { "id": "r3", "content": "36:6", "correctSlot": "slot-3" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Nhỏ nhất" },
+            { "id": "slot-2", "label": "Vừa" },
+            { "id": "slot-3", "label": "Lớn nhất" }
+          ],
+          "explanation": "2 < 4 < 6."
+        },
+        {
+          "id": "g4-l12-q8",
+          "type": "multiple-choice",
+          "prompt": "Mỗi bó có 5 cây, 8 bó có bao nhiêu cây?",
+          "choices": ["35", "40", "45", "50"],
+          "answer": "40",
+          "explanation": "5 x 8 = 40 cây."
+        },
+        {
+          "id": "g4-l12-q9",
+          "type": "fill-blank",
+          "question": "72 : 9 = __",
+          "blanks": [{ "position": 0, "answer": "8" }],
+          "explanation": "Phép chia đơn giản."
+        },
+        {
+          "id": "g4-l12-q10",
+          "type": "multiple-choice",
+          "prompt": "Chia 100 cây tre thành các bó, mỗi bó 10 cây. Có bao nhiêu bó?",
+          "choices": ["8", "9", "10", "11"],
+          "answer": "10",
+          "explanation": "100 : 10 = 10 bó."
+        }
+      ]
+    },
+    {
+      "id": "g4-l13-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l13-q1",
+          "type": "multiple-choice",
+          "prompt": "500 000 - 125 000 = ?",
+          "choices": ["365 000", "375 000", "380 000", "400 000"],
+          "answer": "375 000",
+          "explanation": "Trừ số lớn."
+        },
+        {
+          "id": "g4-l13-q2",
+          "type": "matching-pairs",
+          "question": "Ghép phép tính",
+          "pairs": [
+            { "id": "p1", "left": "250 000 + 100 000", "right": "350 000" },
+            { "id": "p2", "left": "375 000 + 5 000", "right": "380 000" },
+            { "id": "p3", "left": "400 000 - 25 000", "right": "375 000" }
+          ],
+          "explanation": "Ôn cộng trừ số lớn."
+        },
+        {
+          "id": "g4-l13-q3",
+          "type": "fill-blank",
+          "question": "375 000 + 125 000 = __",
+          "blanks": [{ "position": 0, "answer": "500 000" }],
+          "explanation": "Cộng ngược lại."
+        },
+        {
+          "id": "g4-l13-q4",
+          "type": "multiple-choice",
+          "prompt": "Giặc có 600 000 quân, thua 225 000 quân. Còn lại?",
+          "choices": ["355 000", "365 000", "375 000", "385 000"],
+          "answer": "375 000",
+          "explanation": "600 000 - 225 000 = 375 000 quân."
+        },
+        {
+          "id": "g4-l13-q5",
+          "type": "fill-blank",
+          "question": "800 000 - 325 000 = __",
+          "blanks": [{ "position": 0, "answer": "475 000" }],
+          "explanation": "Thực hiện phép trừ số lớn."
+        },
+        {
+          "id": "g4-l13-q6",
+          "type": "drag-drop",
+          "question": "Kéo dấu so sánh đúng",
+          "dragItems": [
+            { "id": "gt", "content": ">", "correctSlot": "slot-500" },
+            { "id": "lt", "content": "<", "correctSlot": "slot-375" }
+          ],
+          "dropSlots": [
+            { "id": "slot-500", "label": "500 000 __ 375 000" },
+            { "id": "slot-375", "label": "375 000 __ 500 000" }
+          ],
+          "explanation": "500 000 lớn hơn 375 000."
+        },
+        {
+          "id": "g4-l13-q7",
+          "type": "multiple-choice",
+          "prompt": "Chiến công A: 180 000, B: 195 000. Tổng chiến công?",
+          "choices": ["365 000", "375 000", "385 000", "395 000"],
+          "answer": "375 000",
+          "explanation": "180 000 + 195 000 = 375 000."
+        },
+        {
+          "id": "g4-l13-q8",
+          "type": "matching-pairs",
+          "question": "Ghép số với cách đọc",
+          "pairs": [
+            {
+              "id": "p1",
+              "left": "375 000",
+              "right": "ba trăm bảy mươi lăm nghìn"
+            },
+            { "id": "p2", "left": "500 000", "right": "năm trăm nghìn" },
+            { "id": "p3", "left": "600 000", "right": "sáu trăm nghìn" }
+          ],
+          "explanation": "Đọc số lớn."
+        },
+        {
+          "id": "g4-l13-q9",
+          "type": "fill-blank",
+          "question": "1 000 000 - 625 000 = __",
+          "blanks": [{ "position": 0, "answer": "375 000" }],
+          "explanation": "Trừ từ 1 triệu."
+        },
+        {
+          "id": "g4-l13-q10",
+          "type": "multiple-choice",
+          "prompt": "Số nào lớn hơn: 375 000 hay 370 500?",
+          "choices": ["375 000", "370 500", "Bằng nhau"],
+          "answer": "375 000",
+          "explanation": "Hàng nghìn: 5 > 0."
+        }
+      ]
+    },
+    {
+      "id": "g4-l14-qs",
+      "xpReward": 16,
+      "questions": [
+        {
+          "id": "g4-l14-q1",
+          "type": "multiple-choice",
+          "prompt": "Độ cao 3 chặng: 120 m, 150 m, 180 m. TBC?",
+          "choices": ["140 m", "150 m", "160 m", "170 m"],
+          "answer": "150 m",
+          "explanation": "(120+150+180)/3=150."
+        },
+        {
+          "id": "g4-l14-q2",
+          "type": "matching-pairs",
+          "question": "Ghép thang độ cao",
+          "pairs": [
+            { "id": "p1", "left": "120 m", "right": "Thấp" },
+            { "id": "p2", "left": "150 m", "right": "Vừa" },
+            { "id": "p3", "left": "180 m", "right": "Cao" }
+          ],
+          "explanation": "So sánh độ cao."
+        },
+        {
+          "id": "g4-l14-q3",
+          "type": "fill-blank",
+          "question": "150 m x 2 = __ m",
+          "blanks": [{ "position": 0, "answer": "300" }],
+          "explanation": "Nhân số lớn đơn giản."
+        },
+        {
+          "id": "g4-l14-q4",
+          "type": "multiple-choice",
+          "prompt": "4 chặng đường cao: 100 m, 140 m, 160 m, 200 m. Trung bình?",
+          "choices": ["140 m", "150 m", "160 m", "170 m"],
+          "answer": "150 m",
+          "explanation": "(100+140+160+200):4 = 600:4 = 150 m."
+        },
+        {
+          "id": "g4-l14-q5",
+          "type": "fill-blank",
+          "question": "TBC của 200, 250, 300 = __",
+          "blanks": [{ "position": 0, "answer": "250" }],
+          "explanation": "(200+250+300):3 = 750:3 = 250."
+        },
+        {
+          "id": "g4-l14-q6",
+          "type": "drag-drop",
+          "question": "Sắp xếp chặng theo độ cao tăng dần",
+          "dragItems": [
+            { "id": "c1", "content": "120 m", "correctSlot": "slot-1" },
+            { "id": "c2", "content": "150 m", "correctSlot": "slot-2" },
+            { "id": "c3", "content": "180 m", "correctSlot": "slot-3" }
+          ],
+          "dropSlots": [
+            { "id": "slot-1", "label": "Thấp nhất" },
+            { "id": "slot-2", "label": "Vừa" },
+            { "id": "slot-3", "label": "Cao nhất" }
+          ],
+          "explanation": "120 < 150 < 180."
+        },
+        {
+          "id": "g4-l14-q7",
+          "type": "multiple-choice",
+          "prompt": "Tổng 5 chặng là 750 m. Trung bình mỗi chặng?",
+          "choices": ["130 m", "140 m", "150 m", "160 m"],
+          "answer": "150 m",
+          "explanation": "750 : 5 = 150 m."
+        },
+        {
+          "id": "g4-l14-q8",
+          "type": "matching-pairs",
+          "question": "Ghép số đo với đơn vị",
+          "pairs": [
+            { "id": "p1", "left": "Độ cao núi", "right": "mét (m)" },
+            { "id": "p2", "left": "Cân nặng", "right": "kilôgam (kg)" },
+            { "id": "p3", "left": "Diện tích", "right": "mét vuông (m2)" }
+          ],
+          "explanation": "Phân biệt đơn vị đo."
+        },
+        {
+          "id": "g4-l14-q9",
+          "type": "fill-blank",
+          "question": "Nếu TBC 6 chặng là 180 m, tổng độ cao là __ m",
+          "blanks": [{ "position": 0, "answer": "1080" }],
+          "explanation": "180 x 6 = 1080 m."
+        },
+        {
+          "id": "g4-l14-q10",
+          "type": "multiple-choice",
+          "prompt": "Chặng 1: 120 m, chặng 2: 180 m. Chênh lệch?",
+          "choices": ["50 m", "60 m", "70 m", "80 m"],
+          "answer": "60 m",
+          "explanation": "180 - 120 = 60 m."
+        }
+      ]
+    },
+    {
+      "id": "g4-l15-qs",
+      "xpReward": 18,
+      "questions": [
+        {
+          "id": "g4-l15-q1",
+          "type": "multiple-choice",
+          "prompt": "Tổng 2/3 + 1/6 = ?",
+          "choices": ["1/2", "3/6", "5/6", "1"],
+          "answer": "5/6",
+          "explanation": "2/3=4/6; 4/6+1/6=5/6."
+        },
+        {
+          "id": "g4-l15-q2",
+          "type": "matching-pairs",
+          "question": "Ghép kết quả cuối",
+          "pairs": [
+            { "id": "p1", "left": "200 000 + 300 000", "right": "500 000" },
+            { "id": "p2", "left": "500 000 - 120 000", "right": "380 000" },
+            { "id": "p3", "left": "1/2 + 1/4", "right": "3/4" }
+          ],
+          "explanation": "Tổng hợp phân số và số lớn."
+        },
+        {
+          "id": "g4-l15-q3",
+          "type": "fill-blank",
+          "question": "Trung bình cộng của 200 000 và 400 000 là __",
+          "blanks": [{ "position": 0, "answer": "300 000" }],
+          "explanation": "(200 000 + 400 000)/2 = 300 000."
+        },
+        {
+          "id": "g4-l15-q4",
+          "type": "multiple-choice",
+          "prompt": "Tổng hợp: 3/4 - 1/2 + 1/4 = ?",
+          "choices": ["1/4", "1/2", "3/4", "1"],
+          "answer": "1/2",
+          "explanation": "3/4 - 2/4 + 1/4 = 2/4 = 1/2."
+        },
+        {
+          "id": "g4-l15-q5",
+          "type": "fill-blank",
+          "question": "450 000 + 150 000 - 100 000 = __",
+          "blanks": [{ "position": 0, "answer": "500 000" }],
+          "explanation": "600 000 - 100 000 = 500 000."
+        },
+        {
+          "id": "g4-l15-q6",
+          "type": "drag-drop",
+          "question": "Kéo loại bài toán đúng",
+          "dragItems": [
+            { "id": "t1", "content": "Phân số", "correctSlot": "slot-ps" },
+            { "id": "t2", "content": "Số lớn", "correctSlot": "slot-sl" },
+            {
+              "id": "t3",
+              "content": "Trung bình cộng",
+              "correctSlot": "slot-tbc"
+            }
+          ],
+          "dropSlots": [
+            { "id": "slot-ps", "label": "2/3 + 1/6" },
+            { "id": "slot-sl", "label": "500 000 - 120 000" },
+            { "id": "slot-tbc", "label": "(10+20+30):3" }
+          ],
+          "explanation": "Phân biệt các dạng toán."
+        },
+        {
+          "id": "g4-l15-q7",
+          "type": "multiple-choice",
+          "prompt": "TBC của 100 000, 200 000, 300 000 là?",
+          "choices": ["150 000", "180 000", "200 000", "220 000"],
+          "answer": "200 000",
+          "explanation": "(100 000+200 000+300 000):3 = 200 000."
+        },
+        {
+          "id": "g4-l15-q8",
+          "type": "matching-pairs",
+          "question": "Ghép bài toán tổng hợp",
+          "pairs": [
+            { "id": "p1", "left": "1/2 + 1/2", "right": "1" },
+            { "id": "p2", "left": "250 000 x 2", "right": "500 000" },
+            { "id": "p3", "left": "TBC 100, 200", "right": "150" }
+          ],
+          "explanation": "Kiến thức tổng hợp."
+        },
+        {
+          "id": "g4-l15-q9",
+          "type": "fill-blank",
+          "question": "Hình chữ nhật 8m x 5m có diện tích __ m2",
+          "blanks": [{ "position": 0, "answer": "40" }],
+          "explanation": "8 x 5 = 40 m2."
+        },
+        {
+          "id": "g4-l15-q10",
+          "type": "multiple-choice",
+          "prompt": "Bài tổng hợp: Có 600 000 hạt gạo chia đều cho 3 kho. Mỗi kho có bao nhiêu?",
+          "choices": ["150 000", "180 000", "200 000", "220 000"],
+          "answer": "200 000",
+          "explanation": "600 000 : 3 = 200 000 hạt."
+        }
+      ]
+    }
+  ]
+}

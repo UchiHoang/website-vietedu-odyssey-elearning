@@ -1,0 +1,57 @@
+{
+  "meta": { "title": "Thánh Gióng", "description": "Giúp Gióng ăn no, lớn nhanh, đánh giặc Ân" },
+  "prologue": [
+    { "speaker": "Làng Phù Đổng", "text": "Giặc Ân kéo tới, cần người cứu nước!" },
+    { "speaker": "Gióng", "text": "Cho ta ăn no, ta sẽ lớn nhanh đánh giặc!" }
+  ],
+  "nodes": [
+    { "id": "giong-1", "title": "Bữa ăn đầu", "badgeOnComplete": "giong_meal1", "activityRef": "giong-1-qs",
+      "cutscene": [{ "speaker": "Mẹ Gióng", "text": "Ăn đi con, lấy sức lớn nhanh." }] },
+    { "id": "giong-2", "title": "Bữa ăn no", "badgeOnComplete": "giong_meal2", "activityRef": "giong-2-qs",
+      "cutscene": [{ "speaker": "Làng Phù Đổng", "text": "Kìa, Gióng đang cao vút!" }] },
+    { "id": "giong-3", "title": "Ngựa sắt và roi sắt", "badgeOnComplete": "giong_gear", "activityRef": "giong-3-qs",
+      "cutscene": [{ "speaker": "Sứ giả", "text": "Đưa ngựa sắt, roi sắt cho Gióng!" }] },
+    { "id": "giong-4", "title": "Ra trận", "badgeOnComplete": "giong_battle", "activityRef": "giong-4-qs",
+      "cutscene": [{ "speaker": "Giặc Ân", "text": "Ngựa sắt phun lửa!?" }] },
+    { "id": "giong-5", "title": "Thắng trận", "badgeOnComplete": "giong_win", "activityRef": "giong-5-qs",
+      "cutscene": [{ "speaker": "Người kể chuyện", "text": "Gióng bay về trời, để lại tượng đài." }] }
+  ],
+  "activities": [
+    { "id": "giong-1-qs", "xpReward": 14, "questions": [
+      { "prompt": "3/4 + 1/4 = ?", "choices": ["1/2","3/4","1","2"], "answer": "1" },
+      { "prompt": "2/3 + 1/6 = ?", "choices": ["1/2","5/6","1","4/3"], "answer": "5/6" },
+      { "prompt": "4500 + 3200 = ?", "choices": ["6700","6800","7700","7800"], "answer": "7700" },
+      { "prompt": "9000 - 2750 = ?", "choices": ["6150","6250","6350","6450"], "answer": "6250" },
+      { "prompt": "5/8 + 1/8 = ?", "choices": ["6/8","5/8","7/8","1"], "answer": "6/8" }
+    ]},
+    { "id": "giong-2-qs", "xpReward": 14, "questions": [
+      { "prompt": "7/10 + 2/10 = ?", "choices": ["9/10","7/10","1","11/10"], "answer": "9/10" },
+      { "prompt": "1/2 + 1/4 = ?", "choices": ["3/4","1/4","1/2","1"], "answer": "3/4" },
+      { "prompt": "12000 - 3456 = ?", "choices": ["8544","8554","8654","8744"], "answer": "8544" },
+      { "prompt": "2500 + 4800 = ?", "choices": ["7100","7200","7300","7400"], "answer": "7300" },
+      { "prompt": "3/5 + 1/5 = ?", "choices": ["3/5","4/5","1/5","1"], "answer": "4/5" }
+    ]},
+    { "id": "giong-3-qs", "xpReward": 14, "questions": [
+      { "prompt": "5/6 + 1/6 = ?", "choices": ["1","5/6","6/6","7/6"], "answer": "1" },
+      { "prompt": "4/9 + 2/9 = ?", "choices": ["6/9","4/9","5/9","7/9"], "answer": "6/9" },
+      { "prompt": "15000 - 7890 = ?", "choices": ["6800","6910","7100","7210"], "answer": "7100" },
+      { "prompt": "8400 + 2600 = ?", "choices": ["10400","10800","11000","11200"], "answer": "11000" },
+      { "prompt": "9/10 - 3/10 = ?", "choices": ["6/10","5/10","7/10","8/10"], "answer": "6/10" }
+    ]},
+    { "id": "giong-4-qs", "xpReward": 14, "questions": [
+      { "prompt": "7/8 - 3/8 = ?", "choices": ["3/8","4/8","5/8","6/8"], "answer": "4/8" },
+      { "prompt": "5/7 + 1/7 = ?", "choices": ["5/7","6/7","1","7/7"], "answer": "6/7" },
+      { "prompt": "23000 - 9876 = ?", "choices": ["13024","13124","13224","13324"], "answer": "13124" },
+      { "prompt": "9999 + 1234 = ?", "choices": ["11111","11233","11243","11233"], "answer": "11233" },
+      { "prompt": "2/3 + 2/3 = ?", "choices": ["2/3","3/3","4/3","1"], "answer": "4/3" }
+    ]},
+    { "id": "giong-5-qs", "xpReward": 14, "questions": [
+      { "prompt": "11/12 - 5/12 = ?", "choices": ["4/12","5/12","6/12","7/12"], "answer": "6/12" },
+      { "prompt": "3/4 + 3/4 = ?", "choices": ["3/4","6/4","6/8","9/8"], "answer": "6/4" },
+      { "prompt": "56000 - 34567 = ?", "choices": ["21333","21433","21533","21443"], "answer": "21433" },
+      { "prompt": "18000 + 7600 = ?", "choices": ["24800","25600","25800","26600"], "answer": "25600" },
+      { "prompt": "7/10 + 5/10 = ?", "choices": ["11/10","12/10","1","1/10"], "answer": "12/10" }
+    ]}
+  ]
+}
+
