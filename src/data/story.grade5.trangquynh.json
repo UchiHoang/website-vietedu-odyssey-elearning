@@ -55,7 +55,7 @@
       "badgeOnComplete": "badge-boot",
       "activityRef": "g5-l5-qs",
       "cutscene": [
-        { "speaker": "Lính Liên Lạc", "text": "Quân địch đang đến gần! Chúng ta phải di chuyển nhanh hơn!", "sprite": "assets/user/linhhaucan5.png" },
+        { "speaker": "Lính Liên Lạc", "text": "Quân địch đang đến gần! Chúng ta phải di chuyển nhanh hơn!", "sprite": "assets/user/linh.png" },
         { "speaker": "Trạng Nguyên", "text": "Muốn nhanh phải biết tính vận tốc. Ta sẽ vạch ra lộ trình tối ưu để đoàn quân đạt tốc độ cao nhất.", "sprite": "assets/user/trangnguyen5.png" }
       ]
     },
@@ -75,7 +75,7 @@
       "badgeOnComplete": "badge-shovel",
       "activityRef": "g5-l7-qs",
       "cutscene": [
-        { "speaker": "Lính Công Binh", "text": "Nước sông đang lên cao, chúng ta cần đắp đê ngăn lũ bảo vệ doanh trại.", "sprite": "assets/user/linhcongbinh5.png" },
+        { "speaker": "Lính Công Binh", "text": "Nước sông đang lên cao, chúng ta cần đắp đê ngăn lũ bảo vệ doanh trại.", "sprite": "assets/user/linh.png" },
         { "speaker": "Trạng Nguyên", "text": "Hãy tính thể tích đất cần đào đắp. Hình hộp chữ nhật hay hình lập phương, ta đều tính được hết.", "sprite": "assets/user/trangnguyen5.png" }
       ]
     },
@@ -125,7 +125,7 @@
       "badgeOnComplete": "badge-ship",
       "activityRef": "g5-l12-qs",
       "cutscene": [
-        { "speaker": "Thuyền Trưởng", "text": "Nước sông chảy xiết quá! Thuyền đi ngược dòng chậm hơn hẳn!", "sprite": "assets/user/thuyentruong5.png" },
+        { "speaker": "Thuyền Trưởng", "text": "Nước sông chảy xiết quá! Thuyền đi ngược dòng chậm hơn hẳn!", "sprite": "assets/user/linh.png" },
         { "speaker": "Trạng Nguyên", "text": "Đó là do vận tốc dòng nước. Xuôi dòng được cộng thêm, ngược dòng bị trừ đi. Ta phải tính toán kỹ để không lỡ thời cơ.", "sprite": "assets/user/trangnguyen5.png" }
       ]
     },
@@ -145,7 +145,7 @@
       "badgeOnComplete": "badge-clock",
       "activityRef": "g5-l14-qs",
       "cutscene": [
-        { "speaker": "Lính Liên Lạc", "text": "Mật thư khẩn cấp! Phải đưa về kinh đô trước ngọ môn quan đóng cửa!", "sprite": "assets/user/linhhaucan5.png" },
+        { "speaker": "Lính Liên Lạc", "text": "Mật thư khẩn cấp! Phải đưa về kinh đô trước ngọ môn quan đóng cửa!", "sprite": "assets/user/linh.png" },
         { "speaker": "Trạng Nguyên", "text": "Quãng đường đã biết, thời gian có hạn. Hãy phi ngựa với vận tốc tối đa mà thần đã tính toán!", "sprite": "assets/user/trangnguyen5.png" }
       ]
     },
