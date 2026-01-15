@@ -18,6 +18,7 @@ type StoryFrame = {
   speaker?: string;
   text?: string;
   [key: string]: unknown;
+  sprite?: string;
 };
 
 type SimpleQuestion = {
@@ -680,7 +681,10 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
     const enhancedFrames = currentNode.cutscene?.map((frame: StoryFrame, idx) => {
       let sprite = undefined;
       
-      if (frame.speaker === "Trạng Quỳnh" || frame.speaker.includes("Quỳnh")) {
+      if (frame.sprite) {
+        sprite = frame.sprite;
+      }
+      else if (frame.speaker === "Trạng Quỳnh" || frame.speaker.includes("Quỳnh")) {
         const isExcited = frame.text.includes("!") || frame.text.includes("thích");
         sprite = isExcited 
           ? (currentNode.assets?.sprite_main_cheer || "assets/user/trang_cheer.png")
