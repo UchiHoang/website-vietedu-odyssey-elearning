@@ -21,6 +21,8 @@
     {
       "id": "g4-l1",
       "title": "Tiếng Loa Sứ Giả",
+      "mathTopic": "Cộng trong phạm vi 100 (cộng có nhớ)",
+      "objective": "Thực hiện phép cộng có nhớ trong phạm vi 100",
       "badgeOnComplete": "g4-l1",
       "activityRef": "g4-l1-qs",
       "cutscene": [{ "speaker": "Sứ Giả", "text": "Tính nhanh để báo vua!" }]
