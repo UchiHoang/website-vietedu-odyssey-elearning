@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-import { GraduationCap, Mail, Phone, Facebook, Youtube, Heart, MapPin } from "lucide-react";
-=======
-import { GraduationCap, Mail, Phone, Facebook, Youtube, Sparkles } from "lucide-react";
->>>>>>> 331da969d17c89ca62fc5a4d781487deb34d1dce
+import { GraduationCap, Mail, Phone, Facebook, Youtube, Heart, MapPin, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { staggerContainer, fadeInUp } from "./animations";
 
 interface FooterProps {
-<<<<<<< HEAD
-  compact?: boolean; // Thêm prop này để bật chế độ gọn
+  compact?: boolean; // Chế độ gọn cho trang bài học
+  className?: string; // Bổ sung class tùy chỉnh
 }
 
-const Footer = ({ compact = false }: FooterProps) => {
+const Footer = ({ compact = false, className = "" }: FooterProps) => {
   const linkVariants = {
     hover: { 
       x: 5, 
@@ -32,7 +28,7 @@ const Footer = ({ compact = false }: FooterProps) => {
   // --- CHẾ ĐỘ COMPACT (Dành cho trang Bài Học) ---
   if (compact) {
     return (
-      <footer className="bg-accent text-accent-foreground border-t border-accent-foreground/10 py-3 relative z-20 shadow-[0_-5px_15px_rgba(0,0,0,0.03)]">
+      <footer className={`bg-accent text-accent-foreground border-t border-accent-foreground/10 py-3 relative z-20 shadow-[0_-5px_15px_rgba(0,0,0,0.03)] ${className}`}>
         <div className="max-w-[1600px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3">
           {/* Logo & Copyright */}
           <div className="flex items-center gap-4">
@@ -82,12 +78,6 @@ const Footer = ({ compact = false }: FooterProps) => {
   }
 
   // --- CHẾ ĐỘ FULL (Dành cho Trang chủ) ---
-=======
-  className?: string;
-}
-
-const Footer = ({ className = "" }: FooterProps) => {
->>>>>>> 331da969d17c89ca62fc5a4d781487deb34d1dce
   return (
     <footer id="contact" className={`bg-accent text-accent-foreground relative overflow-hidden ${className}`}>
       {/* Subtle education icons in footer background */}
@@ -97,29 +87,6 @@ const Footer = ({ className = "" }: FooterProps) => {
       </div>
 
       <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          
-          {/* CỘT 1: Logo & Social */}
-          <motion.div 
-            className="space-y-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <motion.div 
-              className="flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <motion.div
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-              >
-                <GraduationCap className="h-8 w-8" />
-              </motion.div>
-              <span className="text-xl font-heading font-bold">
-=======
         <motion.div
           className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"
           variants={staggerContainer}
@@ -127,11 +94,11 @@ const Footer = ({ className = "" }: FooterProps) => {
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
         >
+          {/* CỘT 1: Logo & Social */}
           <motion.div className="space-y-4" variants={fadeInUp}>
             <div className="flex items-center gap-2">
               <GraduationCap className="h-8 w-8" />
               <span className="text-xl font-heading font-bold flex items-center gap-1">
->>>>>>> 331da969d17c89ca62fc5a4d781487deb34d1dce
                 VietEdu Odyssey
                 <Sparkles className="h-4 w-4" />
               </span>
@@ -139,7 +106,6 @@ const Footer = ({ className = "" }: FooterProps) => {
             <p className="text-sm opacity-90">
               Học qua chơi với văn hóa Việt Nam. Nền tảng giáo dục tương tác hàng đầu dành cho học sinh tiểu học.
             </p>
-<<<<<<< HEAD
             
             {/* Social icons */}
             <div className="flex items-center gap-3 pt-2">
@@ -169,17 +135,7 @@ const Footer = ({ className = "" }: FooterProps) => {
           </motion.div>
 
           {/* CỘT 2: Liên kết */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-=======
-          </motion.div>
-
           <motion.div variants={fadeInUp}>
->>>>>>> 331da969d17c89ca62fc5a4d781487deb34d1dce
             <h4 className="font-heading font-bold mb-4">Liên kết</h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -205,14 +161,8 @@ const Footer = ({ className = "" }: FooterProps) => {
             </ul>
           </motion.div>
 
-<<<<<<< HEAD
           {/* CỘT 3: Hỗ trợ */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
+          <motion.div variants={fadeInUp}>
             <h4 className="font-heading font-bold mb-4">Hỗ trợ</h4>
             <ul className="space-y-2 text-sm">
               {[
@@ -233,7 +183,7 @@ const Footer = ({ className = "" }: FooterProps) => {
                     className="opacity-90 hover:opacity-100 transition-opacity inline-block"
                     variants={linkVariants}
                     whileHover="hover"
-                    onClick={(e) => e.preventDefault()} // Ngăn load lại trang khi click link demo
+                    onClick={(e) => e.preventDefault()}
                   >
                     {item}
                   </motion.a>
@@ -243,12 +193,7 @@ const Footer = ({ className = "" }: FooterProps) => {
           </motion.div>
 
           {/* CỘT 4: Liên hệ */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
+          <motion.div variants={fadeInUp}>
             <h4 className="font-heading font-bold mb-4">Liên hệ</h4>
             <ul className="space-y-4 text-sm">
               <motion.li 
@@ -279,7 +224,6 @@ const Footer = ({ className = "" }: FooterProps) => {
                 <span>(+84) 28 3835 2020</span>
               </motion.li>
 
-              {/* Thêm phần Địa chỉ */}
               <motion.li 
                 className="flex items-start gap-3"
                 whileHover={{ x: 5 }}
@@ -297,7 +241,7 @@ const Footer = ({ className = "" }: FooterProps) => {
               </motion.li>
             </ul>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Bản quyền */}
         <motion.div 
@@ -320,55 +264,6 @@ const Footer = ({ className = "" }: FooterProps) => {
             </motion.span>
             in Vietnam
           </motion.p>
-=======
-          <motion.div variants={fadeInUp}>
-            <h4 className="font-heading font-bold mb-4">Hỗ trợ</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Hướng dẫn sử dụng
-                </a>
-              </li>
-              <li>
-                <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Câu hỏi thường gặp
-                </a>
-              </li>
-              <li>
-                <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Chính sách bảo mật
-                </a>
-              </li>
-              <li>
-                <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-                  Điều khoản sử dụng
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-
-          <motion.div variants={fadeInUp}>
-            <h4 className="font-heading font-bold mb-4">Liên hệ</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4" />
-                <span>contact@vietedu.vn</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                <span>1900 xxxx</span>
-              </li>
-              <li className="flex items-center gap-3 pt-2">
-                <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-                  <Facebook className="h-5 w-5" />
-                </a>
-                <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-                  <Youtube className="h-5 w-5" />
-                </a>
-              </li>
-            </ul>
-          </motion.div>
->>>>>>> 331da969d17c89ca62fc5a4d781487deb34d1dce
         </motion.div>
 
         <div className="border-t border-accent-foreground/20 pt-8 text-center text-sm opacity-90">
