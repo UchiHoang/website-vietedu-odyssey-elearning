@@ -654,19 +654,24 @@ const Lessons = () => {
   const selectedLesson = lessonsData.find((l) => l.id === selectedLessonId);
   const selectedTopic = topicsData.find((t) => t.id === selectedTopicId);
 
-  return (
-    <div className="min-h-screen flex flex-col bg-background">
+return (
+    // Dùng h-[100dvh] để cố định chiều cao trang bằng màn hình thiết bị
+    <div className="flex h-[100dvh] flex-col bg-background overflow-hidden">
+      
+      {/* Header cố định */}
       <Header />
 
-      {/* KHU VỰC NỘI DUNG */}
-      <div className="flex flex-1 overflow-hidden min-h-0 flex-shrink">
+      {/* KHU VỰC GIỮA (Sidebar + Main): Chiếm hết khoảng trống còn lại */}
+      <div className="flex flex-1 overflow-hidden">
+        
         {/* --- SIDEBAR TRÁI (320px) --- */}
-        <div className="w-[320px] border-r flex flex-col bg-card shadow-sm z-10 flex-shrink-0">
-          {/* Phần điều khiển trên cùng */}
-          <div className="p-4 space-y-4">
-            {/* 1. Chọn Lớp */}
+        <div className="w-[320px] flex flex-col border-r bg-card shadow-sm z-10 flex-shrink-0">
+          
+          {/* Phần điều khiển (Không cuộn) */}
+          <div className="flex-shrink-0 p-4 space-y-4 bg-card z-20">
+            {/* Chọn Lớp */}
             <div>
-              <label className="text-sm font-black text-foreground uppercase mb-1.5 block tracking-wider">
+              <label className="text-xs font-black text-muted-foreground uppercase mb-1.5 block tracking-wider">
                 Lớp Học
               </label>
               <Select
@@ -674,11 +679,10 @@ const Lessons = () => {
                 onValueChange={(val) => {
                   setSelectedLessonId(val);
                   setSearchQuery("");
-                  // Khi đổi lớp, có thể reset về học kì 1 hoặc giữ nguyên tuỳ ý
                   setSelectedSemester(1);
                 }}
               >
-                <SelectTrigger className="w-full font-bold h-11 bg-background border-2 hover:border-primary/50 transition-colors">
+                <SelectTrigger className="w-full font-bold h-10 bg-background border-input hover:border-primary/50 transition-colors">
                   <SelectValue placeholder="Chọn lớp..." />
                 </SelectTrigger>
                 <SelectContent>
@@ -691,38 +695,31 @@ const Lessons = () => {
               </Select>
             </div>
 
-            {/* 2. Chọn Học Kì (Tabs) */}
-            <div className="bg-muted/50 p-1 rounded-lg">
+            {/* Chọn Học Kì */}
+            <div className="bg-muted/50 p-1 rounded-lg border">
               <div className="grid grid-cols-2 gap-1">
-                <button
-                  onClick={() => setSelectedSemester(1)}
-                  className={`text-sm font-black py-2 rounded-md transition-all ${
-                    selectedSemester === 1
-                      ? "bg-primary text-primary-foreground shadow-lg scale-105"
-                      : "text-muted-foreground hover:bg-white/70 font-bold"
-                  }`}
-                >
-                  Học kì 1
-                </button>
-                <button
-                  onClick={() => setSelectedSemester(2)}
-                  className={`text-sm font-black py-2 rounded-md transition-all ${
-                    selectedSemester === 2
-                      ? "bg-primary text-primary-foreground shadow-lg scale-105"
-                      : "text-muted-foreground hover:bg-white/70 font-bold"
-                  }`}
-                >
-                  Học kì 2
-                </button>
+                {[1, 2].map((sem) => (
+                  <button
+                    key={sem}
+                    onClick={() => setSelectedSemester(sem)}
+                    className={`text-xs font-bold py-1.5 rounded-md transition-all ${
+                      selectedSemester === sem
+                        ? "bg-primary text-primary-foreground shadow-sm"
+                        : "text-muted-foreground hover:bg-background hover:text-foreground"
+                    }`}
+                  >
+                    Học kì {sem}
+                  </button>
+                ))}
               </div>
             </div>
 
-            {/* 3. Tìm kiếm */}
+            {/* Tìm kiếm */}
             <div className="relative">
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
                 placeholder="Tìm bài học..."
-                className="pl-9 bg-background border-2 font-semibold h-11 focus:border-primary/50 transition-colors"
+                className="pl-9 h-9 text-sm bg-background/50 focus:bg-background transition-colors"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
@@ -731,88 +728,74 @@ const Lessons = () => {
 
           <Separator />
 
-          {/* Danh sách chủ điểm (Topics) */}
-          <div className="flex-1 overflow-hidden flex flex-col bg-muted/10">
-            <div className="p-3 bg-gradient-to-r from-primary/10 to-primary/5 text-xs md:text-sm font-semibold text-foreground uppercase tracking-wider border-b border-primary/20 flex justify-between items-center">
-              <span>Danh sách bài học</span>
-              <Badge
-                variant="outline"
-                className="text-[10px] md:text-xs h-5 md:h-6 px-2 bg-background font-semibold border-primary/30"
-              >
-                {filteredTopics.length} bài
-              </Badge>
-            </div>
-
-            <ScrollArea className="flex-1">
-              <div className="p-3 space-y-2">
-                {filteredTopics.length > 0 ? (
-                  filteredTopics.map((topic, index) => (
-                    <button
-                      key={topic.id}
-                      onClick={() => setSelectedTopicId(topic.id)}
-                      className={`w-full text-left p-4 rounded-lg transition-all duration-300 border-2 flex gap-3 group items-start ${
-                        selectedTopicId === topic.id
-                          ? "bg-gradient-to-r from-primary/10 to-primary/5 border-primary shadow-lg scale-[1.02]"
-                          : "bg-card hover:bg-muted/50 border-transparent hover:border-primary/30 shadow-md hover:shadow-lg hover:scale-[1.01]"
-                      }`}
-                    >
-                      {/* Icon số thứ tự */}
-                      <div className="flex-shrink-0 mt-0.5">
-                        {selectedTopicId === topic.id ? (
-                          <div className="h-7 w-7 rounded-full bg-primary flex items-center justify-center text-primary-foreground shadow-lg ring-2 ring-primary/30">
-                            <Video className="h-4 w-4 fill-current" />
-                          </div>
-                        ) : (
-                          <div className="h-7 w-7 rounded-full bg-muted flex items-center justify-center text-xs font-black text-foreground group-hover:bg-primary/20 group-hover:text-primary group-hover:shadow-md transition-all border-2 border-muted-foreground/20 group-hover:border-primary/40">
-                            {index + 1}
-                          </div>
-                        )}
-                      </div>
-
-                      <div className="flex-1 min-w-0">
-                        {/* SỬA LỖI CẮT CHỮ: dùng whitespace-normal thay vì truncate */}
-                        <h3
-                          className={`text-sm md:text-base font-semibold leading-snug mb-1.5 whitespace-normal ${
-                            selectedTopicId === topic.id
-                              ? "text-primary font-bold"
-                              : "text-foreground"
-                          }`}
-                        >
-                          {topic.title}
-                        </h3>
-
-                        <div className="flex items-center gap-2 flex-wrap">
-                          {topic.completed ? (
-                            <Badge
-                              variant="secondary"
-                              className="text-[10px] md:text-xs h-5 md:h-6 px-2 bg-green-100 text-green-700 hover:bg-green-200 border border-green-300 font-medium"
-                            >
-                              <CheckCircle className="h-3 w-3 mr-1" /> Đã học
-                            </Badge>
-                          ) : (
-                            <span className="text-[10px] md:text-xs text-foreground flex items-center bg-muted px-2 py-0.5 rounded-md font-medium border border-border">
-                              <PlayCircle className="h-3 w-3 mr-1" /> 15p
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </button>
-                  ))
-                ) : (
-                  <div className="text-center py-10 px-4 text-muted-foreground">
-                    <FileText className="h-10 w-10 mx-auto mb-2 opacity-20" />
-                    <p className="text-sm">
-                      Không tìm thấy bài học nào cho Học kì {selectedSemester}.
-                    </p>
-                  </div>
-                )}
-              </div>
-            </ScrollArea>
+          {/* Tiêu đề danh sách */}
+          <div className="flex-shrink-0 p-3 bg-muted/20 border-b flex justify-between items-center">
+            <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">
+              DANH SÁCH BÀI HỌC ({filteredTopics.length})
+            </span>
           </div>
+
+          {/* ScrollArea Sidebar */}
+          <ScrollArea className="flex-1 bg-muted/5">
+            <div className="p-3 space-y-2 pb-4">
+              {filteredTopics.length > 0 ? (
+                filteredTopics.map((topic, index) => (
+                  <button
+                    key={topic.id}
+                    onClick={() => setSelectedTopicId(topic.id)}
+                    className={`w-full text-left p-3 rounded-lg transition-all duration-200 border flex gap-3 group items-start relative ${
+                      selectedTopicId === topic.id
+                        ? "bg-primary/5 border-primary shadow-sm z-10"
+                        : "bg-card border-transparent hover:border-border hover:shadow-sm"
+                    }`}
+                  >
+                    {/* Đường kẻ active */}
+                    {selectedTopicId === topic.id && (
+                      <div className="absolute left-0 top-2 bottom-2 w-1 bg-primary rounded-r-full" />
+                    )}
+
+                    {/* Số thứ tự */}
+                    <div className="flex-shrink-0 mt-0.5 ml-1">
+                      {selectedTopicId === topic.id ? (
+                        <div className="h-6 w-6 rounded-full bg-primary flex items-center justify-center text-primary-foreground shadow-sm">
+                          <Video className="h-3 w-3 fill-current" />
+                        </div>
+                      ) : (
+                        <div className="h-6 w-6 rounded-full bg-muted flex items-center justify-center text-xs font-bold text-muted-foreground border border-border group-hover:border-primary/30 group-hover:text-primary transition-colors">
+                          {index + 1}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex-1 min-w-0">
+                      <h3
+                        className={`text-sm font-semibold leading-snug mb-1.5 whitespace-normal ${
+                          selectedTopicId === topic.id
+                            ? "text-primary"
+                            : "text-foreground group-hover:text-primary/80"
+                        }`}
+                      >
+                        {topic.title}
+                      </h3>
+                      {topic.completed && (
+                        <div className="flex items-center text-[10px] text-green-600 font-medium">
+                          <CheckCircle className="h-3 w-3 mr-1" /> Đã học
+                        </div>
+                      )}
+                    </div>
+                  </button>
+                ))
+              ) : (
+                <div className="flex flex-col items-center justify-center py-10 text-muted-foreground px-4 text-center">
+                  <p className="text-sm">Không tìm thấy bài học nào.</p>
+                </div>
+              )}
+            </div>
+          </ScrollArea>
         </div>
 
-        {/* --- KHUNG CHÍNH (MAIN CONTENT) --- */}
-        <div className="flex-1 flex flex-col bg-background h-full overflow-hidden relative">
+        {/* --- KHUNG CHÍNH (Video & Nội dung) --- */}
+        <div className="flex-1 flex flex-col bg-background h-full relative overflow-hidden">
           {!selectedTopic ? (
             <div className="flex-1 flex flex-col items-center justify-center text-muted-foreground p-8 text-center bg-muted/5">
               <BookOpen className="h-16 w-16 mb-4 opacity-20" />
@@ -820,97 +803,60 @@ const Lessons = () => {
               <p>Vui lòng chọn một bài học từ danh sách bên trái.</p>
             </div>
           ) : (
-            <ScrollArea className="flex-1">
-              {/* SỬA LỖI VIDEO BÉ: Tăng max-w từ 5xl lên 7xl hoặc full */}
-              <div className="max-w-[1600px] mx-auto p-4 md:p-6 lg:p-8 space-y-6">
-                {/* Header Bài Học */}
-                <div className="flex flex-col gap-3">
-                  <div className="flex items-center gap-3 text-sm md:text-base">
-                    <span className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-3 py-1.5 rounded-lg text-xs md:text-sm font-bold uppercase tracking-wider shadow-md">
+            // ScrollArea cho nội dung chính
+            <ScrollArea className="flex-1 h-full">
+              <div className="max-w-[1400px] mx-auto p-6 md:p-8 space-y-6 pb-10">
+                
+                {/* Breadcrumb & Title */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <Badge variant="outline" className="rounded-md font-bold text-primary border-primary/20 bg-primary/5">
                       {selectedLesson?.title}
-                    </span>
-                    <span className="text-muted-foreground font-semibold">
-                      /
-                    </span>
-                    <span className="bg-muted px-3 py-1.5 rounded-lg text-xs md:text-sm font-semibold">
-                      Học kì {selectedSemester}
-                    </span>
+                    </Badge>
+                    <span>/</span>
+                    <span className="font-medium text-foreground">Học kì {selectedSemester}</span>
                   </div>
-                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight tracking-tight">
+                  <h1 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
                     {selectedTopic.title}
                   </h1>
                 </div>
 
-                {/* Video Player*/}
-                <div className="w-full bg-gradient-to-br from-black via-black to-gray-900 rounded-2xl overflow-hidden shadow-2xl ring-2 ring-primary/20 hover:ring-primary/40 transition-all duration-300">
-                  {/* Aspect ratio giữ nguyên để video không bị méo, nhưng width sẽ full container */}
+                {/* Video Player */}
+                <div className="w-full bg-black rounded-xl overflow-hidden shadow-2xl ring-1 ring-border/50">
                   <div className="aspect-video w-full relative">
                     <iframe
                       src={selectedTopic.videoUrl}
                       title={selectedTopic.title}
-                      className="w-full h-full"
+                      className="w-full h-full absolute inset-0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
-                    {/* Overlay gradient effect */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
                   </div>
                 </div>
 
-                {/* Phần thông tin và nút bấm */}
-                <div className="grid lg:grid-cols-3 gap-6 lg:gap-10">
-                  {/* Cột trái: Nội dung mô tả */}
+                {/* Nội dung chi tiết */}
+                <div className="grid lg:grid-cols-3 gap-8 items-start">
                   <div className="lg:col-span-2 space-y-6">
-                    <div className="space-y-4">
-                      <h3 className="font-semibold text-xl md:text-2xl flex items-center gap-3 border-b border-primary/20 pb-2 text-foreground">
-                        <BookOpen className="h-6 w-6 text-primary" />
-                        Nội dung bài học
+                    <div className="bg-card rounded-xl border p-6 shadow-sm">
+                      <h3 className="font-bold text-lg flex items-center gap-2 mb-4 text-primary">
+                        <BookOpen className="h-5 w-5" />
+                        Nội dung tóm tắt
                       </h3>
-                      <div className="text-foreground/90 leading-relaxed text-base md:text-lg">
-                        <p className="mb-3 font-semibold text-primary">
-                          {selectedTopic.description}
-                        </p>
-                        <p className="mt-2">
-                          Hãy xem kỹ video và ghi chép lại các công thức quan
-                          trọng. Sau khi xem xong, bạn có thể nhấn nút "Làm bài
-                          tập" bên cạnh để củng cố kiến thức.
-                        </p>
+                      <div className="prose prose-sm md:prose-base text-muted-foreground leading-relaxed">
+                        <p>{selectedTopic.description}</p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Cột phải: Actions Panel */}
-                  <div className="space-y-4">
-                    <div className="bg-gradient-to-br from-card to-card/95 p-5 rounded-xl border border-primary/10 shadow-md space-y-4 sticky top-4 backdrop-blur-sm">
-                      <h4 className="font-semibold text-lg md:text-xl text-foreground mb-3 tracking-tight">
-                        Hoạt động học tập
-                      </h4>
-
-                      <Button
-                        className="w-full justify-start h-12 text-base font-semibold shadow hover:shadow-md transition-all duration-300"
-                        size="lg"
-                      >
-                        <div className="bg-white/20 p-1.5 rounded-lg mr-3">
-                          <BookOpen className="h-6 w-6" />
-                        </div>
+                  <div className="space-y-4 lg:sticky lg:top-4">
+                    <div className="bg-card p-5 rounded-xl border shadow-sm space-y-4">
+                      <Button className="w-full h-12 text-base font-semibold shadow-md" size="lg">
                         Làm bài tập ngay
                       </Button>
-
-                      <Button
-                        variant="outline"
-                        className="w-full justify-start h-12 text-base font-medium border border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50 transition-all duration-300"
-                      >
-                        <div className="bg-primary/10 p-1.5 rounded-lg mr-3 text-primary">
-                          <FileText className="h-6 w-6" />
-                        </div>
+                      <Button variant="outline" className="w-full h-12 text-base justify-start">
+                        <FileText className="h-5 w-5 mr-3 text-muted-foreground" />
                         Tải tài liệu PDF
                       </Button>
-
-                      <div className="pt-4 border-t-2 border-primary/20 mt-4">
-                        <div className="text-xs font-medium text-center text-primary">
-                          Hoàn thành bài học để nhận 20 XP
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -919,9 +865,16 @@ const Lessons = () => {
           )}
         </div>
       </div>
-      <Footer className="mt-auto" />
+
+      {/* FOOTER NHỎ GỌN (Thay thế cho Footer lớn) */}
+      <div className="border-t bg-card py-2 px-6 flex justify-between items-center text-xs text-muted-foreground z-20 shadow-[0_-5px_10px_rgba(0,0,0,0.05)]">
+        <p>© 2024 VietEdu Odyssey. Học tập không giới hạn.</p>
+        <div className="flex gap-4">
+          <button className="hover:text-primary transition-colors">Điều khoản</button>
+          <button className="hover:text-primary transition-colors">Trợ giúp</button>
+        </div>
+      </div>
     </div>
   );
 };
-
 export default Lessons;
