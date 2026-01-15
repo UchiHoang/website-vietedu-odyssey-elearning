@@ -861,17 +861,12 @@ return (
                   </div>
                 </div>
               </div>
+              {/* FOOTER  */}
+              <div className="mt-10 border-t">
+                <Footer />
+              </div>
             </ScrollArea>
           )}
-        </div>
-      </div>
-
-      {/* FOOTER NHỎ GỌN (Thay thế cho Footer lớn) */}
-      <div className="border-t bg-card py-2 px-6 flex justify-between items-center text-xs text-muted-foreground z-20 shadow-[0_-5px_10px_rgba(0,0,0,0.05)]">
-        <p>© 2024 VietEdu Odyssey. Học tập không giới hạn.</p>
-        <div className="flex gap-4">
-          <button className="hover:text-primary transition-colors">Điều khoản</button>
-          <button className="hover:text-primary transition-colors">Trợ giúp</button>
         </div>
       </div>
     </div>
