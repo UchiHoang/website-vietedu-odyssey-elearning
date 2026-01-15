@@ -15,7 +15,8 @@ interface BadgeModalProps {
   badgeInfo?: any;
   earnedXp: number;
   performance: "excellent" | "good" | "retry";
-  onContinue: () => void;
+  onBackToMap: () => void;
+  onNextLevel?: () => void;
   onRetry?: () => void;
 }
 
@@ -25,7 +26,8 @@ export const BadgeModal = ({
   badgeInfo,
   earnedXp,
   performance,
-  onContinue,
+  onBackToMap,
+  onNextLevel,
   onRetry
 }: BadgeModalProps) => {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -124,14 +126,23 @@ export const BadgeModal = ({
                   variant="outline"
                   className="flex-1"
                 >
-                  Thử lại
+                  Chơi lại
+                </Button>
+              )}
+              {performance !== "retry" && onNextLevel && (
+                <Button
+                  onClick={onNextLevel}
+                  variant="outline"
+                  className="flex-1"
+                >
+                  Màn tiếp theo
                 </Button>
               )}
               <Button
-                onClick={onContinue}
+                onClick={onBackToMap}
                 className="flex-1"
               >
-                {performance === "retry" ? "Tiếp tục" : "Tiếp tục hành trình"}
+                {performance === "retry" ? "Về bản đồ" : "Về danh sách màn"}
               </Button>
             </div>
           </div>
