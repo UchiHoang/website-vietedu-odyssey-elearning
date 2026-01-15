@@ -174,7 +174,6 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
   
   const currentNode = story.nodes[currentNodeIndex];
   const isGameComplete = currentNodeIndex >= story.nodes.length;
-  const isTimerPaused = gamePhase !== "questions" || showBadgeModal || isSubmitting;
 
   const normalizeQuestion = useCallback(
     (q: SimpleQuestion, idx: number) => {
@@ -507,31 +506,38 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
     }
   };
 
-  const handleBackToMap = () => {
+  const handleBadgeModalContinue = async () => {
+    console.log("BadgeModal Continue clicked", {
+      currentNodeIndex,
+      totalNodes: story.nodes.length,
+      levelPerformance,
+      serverNode: lastCourseState?.current_node,
+      completedNodes: lastCourseState?.completed_nodes
+    });
+    
     setShowBadgeModal(false);
     setEarnedXpThisLevel(0);
     setCurrentQuestionIndex(0);
     setCorrectThisLevel(0);
     setIncorrectThisLevel(0);
-    setIsSubmitting(false);
-    setTimerSeconds(0);
-    setGamePhase("level-selection");
-  };
+    
+    // Ưu tiên current_node từ server (lastCourseState), fallback +1
+    const nextIndexFromServer = lastCourseState?.current_node ?? currentNodeIndex + 1;
+    const nextIndex = levelPerformance !== "retry" ? nextIndexFromServer : currentNodeIndex;
 
-  const handleNextLevel = () => {
-    // Chỉ cho phép khi còn màn tiếp theo
-    const serverNext = lastCourseState?.current_node ?? currentNodeIndex + 1;
-    const nextIndex = Math.min(serverNext, story.nodes.length - 1);
-    if (nextIndex <= currentNodeIndex || nextIndex >= story.nodes.length) {
-      handleBackToMap();
-      return;
+    if (nextIndex >= story.nodes.length) {
+      console.log("Game complete, moving to complete phase");
+      setGamePhase("complete");
+    } else if (levelPerformance !== "retry") {
+      console.log("Moving to next node:", nextIndex);
+      setCurrentNodeIndex(nextIndex);
+      setGamePhase("level-selection");
+    } else {
+      // Retry - stay on questions
+      console.log("Retry - staying on questions");
+      levelStartTime.current = Date.now();
+      setGamePhase("questions");
     }
-    setShowBadgeModal(false);
-    setEarnedXpThisLevel(0);
-    setCurrentQuestionIndex(0);
-    setCorrectThisLevel(0);
-    setIncorrectThisLevel(0);
-    handleSelectLevel(nextIndex);
   };
 
   const handleRetry = () => {
@@ -806,7 +812,6 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
           timerSeconds={timerSeconds}
           onTimeUp={handleTimeUp}
           onBack={handleBackToLevelSelection}
-          isPaused={isTimerPaused}
         />
         
         <div className="max-w-7xl mx-auto p-4 md:p-8 pt-4">
@@ -823,13 +828,7 @@ export const TrangQuynhMiniGame = ({ grade, courseId = "grade2-trangquynh", stor
           badgeId={completedBadgeId}
           earnedXp={earnedXpThisLevel}
           performance={levelPerformance}
-          onBackToMap={handleBackToMap}
-          onNextLevel={
-            levelPerformance !== "retry" &&
-            (lastCourseState?.current_node ?? currentNodeIndex + 1) < story.nodes.length
-              ? handleNextLevel
-              : undefined
-          }
+          onContinue={handleBadgeModalContinue}
           onRetry={levelPerformance === "retry" ? handleRetry : undefined}
         />
         

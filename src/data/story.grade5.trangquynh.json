@@ -4,16 +4,24 @@
     "description": "Bạn là quân sư Trạng Nguyên: tính số thập phân, hình học, chuyển động để chỉ huy."
   },
   "prologue": [
-    { "sprite": "assets/user/tuongquan5.png","speaker": "Tướng Quân", "text": "Ta cần một quân sư giỏi toán để giữ vững biên cương." },
-    { "sprite": "assets/user/trangnguyen5.png","speaker": "Người kể chuyện", "text": "Bạn sẽ tính toán lương thảo, đường hành quân và tốc độ chiến thuyền." },
-    { "sprite": "assets/user/tuongquan5.png","speaker": "Tướng Quân", "text": "Mọi quyết định đều dựa trên số liệu, hãy thật chính xác." }
+    { "speaker": "Tướng Quân", "text": "Ta cần một quân sư giỏi toán để giữ vững biên cương.", "sprite": "assets/user/tuongquan5.png" },
+    { "speaker": "Người kể chuyện", "text": "Bạn sẽ tính toán lương thảo, đường hành quân và tốc độ chiến thuyền.", "sprite": "assets/user/trangnguyen5.png" },
+    { "speaker": "Tướng Quân", "text": "Mọi quyết định đều dựa trên số liệu, hãy thật chính xác.", "sprite": "assets/user/tuongquan5.png" }
   ],
   "nodes": [
     {
       "id": "g5-l1",
+      "order": 1,
       "title": "Chiêu Mộ Binh Sĩ",
       "badgeOnComplete": "badge-soldier",
       "activityRef": "g5-l1-qs",
+      "assets": {
+        "bg": "assets/user/bg_camp.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_badge.png",
+        "alt": { "bg": "Doanh trại", "sprite_main_idle": "Trạng Nguyên", "icon": "Huy hiệu" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Hàng ngàn tráng sĩ đã về tụ hội. Nhưng quân số đông thế này, chia trại thế nào cho đều?", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Tướng quân yên tâm. Thần sẽ dùng phép tính thập phân và làm tròn số để phân bổ doanh trại hợp lý nhất.", "sprite": "assets/user/trangnguyen5.png" }
@@ -21,9 +29,17 @@
     },
     {
       "id": "g5-l2",
+      "order": 2,
       "title": "Kiểm Kê Kho Lương",
       "badgeOnComplete": "badge-rice",
       "activityRef": "g5-l2-qs",
+      "assets": {
+        "bg": "assets/user/bg_warehouse.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_sack.png",
+        "alt": { "bg": "Kho lương", "sprite_main_idle": "Trạng Nguyên", "icon": "Bao gạo" }
+      },
       "cutscene": [
         { "speaker": "Lính Hậu Cần", "text": "Bẩm Trạng Nguyên, lương thực từ các nơi gửi về có cả tấn, tạ, yến, lại còn số lẻ nữa!", "sprite": "assets/user/linh.png" },
         { "speaker": "Trạng Nguyên", "text": "Đừng lo! Hãy quy đổi tất cả về cùng một đơn vị đo và dùng số thập phân. Ta sẽ tính toán không sai một hạt.", "sprite": "assets/user/trangnguyen5.png" }
@@ -31,9 +47,17 @@
     },
     {
       "id": "g5-l3",
+      "order": 3,
       "title": "Bản Đồ Biên Giới",
       "badgeOnComplete": "badge-map",
       "activityRef": "g5-l3-qs",
+      "assets": {
+        "bg": "assets/user/bg_maproom.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_ruler.png",
+        "alt": { "bg": "Phòng bản đồ", "sprite_main_idle": "Trạng Nguyên", "icon": "Thước đo" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Địa hình hiểm trở, trên bản đồ vẽ nhỏ xíu thế này, làm sao biết đường đi thực tế bao xa?", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Đó là nhờ tỉ lệ bản đồ. Thần sẽ giúp ngài tính khoảng cách thực địa chính xác từng mét.", "sprite": "assets/user/trangnguyen5.png" }
@@ -41,9 +65,17 @@
     },
     {
       "id": "g5-l4",
+      "order": 4,
       "title": "Tính Toán Quân Nhu",
       "badgeOnComplete": "badge-calculator",
       "activityRef": "g5-l4-qs",
+      "assets": {
+        "bg": "assets/user/bg_market.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_money.png",
+        "alt": { "bg": "Chợ quân nhu", "sprite_main_idle": "Trạng Nguyên", "icon": "Tiền" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Chúng ta cần mua thêm vũ khí và thuốc men. Ngân khố có hạn, phải tính thật khéo.", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Cộng trừ số thập phân là sở trường của thần. Thần sẽ cân đối thu chi, đảm bảo quân ta đủ đầy.", "sprite": "assets/user/trangnguyen5.png" }
@@ -51,19 +83,35 @@
     },
     {
       "id": "g5-l5",
+      "order": 5,
       "title": "Gấp Rút Hành Quân",
       "badgeOnComplete": "badge-boot",
       "activityRef": "g5-l5-qs",
+      "assets": {
+        "bg": "assets/user/bg_road.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_clock.png",
+        "alt": { "bg": "Đường hành quân", "sprite_main_idle": "Trạng Nguyên", "icon": "Đồng hồ" }
+      },
       "cutscene": [
-        { "speaker": "Lính Liên Lạc", "text": "Quân địch đang đến gần! Chúng ta phải di chuyển nhanh hơn!", "sprite": "assets/user/linh.png" },
+        { "speaker": "Lính Liên Lạc", "text": "Quân địch đang đến gần! Chúng ta phải di chuyển nhanh hơn!", "sprite": "assets/user/linhhaucan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Muốn nhanh phải biết tính vận tốc. Ta sẽ vạch ra lộ trình tối ưu để đoàn quân đạt tốc độ cao nhất.", "sprite": "assets/user/trangnguyen5.png" }
       ]
     },
     {
       "id": "g5-l6",
+      "order": 6,
       "title": "Chia Nhỏ Đội Hình",
       "badgeOnComplete": "badge-percent",
       "activityRef": "g5-l6-qs",
+      "assets": {
+        "bg": "assets/user/bg_camp.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_puzzle.png",
+        "alt": { "bg": "Sân tập", "sprite_main_idle": "Trạng Nguyên", "icon": "Mảnh ghép" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Ta muốn chia quân thành các nhóm nhỏ để phục kích. Tỉ lệ bao nhiêu là hợp lý?", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Thần đề xuất dùng tỉ số phần trăm. 20% chặn đầu, 50% bọc sườn, số còn lại bảo vệ đại bản doanh.", "sprite": "assets/user/trangnguyen5.png" }
@@ -71,19 +119,35 @@
     },
     {
       "id": "g5-l7",
+      "order": 7,
       "title": "Đắp Đê Phòng Thủ",
       "badgeOnComplete": "badge-shovel",
       "activityRef": "g5-l7-qs",
+      "assets": {
+        "bg": "assets/user/bg_river.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_bridge.png",
+        "alt": { "bg": "Bờ sông", "sprite_main_idle": "Trạng Nguyên", "icon": "Cầu" }
+      },
       "cutscene": [
-        { "speaker": "Lính Công Binh", "text": "Nước sông đang lên cao, chúng ta cần đắp đê ngăn lũ bảo vệ doanh trại.", "sprite": "assets/user/linh.png" },
+        { "speaker": "Lính Công Binh", "text": "Nước sông đang lên cao, chúng ta cần đắp đê ngăn lũ bảo vệ doanh trại.", "sprite": "assets/user/linhcongbinh5.png" },
         { "speaker": "Trạng Nguyên", "text": "Hãy tính thể tích đất cần đào đắp. Hình hộp chữ nhật hay hình lập phương, ta đều tính được hết.", "sprite": "assets/user/trangnguyen5.png" }
       ]
     },
     {
       "id": "g5-l8",
+      "order": 8,
       "title": "Tính Thuế Quân Điền",
       "badgeOnComplete": "badge-coin",
       "activityRef": "g5-l8-qs",
+      "assets": {
+        "bg": "assets/user/bg_field.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_bunch.png",
+        "alt": { "bg": "Cánh đồng", "sprite_main_idle": "Trạng Nguyên", "icon": "Bó lúa" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Mùa gặt đã tới, dân làng muốn đóng góp lúa gạo nuôi quân. Ta nên thu nhận thế nào?", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Thần sẽ dùng phép nhân số thập phân để tính sản lượng lúa trên từng hecta ruộng. Công bằng cho dân, no ấm cho quân.", "sprite": "assets/user/trangnguyen5.png" }
@@ -91,9 +155,17 @@
     },
     {
       "id": "g5-l9",
+      "order": 9,
       "title": "Trận Địa Hình Tam Giác",
       "badgeOnComplete": "badge-triangle",
       "activityRef": "g5-l9-qs",
+      "assets": {
+        "bg": "assets/user/bg_battlefield.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_ruler.png",
+        "alt": { "bg": "Chiến trường", "sprite_main_idle": "Trạng Nguyên", "icon": "Thước" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Quân địch tấn công theo mũi nhọn. Ta phải bố trí trận địa phòng thủ ra sao?", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Trận đồ hình tam giác là vững chãi nhất. Hãy để thần tính diện tích để bố trí cung thủ vừa đủ.", "sprite": "assets/user/trangnguyen5.png" }
@@ -101,9 +173,17 @@
     },
     {
       "id": "g5-l10",
+      "order": 10,
       "title": "Xây Thành Lũy",
       "badgeOnComplete": "badge-wall",
       "activityRef": "g5-l10-qs",
+      "assets": {
+        "bg": "assets/user/bg_fortress.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_bridge.png",
+        "alt": { "bg": "Tường thành", "sprite_main_idle": "Trạng Nguyên", "icon": "Kiến trúc" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Tường thành cũ đã yếu. Ta cần xây thêm các tháp canh hình thang.", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Diện tích hình thang: Đáy lớn đáy bé ta đem cộng vào, rồi nhân với chiều cao, chia đôi lấy nửa thế nào cũng ra!", "sprite": "assets/user/trangnguyen5.png" }
@@ -111,9 +191,17 @@
     },
     {
       "id": "g5-l11",
+      "order": 11,
       "title": "Vòng Vây Khép Kín",
       "badgeOnComplete": "badge-circle",
       "activityRef": "g5-l11-qs",
+      "assets": {
+        "bg": "assets/user/bg_battlefield.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_badge.png",
+        "alt": { "bg": "Vòng vây", "sprite_main_idle": "Trạng Nguyên", "icon": "Huy hiệu" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Địch đang co cụm lại. Ta sẽ dùng chiến thuật vây tròn.", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Để vòng vây khép kín không kẽ hở, thần sẽ tính chu vi hình tròn. Số Pi 3,14 sẽ là chìa khóa chiến thắng.", "sprite": "assets/user/trangnguyen5.png" }
@@ -121,19 +209,35 @@
     },
     {
       "id": "g5-l12",
+      "order": 12,
       "title": "Thủy Chiến Trên Sông",
       "badgeOnComplete": "badge-ship",
       "activityRef": "g5-l12-qs",
+      "assets": {
+        "bg": "assets/user/bg_river.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_bridge.png",
+        "alt": { "bg": "Trên sông", "sprite_main_idle": "Trạng Nguyên", "icon": "Thuyền" }
+      },
       "cutscene": [
-        { "speaker": "Thuyền Trưởng", "text": "Nước sông chảy xiết quá! Thuyền đi ngược dòng chậm hơn hẳn!", "sprite": "assets/user/linh.png" },
+        { "speaker": "Thuyền Trưởng", "text": "Nước sông chảy xiết quá! Thuyền đi ngược dòng chậm hơn hẳn!", "sprite": "assets/user/thuyentruong5.png" },
         { "speaker": "Trạng Nguyên", "text": "Đó là do vận tốc dòng nước. Xuôi dòng được cộng thêm, ngược dòng bị trừ đi. Ta phải tính toán kỹ để không lỡ thời cơ.", "sprite": "assets/user/trangnguyen5.png" }
       ]
     },
     {
       "id": "g5-l13",
+      "order": 13,
       "title": "Truy Kích Quân Thù",
       "badgeOnComplete": "badge-horse",
       "activityRef": "g5-l13-qs",
+      "assets": {
+        "bg": "assets/user/bg_road.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_clock.png",
+        "alt": { "bg": "Đường mòn", "sprite_main_idle": "Trạng Nguyên", "icon": "Đồng hồ" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Địch đã bỏ chạy được một quãng xa. Liệu ngựa của ta có đuổi kịp không?", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Thần sẽ tính toán thời gian gặp nhau dựa trên hiệu vận tốc. Chúng ta sẽ bắt kịp chúng trước khi trời tối!", "sprite": "assets/user/trangnguyen5.png" }
@@ -141,19 +245,35 @@
     },
     {
       "id": "g5-l14",
+      "order": 14,
       "title": "Cuộc Đua Thời Gian",
       "badgeOnComplete": "badge-clock",
       "activityRef": "g5-l14-qs",
+      "assets": {
+        "bg": "assets/user/bg_capital.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_ticket.png",
+        "alt": { "bg": "Cổng thành", "sprite_main_idle": "Trạng Nguyên", "icon": "Mật thư" }
+      },
       "cutscene": [
-        { "speaker": "Lính Liên Lạc", "text": "Mật thư khẩn cấp! Phải đưa về kinh đô trước ngọ môn quan đóng cửa!", "sprite": "assets/user/linh.png" },
+        { "speaker": "Lính Liên Lạc", "text": "Mật thư khẩn cấp! Phải đưa về kinh đô trước ngọ môn quan đóng cửa!", "sprite": "assets/user/linhhaucan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Quãng đường đã biết, thời gian có hạn. Hãy phi ngựa với vận tốc tối đa mà thần đã tính toán!", "sprite": "assets/user/trangnguyen5.png" }
       ]
     },
     {
       "id": "g5-l15",
+      "order": 15,
       "title": "Khải Hoàn Ca",
       "badgeOnComplete": "badge-medal",
       "activityRef": "g5-l15-qs",
+      "assets": {
+        "bg": "assets/user/bg_festival.png",
+        "sprite_main_idle": "assets/user/trangnguyen5.png",
+        "sprite_main_cheer": "assets/user/trang_cheer.png",
+        "icon": "assets/user/icon_badge.png",
+        "alt": { "bg": "Lễ hội", "sprite_main_idle": "Trạng Nguyên", "icon": "Huy hiệu" }
+      },
       "cutscene": [
         { "speaker": "Tướng Quân", "text": "Đất nước đã sạch bóng quân thù! Công đầu thuộc về quân sư Trạng Nguyên!", "sprite": "assets/user/tuongquan5.png" },
         { "speaker": "Trạng Nguyên", "text": "Không chỉ có thần, mà nhờ tất cả các binh sĩ đã giỏi tính toán, thông thạo binh pháp. Toán học thực sự đã bảo vệ non sông!", "sprite": "assets/user/trangnguyen5.png" }
@@ -367,4 +487,3 @@
     }
   ]
 }
-

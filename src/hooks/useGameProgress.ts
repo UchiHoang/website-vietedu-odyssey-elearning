@@ -226,59 +226,8 @@ export const useGameProgress = (courseId: string) => {
 
       return result;
     },
-    onSuccess: (result, variables) => {
-      // Hợp nhất tiến độ để tránh hạ cấp current_node/completed_nodes khi chơi lại màn cũ
-      queryClient.setQueryData<FullGameState | undefined>(
-        ["game-state", courseId],
-        (prev) => {
-          const prevCourse = prev?.course;
-          const prevGlobals = prev?.globals;
-
-          // nodeIndex được gửi từ mutate payload, fallback từ result.course.current_node - 1
-          const completedIndex = typeof variables?.nodeIndex === "number"
-            ? variables.nodeIndex
-            : Math.max((result.course?.current_node ?? 1) - 1, 0);
-
-          const prevCurrent = prevCourse?.current_node ?? 0;
-          const rpcCurrent = result.course?.current_node ?? completedIndex + 1;
-          const newCurrent = Math.max(prevCurrent, rpcCurrent, completedIndex + 1);
-
-          const mergeCompleted = (incoming?: unknown[], existing?: unknown[]) => {
-            const merged = new Set<number | string>();
-            (existing ?? []).forEach((item) => merged.add(item as number | string));
-            (incoming ?? []).forEach((item) => merged.add(item as number | string));
-            merged.add(completedIndex as number);
-            return Array.from(merged);
-          };
-
-          const mergedCompletedNodes = mergeCompleted(
-            (result.course?.completed_nodes as unknown[]) ?? [],
-            (prevCourse?.completed_nodes as unknown[]) ?? []
-          );
-
-          const mergedCourse: CourseState = {
-            ...prevCourse,
-            ...result.course,
-            current_node: newCurrent,
-            completed_nodes: mergedCompletedNodes,
-            total_stars: result.course?.total_stars ?? prevCourse?.total_stars ?? 0,
-            total_xp: result.course?.total_xp ?? prevCourse?.total_xp,
-          };
-
-          const mergedGlobals: GlobalState = {
-            ...prevGlobals,
-            ...result.globals,
-          };
-
-          return {
-            success: true,
-            globals: mergedGlobals,
-            course: mergedCourse,
-          };
-        }
-      );
-
-      // Invalidate và refetch state nền để đồng bộ server
+    onSuccess: () => {
+      // Invalidate và refetch state
       queryClient.invalidateQueries({ queryKey: ["game-state", courseId] });
     },
   });
